@@ -4,8 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Victor Phoenix — Create What’s Next.</title>
-  <meta name="description" content="Victor Phoenix creates digital experiences, technology, graphics, websites, applications, and AI-powered solutions.">
+  <title>Victor Phoenix — Create What's Next.</title>
+
+  <meta
+    name="description"
+    content="Victor Phoenix creates digital experiences, technology, creative design and AI-powered solutions."
+  >
 
   <style>
     * {
@@ -14,29 +18,30 @@
       box-sizing: border-box;
     }
 
-    :root {
-      --black: #050505;
-      --dark: #0b0b0c;
-      --gray: #8b8b8f;
-      --light: #d8d8dc;
-      --white: #ffffff;
-      --line: rgba(255,255,255,0.12);
-    }
-
     html {
       scroll-behavior: smooth;
     }
 
     body {
-      background: var(--black);
-      color: var(--white);
       font-family: Arial, Helvetica, sans-serif;
-      overflow-x: hidden;
+      background: #050505;
+      color: #ffffff;
+      line-height: 1.6;
     }
 
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
     }
 
     /* NAVIGATION */
@@ -46,608 +51,191 @@
       top: 0;
       left: 0;
       width: 100%;
-      z-index: 100;
-      padding: 22px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(5,5,5,0.72);
+      z-index: 1000;
+      background: rgba(5, 5, 5, 0.82);
       backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid #1d1d1d;
+    }
+
+    .nav-inner {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
     }
 
     .brand {
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: -0.8px;
+      display: flex;
+      align-items: center;
+      width: 150px;
+    }
+
+    .brand img {
+      width: 150px;
+      height: auto;
+      object-fit: contain;
     }
 
     .nav-links {
       display: flex;
+      align-items: center;
       gap: 28px;
       font-size: 14px;
-      color: #bdbdc1;
+      color: #bcbcbc;
     }
 
     .nav-links a:hover {
-      color: white;
+      color: #ffffff;
+    }
+
+    .nav-button {
+      border: 1px solid #ffffff;
+      padding: 11px 18px;
+      border-radius: 30px;
+      color: #ffffff;
     }
 
     /* HERO */
 
     .hero {
       min-height: 100vh;
-      padding: 150px 7% 80px;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 550px;
-      height: 550px;
-      right: -150px;
-      top: 80px;
-      background: radial-gradient(
-        circle,
-        rgba(255,255,255,0.13),
-        transparent 65%
-      );
-      filter: blur(20px);
+      padding-top: 110px;
     }
 
     .hero-content {
-      max-width: 850px;
       position: relative;
-      z-index: 2;
+      z-index: 3;
+      max-width: 760px;
     }
 
     .eyebrow {
-      color: #a8a8ad;
-      font-size: 13px;
-      letter-spacing: 4px;
+      color: #999999;
       text-transform: uppercase;
-      margin-bottom: 28px;
+      letter-spacing: 4px;
+      font-size: 12px;
+      margin-bottom: 25px;
     }
 
-    h1 {
-      font-size: clamp(58px, 10vw, 130px);
-      line-height: 0.88;
+    .hero h1 {
+      font-size: clamp(58px, 9vw, 125px);
+      line-height: 0.9;
       letter-spacing: -7px;
       font-weight: 800;
-      max-width: 1000px;
+      margin-bottom: 35px;
+    }
+
+    .hero h1 span {
+      color: #8d8d8d;
     }
 
     .hero-text {
-      margin-top: 35px;
-      max-width: 600px;
-      color: #a7a7ab;
-      font-size: 18px;
-      line-height: 1.7;
+      max-width: 650px;
+      color: #b5b5b5;
+      font-size: 19px;
+      line-height: 1.8;
+      margin-bottom: 40px;
     }
 
-    .hero-buttons {
+    .buttons {
       display: flex;
-      gap: 14px;
-      margin-top: 40px;
+      gap: 15px;
       flex-wrap: wrap;
     }
 
     .button {
-      padding: 15px 24px;
-      border: 1px solid white;
-      border-radius: 100px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 25px;
+      border-radius: 40px;
+      border: 1px solid #555555;
+      transition: 0.25s ease;
       font-size: 14px;
-      transition: 0.3s;
     }
 
     .button.primary {
-      background: white;
-      color: black;
+      background: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
     }
 
     .button:hover {
       transform: translateY(-3px);
-      background: #222;
-      color: white;
+      border-color: #ffffff;
     }
-
-    .button.primary:hover {
-      background: #ddd;
-      color: black;
-    }
-
-    /* ABSTRACT 3D ELEMENT */
 
     .orb {
       position: absolute;
-      right: 7%;
-      top: 30%;
-      width: 300px;
-      height: 300px;
+      right: -100px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 520px;
+      height: 520px;
       border-radius: 50%;
       background:
-        radial-gradient(
-          circle at 30% 25%,
-          white 0%,
-          #777 12%,
-          #292929 38%,
-          #090909 70%
-        );
+        radial-gradient(circle at 30% 25%, #ffffff 0%, #777777 12%, #292929 35%, #090909 68%);
       box-shadow:
-        0 0 80px rgba(255,255,255,0.12),
-        inset -30px -30px 70px rgba(0,0,0,0.8);
-      animation: float 6s ease-in-out infinite;
+        inset -50px -40px 100px #000000,
+        0 0 100px rgba(255,255,255,0.08);
+      opacity: 0.9;
     }
 
+    .orb::before,
     .orb::after {
       content: "";
       position: absolute;
-      inset: 20px;
+      inset: -30px;
+      border: 1px solid #2b2b2b;
       border-radius: 50%;
-      border: 1px solid rgba(255,255,255,0.2);
-      transform: rotate(25deg) scaleY(0.35);
+      transform: rotate(25deg);
     }
 
-    @keyframes float {
-      0%,100% {
-        transform: translateY(0) rotate(0deg);
-      }
+    .orb::after {
+      inset: -60px;
+      transform: rotate(-25deg);
+      opacity: 0.5;
+    }
 
-      50% {
-        transform: translateY(-22px) rotate(8deg);
-      }
+    /* SECTIONS */
+
+    section {
+      padding: 120px 0;
+      border-top: 1px solid #181818;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 55px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(38px, 6vw, 72px);
+      line-height: 1;
+      letter-spacing: -3px;
+    }
+
+    .section-heading p {
+      max-width: 440px;
+      color: #999999;
     }
 
     /* SERVICES */
 
-    section {
-      padding: 120px 7%;
-    }
-
-    .section-label {
-      color: #77777b;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 12px;
-      margin-bottom: 18px;
-    }
-
-    .section-title {
-      font-size: clamp(40px, 6vw, 76px);
-      letter-spacing: -4px;
-      margin-bottom: 60px;
-    }
-
-    .services {
+    .services-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 18px;
     }
 
     .service-card {
-      min-height: 300px;
+      min-height: 320px;
       padding: 35px;
-      border: 1px solid var(--line);
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,0.07),
-          rgba(255,255,255,0.015)
-        );
-      border-radius: 24px;
-      position: relative;
-      overflow: hidden;
-      transition: 0.4s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(255,255,255,0.3);
-    }
-
-    .service-number {
-      color: #55555a;
-      font-size: 13px;
-      margin-bottom: 80px;
-    }
-
-    .service-card h3 {
-      font-size: 30px;
-      margin-bottom: 14px;
-    }
-
-    .service-card p {
-      color: #8e8e93;
-      line-height: 1.7;
-      max-width: 450px;
-    }
-
-    .service-arrow {
-      position: absolute;
-      right: 30px;
-      bottom: 25px;
-      font-size: 25px;
-    }
-
-    /* PHILOSOPHY */
-
-    .philosophy {
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      text-align: center;
-    }
-
-    .philosophy h2 {
-      font-size: clamp(45px, 7vw, 90px);
-      letter-spacing: -5px;
-      line-height: 1;
-    }
-
-    .philosophy p {
-      margin: 30px auto 0;
-      color: #88888d;
-      max-width: 600px;
-      line-height: 1.7;
-    }
-
-    /* PORTFOLIO */
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .work {
-      height: 360px;
-      border-radius: 22px;
-      border: 1px solid var(--line);
-      background:
-        linear-gradient(
-          135deg,
-          #1c1c1f,
-          #080808
-        );
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-
-    .work span {
-      color: #77777c;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    .work h3 {
-      margin-top: 8px;
-      font-size: 28px;
-    }
-
-    /* CTA */
-
-    .cta {
-      text-align: center;
-      padding: 150px 7%;
-      border-top: 1px solid var(--line);
-    }
-
-    .cta h2 {
-      font-size: clamp(50px, 8vw, 100px);
-      letter-spacing: -6px;
-      line-height: 0.95;
-    }
-
-    .cta p {
-      color: #88888d;
-      margin: 25px auto 35px;
-      max-width: 550px;
-      line-height: 1.7;
-    }
-
-    /* FOOTER */
-
-    footer {
-      padding: 35px 7%;
-      border-top: 1px solid var(--line);
-      display: flex;
-      justify-content: space-between;
-      color: #66666b;
-      font-size: 13px;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 800px) {
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        padding-top: 140px;
-      }
-
-      h1 {
-        font-size: clamp(55px, 17vw, 90px);
-        letter-spacing: -5px;
-      }
-
-      .orb {
-        width: 180px;
-        height: 180px;
-        right: -30px;
-        top: 35%;
-        opacity: 0.55;
-      }
-
-      .services,
-      .portfolio-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-card {
-        min-height: 260px;
-      }
-
-      footer {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <nav>
-    <a href="#" class="brand">
-  <img src="./logo.png" alt="Victor Phoenix">
-</a>
-    <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-
-  <main>
-
-    <!-- HERO -->
-
-    <section class="hero">
-
-      <div class="hero-content">
-
-        <div class="eyebrow">
-          Victor Phoenix
-        </div>
-
-        <h1>
-          Create<br>
-          What’s Next.
-        </h1>
-
-        <p class="hero-text">
-          Digital experiences, technology, creative design and
-          AI-powered solutions built for the future.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="#services" class="button primary">
-            Explore Services
-          </a>
-
-          <a href="#work" class="button">
-            View Work
-          </a>
-        </div>
-
-      </div>
-
-      <div class="orb"></div>
-
-    </section>
-
-
-    <!-- SERVICES -->
-
-    <section id="services">
-
-      <div class="section-label">
-        What We Do
-      </div>
-
-      <h2 class="section-title">
-        Digital, designed<br>
-        for what’s next.
-      </h2>
-
-      <div class="services">
-
-        <a href="#" class="service-card">
-          <div class="service-number">01 / CREATIVE</div>
-
-          <h3>Phoenix Creative</h3>
-
-          <p>
-            Graphics, visual identity, branding and digital
-            creative experiences designed to make ideas visible.
-          </p>
-
-          <div class="service-arrow">↗</div>
-        </a>
-
-
-        <a href="#" class="service-card">
-          <div class="service-number">02 / DIGITAL</div>
-
-          <h3>Phoenix Digital</h3>
-
-          <p>
-            Websites, applications, interfaces and digital
-            products built for modern users and businesses.
-          </p>
-
-          <div class="service-arrow">↗</div>
-        </a>
-
-
-        <a href="#" class="service-card">
-          <div class="service-number">03 / AI</div>
-
-          <h3>Phoenix AI</h3>
-
-          <p>
-            AI-powered tools, automation, integrations and
-            intelligent digital solutions.
-          </p>
-
-          <div class="service-arrow">↗</div>
-        </a>
-
-
-        <a href="#" class="service-card">
-          <div class="service-number">04 / GROWTH</div>
-
-          <h3>Phoenix Growth</h3>
-
-          <p>
-            Digital strategies and creative solutions that help
-            brands communicate, reach people and grow online.
-          </p>
-
-          <div class="service-arrow">↗</div>
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <!-- PHILOSOPHY -->
-
-    <section class="philosophy">
-
-      <div class="section-label">
-        Philosophy
-      </div>
-
-      <h2>
-        Create.<br>
-        Innovate.<br>
-        Evolve.
-      </h2>
-
-      <p>
-        We believe technology should not simply follow the future.
-        It should help create it.
-      </p>
-
-    </section>
-
-
-    <!-- WORK -->
-
-    <section id="work">
-
-      <div class="section-label">
-        Selected Work
-      </div>
-
-      <h2 class="section-title">
-        Ideas into<br>
-        experiences.
-      </h2>
-
-      <div class="portfolio-grid">
-
-        <div class="work">
-          <span>Concept / Brand Identity</span>
-          <h3>Future Brand System</h3>
-        </div>
-
-        <div class="work">
-          <span>Concept / Digital Product</span>
-          <h3>Next Generation Interface</h3>
-        </div>
-
-        <div class="work">
-          <span>Concept / AI Experience</span>
-          <h3>Intelligent Digital Assistant</h3>
-        </div>
-
-        <div class="work">
-          <span>Concept / Web Experience</span>
-          <h3>Digital World</h3>
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-
-      <div class="section-label">
-        About Victor Phoenix
-      </div>
-
-      <h2 class="section-title">
-        Building for<br>
-        the digital world.
-      </h2>
-
-      <p style="max-width:650px;color:#8b8b90;font-size:18px;line-height:1.8;">
-        Victor Phoenix is a digital technology brand focused on
-        creating innovative digital experiences, technologies,
-        creative solutions and AI-powered products.
-      </p>
-
-    </section>
-
-
-    <!-- CTA -->
-
-    <section class="cta" id="contact">
-
-      <div class="section-label">
-        Start Something
-      </div>
-
-      <h2>
-        Let’s create<br>
-        what’s next.
-      </h2>
-
-      <p>
-        Have an idea, project or business that needs a digital
-        solution? Let's turn the idea into something real.
-      </p>
-
-      <a href="#" class="button primary">
-        Get Started
-      </a>
-
-    </section>
-
-  </main>
-
-
-  <footer>
-    <span>© 2026 Victor Phoenix</span>
-    <span>Create What’s Next.</span>
-  </footer>
-
-</body>
-</html>
+      border

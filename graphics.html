@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Graphics & Design — Victor Phoenix</title>
+
+  <meta
+    name="description"
+    content="Graphics and creative design services by Victor Phoenix."
+  >
+
+  <style>
+    :root {
+      --black: #050505;
+      --panel: #0d0d0f;
+      --white: #f5f5f5;
+      --gray: #9999a1;
+      --line: rgba(255,255,255,.11);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(
+          circle at 80% 5%,
+          rgba(255,255,255,.08),
+          transparent 30%
+        ),
+        var(--black);
+
+      color: var(--white);
+
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(
+        1200px,
+        calc(100% - 40px)
+      );
+
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+
+      height: 80px;
+
+      background: rgba(5,5,5,.84);
+
+      backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      width: 190px;
+    }
+
+    .back {
+      color: #aaaab0;
+      font-size: 13px;
+      transition: .25s;
+    }
+
+    .back:hover {
+      color: white;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 110px 0 85px;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      color: #77777f;
+
+      text-transform: uppercase;
+
+      letter-spacing: 4px;
+
+      font-size: 10px;
+
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size:
+        clamp(52px, 8vw, 100px);
+
+      line-height: .9;
+
+      letter-spacing: -5px;
+
+      margin-top: 18px;
+    }
+
+    h1 span {
+      display: block;
+
+      background:
+        linear-gradient(
+          100deg,
+          #f5f5f5,
+          #707078
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .intro {
+      max-width: 670px;
+
+      color: #96969e;
+
+      font-size: 15px;
+
+      line-height: 1.8;
+
+      margin-top: 25px;
+    }
+
+    /* CATEGORY GRID */
+
+    .categories {
+      padding: 70px 0 100px;
+    }
+
+    .category-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 18px;
+    }
+
+    .category {
+      min-height: 300px;
+
+      padding: 30px;
+
+      border:
+        1px solid var(--line);
+
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.055),
+          rgba(255,255,255,.008)
+        );
+
+      position: relative;
+
+      overflow: hidden;
+
+      transition: .3s;
+    }
+
+    .category:hover {
+      transform: translateY(-7px);
+
+      border-color: #55555c;
+
+      box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.4);
+    }
+
+    .category::after {
+      content: "";
+
+      position: absolute;
+
+      width: 250px;
+      height: 250px;
+
+      right: -100px;
+      bottom: -130px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid
+        rgba(255,255,255,.07);
+    }
+
+    .number {
+      color: #66666d;
+
+      font-size: 11px;
+
+      letter-spacing: 2px;
+    }
+
+    .category h2 {
+      font-size: 29px;
+
+      line-height: 1.1;
+
+      margin-top: 42px;
+
+      letter-spacing: -1px;
+    }
+
+    .category p {
+      color: #92929a;
+
+      font-size: 13px;
+
+      max-width: 440px;
+
+      margin-top: 13px;
+    }
+
+    .view {
+      position: absolute;
+
+      left: 30px;
+      bottom: 27px;
+
+      font-size: 12px;
+
+      font-weight: 700;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 30px 0;
+
+      border-top:
+        1px solid var(--line);
+
+      color: #626269;
+
+      font-size: 11px;
+    }
+
+    .footer-row {
+      display: flex;
+
+      justify-content: space-between;
+    }
+
+    @media (max-width: 700px) {
+
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        letter-spacing: -3px;
+      }
+
+      .logo img {
+        width: 145px;
+      }
+
+      .footer-row {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="container nav">
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+        <img
+          src="logo.png"
+          alt="Victor Phoenix"
+        >
+      </a>
+
+      <a
+        href="services.html"
+        class="back"
+      >
+        ← All Services
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <section class="hero">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Phoenix Creative
+        </div>
+
+        <h1>
+          Graphics &
+          <span>Design.</span>
+        </h1>
+
+        <p class="intro">
+          Visual systems and creative assets
+          designed to give brands a strong,
+          memorable and professional presence.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="categories">
+
+      <div class="container">
+
+        <div class="category-grid">
+
+
+          <!-- LOGO DESIGN -->
+
+          <a
+            href="#"
+            class="category"
+          >
+
+            <div class="number">
+              01 / BRANDING
+            </div>
+
+            <h2>
+              Logo Design
+            </h2>
+
+            <p>
+              Professional logo concepts across
+              minimalist, abstract, wordmark,
+              lettermark, monogram, luxury,
+              vintage, emblem, mascot, 3D,
+              signature and combination styles.
+            </p>
+
+            <span class="view">
+              Explore Logo Design →
+            </span>
+
+          </a>
+
+
+          <!-- FLYER DESIGN -->
+
+          <a
+            href="#"
+            class="category"
+          >
+
+            <div class="number">
+              02 / PRINT & DIGITAL
+            </div>
+
+            <h2>
+              Flyer Design
+            </h2>
+
+            <p>
+              Business, event, promotional,
+              product, real estate, corporate
+              and social media flyer designs.
+            </p>
+
+            <span class="view">
+              Explore Flyer Design →
+            </span>
+
+          </a>
+
+
+          <!-- BANNER DESIGN -->
+
+          <a
+            href="#"
+            class="category"
+          >
+
+            <div class="number">
+              03 / VISUAL MEDIA
+            </div>
+
+            <h2>
+              Banner Design
+            </h2>
+
+            <p>
+              Website, YouTube, Facebook,
+              LinkedIn, advertising, event and
+              roll-up banner designs.
+            </p>
+
+            <span class="view">
+              Explore Banner Design →
+            </span>
+
+          </a>
+
+
+          <!-- BROCHURE -->
+
+          <a
+            href="#"
+            class="category"
+          >
+
+            <div class="number">
+              04 / BUSINESS
+            </div>
+
+            <h2>
+              Brochure Design
+            </h2>
+
+            <p>
+              Bi-fold, tri-fold, corporate,
+              product brochures and company
+              profile designs.
+            </p>
+
+            <span class="view">
+              Explore Brochure Design →
+            </span>
+
+          </a>
+
+
+          <!-- BUSINESS MATERIALS -->
+
+          <a
+            href="#"
+            class="category"
+          >
+
+            <div class="number">
+              05 / CORPORATE
+            </div>
+
+            <h2>
+              Business Materials
+            </h2>
+
+            <p>
+              Business cards, letterheads,
+              invoices, certificates,
+              presentations and invitations.
+            </p>
+
+            <span class="view">
+              Explore Business Materials →
+            </span>
+
+          </a>
+
+
+          <!-- SOCIAL MEDIA -->
+
+          <a
+            href="#"
+            class="category"
+          >
+
+            <div class="number">
+              06 / SOCIAL
+            </div>
+
+            <h2>
+              Social Media Design
+            </h2>
+
+            <p>
+              Posts, stories, ads, carousels,
+              infographics, promotional graphics
+              and social branding.
+            </p>
+
+            <span class="view">
+              Explore Social Design →
+            </span>
+
+          </a>
+
+
+          <!-- BRAND IDENTITY -->
+
+          <a
+            href="#"
+            class="category"
+          >
+
+            <div class="number">
+              07 / IDENTITY
+            </div>
+
+            <h2>
+              Brand Identity
+            </h2>
+
+            <p>
+              Visual identity systems that bring
+              logos, colors, typography and
+              brand assets together.
+            </p>
+
+            <span class="view">
+              Explore Brand Identity →
+            </span>
+
+          </a>
+
+
+          <!-- CREATIVE CONTENT -->
+
+          <a
+            href="#"
+            class="category"
+          >
+
+            <div class="number">
+              08 / CREATIVE
+            </div>
+
+            <h2>
+              Creative Content
+            </h2>
+
+            <p>
+              Digital creative assets and visual
+              content designed for modern
+              campaigns and digital platforms.
+            </p>
+
+            <span class="view">
+              Explore Creative Content →
+            </span>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="container footer-row">
+
+      <span>
+        © 2026 Victor Phoenix. All rights reserved.
+      </span>
+
+      <span>
+        Create What’s Next.
+      </span>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

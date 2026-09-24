@@ -3,10 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Victor Phoenix — Create What’s Next.</title>
-  <meta name="description" content="Victor Phoenix — Digital technology, creative solutions, web, apps, AI, and digital experiences.">
+
+  <meta
+    name="description"
+    content="Victor Phoenix — digital experiences, creative design, technology and AI-powered solutions."
+  >
 
   <style>
+    :root {
+      --black: #050505;
+      --dark: #090909;
+      --panel: #0d0d0e;
+      --panel-light: #141416;
+      --white: #f5f5f5;
+      --silver: #cfcfd4;
+      --gray: #9a9aa1;
+      --dark-gray: #66666d;
+      --line: rgba(255,255,255,.12);
+      --max-width: 1320px;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -18,10 +36,42 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #050505;
-      color: #ffffff;
+      background:
+        radial-gradient(
+          circle at 75% 15%,
+          rgba(255,255,255,.08),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 15% 55%,
+          rgba(255,255,255,.035),
+          transparent 30%
+        ),
+        var(--black);
+
+      color: var(--white);
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
       line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 50;
+      opacity: .13;
+
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
     }
 
     a {
@@ -30,341 +80,969 @@
     }
 
     img {
-      max-width: 100%;
       display: block;
+      max-width: 100%;
     }
 
-    /* HEADER */
+    .container {
+      width: min(
+        var(--max-width),
+        calc(100% - 48px)
+      );
+
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: rgba(5, 5, 5, 0.9);
-      border-bottom: 1px solid #222;
-      backdrop-filter: blur(12px);
+      right: 0;
+
+      height: 86px;
+
+      z-index: 100;
+
+      background: rgba(4,4,5,.76);
+      backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid rgba(255,255,255,.08);
     }
 
     .nav {
-      max-width: 1200px;
-      margin: auto;
-      padding: 18px 24px;
+      height: 100%;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+
+      gap: 25px;
     }
 
-    .logo img {
-      width: 150px;
+    .brand img {
+      width: 205px;
       height: auto;
-      object-fit: contain;
     }
 
-    nav {
-      display: flex;
-      gap: 28px;
-    }
-
-    nav a {
-      color: #cccccc;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #ffffff;
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
+    .nav-links {
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 140px 24px 80px;
+      gap: 38px;
+    }
+
+    .nav-links a {
+      color: #d4d4d8;
+      font-size: 13px;
+      position: relative;
+      padding: 10px 0;
+    }
+
+    .nav-links a::after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      height: 1px;
+
+      background: #fff;
+
+      transform: scaleX(0);
+      transition: .25s;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .contact-icons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .icon-button {
+      width: 45px;
+      height: 45px;
+
+      border-radius: 50%;
+
+      border: 1px solid #55555b;
+
+      display: grid;
+      place-items: center;
+
+      background: rgba(255,255,255,.025);
+
+      transition: .25s;
+    }
+
+    .icon-button:hover {
+      background: #fff;
+      color: #000;
+      border-color: #fff;
+
+      transform: translateY(-2px);
+    }
+
+    .icon-button svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 720px;
+
+      padding-top: 86px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 700px;
+      height: 500px;
+
+      right: -80px;
+      top: 40px;
+
       background:
-        radial-gradient(circle at 50% 35%, #202020 0%, #0b0b0b 35%, #050505 70%);
+        radial-gradient(
+          ellipse,
+          rgba(255,255,255,.11),
+          transparent 65%
+        );
+
+      filter: blur(15px);
     }
 
-    .hero-content {
-      max-width: 950px;
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 720px;
+      height: 720px;
+
+      right: -180px;
+      top: -100px;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(255,255,255,.07);
+
+      transform: rotate(-18deg);
     }
 
-    .hero-label {
-      color: #999999;
+    .hero-grid {
+      min-height: 634px;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr
+        1.08fr;
+
+      align-items: center;
+
+      gap: 30px;
+
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-copy {
+      padding: 60px 0;
+    }
+
+    .hero-kicker {
+      display: flex;
+      gap: 15px;
+
+      color: #9999a1;
+
+      font-size: 10px;
+
+      letter-spacing: 4px;
+
       text-transform: uppercase;
-      letter-spacing: 5px;
-      font-size: 12px;
-      margin-bottom: 25px;
     }
 
     .hero h1 {
-      font-size: clamp(55px, 10vw, 125px);
-      line-height: 0.95;
+      font-size:
+        clamp(
+          64px,
+          7.5vw,
+          112px
+        );
+
+      line-height: .86;
+
       letter-spacing: -6px;
+
       font-weight: 800;
+
+      margin: 25px 0;
     }
 
     .hero h1 span {
       display: block;
-      color: #999999;
+
+      background:
+        linear-gradient(
+          100deg,
+          #eeeeee,
+          #77777d
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
     }
 
-    .hero-text {
-      max-width: 650px;
-      margin: 35px auto 0;
-      color: #bdbdbd;
-      font-size: 18px;
+    .hero-description {
+      max-width: 530px;
+
+      color: #b5b5bb;
+
+      font-size: 16px;
+
+      line-height: 1.7;
     }
 
     .hero-buttons {
-      margin-top: 40px;
       display: flex;
-      justify-content: center;
-      gap: 15px;
+
+      gap: 14px;
+
+      margin-top: 30px;
+
       flex-wrap: wrap;
     }
 
     .button {
-      padding: 15px 25px;
-      border: 1px solid #ffffff;
-      border-radius: 100px;
-      font-size: 14px;
-      transition: 0.3s;
+      min-height: 48px;
+
+      padding: 0 23px;
+
+      border-radius: 999px;
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 10px;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      border: 1px solid #fff;
+
+      background: #fff;
+
+      color: #050505;
+
+      transition: .25s;
     }
 
     .button:hover {
-      background: #ffffff;
-      color: #000000;
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 15px 35px
+        rgba(255,255,255,.12);
     }
 
-    .button.secondary {
-      border-color: #444444;
-      color: #cccccc;
+    .button-outline {
+      background: transparent;
+
+      color: #fff;
+
+      border-color: #5b5b61;
     }
 
-    /* GENERAL */
-    section {
-      padding: 110px 24px;
+    .button-outline:hover {
+      background: #fff;
+      color: #000;
+      border-color: #fff;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
+    .hero-art {
+      min-height: 560px;
+
+      display: grid;
+
+      place-items: center;
+
+      position: relative;
     }
 
-    .section-label {
-      color: #777777;
+    .hero-logo {
+      width: min(620px, 92%);
+
+      position: relative;
+
+      z-index: 3;
+
+      filter:
+        drop-shadow(
+          0 25px 40px
+          rgba(0,0,0,.8)
+        );
+    }
+
+    .hero-glow {
+      position: absolute;
+
+      width: 550px;
+      height: 260px;
+
+      bottom: 35px;
+
+      background:
+        radial-gradient(
+          ellipse,
+          rgba(255,255,255,.13),
+          transparent 65%
+        );
+
+      filter: blur(15px);
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services-section {
+      padding: 70px 0 0;
+
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .services-layout {
+      display: grid;
+
+      grid-template-columns:
+        1fr
+        370px;
+
+      gap: 25px;
+    }
+
+    .eyebrow {
+      display: flex;
+
+      align-items: center;
+
+      gap: 14px;
+
+      color: #85858d;
+
       text-transform: uppercase;
+
       letter-spacing: 4px;
-      font-size: 11px;
-      margin-bottom: 15px;
+
+      font-size: 10px;
+
+      font-weight: 700;
+    }
+
+    .eyebrow::after {
+      content: "";
+
+      width: 48px;
+      height: 1px;
+
+      background: #666;
     }
 
     .section-title {
-      font-size: clamp(35px, 6vw, 70px);
-      line-height: 1;
+      font-size:
+        clamp(
+          42px,
+          5vw,
+          72px
+        );
+
+      line-height: .98;
+
       letter-spacing: -3px;
-      margin-bottom: 20px;
+
+      margin-top: 17px;
     }
 
-    .section-description {
-      max-width: 650px;
-      color: #999999;
-      font-size: 17px;
-    }
+    .intro {
+      max-width: 720px;
 
-    /* SERVICES */
-    .services {
-      background: #0a0a0a;
+      margin-top: 18px;
+
+      color: #9999a1;
+
+      font-size: 14px;
+
+      line-height: 1.7;
     }
 
     .service-grid {
-      margin-top: 55px;
+      margin-top: 30px;
+
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
+
+      grid-template-columns:
+        repeat(4,1fr);
+
+      gap: 14px;
+
+      padding-bottom: 60px;
     }
 
     .service-card {
-      padding: 40px;
-      min-height: 260px;
-      border: 1px solid #222222;
-      background: #0f0f0f;
-      transition: 0.35s;
+      min-height: 245px;
+
+      padding: 20px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      border-radius: 13px;
+
+      border: 1px solid rgba(255,255,255,.12);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.045),
+          rgba(255,255,255,.008)
+        );
+
+      transition: .3s;
     }
 
     .service-card:hover {
       transform: translateY(-6px);
-      border-color: #555555;
+
+      border-color: #555;
+
+      box-shadow:
+        0 25px 55px
+        rgba(0,0,0,.4);
+    }
+
+    .service-icon {
+      width: 43px;
+      height: 43px;
+
+      border-radius: 50%;
+
+      border: 1px solid #45454b;
+
+      display: grid;
+      place-items: center;
+
+      margin-bottom: 22px;
+    }
+
+    .service-icon svg {
+      width: 20px;
+      height: 20px;
     }
 
     .service-number {
-      color: #666666;
-      font-size: 13px;
-      margin-bottom: 45px;
+      position: absolute;
+
+      top: 27px;
+      right: 20px;
+
+      color: #68686f;
+
+      font-size: 11px;
     }
 
     .service-card h3 {
-      font-size: 28px;
-      margin-bottom: 12px;
+      font-size: 18px;
+
+      margin-bottom: 8px;
     }
 
     .service-card p {
-      color: #999999;
-      max-width: 500px;
+      color: #929299;
+
+      font-size: 12px;
+
+      line-height: 1.6;
     }
 
     .service-link {
-      display: inline-block;
-      margin-top: 25px;
-      font-size: 13px;
-      color: #ffffff;
+      position: absolute;
+
+      bottom: 18px;
+      left: 20px;
+
+      font-size: 11px;
+
+      font-weight: 700;
     }
 
-    /* PHILOSOPHY */
-    .philosophy {
-      background: #050505;
-      text-align: center;
+    /* =========================
+       CONTACT PANEL
+    ========================= */
+
+    .get-touch {
+      border-left: 1px solid rgba(255,255,255,.12);
+
+      padding:
+        10px
+        0
+        60px
+        48px;
     }
 
-    .philosophy-content {
-      max-width: 900px;
-      margin: auto;
-    }
+    .get-touch h2 {
+      font-size: 35px;
 
-    .philosophy h2 {
-      font-size: clamp(40px, 7vw, 85px);
       line-height: 1;
-      letter-spacing: -4px;
+
+      margin: 18px 0;
     }
 
-    .philosophy h2 span {
-      color: #777777;
-    }
+    .get-touch p {
+      color: #98989f;
 
-    /* WORK */
-    .work {
-      background: #0a0a0a;
-    }
-
-    .work-grid {
-      margin-top: 50px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .work-card {
-      min-height: 300px;
-      border: 1px solid #222;
-      background: linear-gradient(145deg, #1b1b1b, #080808);
-      display: flex;
-      align-items: flex-end;
-      padding: 25px;
-    }
-
-    .work-card span {
-      color: #aaa;
       font-size: 13px;
+
+      line-height: 1.7;
+
+      max-width: 290px;
     }
 
-    /* ABOUT */
-    .about {
-      background: #050505;
+    .contact-button {
+      width: 100%;
+
+      min-height: 62px;
+
+      margin-top: 14px;
+
+      padding: 10px 15px;
+
+      border-radius: 15px;
+
+      border: 1px solid #4e4e54;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 15px;
+
+      background: rgba(255,255,255,.02);
+
+      transition: .25s;
     }
 
-    .about-grid {
-      margin-top: 50px;
+    .contact-button:hover {
+      background: #fff;
+
+      color: #000;
+
+      border-color: #fff;
+    }
+
+    .contact-round {
+      width: 38px;
+      height: 38px;
+
+      border-radius: 50%;
+
+      border: 1px solid #5b5b61;
+
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      place-items: center;
+    }
+
+    .contact-round svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .contact-label {
+      flex: 1;
+
+      font-size: 12px;
+
+      font-weight: 700;
+    }
+
+    .contact-arrow {
+      font-size: 18px;
+    }
+
+    /* =========================
+       PHILOSOPHY
+    ========================= */
+
+    .lower-section {
+      padding: 75px 0;
+
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .two-columns {
+      display: grid;
+
+      grid-template-columns:
+        1fr
+        1fr;
+
       gap: 60px;
     }
 
-    .about-block h3 {
-      font-size: 25px;
-      margin-bottom: 15px;
-    }
+    .philosophy h2 {
+      font-size:
+        clamp(
+          48px,
+          5.5vw,
+          76px
+        );
 
-    .about-block p {
-      color: #999999;
-      font-size: 16px;
-    }
+      line-height: .92;
 
-    /* CONTACT */
-    .contact {
-      background: #111111;
-      text-align: center;
-    }
-
-    .contact-content {
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .contact h2 {
-      font-size: clamp(45px, 7vw, 80px);
-      line-height: 1;
       letter-spacing: -4px;
+
+      margin-top: 20px;
     }
 
-    .contact p {
-      color: #999999;
-      margin: 25px auto 35px;
-      max-width: 550px;
+    .philosophy h2 span {
+      color: #707077;
     }
 
-    /* FOOTER */
-    footer {
-      padding: 30px 24px;
-      border-top: 1px solid #222;
-      background: #050505;
+    .work-description {
+      color: #96969d;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+
+      margin-top: 18px;
+
+      max-width: 510px;
     }
 
-    .footer-inner {
-      max-width: 1200px;
-      margin: auto;
+    .work-preview {
+      height: 185px;
+
+      margin-top: 25px;
+
+      border-radius: 15px;
+
+      border: 1px solid rgba(255,255,255,.12);
+
+      position: relative;
+
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 70% 30%,
+          rgba(255,255,255,.13),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #181819,
+          #070708 55%,
+          #121214
+        );
+    }
+
+    .work-preview::before {
+      content: "";
+
+      position: absolute;
+
+      width: 350px;
+      height: 130px;
+
+      right: -25px;
+      top: 30px;
+
+      border-radius: 50%;
+
+      border: 1px solid
+        rgba(255,255,255,.12);
+
+      transform: rotate(-16deg);
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-section {
+      padding: 90px 0;
+
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.1fr
+        .9fr;
+
+      gap: 70px;
+    }
+
+    .about-text {
+      color: #9a9aa1;
+
+      font-size: 14px;
+
+      line-height: 1.85;
+
+      max-width: 680px;
+
+      margin-top: 22px;
+    }
+
+    .values {
+      display: grid;
+
+      gap: 14px;
+    }
+
+    .value {
+      padding: 15px 0;
+
+      border-top: 1px solid #29292d;
+
       display: flex;
+
       justify-content: space-between;
-      gap: 20px;
-      color: #666666;
+    }
+
+    .value strong {
+      font-size: 13px;
+    }
+
+    .value span {
+      color: #707077;
+
       font-size: 12px;
     }
 
-    /* MOBILE */
-    @media (max-width: 800px) {
-      nav {
-        display: none;
+    /* =========================
+       FINAL CONTACT
+    ========================= */
+
+    .final-contact {
+      padding: 105px 0;
+
+      text-align: center;
+    }
+
+    .final-contact .eyebrow {
+      justify-content: center;
+    }
+
+    .final-contact h2 {
+      font-size:
+        clamp(
+          50px,
+          7vw,
+          94px
+        );
+
+      line-height: .9;
+
+      letter-spacing: -5px;
+
+      margin-top: 18px;
+    }
+
+    .final-contact p {
+      max-width: 580px;
+
+      margin: 22px auto;
+
+      color: #98989f;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+    }
+
+    .final-buttons {
+      display: flex;
+
+      justify-content: center;
+
+      gap: 13px;
+
+      flex-wrap: wrap;
+
+      margin-top: 30px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,.08);
+
+      padding: 27px 0;
+
+      color: #626269;
+
+      font-size: 11px;
+    }
+
+    .footer-row {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 1050px) {
+
+      .service-grid {
+        grid-template-columns:
+          repeat(2,1fr);
       }
 
-      .logo img {
-        width: 125px;
-      }
-
-      .hero h1 {
-        letter-spacing: -3px;
-      }
-
-      .service-grid,
-      .work-grid,
-      .about-grid {
+      .services-layout {
         grid-template-columns: 1fr;
       }
 
-      .service-card {
-        min-height: 220px;
-        padding: 30px;
+      .get-touch {
+        border-left: 0;
+
+        border-top: 1px solid
+          rgba(255,255,255,.12);
+
+        padding:
+          40px
+          0
+          60px;
       }
 
-      .work-card {
-        min-height: 240px;
+      .contact-button {
+        max-width: 430px;
       }
 
-      .footer-inner {
+      .hero-grid {
+        grid-template-columns:
+          1fr 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+
+      .container {
+        width:
+          calc(100% - 32px);
+      }
+
+      header {
+        height: 72px;
+      }
+
+      .brand img {
+        width: 155px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 72px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        padding:
+          70px 0 20px;
+      }
+
+      .hero-art {
+        min-height: 390px;
+      }
+
+      .hero-logo {
+        width: 95%;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .two-columns,
+      .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+      }
+
+      .section-title {
+        letter-spacing: -2px;
+      }
+
+      .footer-row {
         flex-direction: column;
+      }
+    }
+
+    @media (max-width: 430px) {
+
+      .contact-icons {
+        gap: 6px;
+      }
+
+      .icon-button {
+        width: 40px;
+        height: 40px;
+      }
+
+      .brand img {
+        width: 140px;
+      }
+
+      .hero h1 {
+        font-size: 56px;
+
+        letter-spacing: -4px;
       }
     }
   </style>
@@ -372,254 +1050,716 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================= -->
+
   <header>
-    <div class="nav">
-      <a href="#" class="logo">
-        <img src="logo.png" alt="Victor Phoenix">
+
+    <div class="container nav">
+
+      <a href="#home" class="brand">
+        <img
+          src="logo.png"
+          alt="Victor Phoenix"
+        >
       </a>
 
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+      <nav class="nav-links">
+
+        <a href="#home">Home</a>
+
+        <a href="#services">
+          Services
+        </a>
+
+        <a href="#portfolio">
+          Portfolio
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
       </nav>
+
+      <div class="contact-icons">
+
+        <!-- WhatsApp icon only -->
+        <a
+          class="icon-button"
+          href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
+          target="_blank"
+          rel="noopener"
+          aria-label="WhatsApp"
+          title="WhatsApp"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+
+            <path
+              d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L4 20l.9-3.8A8.5 8.5 0 1 1 20.5 11.7Z"
+            />
+
+            <path
+              d="M8.5 8.4c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.6.7c.8 1.5 1.8 2.4 3.4 3.2l.7-.7c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.3.6-.2.8-.8 1.4-1.5 1.5-1.3.2-3.2-.8-4.7-2.2-1.5-1.4-2.5-3.1-2.7-4.5-.1-.5.2-1.1.7-1.4Z"
+            />
+
+          </svg>
+
+        </a>
+
+        <!-- Email icon only -->
+        <a
+          class="icon-button"
+          href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20Inquiry"
+          aria-label="Email"
+          title="Email"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="2"
+            />
+
+            <path
+              d="m4 7 8 6 8-6"
+            />
+
+          </svg>
+
+        </a>
+
+      </div>
+
     </div>
+
   </header>
 
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
+  <main id="home">
 
-      <div class="hero-label">
-        Victor Phoenix
-      </div>
+    <!-- =========================
+         HERO
+    ========================= -->
 
-      <h1>
-        Create
-        <span>What’s Next.</span>
-      </h1>
+    <section class="hero">
 
-      <p class="hero-text">
-        Digital technology, creative solutions, web experiences,
-        applications and AI-powered innovation built for what comes next.
-      </p>
+      <div class="container hero-grid">
 
-      <div class="hero-buttons">
-        <a href="#services" class="button">
-          Explore Services
-        </a>
+        <div class="hero-copy">
 
-        <a href="#contact" class="button secondary">
-          Get Started
-        </a>
-      </div>
+          <div class="hero-kicker">
 
-    </div>
-  </section>
+            <span>DIGITAL</span>
+            <span>•</span>
+            <span>CREATIVE</span>
+            <span>•</span>
+            <span>INTELLIGENT</span>
 
+          </div>
 
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <div class="container">
+          <h1>
+            Create
+            <span>What’s Next.</span>
+          </h1>
 
-      <div class="section-label">
-        What We Create
-      </div>
+          <p class="hero-description">
 
-      <h2 class="section-title">
-        Digital solutions<br>
-        without limits.
-      </h2>
+            Digital experiences, creative design,
+            technology and AI-powered solutions
+            built for people and businesses
+            moving forward.
 
-      <p class="section-description">
-        Victor Phoenix brings creative design, digital technology,
-        web development, applications and artificial intelligence
-        together under one forward-thinking brand.
-      </p>
-
-
-      <div class="service-grid">
-
-        <div class="service-card">
-          <div class="service-number">01</div>
-          <h3>Phoenix Creative</h3>
-          <p>
-            Graphic design, logos, visual identities, social media
-            creatives and other digital visual experiences.
           </p>
-          <a href="#" class="service-link">Explore Creative →</a>
+
+          <div class="hero-buttons">
+
+            <a
+              href="#services"
+              class="button"
+            >
+              Explore Services →
+            </a>
+
+            <a
+              href="#portfolio"
+              class="button button-outline"
+            >
+              View Work
+            </a>
+
+          </div>
+
         </div>
 
 
-        <div class="service-card">
-          <div class="service-number">02</div>
-          <h3>Phoenix Digital</h3>
-          <p>
-            Websites, web applications, landing pages, UI/UX
-            experiences and digital products.
+        <div class="hero-art">
+
+          <img
+            class="hero-logo"
+            src="logo.png"
+            alt="Victor Phoenix"
+          >
+
+          <div class="hero-glow"></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
+
+    <section
+      class="services-section"
+      id="services"
+    >
+
+      <div class="container services-layout">
+
+        <div>
+
+          <div class="eyebrow">
+            What We Do
+          </div>
+
+          <h2 class="section-title">
+            Digital. Creative.<br>
+            Intelligent.
+          </h2>
+
+          <p class="intro">
+
+            We combine creativity, digital
+            technology and AI to create modern
+            solutions for businesses and
+            individuals worldwide.
+
           </p>
-          <a href="#" class="service-link">Explore Digital →</a>
+
+
+          <div class="service-grid">
+
+
+            <article class="service-card">
+
+              <div class="service-icon">
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+
+                  <path
+                    d="M4 20c3-8 7-13 16-16-2 9-7 13-16 16Z"
+                  />
+
+                  <path
+                    d="M7 17 4 20m5-7 3 3"
+                  />
+
+                </svg>
+
+              </div>
+
+              <span class="service-number">
+                01
+              </span>
+
+              <h3>
+                Graphics & Design
+              </h3>
+
+              <p>
+                Logos, branding, social media
+                creatives, flyers, banners and
+                visual identity.
+              </p>
+
+              <a
+                class="service-link"
+                href="#contact"
+              >
+                Learn More →
+              </a>
+
+            </article>
+
+
+            <article class="service-card">
+
+              <div class="service-icon">
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+
+                  <path
+                    d="m8 9-4 3 4 3M16 9l4 3-4 3M14 6l-4 12"
+                  />
+
+                </svg>
+
+              </div>
+
+              <span class="service-number">
+                02
+              </span>
+
+              <h3>
+                Web Development
+              </h3>
+
+              <p>
+                Modern websites, web apps,
+                landing pages and UI/UX
+                experiences.
+              </p>
+
+              <a
+                class="service-link"
+                href="#contact"
+              >
+                Learn More →
+              </a>
+
+            </article>
+
+
+            <article class="service-card">
+
+              <div class="service-icon">
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+
+                  <rect
+                    x="5"
+                    y="5"
+                    width="14"
+                    height="14"
+                    rx="4"
+                  />
+
+                  <path
+                    d="M9 12h6M12 9v6"
+                  />
+
+                </svg>
+
+              </div>
+
+              <span class="service-number">
+                03
+              </span>
+
+              <h3>
+                AI Solutions
+              </h3>
+
+              <p>
+                AI tools, automation,
+                intelligent workflows and
+                custom AI applications.
+              </p>
+
+              <a
+                class="service-link"
+                href="#contact"
+              >
+                Learn More →
+              </a>
+
+            </article>
+
+
+            <article class="service-card">
+
+              <div class="service-icon">
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+
+                  <path
+                    d="M5 19V9M10 19V5M15 19v-7M20 19V3"
+                  />
+
+                  <path
+                    d="M3 19h19"
+                  />
+
+                </svg>
+
+              </div>
+
+              <span class="service-number">
+                04
+              </span>
+
+              <h3>
+                Digital Marketing
+              </h3>
+
+              <p>
+                Strategy, content, social media,
+                ads and growth-focused campaigns.
+              </p>
+
+              <a
+                class="service-link"
+                href="#contact"
+              >
+                Learn More →
+              </a>
+
+            </article>
+
+
+          </div>
+
         </div>
 
 
-        <div class="service-card">
-          <div class="service-number">03</div>
-          <h3>Phoenix AI</h3>
+        <!-- CONTACT -->
+
+        <aside class="get-touch">
+
+          <div class="eyebrow">
+            Get In Touch
+          </div>
+
+          <h2>
+            Let’s Work<br>
+            Together
+          </h2>
+
           <p>
-            AI-powered tools, automation, intelligent workflows,
-            integrations and custom AI solutions.
+            Have a project, idea or need a
+            digital solution? Reach out and
+            let’s create something amazing.
           </p>
-          <a href="#" class="service-link">Explore AI →</a>
+
+
+          <!-- WhatsApp -->
+
+          <a
+            class="contact-button"
+            href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
+            target="_blank"
+            rel="noopener"
+          >
+
+            <span class="contact-round">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+
+                <path
+                  d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L4 20l.9-3.8A8.5 8.5 0 1 1 20.5 11.7Z"
+                />
+
+                <path
+                  d="M8.5 8.4c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.6.7c.8 1.5 1.8 2.4 3.4 3.2l.7-.7c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.3.6-.2.8-.8 1.4-1.5 1.5-1.3.2-3.2-.8-4.7-2.2-1.5-1.4-2.5-3.1-2.7-4.5-.1-.5.2-1.1.7-1.4Z"
+                />
+
+              </svg>
+
+            </span>
+
+            <span class="contact-label">
+              WhatsApp
+            </span>
+
+            <span class="contact-arrow">
+              →
+            </span>
+
+          </a>
+
+
+          <!-- Email -->
+
+          <a
+            class="contact-button"
+            href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20Inquiry"
+          >
+
+            <span class="contact-round">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+
+                <rect
+                  x="3"
+                  y="5"
+                  width="18"
+                  height="14"
+                  rx="2"
+                />
+
+                <path
+                  d="m4 7 8 6 8-6"
+                />
+
+              </svg>
+
+            </span>
+
+            <span class="contact-label">
+              Email
+            </span>
+
+            <span class="contact-arrow">
+              →
+            </span>
+
+          </a>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PHILOSOPHY / PORTFOLIO
+    ========================= -->
+
+    <section
+      class="lower-section"
+      id="portfolio"
+    >
+
+      <div class="container two-columns">
+
+        <div class="philosophy">
+
+          <div class="eyebrow">
+            Our Philosophy
+          </div>
+
+          <h2>
+            Create.<br>
+            <span>Innovate.</span><br>
+            Evolve.
+          </h2>
+
         </div>
 
 
-        <div class="service-card">
-          <div class="service-number">04</div>
-          <h3>Phoenix Growth</h3>
-          <p>
-            Digital marketing, advertising, content strategy and
-            digital growth solutions.
+        <div>
+
+          <div class="eyebrow">
+            Selected Work
+          </div>
+
+          <h2
+            class="section-title"
+            style="font-size:clamp(36px,4vw,55px)"
+          >
+            Ideas into<br>
+            experiences.
+          </h2>
+
+          <p class="work-description">
+
+            A selection of digital concepts
+            and creative work from the
+            Victor Phoenix universe.
+
           </p>
-          <a href="#" class="service-link">Explore Growth →</a>
-        </div>
 
-      </div>
-    </div>
-  </section>
+          <div class="work-preview"></div>
 
-
-  <!-- PHILOSOPHY -->
-  <section class="philosophy">
-    <div class="philosophy-content">
-
-      <div class="section-label">
-        Philosophy
-      </div>
-
-      <h2>
-        Create.
-        <span>Innovate.</span>
-        Evolve.
-      </h2>
-
-    </div>
-  </section>
-
-
-  <!-- WORK -->
-  <section class="work" id="work">
-    <div class="container">
-
-      <div class="section-label">
-        Selected Work
-      </div>
-
-      <h2 class="section-title">
-        Ideas into<br>
-        experiences.
-      </h2>
-
-      <p class="section-description">
-        A selection of digital concepts and creative work from
-        the Victor Phoenix universe.
-      </p>
-
-
-      <div class="work-grid">
-
-        <div class="work-card">
-          <span>Creative Concept</span>
-        </div>
-
-        <div class="work-card">
-          <span>Digital Experience</span>
-        </div>
-
-        <div class="work-card">
-          <span>AI Concept</span>
         </div>
 
       </div>
 
-    </div>
-  </section>
+    </section>
 
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="container">
+    <!-- =========================
+         ABOUT
+    ========================= -->
 
-      <div class="section-label">
-        About Victor Phoenix
-      </div>
+    <section
+      class="about-section"
+      id="about"
+    >
 
-      <h2 class="section-title">
-        Built for<br>
-        what’s next.
-      </h2>
+      <div class="container about-grid">
 
+        <div>
 
-      <div class="about-grid">
+          <div class="eyebrow">
+            About Victor Phoenix
+          </div>
 
-        <div class="about-block">
-          <h3>Mission</h3>
-          <p>
-            To create innovative digital experiences, technologies
-            and AI-powered solutions that help people and businesses
-            move forward.
+          <h2 class="section-title">
+            Built for<br>
+            what’s next.
+          </h2>
+
+          <p class="about-text">
+
+            Victor Phoenix is a digital
+            technology and creative brand
+            focused on building modern visual
+            experiences, websites, applications
+            and AI-powered solutions.
+
           </p>
+
         </div>
 
-        <div class="about-block">
-          <h3>Vision</h3>
-          <p>
-            To build a globally recognized technology brand that
-            shapes how people create, connect and grow in the
-            digital world.
-          </p>
+
+        <div class="values">
+
+          <div class="value">
+            <strong>Bold</strong>
+            <span>Make an impression.</span>
+          </div>
+
+          <div class="value">
+            <strong>Premium</strong>
+            <span>Details matter.</span>
+          </div>
+
+          <div class="value">
+            <strong>Innovative</strong>
+            <span>Build forward.</span>
+          </div>
+
+          <div class="value">
+            <strong>Global</strong>
+            <span>Think beyond borders.</span>
+          </div>
+
+          <div class="value">
+            <strong>Minimal</strong>
+            <span>Clarity over clutter.</span>
+          </div>
+
         </div>
 
       </div>
 
-    </div>
-  </section>
+    </section>
 
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="contact-content">
+    <!-- =========================
+         FINAL CONTACT
+    ========================= -->
 
-      <div class="section-label">
-        Start Something
+    <section
+      class="final-contact"
+      id="contact"
+    >
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Start Something
+        </div>
+
+        <h2>
+          Let’s create<br>
+          what’s next.
+        </h2>
+
+        <p>
+
+          Have an idea, project or digital
+          challenge? Contact Victor Phoenix
+          directly and tell us what you want
+          to create.
+
+        </p>
+
+
+        <div class="final-buttons">
+
+          <a
+            class="button"
+            href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
+            target="_blank"
+            rel="noopener"
+          >
+            WhatsApp →
+          </a>
+
+          <a
+            class="button button-outline"
+            href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20Inquiry"
+          >
+            Email →
+          </a>
+
+        </div>
+
       </div>
 
-      <h2>
-        Let’s create<br>
-        what’s next.
-      </h2>
+    </section>
 
-      <p>
-        Have an idea, project or digital challenge?
-        Let’s turn it into something real.
-      </p>
-
-      <a href="#" class="button">
-        Get Started
-      </a>
-
-    </div>
-  </section>
+  </main>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
-    <div class="footer-inner">
+
+    <div class="container footer-row">
 
       <span>
-        © 2026 Victor Phoenix
+        © 2026 Victor Phoenix. All rights reserved.
       </span>
 
       <span>
@@ -627,6 +1767,7 @@
       </span>
 
     </div>
+
   </footer>
 
 </body>

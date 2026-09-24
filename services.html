@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Services — Victor Phoenix</title>
+
+  <meta
+    name="description"
+    content="Explore digital, creative, web, AI and marketing services from Victor Phoenix."
+  >
+
+  <style>
+    :root {
+      --black: #050505;
+      --dark: #090909;
+      --panel: #0d0d0f;
+      --white: #f5f5f5;
+      --gray: #9999a1;
+      --line: rgba(255,255,255,.11);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(
+          circle at 80% 10%,
+          rgba(255,255,255,.08),
+          transparent 30%
+        ),
+        var(--black);
+
+      color: var(--white);
+
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(
+        1200px,
+        calc(100% - 40px)
+      );
+
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+
+      height: 80px;
+
+      background: rgba(5,5,5,.82);
+
+      backdrop-filter: blur(18px);
+
+      border-bottom:
+        1px solid var(--line);
+    }
+
+    .nav {
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      width: 190px;
+    }
+
+    .back {
+      color: #aaaab0;
+
+      font-size: 13px;
+
+      transition: .25s;
+    }
+
+    .back:hover {
+      color: white;
+    }
+
+    /* HERO */
+
+    .page-hero {
+      padding: 110px 0 80px;
+
+      border-bottom:
+        1px solid var(--line);
+    }
+
+    .eyebrow {
+      color: #77777f;
+
+      text-transform: uppercase;
+
+      letter-spacing: 4px;
+
+      font-size: 10px;
+
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size:
+        clamp(
+          55px,
+          8vw,
+          100px
+        );
+
+      line-height: .9;
+
+      letter-spacing: -5px;
+
+      margin-top: 18px;
+    }
+
+    h1 span {
+      display: block;
+
+      background:
+        linear-gradient(
+          100deg,
+          #f4f4f4,
+          #707078
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .intro {
+      max-width: 650px;
+
+      margin-top: 25px;
+
+      color: #96969e;
+
+      font-size: 15px;
+
+      line-height: 1.8;
+    }
+
+    /* SERVICES */
+
+    .services {
+      padding: 70px 0 100px;
+    }
+
+    .service-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 18px;
+    }
+
+    .service-card {
+      min-height: 340px;
+
+      padding: 30px;
+
+      border-radius: 18px;
+
+      border: 1px solid var(--line);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.055),
+          rgba(255,255,255,.008)
+        );
+
+      position: relative;
+
+      overflow: hidden;
+
+      transition: .3s;
+    }
+
+    .service-card::after {
+      content: "";
+
+      position: absolute;
+
+      width: 280px;
+      height: 280px;
+
+      right: -100px;
+      bottom: -130px;
+
+      border-radius: 50%;
+
+      border: 1px solid
+        rgba(255,255,255,.07);
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+
+      border-color: #55555c;
+
+      box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.4);
+    }
+
+    .number {
+      color: #66666d;
+
+      font-size: 11px;
+
+      letter-spacing: 2px;
+    }
+
+    .service-card h2 {
+      font-size: 30px;
+
+      margin-top: 45px;
+
+      letter-spacing: -1px;
+    }
+
+    .service-card p {
+      color: #909098;
+
+      font-size: 13px;
+
+      max-width: 450px;
+
+      margin-top: 13px;
+    }
+
+    .explore {
+      position: absolute;
+
+      left: 30px;
+      bottom: 28px;
+
+      font-size: 12px;
+
+      font-weight: 700;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 30px 0;
+
+      border-top:
+        1px solid var(--line);
+
+      color: #626269;
+
+      font-size: 11px;
+    }
+
+    .footer-row {
+      display: flex;
+
+      justify-content: space-between;
+    }
+
+    @media (max-width: 700px) {
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        letter-spacing: -3px;
+      }
+
+      .footer-row {
+        flex-direction: column;
+
+        gap: 8px;
+      }
+
+      .logo img {
+        width: 145px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="container nav">
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <img
+          src="logo.png"
+          alt="Victor Phoenix"
+        >
+
+      </a>
+
+      <a
+        href="index.html"
+        class="back"
+      >
+        ← Back Home
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <section class="page-hero">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Victor Phoenix Services
+        </div>
+
+        <h1>
+          Digital.
+          <span>Creative.</span>
+          Intelligent.
+        </h1>
+
+        <p class="intro">
+
+          Explore the services we provide across
+          creative design, digital technology,
+          artificial intelligence and digital
+          growth.
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="services">
+
+      <div class="container">
+
+        <div class="service-grid">
+
+
+          <!-- GRAPHICS -->
+
+          <a
+            href="#"
+            class="service-card"
+          >
+
+            <div class="number">
+              01 / CREATIVE
+            </div>
+
+            <h2>
+              Graphics & Design
+            </h2>
+
+            <p>
+
+              Build a strong visual identity with
+              logo design, flyers, banners,
+              brochures, social media graphics and
+              other creative assets.
+
+            </p>
+
+            <span class="explore">
+              Explore Graphics →
+            </span>
+
+          </a>
+
+
+          <!-- WEB -->
+
+          <a
+            href="#"
+            class="service-card"
+          >
+
+            <div class="number">
+              02 / TECHNOLOGY
+            </div>
+
+            <h2>
+              Web Development
+            </h2>
+
+            <p>
+
+              Modern websites, landing pages,
+              web applications and digital
+              experiences designed around your
+              goals.
+
+            </p>
+
+            <span class="explore">
+              Explore Web →
+            </span>
+
+          </a>
+
+
+          <!-- AI -->
+
+          <a
+            href="#"
+            class="service-card"
+          >
+
+            <div class="number">
+              03 / INTELLIGENCE
+            </div>
+
+            <h2>
+              AI Solutions
+            </h2>
+
+            <p>
+
+              Explore AI-powered tools,
+              automation, intelligent workflows,
+              integrations and custom digital
+              solutions.
+
+            </p>
+
+            <span class="explore">
+              Explore AI →
+            </span>
+
+          </a>
+
+
+          <!-- MARKETING -->
+
+          <a
+            href="#"
+            class="service-card"
+          >
+
+            <div class="number">
+              04 / GROWTH
+            </div>
+
+            <h2>
+              Digital Marketing
+            </h2>
+
+            <p>
+
+              Digital strategy, content,
+              advertising, social media and
+              growth-focused digital campaigns.
+
+            </p>
+
+            <span class="explore">
+              Explore Marketing →
+            </span>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="container footer-row">
+
+      <span>
+        © 2026 Victor Phoenix. All rights reserved.
+      </span>
+
+      <span>
+        Create What’s Next.
+      </span>
+
+    </div>
+
+  </footer>
+
+</body>
+  </html>

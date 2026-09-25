@@ -3,116 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Logo Design | Victor Phoenix</title>
-
-<meta name="description"
-content="Professional logo design styles and packages by Victor Phoenix.">
 
 <style>
 :root{
   --bg:#070707;
-  --surface:#101010;
-  --surface2:#151515;
+  --card:#111;
+  --card2:#151515;
   --line:#292929;
   --text:#f5f5f5;
-  --muted:#a6a6a6;
-  --soft:#d8d8d8;
+  --muted:#999;
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
-  font-family:Inter,Arial,sans-serif;
   background:var(--bg);
   color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
   line-height:1.6;
 }
 
 a{
-  color:inherit;
   text-decoration:none;
+  color:inherit;
 }
-
-/* HEADER */
 
 header{
   position:sticky;
   top:0;
-  z-index:20;
+  z-index:50;
   background:rgba(7,7,7,.92);
-  backdrop-filter:blur(16px);
+  backdrop-filter:blur(15px);
   border-bottom:1px solid var(--line);
 }
 
 .nav{
-  max-width:1280px;
+  max-width:1300px;
   margin:auto;
-  padding:18px 24px;
+  padding:18px 25px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  gap:20px;
+  align-items:center;
 }
 
 .logo{
-  height:48px;
   width:auto;
-  object-fit:contain;
+  height:48px;
 }
 
 .back{
-  border:1px solid #3a3a3a;
-  padding:10px 16px;
-  border-radius:999px;
-  color:var(--soft);
+  border:1px solid #444;
+  padding:10px 17px;
+  border-radius:30px;
   font-size:14px;
 }
 
 .back:hover{
-  background:#fff;
-  color:#000;
+  background:white;
+  color:black;
 }
-
-/* HERO */
 
 .hero{
   max-width:1100px;
   margin:auto;
-  padding:100px 24px 65px;
+  padding:100px 25px 70px;
   text-align:center;
 }
 
 .eyebrow{
+  color:#888;
   text-transform:uppercase;
   letter-spacing:.22em;
-  color:#999;
   font-size:12px;
-  margin-bottom:18px;
+  margin-bottom:20px;
 }
 
-h1{
-  font-size:clamp(52px,9vw,110px);
+.hero h1{
+  font-size:clamp(55px,9vw,110px);
   line-height:.9;
-  letter-spacing:-.055em;
+  letter-spacing:-.06em;
 }
 
 .hero p{
   max-width:760px;
-  margin:28px auto 0;
+  margin:30px auto 0;
   color:var(--muted);
   font-size:18px;
 }
 
-/* CATALOG */
+/* LOGO SECTIONS */
 
 .catalog{
   max-width:1250px;
@@ -120,160 +102,160 @@ h1{
   padding:20px 24px 100px;
 }
 
-.logo-block{
-  margin:0 0 90px;
+.logo-section{
+  margin-bottom:90px;
 }
-
-/* SHOWCASE */
 
 .showcase{
-  border:1px solid var(--line);
-  border-radius:30px;
   overflow:hidden;
-  background:linear-gradient(145deg,#0d0d0d,#161616);
+  border:1px solid var(--line);
+  border-radius:28px;
+  background:linear-gradient(145deg,#0d0d0d,#171717);
 }
 
-.showcase-top{
-  padding:14px 18px;
-  border-bottom:1px solid var(--line);
+.showcase-label{
   display:flex;
   justify-content:space-between;
-  color:#888;
+  padding:14px 20px;
+  border-bottom:1px solid var(--line);
+  color:#777;
   font-size:11px;
-  text-transform:uppercase;
   letter-spacing:.16em;
+  text-transform:uppercase;
 }
-
-/* SAMPLE */
 
 .sample{
   min-height:430px;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:60px 25px;
   position:relative;
   overflow:hidden;
+  padding:60px 25px;
 }
 
 .sample:before{
   content:"";
   position:absolute;
-  width:430px;
-  height:430px;
+  width:450px;
+  height:450px;
   border-radius:50%;
-  filter:blur(80px);
-  opacity:.16;
   background:var(--accent);
-  top:-180px;
+  opacity:.13;
+  filter:blur(100px);
+  top:-220px;
   right:-150px;
 }
 
-.sample:after{
-  content:"";
-  position:absolute;
-  width:300px;
-  height:300px;
-  border-radius:50%;
-  filter:blur(90px);
-  opacity:.09;
-  background:var(--accent);
-  bottom:-180px;
-  left:-100px;
-}
-
-.sample-inner{
-  position:relative;
+.sample-content{
   text-align:center;
+  position:relative;
   z-index:2;
 }
 
-/* LOGO SYMBOL */
-
 .symbol{
-  width:150px;
-  height:150px;
-  margin:0 auto 25px;
-  display:grid;
-  place-items:center;
+  width:145px;
+  height:145px;
+  margin:auto auto 25px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   color:var(--accent);
-  font-weight:900;
   font-size:52px;
-  border-radius:30px;
+  font-weight:900;
 }
 
-/* Individual visual treatments */
+.brand{
+  font-size:clamp(34px,6vw,70px);
+  font-weight:900;
+  letter-spacing:-.055em;
+}
 
-.style-minimalist .symbol{
+.tagline{
+  margin-top:10px;
+  color:#aaa;
+  font-size:13px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+.sample-note{
+  margin-top:22px;
+  color:#666;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+}
+
+/* VISUAL STYLES */
+
+.minimalist .symbol{
   border:5px solid var(--accent);
   border-radius:50%;
 }
 
-.style-abstract .symbol{
-  border-radius:38% 62% 60% 40%;
-  background:linear-gradient(135deg,var(--accent),#ffffff22);
-  transform:rotate(-12deg);
+.abstract .symbol{
+  background:linear-gradient(135deg,var(--accent),#fff2);
+  border-radius:35% 65% 60% 40%;
+  transform:rotate(-15deg);
 }
 
-.style-wordmark .symbol{
+.wordmark .symbol{
   border-bottom:7px solid var(--accent);
-  border-radius:0;
 }
 
-.style-lettermark .symbol{
+.lettermark .symbol{
   border:4px solid var(--accent);
   border-radius:18px;
 }
 
-.style-monogram .symbol{
+.monogram .symbol{
   border:4px solid var(--accent);
   border-radius:50%;
 }
 
-.style-luxury .symbol{
-  transform:rotate(45deg);
+.luxury .symbol{
   border:4px solid var(--accent);
+  transform:rotate(45deg);
   border-radius:12px;
 }
 
-.style-vintage .symbol{
+.vintage .symbol{
   border:5px double var(--accent);
   border-radius:50%;
 }
 
-.style-emblem .symbol{
+.emblem .symbol{
   border:4px solid var(--accent);
-  clip-path:polygon(50% 0%,92% 22%,82% 82%,50% 100%,18% 82%,8% 22%);
+  clip-path:polygon(50% 0,92% 22%,82% 82%,50% 100%,18% 82%,8% 22%);
 }
 
-.style-mascot .symbol{
-  border-radius:42% 42% 35% 35%;
-  background:#181818;
+.mascot .symbol{
+  background:#191919;
   border:4px solid var(--accent);
+  border-radius:42%;
 }
 
-.style-3d .symbol{
-  background:linear-gradient(145deg,var(--accent),#ffffff22);
-  box-shadow:
-    12px 12px 0 rgba(255,255,255,.06),
-    22px 22px 35px rgba(0,0,0,.6);
-  transform:skewY(-4deg);
+.threed .symbol{
+  background:linear-gradient(145deg,var(--accent),#fff2);
+  box-shadow:12px 12px 0 #ffffff0b,25px 25px 40px #000;
+  border-radius:18px;
 }
 
-.style-signature .symbol{
+.signature .symbol{
   border-bottom:3px solid var(--accent);
   border-radius:50%;
   font-family:cursive;
 }
 
-.style-combination .symbol{
+.combination .symbol{
   border:4px solid var(--accent);
   border-radius:50%;
 }
 
-.style-industrial .symbol{
-  background:#171717;
+.industrial .symbol{
   border:5px solid var(--accent);
+  background:#181818;
   clip-path:polygon(
     0 20%,20% 20%,20% 0,80% 0,
     80% 20%,100% 20%,100% 80%,
@@ -282,138 +264,113 @@ h1{
   );
 }
 
-.style-tech .symbol{
+.tech .symbol{
   border:3px solid var(--accent);
   border-radius:22px;
-  box-shadow:inset 0 0 30px #ffffff0d;
+  box-shadow:inset 0 0 35px #fff1;
 }
 
-.style-geometric .symbol{
-  clip-path:polygon(50% 0%,100% 100%,0% 100%);
-  background:linear-gradient(145deg,var(--accent),#ffffff15);
+.geometric .symbol{
+  background:var(--accent);
+  clip-path:polygon(50% 0,100% 100%,0 100%);
+  color:#111;
 }
 
-.style-negative .symbol{
+.negative .symbol{
   border-radius:50%;
-  background:
-    radial-gradient(circle at 35% 35%,transparent 0 24%,var(--accent) 25% 50%,transparent 51%);
+  background:radial-gradient(circle at 35% 35%,transparent 0 23%,var(--accent) 24% 50%,transparent 51%);
 }
 
-.style-badge .symbol{
+.badge .symbol{
   border:4px solid var(--accent);
-  border-radius:18px;
+  border-radius:20px;
 }
 
-.style-pictorial .symbol{
+.pictorial .symbol{
+  border:4px solid var(--accent);
   border-radius:50%;
-  background:#151515;
-  border:3px solid var(--accent);
 }
 
-.style-character .symbol{
+.character .symbol{
   border:4px solid var(--accent);
   border-radius:45%;
 }
 
-.style-handcrafted .symbol{
+.handcrafted .symbol{
   border:3px dashed var(--accent);
   border-radius:38%;
 }
 
-.style-sports .symbol{
+.sports .symbol{
+  border-left:9px solid var(--accent);
+  border-right:9px solid var(--accent);
   transform:skewX(-10deg);
-  border-left:8px solid var(--accent);
-  border-right:8px solid var(--accent);
 }
 
-.style-gaming .symbol{
+.gaming .symbol{
   border:4px solid var(--accent);
   clip-path:polygon(10% 0,90% 0,100% 70%,75% 100%,25% 100%,0 70%);
 }
 
-.style-fashion .symbol{
+.fashion .symbol{
   border-bottom:3px solid var(--accent);
   border-radius:50%;
 }
 
-.style-corporate .symbol{
+.corporate .symbol{
   border:3px solid var(--accent);
   border-radius:20px;
 }
 
-.style-food .symbol{
+.food .symbol{
   border:5px solid var(--accent);
   border-radius:50%;
 }
 
-.style-realestate .symbol{
-  clip-path:polygon(50% 0,100% 38%,100% 100%,0 100%,0 38%);
+.realestate .symbol{
   background:#151515;
   border:3px solid var(--accent);
+  clip-path:polygon(50% 0,100% 38%,100% 100%,0 100%,0 38%);
 }
 
-.style-beauty .symbol{
+.beauty .symbol{
   border:3px solid var(--accent);
   border-radius:50% 20% 50% 20%;
   transform:rotate(45deg);
 }
 
-.style-automotive .symbol{
+.automotive .symbol{
   border:4px solid var(--accent);
   border-radius:50%;
 }
 
-.style-entertainment .symbol{
+.entertainment .symbol{
   border:4px solid var(--accent);
   border-radius:50%;
-  box-shadow:0 0 30px #ffffff0c;
+  box-shadow:0 0 35px #fff1;
 }
 
-.style-apparel .symbol{
+.apparel .symbol{
   border:4px solid var(--accent);
   transform:skewX(-8deg);
-}
-
-/* BRAND NAME */
-
-.brand{
-  font-size:clamp(32px,6vw,68px);
-  font-weight:900;
-  letter-spacing:-.05em;
-}
-
-.tagline{
-  margin-top:8px;
-  color:#a9a9a9;
-  font-size:14px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-}
-
-.sample-note{
-  margin-top:22px;
-  font-size:11px;
-  color:#777;
-  text-transform:uppercase;
-  letter-spacing:.14em;
 }
 
 /* INFO */
 
 .info{
-  padding:34px;
+  padding:35px;
 }
 
 .info h2{
   font-size:38px;
-  letter-spacing:-.035em;
+  letter-spacing:-.04em;
   margin-bottom:10px;
 }
 
-.info > p{
+.description{
   color:var(--muted);
   max-width:900px;
-  margin-bottom:32px;
+  margin-bottom:30px;
 }
 
 /* PACKAGES */
@@ -425,15 +382,14 @@ h1{
 }
 
 .package{
-  background:#0d0d0d;
-  border:1px solid #2b2b2b;
+  padding:25px;
+  background:#0c0c0c;
+  border:1px solid #2a2a2a;
   border-radius:20px;
-  padding:24px;
 }
 
-.package.featured{
+.package.standard{
   border-color:#777;
-  background:#111;
 }
 
 .package h3{
@@ -441,9 +397,9 @@ h1{
 }
 
 .price{
-  font-size:34px;
-  font-weight:800;
-  margin:9px 0 14px;
+  font-size:36px;
+  font-weight:900;
+  margin:8px 0 16px;
 }
 
 .package ul{
@@ -458,28 +414,30 @@ h1{
 }
 
 .package li:last-child{
-  border-bottom:0;
+  border-bottom:none;
 }
 
-.cta{
-  display:inline-flex;
-  margin-top:20px;
-  padding:12px 17px;
-  border-radius:999px;
-  background:#f2f2f2;
+/* ONLY START NOW ON PACKAGES */
+
+.start{
+  display:block;
+  margin-top:22px;
+  padding:12px;
+  text-align:center;
+  border-radius:30px;
+  background:white;
   color:#000;
-  font-weight:700;
+  font-weight:800;
   font-size:13px;
 }
 
-.cta:hover{
-  background:#fff;
-  transform:translateY(-1px);
+.start:hover{
+  background:#ddd;
 }
 
-/* CONTACT */
+/* FINAL CONTACT */
 
-.contact{
+.final-contact{
   max-width:1250px;
   margin:0 auto 100px;
   padding:0 24px;
@@ -488,46 +446,38 @@ h1{
 .contact-box{
   border:1px solid #333;
   border-radius:28px;
-  padding:55px;
+  padding:60px 30px;
   text-align:center;
-  background:linear-gradient(135deg,#111,#080808);
+  background:linear-gradient(135deg,#131313,#080808);
 }
 
 .contact-box h2{
-  font-size:clamp(32px,5vw,58px);
-  letter-spacing:-.04em;
+  font-size:clamp(34px,5vw,60px);
+  letter-spacing:-.05em;
 }
 
 .contact-box p{
+  max-width:680px;
+  margin:18px auto 28px;
   color:#999;
-  max-width:700px;
-  margin:15px auto 25px;
 }
 
-.contact-btn{
-  display:inline-flex;
-  padding:14px 22px;
-  border-radius:999px;
+.contact-button{
+  display:inline-block;
   background:white;
-  color:black;
+  color:#000;
+  padding:14px 24px;
+  border-radius:30px;
   font-weight:800;
 }
 
-.contact-btn:hover{
-  transform:translateY(-2px);
-}
-
-/* FOOTER */
-
 footer{
   border-top:1px solid var(--line);
-  padding:30px 24px;
+  padding:30px;
   text-align:center;
   color:#666;
   font-size:13px;
 }
-
-/* MOBILE */
 
 @media(max-width:850px){
 
@@ -539,20 +489,12 @@ footer{
     min-height:360px;
   }
 
-  .info{
-    padding:25px;
-  }
-
-  .contact-box{
-    padding:35px 22px;
-  }
-
 }
 
 @media(max-width:600px){
 
   .nav{
-    padding:15px 18px;
+    padding:15px;
   }
 
   .logo{
@@ -561,7 +503,6 @@ footer{
 
   .back{
     font-size:12px;
-    padding:8px 12px;
   }
 
   .hero{
@@ -573,27 +514,8 @@ footer{
     padding-right:15px;
   }
 
-  .logo-block{
-    margin-bottom:65px;
-  }
-
-  .showcase{
-    border-radius:22px;
-  }
-
-  .sample{
-    padding:45px 18px;
-  }
-
-  .symbol{
-    width:125px;
-    height:125px;
-    margin-bottom:20px;
-  }
-
-  .tagline{
-    font-size:11px;
-    letter-spacing:.12em;
+  .info{
+    padding:25px;
   }
 
 }
@@ -603,19 +525,17 @@ footer{
 <body>
 
 <header>
-
 <nav class="nav">
 
 <a href="graphics.html">
 <img src="logo.png" class="logo" alt="Victor Phoenix">
 </a>
 
-<a class="back" href="graphics.html">
+<a href="graphics.html" class="back">
 ← Graphics & Design
 </a>
 
 </nav>
-
 </header>
 
 
@@ -626,12 +546,11 @@ Phoenix Creative · Logo Design
 </div>
 
 <h1>
-Build a logo<br>
-people remember.
+Logo Design.
 </h1>
 
 <p>
-Explore a broad professional logo catalogue — from clean minimalist marks to industrial, technology, gaming, sports, fashion, mascot, signature and specialized brand identities.
+Explore professional logo styles for businesses, creators, technology brands, entertainment, fashion, sports, gaming, hospitality and more.
 </p>
 
 </section>
@@ -640,23 +559,25 @@ Explore a broad professional logo catalogue — from clean minimalist marks to i
 <main class="catalog" id="catalog"></main>
 
 
-<section class="contact">
+<!-- FINAL CONTACT SECTION — OUTSIDE ALL PACKAGES -->
+
+<section class="final-contact">
 
 <div class="contact-box">
 
 <h2>
-Tell Victor Phoenix what you want to create.
+Ready to create?
 </h2>
 
 <p>
-Choose a logo style above, or tell us about your business, idea or project. We can help shape the visual direction and package that fits your brand.
+Tell Victor Phoenix what you want to create. Share your business, idea, preferred logo style or anything you already have in mind.
 </p>
 
 <a
-class="contact-btn"
+class="contact-button"
 href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20create%20a%20logo.%20Here%20is%20what%20I%20want%3A"
 >
-Start an inquiry on WhatsApp
+Contact Victor Phoenix →
 </a>
 
 </div>
@@ -671,354 +592,76 @@ Start an inquiry on WhatsApp
 
 <script>
 
-const types = [
+const logos = [
 
-[
-"Minimalist",
-"NOVA",
-"Simply Forward",
-"A refined logo built around reduction, balance and clarity. Ideal for modern brands that need a clean identity that works everywhere.",
-"●",
-"35","55","90",
-"#e8e8e8",
-"minimalist"
-],
+["Minimalist","NOVA","Simply Forward","A clean and refined identity built around simplicity, balance and clarity.","●","#e8e8e8","minimalist","35","55","90"],
 
-[
-"Abstract",
-"VYRA",
-"Beyond Form",
-"A distinctive abstract mark using expressive shapes and movement to create a memorable visual identity.",
-"◈",
-"45","70","110",
-"#ff5c7a",
-"abstract"
-],
+["Abstract","VYRA","Beyond Form","An expressive identity using distinctive shapes and movement to create a memorable visual language.","◈","#ff5c7a","abstract","45","70","110"],
 
-[
-"Wordmark",
-"VELA",
-"Move Beautifully",
-"A typography-led identity where the brand name is the hero, with custom spacing and visual character.",
-"V",
-"35","55","90",
-"#58a6ff",
-"wordmark"
-],
+["Wordmark","VELA","Move Beautifully","A typography-led identity where the brand name becomes the central visual asset.","V","#58a6ff","wordmark","35","55","90"],
 
-[
-"Lettermark",
-"ARC",
-"Build With Purpose",
-"A compact initial-based identity designed for companies that want a sharp, recognizable mark.",
-"A",
-"35","55","90",
-"#7ee787",
-"lettermark"
-],
+["Lettermark","ARC","Build With Purpose","A compact initial-based identity designed for strong recognition and clean applications.","A","#7ee787","lettermark","35","55","90"],
 
-[
-"Monogram",
-"MONARQ",
-"Defined by Detail",
-"Interlocked initials create a sophisticated symbol suitable for premium personal and corporate brands.",
-"M",
-"40","60","100",
-"#d2a8ff",
-"monogram"
-],
+["Monogram","MONARQ","Defined by Detail","An interlocking-letter identity designed for sophisticated and premium brands.","M","#d2a8ff","monogram","40","60","100"],
 
-[
-"Luxury / Premium",
-"VÉRONA",
-"The Art of Living",
-"An elegant identity with refined proportions, premium typography and a high-fashion visual language.",
-"◇",
-"55","85","130",
-"#f2c14e",
-"luxury"
-],
+["Luxury / Premium","VÉRONA","The Art of Living","An elegant identity direction with refined proportions and premium visual character.","◇","#f2c14e","luxury","55","85","130"],
 
-[
-"Vintage / Retro",
-"OLD TOWN",
-"Since 1987",
-"A heritage-inspired badge treatment with classic character, strong typography and nostalgic detail.",
-"OT",
-"45","70","110",
-"#d69e6d",
-"vintage"
-],
+["Vintage / Retro","OLD TOWN","Since 1987","A heritage-inspired identity with classic typography and nostalgic character.","OT","#d69e6d","vintage","45","70","110"],
 
-[
-"Emblem",
-"VALOR",
-"Strength in Unity",
-"A structured emblem combining symbol, typography and badge architecture for organizations and brands.",
-"V",
-"45","70","110",
-"#4dd0e1",
-"emblem"
-],
+["Emblem","VALOR","Strength in Unity","A structured badge-style identity for organizations, clubs, institutions and brands.","V","#4dd0e1","emblem","45","70","110"],
 
-[
-"Mascot",
-"FANG",
-"Play Without Limits",
-"A character-led identity designed to feel expressive, recognizable and memorable — ideal for gaming, sports and entertainment.",
-"◉",
-"65","105","160",
-"#ff7a18",
-"mascot"
-],
+["Mascot","FANG","Play Without Limits","An expressive character-led identity ideal for gaming, sports, entertainment and youth brands.","◉","#ff7a18","mascot","65","105","160"],
 
-[
-"3D",
-"VORTEX",
-"Enter Another Dimension",
-"A dimensional identity direction using depth, highlights and perspective for technology, entertainment and digital brands.",
-"3D",
-"65","105","160",
-"#8b9cff",
-"3d"
-],
+["3D","VORTEX","Enter Another Dimension","A dimensional logo direction using depth, highlights and perspective.","3D","#8b9cff","threed","65","105","160"],
 
-[
-"Signature",
-"Eliana",
-"Made Personally",
-"A handwritten signature-style identity for creators, personalities, beauty, fashion and personal brands.",
-"E",
-"45","70","110",
-"#ff8fc7",
-"signature"
-],
+["Signature","Eliana","Made Personally","A personal handwritten identity for creators, personalities, beauty and fashion brands.","E","#ff8fc7","signature","45","70","110"],
 
-[
-"Combination",
-"VERTEX",
-"Build What Matters",
-"A complete combination mark bringing together a symbol and wordmark into one flexible identity.",
-"V★",
-"50","80","125",
-"#36d399",
-"combination"
-],
+["Combination","VERTEX","Build What Matters","A flexible identity combining a symbol with a strong wordmark.","V★","#36d399","combination","50","80","125"],
 
-[
-"Industrial",
-"FORGE",
-"Built to Perform",
-"A bold engineered identity using strong geometry and rugged visual language for construction, manufacturing, engineering and industrial businesses.",
-"F",
-"50","80","125",
-"#f97316",
-"industrial"
-],
+["Industrial","FORGE","Built to Perform","A bold engineered identity for construction, manufacturing, engineering and industrial businesses.","F","#f97316","industrial","50","80","125"],
 
-[
-"Tech / Technology",
-"NEXORA",
-"Technology in Motion",
-"A futuristic technology identity using precise geometry, digital forms and a modern wordmark system.",
-"N",
-"50","80","125",
-"#22d3ee",
-"tech"
-],
+["Tech / Technology","NEXORA","Technology in Motion","A futuristic technology identity using precise geometry and digital visual language.","N","#22d3ee","tech","50","80","125"],
 
-[
-"Geometric",
-"AXIS",
-"Precision in Motion",
-"A mathematically structured mark built from balanced geometric forms for modern professional brands.",
-"△",
-"45","70","110",
-"#60a5fa",
-"geometric"
-],
+["Geometric","AXIS","Precision in Motion","A structured identity built from balanced geometric forms.","△","#60a5fa","geometric","45","70","110"],
 
-[
-"Negative Space",
-"NOVAIR",
-"See Beyond",
-"A clever symbol that reveals a second idea through negative space, creating a memorable visual discovery.",
-"◐",
-"50","80","125",
-"#a78bfa",
-"negative"
-],
+["Negative Space","NOVAIR","See Beyond","A clever identity where a second visual idea is revealed through negative space.","◐","#a78bfa","negative","50","80","125"],
 
-[
-"Badge",
-"NORTHLINE",
-"Made for the Journey",
-"A strong enclosed identity designed for communities, products, apparel, clubs and lifestyle brands.",
-"N",
-"45","70","110",
-"#34d399",
-"badge"
-],
+["Badge","NORTHLINE","Made for the Journey","A strong enclosed identity for lifestyle brands, products, clubs and communities.","N","#34d399","badge","45","70","110"],
 
-[
-"Pictorial / Symbol",
-"LUMO",
-"Light Your Way",
-"A standalone visual symbol designed to communicate the brand without relying entirely on typography.",
-"✦",
-"45","70","110",
-"#fbbf24",
-"pictorial"
-],
+["Pictorial / Symbol","LUMO","Light Your Way","A standalone visual symbol designed to communicate the brand independently.","✦","#fbbf24","pictorial","45","70","110"],
 
-[
-"Character",
-"ROO",
-"Made to Stand Out",
-"A friendly illustrated character direction for brands that need personality, warmth and visual recognition.",
-"R",
-"60","95","145",
-"#fb7185",
-"character"
-],
+["Character","ROO","Made to Stand Out","A personality-driven identity using character and illustration.","R","#fb7185","character","60","95","145"],
 
-[
-"Handcrafted",
-"MOSS & CO.",
-"Naturally Made",
-"An organic identity direction using hand-drawn character, imperfect detail and natural visual personality.",
-"✿",
-"45","70","110",
-"#84cc16",
-"handcrafted"
-],
+["Handcrafted","MOSS & CO.","Naturally Made","An organic hand-drawn direction for natural, handmade and lifestyle brands.","✿","#84cc16","handcrafted","45","70","110"],
 
-[
-"Sports",
-"APEX",
-"Push Further",
-"A high-energy identity designed for clubs, athletes, fitness brands and competitive organizations.",
-"A",
-"50","80","125",
-"#ef4444",
-"sports"
-],
+["Sports","APEX","Push Further","A powerful high-energy identity for sports, fitness, clubs and athletes.","A","#ef4444","sports","50","80","125"],
 
-[
-"Gaming",
-"FANG//X",
-"Enter the Arena",
-"A bold gaming identity with aggressive shape language, character potential and strong digital readability.",
-"FX",
-"60","100","155",
-"#a855f7",
-"gaming"
-],
+["Gaming","FANG//X","Enter the Arena","A bold gaming identity designed for strong digital recognition and character.","FX","#a855f7","gaming","60","100","155"],
 
-[
-"Fashion",
-"NOIRÉ",
-"Designed to Be Seen",
-"A refined fashion-oriented identity emphasizing typography, proportion and editorial sophistication.",
-"N",
-"55","85","130",
-"#f472b6",
-"fashion"
-],
+["Fashion","NOIRÉ","Designed to Be Seen","A refined fashion identity emphasizing typography, proportion and editorial style.","N","#f472b6","fashion","55","85","130"],
 
-[
-"Corporate",
-"NORTHSTAR",
-"Lead With Clarity",
-"A professional corporate identity system designed for trust, consistency and long-term brand use.",
-"★",
-"50","80","125",
-"#94a3b8",
-"corporate"
-],
+["Corporate","NORTHSTAR","Lead With Clarity","A professional identity designed for corporate organizations and long-term brand systems.","★","#94a3b8","corporate","50","80","125"],
 
-[
-"Food / Restaurant",
-"SAVORA",
-"Made to Taste",
-"A warm identity direction for restaurants, cafés, food brands and hospitality businesses.",
-"S",
-"45","70","110",
-"#fb923c",
-"food"
-],
+["Food / Restaurant","SAVORA","Made to Taste","A warm identity direction for restaurants, cafés, food brands and hospitality.","S","#fb923c","food","45","70","110"],
 
-[
-"Real Estate",
-"VERTEX ESTATES",
-"Spaces With Purpose",
-"A polished property-focused identity using architectural structure and premium typography.",
-"V",
-"50","80","125",
-"#38bdf8",
-"realestate"
-],
+["Real Estate","VERTEX ESTATES","Spaces With Purpose","An architectural identity designed for property, real estate and development brands.","V","#38bdf8","realestate","50","80","125"],
 
-[
-"Beauty / Lifestyle",
-"ELORA",
-"Feel Beautiful",
-"A soft, elegant identity direction for beauty, skincare, wellness and lifestyle brands.",
-"E",
-"45","70","110",
-"#f9a8d4",
-"beauty"
-],
+["Beauty / Lifestyle","ELORA","Feel Beautiful","A refined identity for beauty, skincare, wellness and lifestyle businesses.","E","#f9a8d4","beauty","45","70","110"],
 
-[
-"Automotive",
-"TORQ",
-"Driven Forward",
-"A performance-focused identity using speed, engineering and mechanical visual cues.",
-"T",
-"50","80","125",
-"#ef4444",
-"automotive"
-],
+["Automotive","TORQ","Driven Forward","A performance-oriented identity using mechanical and speed-inspired visual language.","T","#ef4444","automotive","50","80","125"],
 
-[
-"Entertainment",
-"PULSE",
-"Feel the Moment",
-"A high-impact identity for media, music, events and entertainment brands.",
-"P",
-"50","80","125",
-"#f43f5e",
-"entertainment"
-],
+["Entertainment","PULSE","Feel the Moment","A high-impact identity for music, media, events and entertainment brands.","P","#f43f5e","entertainment","50","80","125"],
 
-[
-"Sportswear / Apparel",
-"STRIKE",
-"Wear the Energy",
-"A flexible apparel identity designed to remain bold across clothing, tags, social media and merchandise.",
-"S",
-"50","80","125",
-"#facc15",
-"apparel"
-]
+["Sportswear / Apparel","STRIKE","Wear the Energy","A bold flexible identity for clothing, apparel, merchandise and sportswear.","S","#facc15","apparel","50","80","125"]
 
 ];
 
 
-function packageHTML(
-name,
-price,
-concepts,
-revisions,
-formats,
-delivery,
-featured=false
-){
+function packageCard(name,price,concepts,revisions,formats,delivery,style){
 
 return `
 
-<article class="package ${featured ? "featured" : ""}">
+<div class="package ${name === "Standard" ? "standard" : ""}">
 
 <h3>${name}</h3>
 
@@ -1028,102 +671,75 @@ $${price}
 
 <ul>
 
-<li>
-${concepts} original concept direction${concepts > 1 ? "s" : ""}
-</li>
+<li>${concepts} original concept${concepts>1?"s":""}</li>
 
-<li>
-${revisions} revision round${revisions > 1 ? "s" : ""}
-</li>
+<li>${revisions} revision round${revisions>1?"s":""}</li>
 
-<li>
-Selected concept professionally finalized
-</li>
+<li>Selected concept professionally finalized</li>
 
-<li>
-Full-color logo version
-</li>
+<li>Full-color logo</li>
 
-<li>
-Black & white version
-</li>
+<li>Black & white logo</li>
 
-<li>
-Transparent background
-</li>
+<li>Transparent background</li>
 
-<li>
-${formats}
-</li>
+<li>${formats}</li>
 
-<li>
-Commercial-ready final files
-</li>
+<li>Commercial-ready files</li>
 
-<li>
-Delivery: ${delivery}
-</li>
+<li>Delivery: ${delivery}</li>
 
 </ul>
 
 <a
-class="cta"
+class="start"
 href="https://wa.me/2349165831007?text=${encodeURIComponent(
-"Hello Victor Phoenix, I chose the " +
+"Hello Victor Phoenix, I want to start the " +
 name +
-" package for the " +
-price +
-" logo design style. I would like to discuss my logo project."
+" package for " +
+style +
+" Logo Design."
 )}"
 >
-Tell Victor Phoenix what you want to create →
+START NOW →
 </a>
 
-</article>
+</div>
 
 `;
 
 }
 
 
-types.forEach((t,index)=>{
+logos.forEach((logo,index)=>{
 
 const [
 style,
 brand,
-tag,
+tagline,
 description,
 symbol,
+accent,
+className,
 basic,
 standard,
-premium,
-accent,
-className
-] = t;
+premium
+]=logo;
 
 
-const section =
-document.createElement("section");
+const section=document.createElement("section");
 
-section.className =
-"logo-block";
+section.className="logo-section";
 
 
-section.style.setProperty(
-"--accent",
-accent
-);
-
-
-section.innerHTML = `
+section.innerHTML=`
 
 <div class="showcase">
 
-<div class="showcase-top">
+<div class="showcase-label">
 
 <span>
-${String(index + 1).padStart(2,"0")}
-· ${style}
+${String(index+1).padStart(2,"0")} · ${style}
 </span>
 
 <span>
@@ -1133,9 +749,12 @@ Concept Sample
 </div>
 
 
-<div class="sample style-${className}">
+<div
+class="sample ${className}"
+style="--accent:${accent}"
+>
 
-<div class="sample-inner">
+<div class="sample-content">
 
 <div class="symbol">
 ${symbol}
@@ -1146,11 +765,11 @@ ${brand}
 </div>
 
 <div class="tagline">
-${tag}
+${tagline}
 </div>
 
 <div class="sample-note">
-Logo design concept · Brand name · Tagline
+Logo · Brand Name · Philosophy
 </div>
 
 </div>
@@ -1164,39 +783,41 @@ Logo design concept · Brand name · Tagline
 ${style} Logo
 </h2>
 
-<p>
+<p class="description">
 ${description}
 </p>
 
 
 <div class="packages">
 
-${packageHTML(
+${packageCard(
 "Basic",
 basic,
 1,
 2,
-"PNG, JPG, PDF, transparent PNG",
-"3–4 days"
+"PNG, JPG, PDF",
+"3–4 days",
+style
 )}
 
-${packageHTML(
+${packageCard(
 "Standard",
 standard,
 2,
 3,
-"PNG, JPG, PDF, SVG, transparent files",
+"PNG, JPG, PDF, SVG",
 "4–5 days",
-true
+style
 )}
 
-${packageHTML(
+${packageCard(
 "Premium",
 premium,
 3,
 5,
-"PNG, JPG, PDF, SVG, editable/source vector files",
-"5–7 days"
+"PNG, JPG, PDF, SVG + editable source vector",
+"5–7 days",
+style
 )}
 
 </div>

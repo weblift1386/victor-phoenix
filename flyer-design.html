@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Flyer Design — Victor Phoenix</title>
+
+<meta name="description" content="Professional flyer design services and packages by Victor Phoenix.">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#080808;
+  color:#fff;
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(8,8,8,.9);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid #242424;
+}
+
+.nav{
+  max-width:1280px;
+  margin:auto;
+  padding:18px 25px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  width:170px;
+}
+
+.back{
+  color:#aaa;
+  font-size:14px;
+}
+
+.back:hover{
+  color:#fff;
+}
+
+/* HERO */
+
+.hero{
+  max-width:1280px;
+  margin:auto;
+  padding:100px 25px 80px;
+}
+
+.eyebrow{
+  color:#777;
+  text-transform:uppercase;
+  letter-spacing:4px;
+  font-size:11px;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:clamp(55px,9vw,115px);
+  line-height:.9;
+  letter-spacing:-6px;
+}
+
+.hero h1 span{
+  color:#666;
+}
+
+.hero-text{
+  max-width:700px;
+  margin-top:30px;
+  color:#999;
+  font-size:17px;
+}
+
+/* INTRO */
+
+.intro{
+  max-width:1280px;
+  margin:auto;
+  padding:0 25px 80px;
+}
+
+.intro-box{
+  border:1px solid #292929;
+  border-radius:25px;
+  padding:35px;
+  background:#0d0d0d;
+}
+
+.intro-box p{
+  color:#999;
+  max-width:850px;
+}
+
+.intro-box strong{
+  color:#fff;
+}
+
+/* SERVICE */
+
+.flyer-section{
+  max-width:1280px;
+  margin:auto;
+  padding:35px 25px 110px;
+}
+
+.flyer-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:25px;
+  margin-bottom:28px;
+}
+
+.flyer-number{
+  color:#555;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:3px;
+}
+
+.flyer-header h2{
+  font-size:42px;
+  letter-spacing:-2px;
+  margin-top:7px;
+}
+
+.flyer-header p{
+  color:#777;
+  max-width:350px;
+  font-size:13px;
+}
+
+/* LARGE SAMPLE */
+
+.showcase{
+  min-height:560px;
+  border-radius:30px;
+  padding:60px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  margin-bottom:30px;
+}
+
+.showcase-label{
+  position:absolute;
+  top:25px;
+  left:28px;
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.55);
+}
+
+/* FLYER MOCKUP */
+
+.flyer{
+  width:310px;
+  min-height:430px;
+  border-radius:6px;
+  padding:32px 25px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 35px 80px rgba(0,0,0,.55);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.flyer small{
+  font-size:9px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  opacity:.75;
+}
+
+.flyer h3{
+  font-size:45px;
+  line-height:.9;
+  letter-spacing:-3px;
+  margin:15px 0;
+}
+
+.flyer p{
+  font-size:12px;
+  max-width:220px;
+  opacity:.8;
+}
+
+.flyer-button{
+  display:inline-block;
+  margin-top:25px;
+  padding:10px 15px;
+  border-radius:5px;
+  width:max-content;
+  font-size:10px;
+  font-weight:bold;
+}
+
+/* BUSINESS */
+
+.business-showcase{
+  background:
+  radial-gradient(circle at 20% 20%,#3865ff,transparent 35%),
+  linear-gradient(135deg,#07102d,#090909);
+}
+
+.business-flyer{
+  background:linear-gradient(145deg,#f5f7ff,#bfcaff);
+  color:#07102d;
+}
+
+.business-flyer .flyer-button{
+  background:#142e9c;
+  color:#fff;
+}
+
+/* EVENT */
+
+.event-showcase{
+  background:
+  radial-gradient(circle at 70% 30%,#ff4d75,transparent 35%),
+  linear-gradient(135deg,#240718,#090909);
+}
+
+.event-flyer{
+  background:linear-gradient(145deg,#ff315f,#7d0b54);
+  color:#fff;
+}
+
+.event-flyer h3{
+  font-size:58px;
+}
+
+.event-flyer .flyer-button{
+  background:#fff;
+  color:#8a1250;
+}
+
+/* PROMO */
+
+.promo-showcase{
+  background:
+  radial-gradient(circle at 30% 30%,#ffb300,transparent 35%),
+  linear-gradient(135deg,#382000,#0d0902);
+}
+
+.promo-flyer{
+  background:linear-gradient(145deg,#fff1c2,#ff9e00);
+  color:#261400;
+}
+
+.promo-flyer .flyer-button{
+  background:#201100;
+  color:#fff;
+}
+
+/* PRODUCT */
+
+.product-showcase{
+  background:
+  radial-gradient(circle at 70% 20%,#00d9c0,transparent 35%),
+  linear-gradient(135deg,#032b28,#080909);
+}
+
+.product-flyer{
+  background:linear-gradient(145deg,#071c1a,#00a993);
+  color:#eafffb;
+}
+
+.product-circle{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#fff,#b5fff4 35%,#008f7d);
+  margin:0 auto 20px;
+  box-shadow:0 20px 50px rgba(0,0,0,.3);
+}
+
+.product-flyer .flyer-button{
+  background:#fff;
+  color:#00695c;
+}
+
+/* REAL ESTATE */
+
+.realestate-showcase{
+  background:
+  radial-gradient(circle at 20% 30%,#b66b35,transparent 35%),
+  linear-gradient(135deg,#24150d,#090909);
+}
+
+.realestate-flyer{
+  background:linear-gradient(145deg,#f4e7d5,#c99361);
+  color:#29180c;
+}
+
+.house{
+  width:160px;
+  height:115px;
+  background:#fff;
+  margin:0 auto 20px;
+  position:relative;
+  border-radius:5px;
+}
+
+.house:before{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:120px;
+  background:#fff;
+  left:20px;
+  top:-48px;
+  transform:rotate(45deg);
+  z-index:-1;
+}
+
+.house-window{
+  width:38px;
+  height:38px;
+  background:#4f7890;
+  position:absolute;
+  top:35px;
+  left:61px;
+}
+
+.realestate-flyer .flyer-button{
+  background:#2b170b;
+  color:#fff;
+}
+
+/* CORPORATE */
+
+.corporate-showcase{
+  background:
+  radial-gradient(circle at 75% 30%,#7a3dff,transparent 35%),
+  linear-gradient(135deg,#160b31,#080808);
+}
+
+.corporate-flyer{
+  background:linear-gradient(145deg,#fff,#d8ccff);
+  color:#251146;
+}
+
+.corporate-chart{
+  height:80px;
+  display:flex;
+  align-items:flex-end;
+  gap:8px;
+  margin:25px 0;
+}
+
+.corporate-chart span{
+  display:block;
+  width:20px;
+  background:#7a3dff;
+  border-radius:4px 4px 0 0;
+}
+
+.corporate-chart span:nth-child(1){height:35px}
+.corporate-chart span:nth-child(2){height:55px}
+.corporate-chart span:nth-child(3){height:45px}
+.corporate-chart span:nth-child(4){height:75px}
+.corporate-chart span:nth-child(5){height:60px}
+
+.corporate-flyer .flyer-button{
+  background:#44209a;
+  color:#fff;
+}
+
+/* SOCIAL */
+
+.social-showcase{
+  background:
+  radial-gradient(circle at 30% 30%,#ff4dd8,transparent 30%),
+  radial-gradient(circle at 75% 70%,#5366ff,transparent 35%),
+  #100820;
+}
+
+.social-flyer{
+  background:linear-gradient(145deg,#ff3b8d,#6b36ff);
+  color:#fff;
+}
+
+.social-flyer .flyer-button{
+  background:#fff;
+  color:#6b36ff;
+}
+
+/* DESCRIPTION */
+
+.description{
+  max-width:850px;
+  margin:0 auto 35px;
+  text-align:center;
+}
+
+.description h3{
+  font-size:31px;
+  margin-bottom:12px;
+}
+
+.description p{
+  color:#888;
+  font-size:15px;
+}
+
+.sample-note{
+  color:#555;
+  font-size:11px;
+  margin-top:10px;
+}
+
+/* PACKAGES */
+
+.packages-title{
+  text-align:center;
+  margin-bottom:22px;
+}
+
+.packages-title span{
+  color:#666;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:3px;
+}
+
+.packages{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.package{
+  background:#101010;
+  border:1px solid #292929;
+  border-radius:20px;
+  padding:30px;
+  min-height:370px;
+  display:flex;
+  flex-direction:column;
+}
+
+.package.featured{
+  background:linear-gradient(145deg,#191919,#0d0d0d);
+  border-color:#666;
+}
+
+.package-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.package h4{
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  color:#aaa;
+}
+
+.recommended{
+  font-size:9px;
+  color:#000;
+  background:#fff;
+  padding:5px 8px;
+  border-radius:20px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.price{
+  font-size:42px;
+  font-weight:900;
+  margin:16px 0 20px;
+}
+
+.package ul{
+  list-style:none;
+  color:#999;
+  font-size:13px;
+}
+
+.package li{
+  padding:8px 0;
+  border-bottom:1px solid #202020;
+}
+
+.package-btn{
+  display:block;
+  margin-top:auto;
+  padding:14px;
+  border-radius:10px;
+  background:#fff;
+  color:#000;
+  text-align:center;
+  font-weight:800;
+  font-size:12px;
+}
+
+/* CTA */
+
+.cta{
+  max-width:1280px;
+  margin:auto;
+  padding:30px 25px 100px;
+}
+
+.cta-box{
+  border:1px solid #292929;
+  border-radius:30px;
+  padding:80px 30px;
+  text-align:center;
+  background:
+  radial-gradient(circle at 50% 0,#222,transparent 50%),
+  #0d0d0d;
+}
+
+.cta-box h2{
+  font-size:clamp(45px,7vw,80px);
+  line-height:.95;
+  letter-spacing:-5px;
+}
+
+.cta-box p{
+  color:#888;
+  max-width:600px;
+  margin:25px auto 32px;
+}
+
+.cta-button{
+  display:inline-block;
+  padding:15px 28px;
+  background:#fff;
+  color:#000;
+  border-radius:10px;
+  font-size:13px;
+  font-weight:800;
+}
+
+footer{
+  border-top:1px solid #222;
+  text-align:center;
+  padding:30px 20px;
+  color:#666;
+  font-size:11px;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  .flyer-header{
+    display:block;
+  }
+
+  .flyer-header p{
+    margin-top:15px;
+  }
+
+  .packages{
+    grid-template-columns:1fr;
+  }
+
+  .package{
+    min-height:auto;
+  }
+
+  .showcase{
+    min-height:500px;
+    padding:35px 20px;
+  }
+}
+
+@media(max-width:550px){
+
+  .nav{
+    padding:15px 18px;
+  }
+
+  .logo{
+    width:140px;
+  }
+
+  .hero{
+    padding:70px 20px;
+  }
+
+  .hero h1{
+    font-size:58px;
+    letter-spacing:-4px;
+  }
+
+  .intro,
+  .flyer-section,
+  .cta{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .flyer-header h2{
+    font-size:34px;
+  }
+
+  .showcase{
+    min-height:460px;
+    border-radius:22px;
+  }
+
+  .flyer{
+    width:270px;
+    min-height:390px;
+  }
+
+  .flyer h3{
+    font-size:38px;
+  }
+
+  .cta-box{
+    padding:60px 22px;
+  }
+
+  .cta-box h2{
+    font-size:48px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+
+    <a href="index.html">
+      <img src="logo.png" alt="Victor Phoenix" class="logo">
+    </a>
+
+    <a href="graphics.html" class="back">
+      ← Graphics & Design
+    </a>
+
+  </nav>
+</header>
+
+
+<section class="hero">
+
+  <div class="eyebrow">
+    Phoenix Creative / Flyer Design
+  </div>
+
+  <h1>
+    Designs that<br>
+    <span>get noticed.</span>
+  </h1>
+
+  <p class="hero-text">
+    Professional flyer designs created for businesses, events,
+    promotions, products, real estate and digital campaigns.
+  </p>
+
+</section>
+
+
+<section class="intro">
+
+  <div class="intro-box">
+
+    <p>
+      Explore different flyer directions below. Every visual is a
+      <strong>sample concept</strong> created to demonstrate the type
+      of design Victor Phoenix can create for your brand or campaign.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- BUSINESS -->
+
+<section class="flyer-section">
+
+  <div class="flyer-header">
+
+    <div>
+      <div class="flyer-number">01 / Business Flyer</div>
+      <h2>Business Flyer</h2>
+    </div>
+
+    <p>
+      Professional promotional material for companies and services.
+    </p>
+
+  </div>
+
+  <div class="showcase business-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="flyer business-flyer">
+
+      <small>Business Strategy</small>
+
+      <h3>
+        BUILD<br>
+        BETTER.
+      </h3>
+
+      <p>
+        Smart strategies designed to help modern businesses move forward.
+      </p>
+
+      <a class="flyer-button" href="#">
+        DISCOVER MORE
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+
+    <h3>Business Flyer Design</h3>
+
+    <p>
+      Clean, professional flyers for company promotions,
+      services, announcements and business campaigns.
+    </p>
+
+    <div class="sample-note">
+      Sample concept — not a real client project.
+    </div>
+
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h4>Basic</h4>
+      <div class="price">$25</div>
+      <ul>
+        <li>1 flyer concept</li>
+        <li>2 revisions</li>
+        <li>PNG + JPG</li>
+        <li>Digital-ready design</li>
+        <li>3-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Business%20Flyer%20Basic%20package.">
+        Get Started
+      </a>
+    </div>
+
+    <div class="package featured">
+
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+
+      <div class="price">$40</div>
+
+      <ul>
+        <li>2 flyer concepts</li>
+        <li>3 revisions</li>
+        <li>PNG + JPG + PDF</li>
+        <li>Print-ready design</li>
+        <li>1 size variation</li>
+        <li>4-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Business%20Flyer%20Standard%20package.">
+        Get Started
+      </a>
+
+    </div>
+
+    <div class="package">
+
+      <h4>Premium</h4>
+
+      <div class="price">$65</div>
+
+      <ul>
+        <li>3 flyer concepts</li>
+        <li>5 revisions</li>
+        <li>PNG + JPG + PDF</li>
+        <li>Print + digital ready</li>
+        <li>Up to 3 sizes</li>
+        <li>5-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Business%20Flyer%20Premium%20package.">
+        Get Started
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- EVENT -->
+
+<section class="flyer-section">
+
+  <div class="flyer-header">
+
+    <div>
+      <div class="flyer-number">02 / Event Flyer</div>
+      <h2>Event Flyer</h2>
+    </div>
+
+    <p>
+      Eye-catching designs for concerts, parties and special events.
+    </p>
+
+  </div>
+
+  <div class="showcase event-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="flyer event-flyer">
+
+      <small>Live Experience</small>
+
+      <h3>
+        NIGHT<br>
+        PULSE
+      </h3>
+
+      <p>
+        Music. Energy. People. One unforgettable night.
+      </p>
+
+      <a class="flyer-button" href="#">
+        GET TICKETS
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+
+    <h3>Event Flyer Design</h3>
+
+    <p>
+      Promotional flyers designed to create excitement and communicate
+      event details clearly.
+    </p>
+
+    <div class="sample-note">
+      Sample concept — not a real client project.
+    </div>
+
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h4>Basic</h4>
+      <div class="price">$30</div>
+      <ul>
+        <li>1 concept</li>
+        <li>2 revisions</li>
+        <li>PNG + JPG</li>
+        <li>Digital-ready</li>
+        <li>3-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Event%20Flyer%20Basic%20package.">
+        Get Started
+      </a>
+    </div>
+
+    <div class="package featured">
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+
+      <div class="price">$50</div>
+
+      <ul>
+        <li>2 concepts</li>
+        <li>3 revisions</li>
+        <li>PNG + JPG + PDF</li>
+        <li>Print-ready</li>
+        <li>1 size variation</li>
+        <li>4-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Event%20Flyer%20Standard%20package.">
+        Get Started
+      </a>
+    </div>
+
+    <div class="package">
+      <h4>Premium</h4>
+      <div class="price">$80</div>
+
+      <ul>
+        <li>3 concepts</li>
+        <li>5 revisions</li>
+        <li>PNG + JPG + PDF</li>
+        <li>Print + digital ready</li>
+        <li>Up to 3 sizes</li>
+        <li>5-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Event%20Flyer%20Premium%20package.">
+        Get Started
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROMOTIONAL -->
+
+<section class="flyer-section">
+
+  <div class="flyer-header">
+
+    <div>
+      <div class="flyer-number">03 / Promotional Flyer</div>
+      <h2>Promotional Flyer</h2>
+    </div>
+
+    <p>
+      Bold promotional designs created to drive attention.
+    </p>
+
+  </div>
+
+  <div class="showcase promo-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="flyer promo-flyer">
+
+      <small>Limited Offer</small>
+
+      <h3>
+        50%<br>
+        OFF
+      </h3>
+
+      <p>
+        Upgrade your experience with our limited promotional offer.
+      </p>
+
+      <a class="flyer-button" href="#">
+        SHOP NOW
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+
+    <h3>Promotional Flyer Design</h3>
+
+    <p>
+      High-impact promotional graphics for sales, discounts,
+      launches and special offers.
+    </p>
+
+    <div class="sample-note">
+      Sample concept — not a real client project.
+    </div>
+
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h4>Basic</h4>
+      <div class="price">$30</div>
+      <ul>
+        <li>1 concept</li>
+        <li>2 revisions</li>
+        <li>PNG + JPG</li>
+        <li>Digital-ready</li>
+        <li>3-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Promotional%20Flyer%20Basic%20package.">
+        Get Started
+      </a>
+    </div>
+
+    <div class="package featured">
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+
+      <div class="price">$50</div>
+
+      <ul>
+        <li>2 concepts</li>
+        <li>3 revisions</li>
+        <li>PNG + JPG + PDF</li>
+        <li>Print-ready</li>
+        <li>1 size variation</li>
+        <li>4-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Promotional%20Flyer%20Standard%20package.">
+        Get Started
+      </a>
+    </div>
+
+    <div class="package">
+      <h4>Premium</h4>
+      <div class="price">$80</div>
+
+      <ul>
+        <li>3 concepts</li>
+        <li>5 revisions</li>
+        <li>PNG + JPG + PDF</li>
+        <li>Print + digital ready</li>
+        <li>Up to 3 sizes</li>
+        <li>5-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Promotional%20Flyer%20Premium%20package.">
+        Get Started
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PRODUCT -->
+
+<section class="flyer-section">
+
+  <div class="flyer-header">
+
+    <div>
+      <div class="flyer-number">04 / Product Flyer</div>
+      <h2>Product Flyer</h2>
+    </div>
+
+    <p>
+      Product-focused visuals designed to make offers stand out.
+    </p>
+
+  </div>
+
+  <div class="showcase product-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="flyer product-flyer">
+
+      <div class="product-circle"></div>
+
+      <small>New Collection</small>
+
+      <h3>
+        PURE<br>
+        FORM
+      </h3>
+
+      <p>
+        Designed for modern everyday living.
+      </p>
+
+      <a class="flyer-button" href="#">
+        EXPLORE
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+
+    <h3>Product Flyer Design</h3>
+
+    <p>
+      Product-centered flyers combining strong visuals, product
+      information and promotional messaging.
+    </p>
+
+    <div class="sample-note">
+      Sample concept — not a real client project.
+    </div>
+
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h4>Basic</h4>
+      <div class="price">$35</div>
+      <ul>
+        <li>1 concept</li>
+        <li>2 revisions</li>
+        <li>PNG + JPG</li>
+        <li>Digital-ready</li>
+        <li>3-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Product%20Flyer%20Basic%20package.">
+        Get Started
+      </a>
+    </div>
+
+    <div class="package featured">
+
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+
+      <div class="price">$55</div>
+
+      <ul>
+        <li>2 concepts</li>
+        <li>3 revisions</li>
+        <li>PNG + JPG + PDF</li>
+        <li>Print-ready</li>
+        <li>1 size variation</li>
+        <li>4-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Product%20Flyer%20Standard%20package.">
+        Get Started
+      </a>
+
+    </div>
+
+    <div class="package">
+
+      <h4>Premium</h4>
+
+      <div class="price">$90</div>
+
+      <ul>
+        <li>3 concepts</li>
+        <li>5 revisions</li>
+        <li>PNG + JPG + PDF</li>
+        <li>Print + digital ready</li>
+        <li>Up to 3 sizes</li>
+        <li>5-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Product%20Flyer%20Premium%20package.">
+        Get Started
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- REAL ESTATE -->
+
+<section class="flyer-section">
+
+  <div class="flyer-header">
+
+    <div>
+      <div class="flyer-number">05 / Real Estate Flyer</div>
+      <h2>Real Estate Flyer</h2>
+    </div>
+
+    <p>
+      Property-focused designs for listings and promotions.
+    </p>
+
+  </div>
+
+  <div class="showcase realestate-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="flyer realestate-flyer">
+
+      <div class="house">
+        <div class="house-window"></div>
+      </div>
+
+      <small>Property Collection</small>
+
+      <h3>
+        FIND<br>
+        HOME.
+      </h3>
+
+      <p>
+        Modern spaces created for modern living.
+      </p>
+
+      <a class="flyer-button" href="#">
+        VIEW PROPERTY
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+
+    <h3>Real Estate Flyer Design</h3>
+
+    <p>
+      Professional property flyers for real estate listings,
+      developments, agents and property campaigns.
+    </p>
+
+    <div class="sample-note">
+      Sample concept — not a real client project.
+    </div>
+
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h4>Basic</h4>
+      <div class="price">$40</div>
+      <ul>
+        <li>1 concept</li>
+        <li>2 revisions</li>
+        <li>PNG + JPG</li>
+        <li>Digital-ready</li>
+        <li>4-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Real%20Estate%20Flyer%20Basic%20package.">
+        Get Started
+      </a>
+    </div>
+
+    <div class="package featured">
+
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+
+      <div class="price">$65</div>
+
+      <ul>
+        <li>2 concepts</li>
+        <li>3 revisions</li>
+        <li>PNG + JPG + PDF</li>
+        <li>Print-ready</li>
+        <li>1 size variation</li>
+        <li>5-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Real%20Estate%20Flyer%20Standard%20package.">
+        Get Started
+      </a>
+
+    </div>
+
+    <div class="package">
+
+      <h4>Premium</h4>
+
+      <div class="price">$100</div>
+
+      <ul>
+        <li>3 concepts</li>
+        <li>5 revisions</li>
+        <li>PNG + JPG + PDF</li>
+        <li>Print + digital ready</li>
+        <li>Up to 3 sizes</li>
+        <li>6-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Real%20Estate%20Flyer%20Premium%20package.">
+        Get Started
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CORPORATE -->
+
+<section class="flyer-section">
+
+  <div class="flyer-header">
+
+    <div>
+      <div class="flyer-number">06 / Corporate Flyer</div>
+      <h2>Corporate Flyer</h2>
+    </div>
+
+    <p>
+      Structured visual communication for professional organizations.
+    </p>
+
+  </div>
+
+  <div class="showcase corporate-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="flyer corporate-flyer">
+
+      <small>Annual Report</small>
+
+      <h3>
+        GROW<br>
+        FORWARD.
+      </h3>
+
+      <div class="corporate-chart">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <p>
+        Building stronger businesses through better strategy.
+      </p>
+
+      <a class="flyer-button" href="#">
+        LEARN MORE
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+
+    <h3>Corporate Flyer Design</h3>
+
+    <p>
+      Professional communication pieces for companies,
+      institutions, reports and corporate campaigns.
+    </p>
+
+    <div class="sample-note">
+      Sample concept — not a real client project.
+    </div>
+
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h4>Basic</h4>
+      <div class="price">$35</div>
+      <ul>
+        <li>1 concept</li>
+        <li>2 revisions</li>
+        <li>PNG + JPG</li>
+        <li>Digital-ready</li>
+        <li>4-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Corporate%20Flyer%20Basic%20package.">
+        Get Started
+      </a>
+    </div>
+
+    <div class="package featured">
+
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+
+      <div class="price">$55</div>
+
+      <ul>
+        <li>2 concepts</li>
+        <li>3 revisions</li>
+        <li>PNG + JPG + PDF</li>
+        <li>Print-ready</li>
+        <li>1 size variation</li>
+        <li>5-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Corporate%20Flyer%20Standard%20package.">
+        Get Started
+      </a>
+
+    </div>
+
+    <div class="package">
+
+      <h4>Premium</h4>
+
+      <div class="price">$90</div>
+
+      <ul>
+        <li>3 concepts</li>
+        <li>5 revisions</li>
+        <li>PNG + JPG + PDF</li>
+        <li>Print + digital ready</li>
+        <li>Up to 3 sizes</li>
+        <li>6-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Corporate%20Flyer%20Premium%20package.">
+        Get Started
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SOCIAL -->
+
+<section class="flyer-section">
+
+  <div class="flyer-header">
+
+    <div>
+      <div class="flyer-number">07 / Social Media Flyer</div>
+      <h2>Social Media Flyer</h2>
+    </div>
+
+    <p>
+      Digital-first designs built for social platforms.
+    </p>
+
+  </div>
+
+  <div class="showcase social-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="flyer social-flyer">
+
+      <small>Social Campaign</small>
+
+      <h3>
+        MAKE<br>
+        IT LOUD.
+      </h3>
+
+      <p>
+        Scroll-stopping visual content designed for digital audiences.
+      </p>
+
+      <a class="flyer-button" href="#">
+        FOLLOW
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+
+    <h3>Social Media Flyer Design</h3>
+
+    <p>
+      Platform-ready promotional graphics for social posts,
+      campaigns, announcements and digital promotions.
+    </p>
+
+    <div class="sample-note">
+      Sample concept — not a real client project.
+    </div>
+
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+
+      <h4>Basic</h4>
+
+      <div class="price">$25</div>
+
+      <ul>
+        <li>1 concept</li>
+        <li>2 revisions</li>
+        <li>PNG + JPG</li>
+        <li>1 platform size</li>
+        <li>3-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Social%20Media%20Flyer%20Basic%20package.">
+        Get Started
+      </a>
+
+    </div>
+
+    <div class="package featured">
+
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+
+      <div class="price">$45</div>
+
+      <ul>
+        <li>2 concepts</li>
+        <li>3 revisions</li>
+        <li>PNG + JPG</li>
+        <li>2 platform sizes</li>
+        <li>4-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Social%20Media%20Flyer%20Standard%20package.">
+        Get Started
+      </a>
+
+    </div>
+
+    <div class="package">
+
+      <h4>Premium</h4>
+
+      <div class="price">$70</div>
+
+      <ul>
+        <li>3 concepts</li>
+        <li>5 revisions</li>
+        <li>PNG + JPG + PDF</li>
+        <li>Up to 3 platform sizes</li>
+        <li>5-day delivery</li>
+      </ul>
+
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Social%20Media%20Flyer%20Premium%20package.">
+        Get Started
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <div class="cta-box">
+
+    <div class="eyebrow">
+      Start your project
+    </div>
+
+    <h2>
+      Make your message<br>
+      impossible to ignore.
+    </h2>
+
+    <p>
+      Choose a flyer style and package, then contact Victor Phoenix
+      to begin your project.
+    </p>
+
+    <a
+      class="cta-button"
+      href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20discuss%20a%20flyer%20design%20project."
+    >
+      Start a Flyer Project →
+    </a>
+
+  </div>
+
+</section>
+
+
+<footer>
+  © 2026 Victor Phoenix. Create What’s Next.
+</footer>
+
+</body>
+</html>

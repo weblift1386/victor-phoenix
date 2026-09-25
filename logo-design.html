@@ -3,1017 +3,2458 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Logo Design — Victor Phoenix</title>
-<meta name="description" content="Professional logo design by Victor Phoenix. Explore custom minimalist, abstract, wordmark, lettermark, monogram, luxury, vintage, emblem, mascot, 3D, signature and combination logo designs.">
+
+<meta
+  name="description"
+  content="Professional logo design concepts and packages by Victor Phoenix."
+>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:#070707;
+  background:#080808;
   color:#fff;
   line-height:1.6;
 }
-a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block}
 
-.header{
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
   position:sticky;
   top:0;
-  z-index:100;
-  background:rgba(7,7,7,.86);
+  z-index:1000;
+  background:rgba(8,8,8,.88);
   backdrop-filter:blur(18px);
   border-bottom:1px solid #242424;
 }
+
 .nav{
-  max-width:1250px;
+  max-width:1280px;
   margin:auto;
-  padding:18px 24px;
+  padding:18px 25px;
   display:flex;
   align-items:center;
   justify-content:space-between;
 }
+
 .logo{
   width:170px;
 }
+
 .back{
   color:#aaa;
   font-size:14px;
   transition:.3s;
 }
-.back:hover{color:#fff}
+
+.back:hover{
+  color:#fff;
+}
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
-  max-width:1250px;
+  max-width:1280px;
   margin:auto;
-  padding:95px 24px 70px;
+  padding:100px 25px 85px;
 }
+
 .eyebrow{
-  color:#888;
+  color:#777;
   text-transform:uppercase;
   letter-spacing:4px;
   font-size:11px;
   margin-bottom:18px;
 }
+
 .hero h1{
-  font-size:clamp(48px,8vw,100px);
-  line-height:.92;
-  letter-spacing:-5px;
-  max-width:850px;
+  font-size:clamp(55px,9vw,115px);
+  line-height:.9;
+  letter-spacing:-6px;
+  max-width:1000px;
 }
+
 .hero h1 span{
-  color:#777;
+  color:#666;
 }
-.hero p{
-  color:#aaa;
-  max-width:680px;
-  margin-top:28px;
+
+.hero-text{
+  max-width:700px;
+  margin-top:30px;
+  color:#999;
   font-size:17px;
 }
 
-.section{
-  max-width:1250px;
+/* =========================
+   INTRO
+========================= */
+
+.intro{
+  max-width:1280px;
   margin:auto;
-  padding:30px 24px 100px;
+  padding:0 25px 80px;
 }
-.section-title{
+
+.intro-box{
+  border:1px solid #292929;
+  border-radius:25px;
+  padding:35px;
+  background:#0d0d0d;
+}
+
+.intro-box p{
+  color:#999;
+  max-width:850px;
+}
+
+.intro-box strong{
+  color:#fff;
+}
+
+/* =========================
+   LOGO SECTIONS
+========================= */
+
+.logo-section{
+  max-width:1280px;
+  margin:auto;
+  padding:35px 25px 110px;
+}
+
+.logo-header{
   display:flex;
-  align-items:end;
+  align-items:flex-end;
   justify-content:space-between;
-  gap:20px;
-  margin-bottom:35px;
+  gap:25px;
+  margin-bottom:28px;
 }
-.section-title h2{
-  font-size:36px;
-  letter-spacing:-1.5px;
+
+.logo-number{
+  color:#555;
+  font-size:12px;
+  letter-spacing:3px;
+  text-transform:uppercase;
 }
-.section-title p{
+
+.logo-header h2{
+  font-size:42px;
+  letter-spacing:-2px;
+  margin-top:7px;
+}
+
+.logo-header p{
   color:#777;
   font-size:13px;
+  max-width:350px;
 }
 
-.logo-item{
-  margin-bottom:100px;
-}
+/* =========================
+   LARGE SHOWCASE
+========================= */
 
-.logo-preview{
+.showcase{
+  min-height:500px;
+  border-radius:30px;
   position:relative;
-  min-height:430px;
-  border:1px solid #292929;
-  border-radius:26px;
   overflow:hidden;
-  background:
-    radial-gradient(circle at 70% 20%,rgba(255,255,255,.08),transparent 32%),
-    linear-gradient(135deg,#171717,#090909 60%,#111);
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:45px;
+  padding:60px;
+  margin-bottom:30px;
 }
 
-.preview-label{
+.showcase-label{
   position:absolute;
-  top:22px;
-  left:24px;
-  color:#666;
+  top:25px;
+  left:28px;
   font-size:10px;
-  text-transform:uppercase;
   letter-spacing:3px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.55);
 }
 
-.logo-showcase{
-  width:min(720px,100%);
-  min-height:260px;
-  border:1px solid #343434;
-  border-radius:22px;
-  background:linear-gradient(145deg,#202020,#0d0d0d);
-  box-shadow:0 30px 80px rgba(0,0,0,.55);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:50px;
-  position:relative;
-  overflow:hidden;
-}
-
-.logo-showcase:after{
+.showcase::after{
   content:"";
   position:absolute;
-  width:280px;
-  height:280px;
-  right:-100px;
-  bottom:-140px;
+  width:500px;
+  height:500px;
   border-radius:50%;
-  background:rgba(255,255,255,.05);
-  filter:blur(10px);
+  right:-200px;
+  bottom:-280px;
+  background:rgba(255,255,255,.08);
+  filter:blur(40px);
 }
 
-.logo-content{
+.logo-display{
   position:relative;
   z-index:2;
   text-align:center;
 }
 
-.logo-name{
-  font-weight:900;
-  font-size:clamp(36px,7vw,72px);
-  letter-spacing:-4px;
-}
-.logo-sub{
-  color:#aaa;
-  font-size:12px;
-  letter-spacing:5px;
-  text-transform:uppercase;
-  margin-top:8px;
+/* =========================
+   LOGO 01
+========================= */
+
+.minimal-showcase{
+  background:
+  radial-gradient(circle at 20% 20%,#315be8 0,transparent 30%),
+  linear-gradient(135deg,#07112f,#102b71);
 }
 
-.detail{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:30px;
+.minimal-symbol{
+  width:150px;
+  height:150px;
+  margin:auto;
+  border-radius:38px;
+  background:linear-gradient(145deg,#fff,#8fa8ff);
+  color:#173a9b;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:75px;
+  font-weight:900;
+  box-shadow:0 25px 70px rgba(60,100,255,.35);
+}
+
+.minimal-name{
+  font-size:58px;
+  font-weight:900;
+  letter-spacing:-4px;
   margin-top:25px;
 }
 
-.description{
-  padding:28px 0;
+.minimal-sub{
+  color:#a9baff;
+  letter-spacing:7px;
+  font-size:11px;
+  text-transform:uppercase;
 }
-.description h3{
+
+/* =========================
+   LOGO 02
+========================= */
+
+.abstract-showcase{
+  background:
+  radial-gradient(circle at 30% 30%,#8d36ff,transparent 30%),
+  radial-gradient(circle at 75% 65%,#00d9ff,transparent 30%),
+  #120721;
+}
+
+.abstract-symbol{
+  width:180px;
+  height:180px;
+  margin:auto;
+  position:relative;
+}
+
+.abstract-symbol span{
+  position:absolute;
+  width:125px;
+  height:125px;
+  border-radius:70% 30% 60% 40%;
+  transform:rotate(35deg);
+}
+
+.abstract-symbol span:first-child{
+  background:linear-gradient(135deg,#ff4df0,#703cff);
+  left:0;
+  top:25px;
+}
+
+.abstract-symbol span:last-child{
+  background:linear-gradient(135deg,#00eaff,#006cff);
+  right:0;
+  bottom:5px;
+  mix-blend-mode:screen;
+}
+
+.abstract-name{
+  font-size:58px;
+  font-weight:900;
+  letter-spacing:-4px;
+  margin-top:20px;
+}
+
+.abstract-sub{
+  color:#8feaff;
+  text-transform:uppercase;
+  letter-spacing:6px;
+  font-size:11px;
+}
+
+/* =========================
+   LOGO 03
+========================= */
+
+.wordmark-showcase{
+  background:
+  radial-gradient(circle at 70% 20%,#ff6754,transparent 35%),
+  linear-gradient(135deg,#35100c,#160807);
+}
+
+.wordmark-name{
+  font-size:80px;
+  font-weight:900;
+  letter-spacing:-7px;
+  color:#fff4ed;
+}
+
+.wordmark-line{
+  height:3px;
+  width:180px;
+  background:#ff6b55;
+  margin:18px auto;
+}
+
+.wordmark-sub{
+  letter-spacing:8px;
+  font-size:11px;
+  color:#ffb2a5;
+  text-transform:uppercase;
+}
+
+/* =========================
+   LOGO 04
+========================= */
+
+.letter-showcase{
+  background:
+  radial-gradient(circle at 50% 40%,#18a879,transparent 35%),
+  linear-gradient(135deg,#041f19,#07100d);
+}
+
+.letter-symbol{
+  width:190px;
+  height:190px;
+  border:6px solid #65e0b1;
+  border-radius:50%;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:76px;
+  font-weight:900;
+  color:#d8fff0;
+  box-shadow:0 0 80px rgba(40,220,160,.2);
+}
+
+.letter-name{
+  font-size:45px;
+  font-weight:900;
+  margin-top:25px;
+}
+
+.letter-sub{
+  color:#65e0b1;
+  letter-spacing:6px;
+  text-transform:uppercase;
+  font-size:10px;
+}
+
+/* =========================
+   LOGO 05
+========================= */
+
+.monogram-showcase{
+  background:
+  radial-gradient(circle at 50% 20%,#274b8f,transparent 35%),
+  linear-gradient(135deg,#07101f,#0b172c);
+}
+
+.monogram-symbol{
+  font-family:Georgia,serif;
+  font-size:145px;
+  line-height:1;
+  font-weight:bold;
+  letter-spacing:-30px;
+  color:#dbe9ff;
+  text-shadow:12px 18px 40px rgba(0,0,0,.5);
+}
+
+.monogram-name{
+  margin-top:20px;
   font-size:30px;
+  letter-spacing:8px;
+  text-transform:uppercase;
+}
+
+.monogram-sub{
+  color:#8eafe5;
+  font-size:11px;
+  letter-spacing:5px;
+}
+
+/* =========================
+   LOGO 06
+========================= */
+
+.luxury-showcase{
+  background:
+  radial-gradient(circle at 50% 40%,#63272e,transparent 40%),
+  linear-gradient(135deg,#18090c,#090607);
+}
+
+.luxury-frame{
+  border:1px solid #d5a45e;
+  padding:45px 70px;
+  position:relative;
+}
+
+.luxury-frame::before,
+.luxury-frame::after{
+  content:"◆";
+  color:#d5a45e;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.luxury-frame::before{left:18px}
+.luxury-frame::after{right:18px}
+
+.luxury-name{
+  font-family:Georgia,serif;
+  color:#f3d28f;
+  font-size:65px;
+  letter-spacing:9px;
+}
+
+.luxury-sub{
+  color:#d8b982;
+  letter-spacing:7px;
+  font-size:10px;
+  margin-top:8px;
+}
+
+/* =========================
+   LOGO 07
+========================= */
+
+.vintage-showcase{
+  background:
+  radial-gradient(circle at 50% 50%,#547048,transparent 45%),
+  #182016;
+}
+
+.vintage-frame{
+  border:4px double #e2b65d;
+  padding:45px 70px;
+  border-radius:50%;
+  color:#f2d38b;
+}
+
+.vintage-name{
+  font-family:Georgia,serif;
+  font-size:43px;
+  font-weight:bold;
+  text-transform:uppercase;
+  letter-spacing:4px;
+}
+
+.vintage-sub{
+  color:#d7d0a8;
+  font-size:10px;
+  letter-spacing:5px;
+}
+
+/* =========================
+   LOGO 08
+========================= */
+
+.emblem-showcase{
+  background:
+  radial-gradient(circle at 50% 40%,#1c65d8,transparent 40%),
+  linear-gradient(135deg,#061535,#07101e);
+}
+
+.emblem-symbol{
+  width:205px;
+  height:205px;
+  margin:auto;
+  border-radius:50%;
+  border:5px solid #dce8ff;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.emblem-symbol::before{
+  content:"";
+  position:absolute;
+  inset:15px;
+  border:2px solid #4e8df0;
+  border-radius:50%;
+}
+
+.emblem-symbol span{
+  font-size:65px;
+  font-weight:900;
+}
+
+.emblem-name{
+  margin-top:20px;
+  font-size:35px;
+  font-weight:900;
+  letter-spacing:3px;
+}
+
+.emblem-sub{
+  color:#6ea5ff;
+  font-size:10px;
+  letter-spacing:5px;
+}
+
+/* =========================
+   LOGO 09
+========================= */
+
+.mascot-showcase{
+  background:
+  radial-gradient(circle at 50% 35%,#ff8a3d,transparent 38%),
+  linear-gradient(135deg,#321307,#120805);
+}
+
+.mascot{
+  width:190px;
+  height:170px;
+  margin:auto;
+  position:relative;
+}
+
+.mascot-head{
+  width:135px;
+  height:120px;
+  position:absolute;
+  left:28px;
+  top:30px;
+  border-radius:48% 52% 44% 56%;
+  background:linear-gradient(145deg,#ffcc68,#e96a2d);
+}
+
+.mascot-ear{
+  width:52px;
+  height:70px;
+  background:#f39845;
+  position:absolute;
+  top:0;
+  border-radius:70% 30%;
+}
+
+.mascot-ear.left{
+  left:18px;
+  transform:rotate(-25deg);
+}
+
+.mascot-ear.right{
+  right:18px;
+  transform:rotate(25deg);
+}
+
+.mascot-eye{
+  position:absolute;
+  width:15px;
+  height:15px;
+  background:#28120b;
+  border-radius:50%;
+  top:72px;
+}
+
+.mascot-eye.left{left:67px}
+.mascot-eye.right{right:67px}
+
+.mascot-mouth{
+  position:absolute;
+  width:48px;
+  height:20px;
+  border-bottom:5px solid #28120b;
+  border-radius:50%;
+  left:70px;
+  top:96px;
+}
+
+.mascot-name{
+  font-size:48px;
+  font-weight:900;
+  margin-top:10px;
+}
+
+.mascot-sub{
+  color:#ffb45e;
+  letter-spacing:6px;
+  font-size:10px;
+}
+
+/* =========================
+   LOGO 10
+========================= */
+
+.three-showcase{
+  background:
+  radial-gradient(circle at 50% 40%,#008cff,transparent 35%),
+  radial-gradient(circle at 70% 70%,#8d34ff,transparent 35%),
+  #070b17;
+}
+
+.three-name{
+  font-size:95px;
+  font-weight:900;
+  letter-spacing:-9px;
+  color:#eaffff;
+  transform:skew(-8deg);
+  text-shadow:
+    8px 8px 0 #0078c8,
+    16px 16px 0 #4b1bb7,
+    28px 30px 40px rgba(0,0,0,.8);
+}
+
+.three-sub{
+  color:#71eaff;
+  letter-spacing:7px;
+  font-size:10px;
+  margin-top:25px;
+}
+
+/* =========================
+   LOGO 11
+========================= */
+
+.signature-showcase{
+  background:
+  radial-gradient(circle at 60% 30%,#ff597f,transparent 35%),
+  linear-gradient(135deg,#17102b,#0c0717);
+}
+
+.signature-name{
+  font-family:"Brush Script MT","Segoe Script",cursive;
+  font-size:90px;
+  font-style:italic;
+  color:#ffd4df;
+  transform:rotate(-5deg);
+}
+
+.signature-line{
+  width:260px;
+  height:2px;
+  background:#ff6d91;
+  margin:15px auto;
+}
+
+.signature-sub{
+  color:#ff9fb6;
+  letter-spacing:6px;
+  font-size:10px;
+  text-transform:uppercase;
+}
+
+/* =========================
+   LOGO 12
+========================= */
+
+.combination-showcase{
+  background:
+  radial-gradient(circle at 25% 50%,#00a99a,transparent 30%),
+  radial-gradient(circle at 75% 50%,#ff713b,transparent 30%),
+  #071616;
+}
+
+.combination-wrap{
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.combination-symbol{
+  width:145px;
+  height:145px;
+  border-radius:35px 65% 35px 65%;
+  background:linear-gradient(135deg,#20e0c5,#ff7047);
+  transform:rotate(12deg);
+  box-shadow:0 25px 70px rgba(0,0,0,.45);
+}
+
+.combination-name{
+  font-size:60px;
+  font-weight:900;
+  letter-spacing:-5px;
+  text-align:left;
+}
+
+.combination-sub{
+  color:#72e0d1;
+  letter-spacing:6px;
+  font-size:10px;
+  text-align:left;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description{
+  max-width:850px;
+  margin:0 auto 35px;
+  text-align:center;
+}
+
+.description h3{
+  font-size:31px;
   margin-bottom:12px;
 }
+
 .description p{
-  color:#999;
-  max-width:650px;
+  color:#888;
+  font-size:15px;
+}
+
+.sample-note{
+  margin-top:10px;
+  color:#555;
+  font-size:11px;
+}
+
+/* =========================
+   PACKAGES
+========================= */
+
+.packages-title{
+  text-align:center;
+  margin-bottom:22px;
+}
+
+.packages-title span{
+  color:#666;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:3px;
 }
 
 .packages{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:14px;
+  gap:18px;
 }
 
 .package{
+  background:#101010;
   border:1px solid #292929;
-  border-radius:18px;
-  padding:24px;
-  background:#0e0e0e;
+  border-radius:20px;
+  padding:30px;
+  min-height:380px;
+  display:flex;
+  flex-direction:column;
   transition:.3s;
 }
+
 .package:hover{
   transform:translateY(-5px);
   border-color:#555;
 }
+
 .package.featured{
-  background:linear-gradient(145deg,#181818,#0c0c0c);
-  border-color:#555;
+  background:linear-gradient(145deg,#191919,#0d0d0d);
+  border-color:#666;
 }
+
+.package-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
 .package h4{
-  font-size:14px;
+  font-size:13px;
   text-transform:uppercase;
-  letter-spacing:2px;
+  letter-spacing:3px;
   color:#aaa;
 }
-.price{
-  font-size:32px;
-  font-weight:800;
-  margin:12px 0 15px;
+
+.recommended{
+  font-size:9px;
+  color:#000;
+  background:#fff;
+  padding:5px 8px;
+  border-radius:20px;
+  text-transform:uppercase;
+  letter-spacing:1px;
 }
+
+.price{
+  font-size:42px;
+  font-weight:900;
+  margin:16px 0 20px;
+}
+
 .package ul{
   list-style:none;
-  color:#888;
-  font-size:12px;
+  color:#999;
+  font-size:13px;
 }
+
 .package li{
-  padding:5px 0;
-  border-bottom:1px solid #1e1e1e;
+  padding:8px 0;
+  border-bottom:1px solid #202020;
 }
-.package li:last-child{border:0}
+
+.package li:last-child{
+  border-bottom:0;
+}
 
 .package-btn{
   display:block;
-  margin-top:20px;
-  padding:12px;
-  text-align:center;
+  margin-top:auto;
+  padding:14px;
   border-radius:10px;
   background:#fff;
   color:#000;
-  font-weight:700;
+  text-align:center;
+  font-weight:800;
   font-size:12px;
   transition:.3s;
 }
+
 .package-btn:hover{
   background:#ccc;
 }
 
-/* Individual logo presentations */
-
-.minimal-mark{
-  width:115px;
-  height:115px;
-  border-radius:32px;
-  background:linear-gradient(145deg,#fff,#aaa);
-  box-shadow:0 25px 60px rgba(255,255,255,.14);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#080808;
-  font-size:54px;
-  font-weight:900;
-}
-
-.abstract-mark{
-  width:180px;
-  height:180px;
-  position:relative;
-}
-.abstract-mark:before,
-.abstract-mark:after{
-  content:"";
-  position:absolute;
-  inset:25px;
-  border-radius:60% 30% 65% 35%;
-  transform:rotate(35deg);
-}
-.abstract-mark:before{
-  background:linear-gradient(135deg,#fff,#777);
-}
-.abstract-mark:after{
-  background:#111;
-  inset:55px 30px 30px 65px;
-}
-
-.wordmark{
-  font-size:64px;
-  font-weight:900;
-  letter-spacing:-5px;
-}
-.wordmark small{
-  display:block;
-  font-size:10px;
-  color:#888;
-  letter-spacing:6px;
-  margin-top:5px;
-}
-
-.lettermark{
-  width:155px;
-  height:155px;
-  border:4px solid #eee;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:64px;
-  font-weight:900;
-  letter-spacing:-7px;
-  box-shadow:0 0 50px rgba(255,255,255,.08);
-}
-
-.monogram{
-  font-size:95px;
-  font-weight:900;
-  letter-spacing:-18px;
-  background:linear-gradient(135deg,#fff,#777);
-  -webkit-background-clip:text;
-  color:transparent;
-}
-
-.luxury{
-  border:1px solid #aaa;
-  padding:28px 45px;
-  position:relative;
-}
-.luxury:before,
-.luxury:after{
-  content:"◆";
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  color:#aaa;
-  font-size:12px;
-}
-.luxury:before{left:12px}
-.luxury:after{right:12px}
-.luxury strong{
-  font-family:Georgia,serif;
-  font-size:52px;
-  letter-spacing:8px;
-}
-
-.vintage{
-  border:3px double #bbb;
-  padding:28px 45px;
-  border-radius:50%;
-  font-family:Georgia,serif;
-  font-weight:bold;
-  font-size:34px;
-  text-transform:uppercase;
-  letter-spacing:3px;
-}
-
-.emblem{
-  width:190px;
-  height:190px;
-  border-radius:50%;
-  border:3px solid #ddd;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-}
-.emblem:before{
-  content:"";
-  position:absolute;
-  inset:14px;
-  border:1px solid #666;
-  border-radius:50%;
-}
-.emblem span{
-  font-size:40px;
-  font-weight:900;
-  letter-spacing:-4px;
-}
-
-.mascot{
-  position:relative;
-  width:190px;
-  height:170px;
-}
-.mascot .head{
-  width:130px;
-  height:115px;
-  background:linear-gradient(145deg,#ddd,#777);
-  border-radius:48% 52% 44% 56%;
-  position:absolute;
-  left:30px;
-  top:25px;
-}
-.mascot .ear{
-  width:45px;
-  height:65px;
-  background:#aaa;
-  position:absolute;
-  top:0;
-  border-radius:60% 40%;
-}
-.mascot .ear.left{left:20px;transform:rotate(-25deg)}
-.mascot .ear.right{right:20px;transform:rotate(25deg)}
-.mascot .eye{
-  width:13px;
-  height:13px;
-  background:#111;
-  border-radius:50%;
-  position:absolute;
-  top:66px;
-}
-.mascot .eye.left{left:65px}
-.mascot .eye.right{right:65px}
-.mascot .mouth{
-  position:absolute;
-  width:45px;
-  height:18px;
-  border-bottom:4px solid #111;
-  border-radius:50%;
-  left:72px;
-  top:88px;
-}
-
-.three-d{
-  font-size:76px;
-  font-weight:900;
-  letter-spacing:-7px;
-  color:#ddd;
-  text-shadow:
-    7px 7px 0 #777,
-    14px 14px 0 #333,
-    22px 22px 30px rgba(0,0,0,.7);
-  transform:skew(-8deg);
-}
-
-.signature{
-  font-family:"Brush Script MT","Segoe Script",cursive;
-  font-size:78px;
-  font-style:italic;
-  color:#eee;
-  transform:rotate(-6deg);
-}
-
-.combination{
-  display:flex;
-  align-items:center;
-  gap:20px;
-}
-.combination .symbol{
-  width:105px;
-  height:105px;
-  border-radius:28px 50% 28px 50%;
-  background:linear-gradient(135deg,#fff,#666);
-  transform:rotate(12deg);
-}
-.combination strong{
-  font-size:45px;
-  letter-spacing:-3px;
-}
-
-.note{
-  color:#666;
-  font-size:11px;
-  margin-top:15px;
-}
+/* =========================
+   CTA
+========================= */
 
 .cta{
-  max-width:1250px;
-  margin:0 auto 80px;
-  padding:70px 24px;
+  max-width:1280px;
+  margin:auto;
+  padding:40px 25px 100px;
 }
+
 .cta-box{
   border:1px solid #292929;
-  border-radius:28px;
-  padding:65px 40px;
+  border-radius:30px;
+  padding:80px 30px;
   text-align:center;
   background:
-    radial-gradient(circle at 50% 0,rgba(255,255,255,.08),transparent 45%),
-    #0d0d0d;
+  radial-gradient(circle at 50% 0,#222,transparent 50%),
+  #0d0d0d;
 }
+
 .cta-box h2{
-  font-size:clamp(40px,6vw,70px);
-  letter-spacing:-4px;
+  font-size:clamp(45px,7vw,80px);
+  line-height:.95;
+  letter-spacing:-5px;
 }
+
 .cta-box p{
   color:#888;
-  margin:18px auto 30px;
-  max-width:550px;
+  max-width:600px;
+  margin:25px auto 32px;
 }
+
 .cta-button{
   display:inline-block;
-  padding:15px 26px;
-  border-radius:10px;
+  padding:15px 28px;
   background:#fff;
   color:#000;
-  font-weight:800;
+  border-radius:10px;
   font-size:13px;
+  font-weight:800;
 }
 
-.footer{
+/* =========================
+   FOOTER
+========================= */
+
+footer{
   border-top:1px solid #222;
-  padding:30px 24px;
+  text-align:center;
+  padding:30px 20px;
   color:#666;
   font-size:11px;
-  text-align:center;
 }
 
-@media(max-width:900px){
-  .detail{grid-template-columns:1fr}
-  .packages{grid-template-columns:1fr}
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:850px){
+
+  .logo-header{
+    display:block;
+  }
+
+  .logo-header p{
+    margin-top:15px;
+  }
+
+  .packages{
+    grid-template-columns:1fr;
+  }
+
+  .package{
+    min-height:auto;
+  }
+
+  .showcase{
+    min-height:420px;
+    padding:35px 20px;
+  }
+
+  .minimal-name,
+  .abstract-name,
+  .wordmark-name{
+    font-size:48px;
+  }
+
+  .three-name{
+    font-size:65px;
+  }
+
+  .signature-name{
+    font-size:65px;
+  }
+
+  .combination-wrap{
+    flex-direction:column;
+  }
+
+  .combination-name{
+    text-align:center;
+    font-size:48px;
+  }
+
+  .combination-sub{
+    text-align:center;
+  }
 }
 
-@media(max-width:600px){
-  .hero{padding-top:65px}
-  .hero h1{letter-spacing:-3px}
-  .section{padding-bottom:60px}
-  .logo-preview{min-height:330px;padding:25px}
-  .logo-showcase{padding:30px;min-height:220px}
-  .three-d{font-size:52px}
-  .signature{font-size:55px}
-  .luxury strong{font-size:34px}
-  .vintage{font-size:23px;padding:22px}
-  .combination strong{font-size:30px}
+@media(max-width:550px){
+
+  .nav{
+    padding:15px 18px;
+  }
+
+  .logo{
+    width:140px;
+  }
+
+  .hero{
+    padding:70px 20px;
+  }
+
+  .hero h1{
+    font-size:58px;
+    letter-spacing:-4px;
+  }
+
+  .intro,
+  .logo-section,
+  .cta{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .logo-header h2{
+    font-size:34px;
+  }
+
+  .showcase{
+    min-height:350px;
+    border-radius:22px;
+  }
+
+  .minimal-symbol{
+    width:110px;
+    height:110px;
+    font-size:55px;
+  }
+
+  .minimal-name,
+  .abstract-name,
+  .wordmark-name{
+    font-size:39px;
+  }
+
+  .letter-symbol{
+    width:145px;
+    height:145px;
+    font-size:55px;
+  }
+
+  .monogram-symbol{
+    font-size:100px;
+  }
+
+  .luxury-frame{
+    padding:35px 45px;
+  }
+
+  .luxury-name{
+    font-size:38px;
+    letter-spacing:5px;
+  }
+
+  .vintage-frame{
+    padding:30px 40px;
+  }
+
+  .vintage-name{
+    font-size:25px;
+  }
+
+  .emblem-symbol{
+    width:155px;
+    height:155px;
+  }
+
+  .three-name{
+    font-size:50px;
+  }
+
+  .signature-name{
+    font-size:48px;
+  }
+
+  .combination-symbol{
+    width:110px;
+    height:110px;
+  }
+
+  .combination-name{
+    font-size:38px;
+  }
+
+  .package{
+    padding:25px;
+  }
+
+  .cta-box{
+    padding:60px 22px;
+  }
+
+  .cta-box h2{
+    font-size:48px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header class="header">
+<header>
   <nav class="nav">
+
     <a href="index.html">
       <img src="logo.png" alt="Victor Phoenix" class="logo">
     </a>
-    <a href="graphics.html" class="back">← Graphics & Design</a>
+
+    <a href="graphics.html" class="back">
+      ← Graphics & Design
+    </a>
+
   </nav>
 </header>
 
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
-  <div class="eyebrow">Phoenix Creative / Logo Design</div>
-  <h1>Logos built to<br><span>be remembered.</span></h1>
-  <p>
-    Explore professionally crafted logo directions designed for different
-    brand personalities. Each style can be developed into a complete,
-    polished identity for your business.
+
+  <div class="eyebrow">
+    Phoenix Creative / Logo Design
+  </div>
+
+  <h1>
+    Identity that<br>
+    <span>stands apart.</span>
+  </h1>
+
+  <p class="hero-text">
+    Explore different logo directions created for different industries,
+    personalities and brand goals. Choose a style and package that fits
+    the identity you want to build.
   </p>
-</section>
-
-<section class="section">
-
-<div class="section-title">
-  <div>
-    <div class="eyebrow">Explore the collection</div>
-    <h2>Logo Styles</h2>
-  </div>
-  <p>12 design directions</p>
-</div>
-
-<!-- 01 MINIMALIST -->
-<article class="logo-item">
-  <div class="logo-preview">
-    <div class="preview-label">01 / Minimalist — Sample Concept</div>
-    <div class="logo-showcase">
-      <div class="logo-content">
-        <div class="minimal-mark">V</div>
-        <div class="logo-name">VERRA</div>
-        <div class="logo-sub">Design Studio</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="detail">
-    <div class="description">
-      <h3>Minimalist Logo</h3>
-      <p>
-        Clean, restrained and highly recognizable. Designed for brands
-        that want a modern identity with strong visual simplicity.
-      </p>
-      <div class="note">Sample shown for presentation purposes.</div>
-    </div>
-
-    <div class="packages">
-      <div class="package">
-        <h4>Basic</h4>
-        <div class="price">$30</div>
-        <ul>
-          <li>1 logo concept</li>
-          <li>2 revisions</li>
-          <li>Full color version</li>
-          <li>PNG + JPG</li>
-          <li>3-day delivery</li>
-        </ul>
-        <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Minimalist%20Logo%20Basic%20package.">Get Started</a>
-      </div>
-
-      <div class="package featured">
-        <h4>Standard</h4>
-        <div class="price">$50</div>
-        <ul>
-          <li>2 logo concepts</li>
-          <li>3 revisions</li>
-          <li>Color + black + white</li>
-          <li>Transparent background</li>
-          <li>PNG + JPG + PDF</li>
-          <li>4-day delivery</li>
-        </ul>
-        <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Minimalist%20Logo%20Standard%20package.">Get Started</a>
-      </div>
-
-      <div class="package">
-        <h4>Premium</h4>
-        <div class="price">$80</div>
-        <ul>
-          <li>3 logo concepts</li>
-          <li>5 revisions</li>
-          <li>Complete final logo set</li>
-          <li>Color + black + white</li>
-          <li>Transparent files</li>
-          <li>Source-ready formats</li>
-          <li>5-day delivery</li>
-        </ul>
-        <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Minimalist%20Logo%20Premium%20package.">Get Started</a>
-      </div>
-    </div>
-  </div>
-</article>
-
-<!-- 02 ABSTRACT -->
-<article class="logo-item">
-  <div class="logo-preview">
-    <div class="preview-label">02 / Abstract — Sample Concept</div>
-    <div class="logo-showcase">
-      <div class="logo-content">
-        <div class="abstract-mark"></div>
-        <div class="logo-name">NEXORA</div>
-        <div class="logo-sub">Future Systems</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="detail">
-    <div class="description">
-      <h3>Abstract Logo</h3>
-      <p>
-        Custom shapes, movement and symbolism combined into a distinctive
-        mark for brands that want something less predictable.
-      </p>
-      <div class="note">Sample shown for presentation purposes.</div>
-    </div>
-
-    <div class="packages">
-      <div class="package">
-        <h4>Basic</h4>
-        <div class="price">$40</div>
-        <ul>
-          <li>1 logo concept</li>
-          <li>2 revisions</li>
-          <li>Full color</li>
-          <li>PNG + JPG</li>
-          <li>3-day delivery</li>
-        </ul>
-        <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Abstract%20Logo%20Basic%20package.">Get Started</a>
-      </div>
-
-      <div class="package featured">
-        <h4>Standard</h4>
-        <div class="price">$65</div>
-        <ul>
-          <li>2 logo concepts</li>
-          <li>3 revisions</li>
-          <li>Color + black + white</li>
-          <li>Transparent background</li>
-          <li>PNG + JPG + PDF</li>
-          <li>4-day delivery</li>
-        </ul>
-        <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Abstract%20Logo%20Standard%20package.">Get Started</a>
-      </div>
-
-      <div class="package">
-        <h4>Premium</h4>
-        <div class="price">$100</div>
-        <ul>
-          <li>3 logo concepts</li>
-          <li>5 revisions</li>
-          <li>Final logo system</li>
-          <li>Color + black + white</li>
-          <li>Transparent files</li>
-          <li>Source-ready formats</li>
-          <li>6-day delivery</li>
-        </ul>
-        <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Abstract%20Logo%20Premium%20package.">Get Started</a>
-      </div>
-    </div>
-  </div>
-</article>
-
-<!-- 03 WORDMARK -->
-<article class="logo-item">
-  <div class="logo-preview">
-    <div class="preview-label">03 / Wordmark — Sample Concept</div>
-    <div class="logo-showcase">
-      <div class="logo-content">
-        <div class="wordmark">AURELIS<small>CREATIVE GROUP</small></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="detail">
-    <div class="description">
-      <h3>Wordmark Logo</h3>
-      <p>
-        Typography becomes the identity. A custom typographic direction
-        creates a strong, memorable brand without relying on a separate icon.
-      </p>
-      <div class="note">Sample shown for presentation purposes.</div>
-    </div>
-
-    <div class="packages">
-      <div class="package">
-        <h4>Basic</h4>
-        <div class="price">$30</div>
-        <ul>
-          <li>1 wordmark concept</li>
-          <li>2 revisions</li>
-          <li>Full color</li>
-          <li>PNG + JPG</li>
-          <li>3-day delivery</li>
-        </ul>
-        <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Wordmark%20Logo%20Basic%20package.">Get Started</a>
-      </div>
-
-      <div class="package featured">
-        <h4>Standard</h4>
-        <div class="price">$50</div>
-        <ul>
-          <li>2 concepts</li>
-          <li>3 revisions</li>
-          <li>Color + black + white</li>
-          <li>Transparent background</li>
-          <li>PNG + JPG + PDF</li>
-          <li>4-day delivery</li>
-        </ul>
-        <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Wordmark%20Logo%20Standard%20package.">Get Started</a>
-      </div>
-
-      <div class="package">
-        <h4>Premium</h4>
-        <div class="price">$80</div>
-        <ul>
-          <li>3 concepts</li>
-          <li>5 revisions</li>
-          <li>Final typographic system</li>
-          <li>Color + black + white</li>
-          <li>Transparent files</li>
-          <li>Source-ready formats</li>
-          <li>5-day delivery</li>
-        </ul>
-        <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Wordmark%20Logo%20Premium%20package.">Get Started</a>
-      </div>
-    </div>
-  </div>
-</article>
-
-<!-- 04 LETTERMARK -->
-<article class="logo-item">
-  <div class="logo-preview">
-    <div class="preview-label">04 / Lettermark — Sample Concept</div>
-    <div class="logo-showcase">
-      <div class="logo-content">
-        <div class="lettermark">AP</div>
-        <div class="logo-name">APEX</div>
-        <div class="logo-sub">Performance</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="detail">
-    <div class="description">
-      <h3>Lettermark Logo</h3>
-      <p>
-        A focused identity built from initials, ideal for companies with
-        longer names that need a compact and recognizable visual mark.
-      </p>
-    </div>
-
-    <div class="packages">
-      <div class="package"><h4>Basic</h4><div class="price">$30</div><ul><li>1 concept</li><li>2 revisions</li><li>Color version</li><li>PNG + JPG</li><li>3-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Lettermark%20Logo%20Basic%20package.">Get Started</a></div>
-      <div class="package featured"><h4>Standard</h4><div class="price">$50</div><ul><li>2 concepts</li><li>3 revisions</li><li>Color + black + white</li><li>Transparent background</li><li>PNG + JPG + PDF</li><li>4-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Lettermark%20Logo%20Standard%20package.">Get Started</a></div>
-      <div class="package"><h4>Premium</h4><div class="price">$80</div><ul><li>3 concepts</li><li>5 revisions</li><li>Complete final set</li><li>Color + black + white</li><li>Transparent files</li><li>Source-ready formats</li><li>5-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Lettermark%20Logo%20Premium%20package.">Get Started</a></div>
-    </div>
-  </div>
-</article>
-
-<!-- 05 MONOGRAM -->
-<article class="logo-item">
-  <div class="logo-preview">
-    <div class="preview-label">05 / Monogram — Sample Concept</div>
-    <div class="logo-showcase">
-      <div class="logo-content">
-        <div class="monogram">MJ</div>
-        <div class="logo-sub">Maison Juno</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="detail">
-    <div class="description">
-      <h3>Monogram Logo</h3>
-      <p>Interlocking initials transformed into a refined signature mark for premium and personal brands.</p>
-    </div>
-    <div class="packages">
-      <div class="package"><h4>Basic</h4><div class="price">$35</div><ul><li>1 concept</li><li>2 revisions</li><li>Color</li><li>PNG + JPG</li><li>3-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Monogram%20Logo%20Basic%20package.">Get Started</a></div>
-      <div class="package featured"><h4>Standard</h4><div class="price">$55</div><ul><li>2 concepts</li><li>3 revisions</li><li>Color + black + white</li><li>Transparent background</li><li>PNG + JPG + PDF</li><li>4-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Monogram%20Logo%20Standard%20package.">Get Started</a></div>
-      <div class="package"><h4>Premium</h4><div class="price">$90</div><ul><li>3 concepts</li><li>5 revisions</li><li>Complete logo system</li><li>Color + black + white</li><li>Transparent files</li><li>Source-ready formats</li><li>5-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Monogram%20Logo%20Premium%20package.">Get Started</a></div>
-    </div>
-  </div>
-</article>
-
-<!-- 06 LUXURY -->
-<article class="logo-item">
-  <div class="logo-preview">
-    <div class="preview-label">06 / Luxury — Sample Concept</div>
-    <div class="logo-showcase">
-      <div class="logo-content luxury">
-        <strong>ÉLAN</strong>
-        <div class="logo-sub">Maison</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="detail">
-    <div class="description">
-      <h3>Luxury / Premium Logo</h3>
-      <p>Elegant typography, balanced spacing and sophisticated composition for luxury-focused brands.</p>
-    </div>
-    <div class="packages">
-      <div class="package"><h4>Basic</h4><div class="price">$50</div><ul><li>1 concept</li><li>2 revisions</li><li>Color</li><li>PNG + JPG</li><li>4-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Luxury%20Logo%20Basic%20package.">Get Started</a></div>
-      <div class="package featured"><h4>Standard</h4><div class="price">$80</div><ul><li>2 concepts</li><li>3 revisions</li><li>Color + black + white</li><li>Transparent background</li><li>PNG + JPG + PDF</li><li>5-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Luxury%20Logo%20Standard%20package.">Get Started</a></div>
-      <div class="package"><h4>Premium</h4><div class="price">$120</div><ul><li>3 concepts</li><li>5 revisions</li><li>Complete premium logo set</li><li>Color + black + white</li><li>Transparent files</li><li>Source-ready formats</li><li>7-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Luxury%20Logo%20Premium%20package.">Get Started</a></div>
-    </div>
-  </div>
-</article>
-
-<!-- 07 VINTAGE -->
-<article class="logo-item">
-  <div class="logo-preview">
-    <div class="preview-label">07 / Vintage — Sample Concept</div>
-    <div class="logo-showcase">
-      <div class="logo-content vintage">Iron & Oak</div>
-    </div>
-  </div>
-
-  <div class="detail">
-    <div class="description">
-      <h3>Vintage / Retro Logo</h3>
-      <p>Classic badge forms, traditional typography and nostalgic visual language adapted for modern brands.</p>
-    </div>
-    <div class="packages">
-      <div class="package"><h4>Basic</h4><div class="price">$40</div><ul><li>1 concept</li><li>2 revisions</li><li>Color</li><li>PNG + JPG</li><li>4-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Vintage%20Logo%20Basic%20package.">Get Started</a></div>
-      <div class="package featured"><h4>Standard</h4><div class="price">$65</div><ul><li>2 concepts</li><li>3 revisions</li><li>Color + black + white</li><li>Transparent background</li><li>PNG + JPG + PDF</li><li>5-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Vintage%20Logo%20Standard%20package.">Get Started</a></div>
-      <div class="package"><h4>Premium</h4><div class="price">$100</div><ul><li>3 concepts</li><li>5 revisions</li><li>Complete vintage set</li><li>Color + black + white</li><li>Transparent files</li><li>Source-ready formats</li><li>6-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Vintage%20Logo%20Premium%20package.">Get Started</a></div>
-    </div>
-  </div>
-</article>
-
-<!-- 08 EMBLEM -->
-<article class="logo-item">
-  <div class="logo-preview">
-    <div class="preview-label">08 / Emblem — Sample Concept</div>
-    <div class="logo-showcase">
-      <div class="logo-content">
-        <div class="emblem"><span>AX</span></div>
-        <div class="logo-sub">Athletic Club</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="detail">
-    <div class="description">
-      <h3>Emblem Logo</h3>
-      <p>Structured badge-style identities designed for institutions, clubs, organizations and established brands.</p>
-    </div>
-    <div class="packages">
-      <div class="package"><h4>Basic</h4><div class="price">$40</div><ul><li>1 concept</li><li>2 revisions</li><li>Color</li><li>PNG + JPG</li><li>4-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Emblem%20Logo%20Basic%20package.">Get Started</a></div>
-      <div class="package featured"><h4>Standard</h4><div class="price">$65</div><ul><li>2 concepts</li><li>3 revisions</li><li>Color + black + white</li><li>Transparent background</li><li>PNG + JPG + PDF</li><li>5-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Emblem%20Logo%20Standard%20package.">Get Started</a></div>
-      <div class="package"><h4>Premium</h4><div class="price">$100</div><ul><li>3 concepts</li><li>5 revisions</li><li>Complete emblem system</li><li>Color + black + white</li><li>Transparent files</li><li>Source-ready formats</li><li>6-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Emblem%20Logo%20Premium%20package.">Get Started</a></div>
-    </div>
-  </div>
-</article>
-
-<!-- 09 MASCOT -->
-<article class="logo-item">
-  <div class="logo-preview">
-    <div class="preview-label">09 / Mascot — Sample Concept</div>
-    <div class="logo-showcase">
-      <div class="logo-content">
-        <div class="mascot">
-          <div class="ear left"></div>
-          <div class="ear right"></div>
-          <div class="head"></div>
-          <div class="eye left"></div>
-          <div class="eye right"></div>
-          <div class="mouth"></div>
-        </div>
-        <div class="logo-name">NOVA</div>
-        <div class="logo-sub">Gaming</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="detail">
-    <div class="description">
-      <h3>Mascot Logo</h3>
-      <p>Character-led identities designed to make brands more expressive, recognizable and memorable.</p>
-    </div>
-    <div class="packages">
-      <div class="package"><h4>Basic</h4><div class="price">$60</div><ul><li>1 character concept</li><li>2 revisions</li><li>Color version</li><li>PNG + JPG</li><li>5-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Mascot%20Logo%20Basic%20package.">Get Started</a></div>
-      <div class="package featured"><h4>Standard</h4><div class="price">$100</div><ul><li>2 character concepts</li><li>3 revisions</li><li>Color + black + white</li><li>Transparent background</li><li>PNG + JPG + PDF</li><li>7-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Mascot%20Logo%20Standard%20package.">Get Started</a></div>
-      <div class="package"><h4>Premium</h4><div class="price">$150</div><ul><li>3 character concepts</li><li>5 revisions</li><li>Complete mascot system</li><li>Color + black + white</li><li>Transparent files</li><li>Source-ready formats</li><li>10-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Mascot%20Logo%20Premium%20package.">Get Started</a></div>
-    </div>
-  </div>
-</article>
-
-<!-- 10 3D -->
-<article class="logo-item">
-  <div class="logo-preview">
-    <div class="preview-label">10 / 3D — Sample Concept</div>
-    <div class="logo-showcase">
-      <div class="logo-content">
-        <div class="three-d">VOLT</div>
-        <div class="logo-sub">Digital Energy</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="detail">
-    <div class="description">
-      <h3>3D Logo</h3>
-      <p>Dimensional branding with depth, lighting and visual presence for digital-first and modern technology brands.</p>
-    </div>
-    <div class="packages">
-      <div class="package"><h4>Basic</h4><div class="price">$60</div><ul><li>1 concept</li><li>2 revisions</li><li>3D presentation</li><li>PNG + JPG</li><li>5-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%203D%20Logo%20Basic%20package.">Get Started</a></div>
-      <div class="package featured"><h4>Standard</h4><div class="price">$100</div><ul><li>2 concepts</li><li>3 revisions</li><li>Color + black + white</li><li>Transparent background</li><li>PNG + JPG + PDF</li><li>7-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%203D%20Logo%20Standard%20package.">Get Started</a></div>
-      <div class="package"><h4>Premium</h4><div class="price">$150</div><ul><li>3 concepts</li><li>5 revisions</li><li>Full 3D logo system</li><li>Color + black + white</li><li>Transparent files</li><li>Source-ready formats</li><li>10-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%203D%20Logo%20Premium%20package.">Get Started</a></div>
-    </div>
-  </div>
-</article>
-
-<!-- 11 SIGNATURE -->
-<article class="logo-item">
-  <div class="logo-preview">
-    <div class="preview-label">11 / Signature — Sample Concept</div>
-    <div class="logo-showcase">
-      <div class="logo-content">
-        <div class="signature">Livia Rose</div>
-        <div class="logo-sub">Personal Brand</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="detail">
-    <div class="description">
-      <h3>Signature Logo</h3>
-      <p>Personal, elegant and expressive lettering designed for creators, professionals and personal brands.</p>
-    </div>
-    <div class="packages">
-      <div class="package"><h4>Basic</h4><div class="price">$40</div><ul><li>1 signature concept</li><li>2 revisions</li><li>Color</li><li>PNG + JPG</li><li>4-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Signature%20Logo%20Basic%20package.">Get Started</a></div>
-      <div class="package featured"><h4>Standard</h4><div class="price">$65</div><ul><li>2 concepts</li><li>3 revisions</li><li>Color + black + white</li><li>Transparent background</li><li>PNG + JPG + PDF</li><li>5-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Signature%20Logo%20Standard%20package.">Get Started</a></div>
-      <div class="package"><h4>Premium</h4><div class="price">$100</div><ul><li>3 concepts</li><li>5 revisions</li><li>Complete signature system</li><li>Color + black + white</li><li>Transparent files</li><li>Source-ready formats</li><li>6-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Signature%20Logo%20Premium%20package.">Get Started</a></div>
-    </div>
-  </div>
-</article>
-
-<!-- 12 COMBINATION -->
-<article class="logo-item">
-  <div class="logo-preview">
-    <div class="preview-label">12 / Combination — Sample Concept</div>
-    <div class="logo-showcase">
-      <div class="logo-content combination">
-        <div class="symbol"></div>
-        <div>
-          <strong>ORION</strong>
-          <div class="logo-sub">Creative Labs</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="detail">
-    <div class="description">
-      <h3>Combination Logo</h3>
-      <p>A custom symbol paired with a wordmark, giving the brand both an independent icon and a complete identity.</p>
-    </div>
-    <div class="packages">
-      <div class="package"><h4>Basic</h4><div class="price">$45</div><ul><li>1 concept</li><li>2 revisions</li><li>Color</li><li>PNG + JPG</li><li>4-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Combination%20Logo%20Basic%20package.">Get Started</a></div>
-      <div class="package featured"><h4>Standard</h4><div class="price">$75</div><ul><li>2 concepts</li><li>3 revisions</li><li>Color + black + white</li><li>Transparent background</li><li>PNG + JPG + PDF</li><li>5-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Combination%20Logo%20Standard%20package.">Get Started</a></div>
-      <div class="package"><h4>Premium</h4><div class="price">$120</div><ul><li>3 concepts</li><li>5 revisions</li><li>Complete identity mark</li><li>Color + black + white</li><li>Transparent files</li><li>Source-ready formats</li><li>7-day delivery</li></ul><a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Combination%20Logo%20Premium%20package.">Get Started</a></div>
-    </div>
-  </div>
-</article>
 
 </section>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="intro">
+
+  <div class="intro-box">
+
+    <p>
+      Every logo shown below is a <strong>sample concept</strong> created
+      for presentation purposes. They demonstrate different creative
+      directions and color possibilities. Your final logo is created
+      specifically for your own brand.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     01 MINIMALIST
+========================= -->
+
+<section class="logo-section">
+
+  <div class="logo-header">
+
+    <div>
+      <div class="logo-number">01 / Minimalist</div>
+      <h2>Minimalist Logo</h2>
+    </div>
+
+    <p>
+      Clean, simple and highly recognizable.
+    </p>
+
+  </div>
+
+  <div class="showcase minimal-showcase">
+
+    <div class="showcase-label">
+      Sample Concept
+    </div>
+
+    <div class="logo-display">
+
+      <div class="minimal-symbol">
+        V
+      </div>
+
+      <div class="minimal-name">
+        VERRA
+      </div>
+
+      <div class="minimal-sub">
+        Design Studio
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+
+    <h3>Minimalist Logo Design</h3>
+
+    <p>
+      A refined identity focused on simplicity, balance and recognition.
+      Ideal for modern businesses and professional brands.
+    </p>
+
+    <div class="sample-note">
+      Concept design — not a real client project.
+    </div>
+
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+
+      <div class="package-top">
+        <h4>Basic</h4>
+      </div>
+
+      <div class="price">$30</div>
+
+      <ul>
+        <li>1 logo concept</li>
+        <li>2 revisions</li>
+        <li>Full color version</li>
+        <li>PNG + JPG</li>
+        <li>3-day delivery</li>
+      </ul>
+
+      <a
+        class="package-btn"
+        href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Minimalist%20Logo%20Basic%20package."
+      >
+        Get Started
+      </a>
+
+    </div>
+
+
+    <div class="package featured">
+
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+
+      <div class="price">$50</div>
+
+      <ul>
+        <li>2 logo concepts</li>
+        <li>3 revisions</li>
+        <li>Color + black + white</li>
+        <li>Transparent background</li>
+        <li>PNG + JPG + PDF</li>
+        <li>4-day delivery</li>
+      </ul>
+
+      <a
+        class="package-btn"
+        href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Minimalist%20Logo%20Standard%20package."
+      >
+        Get Started
+      </a>
+
+    </div>
+
+
+    <div class="package">
+
+      <div class="package-top">
+        <h4>Premium</h4>
+      </div>
+
+      <div class="price">$80</div>
+
+      <ul>
+        <li>3 logo concepts</li>
+        <li>5 revisions</li>
+        <li>Complete final logo set</li>
+        <li>Color + black + white</li>
+        <li>Transparent files</li>
+        <li>Source-ready formats</li>
+        <li>5-day delivery</li>
+      </ul>
+
+      <a
+        class="package-btn"
+        href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Minimalist%20Logo%20Premium%20package."
+      >
+        Get Started
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     02 ABSTRACT
+========================= -->
+
+<section class="logo-section">
+
+  <div class="logo-header">
+
+    <div>
+      <div class="logo-number">02 / Abstract</div>
+      <h2>Abstract Logo</h2>
+    </div>
+
+    <p>
+      Distinctive shapes and visual symbolism.
+    </p>
+
+  </div>
+
+  <div class="showcase abstract-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="logo-display">
+
+      <div class="abstract-symbol">
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="abstract-name">
+        NEXORA
+      </div>
+
+      <div class="abstract-sub">
+        Future Systems
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+
+    <h3>Abstract Logo Design</h3>
+
+    <p>
+      Custom visual forms designed to give your brand a unique and
+      less predictable identity.
+    </p>
+
+    <div class="sample-note">
+      Concept design — not a real client project.
+    </div>
+
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h4>Basic</h4>
+      <div class="price">$40</div>
+      <ul>
+        <li>1 logo concept</li>
+        <li>2 revisions</li>
+        <li>Full color</li>
+        <li>PNG + JPG</li>
+        <li>3-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Abstract%20Logo%20Basic%20package.">Get Started</a>
+    </div>
+
+    <div class="package featured">
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+      <div class="price">$65</div>
+      <ul>
+        <li>2 logo concepts</li>
+        <li>3 revisions</li>
+        <li>Color + black + white</li>
+        <li>Transparent background</li>
+        <li>PNG + JPG + PDF</li>
+        <li>4-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Abstract%20Logo%20Standard%20package.">Get Started</a>
+    </div>
+
+    <div class="package">
+      <h4>Premium</h4>
+      <div class="price">$100</div>
+      <ul>
+        <li>3 logo concepts</li>
+        <li>5 revisions</li>
+        <li>Complete logo system</li>
+        <li>Color + black + white</li>
+        <li>Transparent files</li>
+        <li>Source-ready formats</li>
+        <li>6-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Abstract%20Logo%20Premium%20package.">Get Started</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     03 WORDMARK
+========================= -->
+
+<section class="logo-section">
+
+  <div class="logo-header">
+    <div>
+      <div class="logo-number">03 / Wordmark</div>
+      <h2>Wordmark Logo</h2>
+    </div>
+    <p>Typography becomes the identity.</p>
+  </div>
+
+  <div class="showcase wordmark-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="logo-display">
+
+      <div class="wordmark-name">
+        AURELIS
+      </div>
+
+      <div class="wordmark-line"></div>
+
+      <div class="wordmark-sub">
+        Creative Group
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+
+    <h3>Wordmark Logo Design</h3>
+
+    <p>
+      A typography-led identity where the brand name itself becomes
+      the primary visual mark.
+    </p>
+
+    <div class="sample-note">
+      Concept design — not a real client project.
+    </div>
+
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h4>Basic</h4>
+      <div class="price">$30</div>
+      <ul>
+        <li>1 wordmark concept</li>
+        <li>2 revisions</li>
+        <li>Full color</li>
+        <li>PNG + JPG</li>
+        <li>3-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Wordmark%20Logo%20Basic%20package.">Get Started</a>
+    </div>
+
+    <div class="package featured">
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+      <div class="price">$50</div>
+      <ul>
+        <li>2 logo concepts</li>
+        <li>3 revisions</li>
+        <li>Color + black + white</li>
+        <li>Transparent background</li>
+        <li>PNG + JPG + PDF</li>
+        <li>4-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Wordmark%20Logo%20Standard%20package.">Get Started</a>
+    </div>
+
+    <div class="package">
+      <h4>Premium</h4>
+      <div class="price">$80</div>
+      <ul>
+        <li>3 logo concepts</li>
+        <li>5 revisions</li>
+        <li>Final typography system</li>
+        <li>Color + black + white</li>
+        <li>Transparent files</li>
+        <li>Source-ready formats</li>
+        <li>5-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Wordmark%20Logo%20Premium%20package.">Get Started</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     04 LETTERMARK
+========================= -->
+
+<section class="logo-section">
+
+  <div class="logo-header">
+    <div>
+      <div class="logo-number">04 / Lettermark</div>
+      <h2>Lettermark Logo</h2>
+    </div>
+    <p>Compact identity built from initials.</p>
+  </div>
+
+  <div class="showcase letter-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="logo-display">
+
+      <div class="letter-symbol">
+        AP
+      </div>
+
+      <div class="letter-name">
+        APEX
+      </div>
+
+      <div class="letter-sub">
+        Performance
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+
+    <h3>Lettermark Logo Design</h3>
+
+    <p>
+      Strong initials transformed into a compact visual identity for
+      companies with longer names.
+    </p>
+
+    <div class="sample-note">
+      Concept design — not a real client project.
+    </div>
+
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h4>Basic</h4>
+      <div class="price">$30</div>
+      <ul>
+        <li>1 concept</li>
+        <li>2 revisions</li>
+        <li>Color version</li>
+        <li>PNG + JPG</li>
+        <li>3-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Lettermark%20Logo%20Basic%20package.">Get Started</a>
+    </div>
+
+    <div class="package featured">
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+      <div class="price">$50</div>
+      <ul>
+        <li>2 concepts</li>
+        <li>3 revisions</li>
+        <li>Color + black + white</li>
+        <li>Transparent background</li>
+        <li>PNG + JPG + PDF</li>
+        <li>4-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Lettermark%20Logo%20Standard%20package.">Get Started</a>
+    </div>
+
+    <div class="package">
+      <h4>Premium</h4>
+      <div class="price">$80</div>
+      <ul>
+        <li>3 concepts</li>
+        <li>5 revisions</li>
+        <li>Complete final set</li>
+        <li>Color + black + white</li>
+        <li>Transparent files</li>
+        <li>Source-ready formats</li>
+        <li>5-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Lettermark%20Logo%20Premium%20package.">Get Started</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     05 MONOGRAM
+========================= -->
+
+<section class="logo-section">
+
+  <div class="logo-header">
+    <div>
+      <div class="logo-number">05 / Monogram</div>
+      <h2>Monogram Logo</h2>
+    </div>
+    <p>Interlocking initials with personality.</p>
+  </div>
+
+  <div class="showcase monogram-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="logo-display">
+
+      <div class="monogram-symbol">
+        MJ
+      </div>
+
+      <div class="monogram-name">
+        MAISON JUNO
+      </div>
+
+      <div class="monogram-sub">
+        Modern House
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+    <h3>Monogram Logo Design</h3>
+    <p>
+      Interlocking initials transformed into a sophisticated signature
+      mark for premium and personal brands.
+    </p>
+    <div class="sample-note">
+      Concept design — not a real client project.
+    </div>
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h4>Basic</h4>
+      <div class="price">$35</div>
+      <ul>
+        <li>1 concept</li>
+        <li>2 revisions</li>
+        <li>Color version</li>
+        <li>PNG + JPG</li>
+        <li>3-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Monogram%20Logo%20Basic%20package.">Get Started</a>
+    </div>
+
+    <div class="package featured">
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+      <div class="price">$55</div>
+      <ul>
+        <li>2 concepts</li>
+        <li>3 revisions</li>
+        <li>Color + black + white</li>
+        <li>Transparent background</li>
+        <li>PNG + JPG + PDF</li>
+        <li>4-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Monogram%20Logo%20Standard%20package.">Get Started</a>
+    </div>
+
+    <div class="package">
+      <h4>Premium</h4>
+      <div class="price">$90</div>
+      <ul>
+        <li>3 concepts</li>
+        <li>5 revisions</li>
+        <li>Complete logo system</li>
+        <li>Color + black + white</li>
+        <li>Transparent files</li>
+        <li>Source-ready formats</li>
+        <li>5-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Monogram%20Logo%20Premium%20package.">Get Started</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     06 LUXURY
+========================= -->
+
+<section class="logo-section">
+
+  <div class="logo-header">
+    <div>
+      <div class="logo-number">06 / Luxury</div>
+      <h2>Luxury / Premium Logo</h2>
+    </div>
+    <p>Elegant identity with sophisticated presentation.</p>
+  </div>
+
+  <div class="showcase luxury-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="logo-display luxury-frame">
+
+      <div class="luxury-name">
+        ÉLAN
+      </div>
+
+      <div class="luxury-sub">
+        Maison
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+    <h3>Luxury Logo Design</h3>
+    <p>
+      Refined typography, spacing and composition designed for
+      premium-positioned brands.
+    </p>
+    <div class="sample-note">
+      Concept design — not a real client project.
+    </div>
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h4>Basic</h4>
+      <div class="price">$50</div>
+      <ul>
+        <li>1 concept</li>
+        <li>2 revisions</li>
+        <li>Color version</li>
+        <li>PNG + JPG</li>
+        <li>4-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Luxury%20Logo%20Basic%20package.">Get Started</a>
+    </div>
+
+    <div class="package featured">
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+      <div class="price">$80</div>
+      <ul>
+        <li>2 concepts</li>
+        <li>3 revisions</li>
+        <li>Color + black + white</li>
+        <li>Transparent background</li>
+        <li>PNG + JPG + PDF</li>
+        <li>5-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Luxury%20Logo%20Standard%20package.">Get Started</a>
+    </div>
+
+    <div class="package">
+      <h4>Premium</h4>
+      <div class="price">$120</div>
+      <ul>
+        <li>3 concepts</li>
+        <li>5 revisions</li>
+        <li>Complete premium logo set</li>
+        <li>Color + black + white</li>
+        <li>Transparent files</li>
+        <li>Source-ready formats</li>
+        <li>7-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Luxury%20Logo%20Premium%20package.">Get Started</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     07 VINTAGE
+========================= -->
+
+<section class="logo-section">
+
+  <div class="logo-header">
+    <div>
+      <div class="logo-number">07 / Vintage</div>
+      <h2>Vintage / Retro Logo</h2>
+    </div>
+    <p>Classic character with modern presentation.</p>
+  </div>
+
+  <div class="showcase vintage-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="logo-display vintage-frame">
+
+      <div class="vintage-name">
+        Iron & Oak
+      </div>
+
+      <div class="vintage-sub">
+        EST. 1986
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+    <h3>Vintage Logo Design</h3>
+    <p>
+      Traditional badge forms, nostalgic typography and classic
+      visual language for brands that want character.
+    </p>
+    <div class="sample-note">
+      Concept design — not a real client project.
+    </div>
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h4>Basic</h4>
+      <div class="price">$40</div>
+      <ul>
+        <li>1 concept</li>
+        <li>2 revisions</li>
+        <li>Color version</li>
+        <li>PNG + JPG</li>
+        <li>4-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Vintage%20Logo%20Basic%20package.">Get Started</a>
+    </div>
+
+    <div class="package featured">
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+      <div class="price">$65</div>
+      <ul>
+        <li>2 concepts</li>
+        <li>3 revisions</li>
+        <li>Color + black + white</li>
+        <li>Transparent background</li>
+        <li>PNG + JPG + PDF</li>
+        <li>5-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Vintage%20Logo%20Standard%20package.">Get Started</a>
+    </div>
+
+    <div class="package">
+      <h4>Premium</h4>
+      <div class="price">$100</div>
+      <ul>
+        <li>3 concepts</li>
+        <li>5 revisions</li>
+        <li>Complete vintage set</li>
+        <li>Color + black + white</li>
+        <li>Transparent files</li>
+        <li>Source-ready formats</li>
+        <li>6-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Vintage%20Logo%20Premium%20package.">Get Started</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     08 EMBLEM
+========================= -->
+
+<section class="logo-section">
+
+  <div class="logo-header">
+    <div>
+      <div class="logo-number">08 / Emblem</div>
+      <h2>Emblem Logo</h2>
+    </div>
+    <p>Strong badge-style visual identity.</p>
+  </div>
+
+  <div class="showcase emblem-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="logo-display">
+
+      <div class="emblem-symbol">
+        <span>AX</span>
+      </div>
+
+      <div class="emblem-name">
+        ATHLETIC CLUB
+      </div>
+
+      <div class="emblem-sub">
+        PERFORMANCE
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+    <h3>Emblem Logo Design</h3>
+    <p>
+      Structured badge identities for clubs, organizations,
+      institutions and established businesses.
+    </p>
+    <div class="sample-note">
+      Concept design — not a real client project.
+    </div>
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h4>Basic</h4>
+      <div class="price">$40</div>
+      <ul>
+        <li>1 concept</li>
+        <li>2 revisions</li>
+        <li>Color version</li>
+        <li>PNG + JPG</li>
+        <li>4-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Emblem%20Logo%20Basic%20package.">Get Started</a>
+    </div>
+
+    <div class="package featured">
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+      <div class="price">$65</div>
+      <ul>
+        <li>2 concepts</li>
+        <li>3 revisions</li>
+        <li>Color + black + white</li>
+        <li>Transparent background</li>
+        <li>PNG + JPG + PDF</li>
+        <li>5-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Emblem%20Logo%20Standard%20package.">Get Started</a>
+    </div>
+
+    <div class="package">
+      <h4>Premium</h4>
+      <div class="price">$100</div>
+      <ul>
+        <li>3 concepts</li>
+        <li>5 revisions</li>
+        <li>Complete emblem system</li>
+        <li>Color + black + white</li>
+        <li>Transparent files</li>
+        <li>Source-ready formats</li>
+        <li>6-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Emblem%20Logo%20Premium%20package.">Get Started</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     09 MASCOT
+========================= -->
+
+<section class="logo-section">
+
+  <div class="logo-header">
+    <div>
+      <div class="logo-number">09 / Mascot</div>
+      <h2>Mascot Logo</h2>
+    </div>
+    <p>Character-led identity with personality.</p>
+  </div>
+
+  <div class="showcase mascot-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="logo-display">
+
+      <div class="mascot">
+
+        <div class="mascot-ear mascot-ear left"></div>
+        <div class="mascot-ear mascot-ear right"></div>
+        <div class="mascot-head"></div>
+        <div class="mascot-eye left"></div>
+        <div class="mascot-eye right"></div>
+        <div class="mascot-mouth"></div>
+
+      </div>
+
+      <div class="mascot-name">
+        NOVA
+      </div>
+
+      <div class="mascot-sub">
+        Gaming
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+    <h3>Mascot Logo Design</h3>
+    <p>
+      Character-based branding designed to make a company,
+      community or product more expressive and memorable.
+    </p>
+    <div class="sample-note">
+      Concept design — not a real client project.
+    </div>
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h4>Basic</h4>
+      <div class="price">$60</div>
+      <ul>
+        <li>1 character concept</li>
+        <li>2 revisions</li>
+        <li>Color version</li>
+        <li>PNG + JPG</li>
+        <li>5-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Mascot%20Logo%20Basic%20package.">Get Started</a>
+    </div>
+
+    <div class="package featured">
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+      <div class="price">$100</div>
+      <ul>
+        <li>2 character concepts</li>
+        <li>3 revisions</li>
+        <li>Color + black + white</li>
+        <li>Transparent background</li>
+        <li>PNG + JPG + PDF</li>
+        <li>7-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Mascot%20Logo%20Standard%20package.">Get Started</a>
+    </div>
+
+    <div class="package">
+      <h4>Premium</h4>
+      <div class="price">$150</div>
+      <ul>
+        <li>3 character concepts</li>
+        <li>5 revisions</li>
+        <li>Complete mascot system</li>
+        <li>Color + black + white</li>
+        <li>Transparent files</li>
+        <li>Source-ready formats</li>
+        <li>10-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Mascot%20Logo%20Premium%20package.">Get Started</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     10 3D
+========================= -->
+
+<section class="logo-section">
+
+  <div class="logo-header">
+    <div>
+      <div class="logo-number">10 / 3D</div>
+      <h2>3D Logo</h2>
+    </div>
+    <p>Depth, lighting and dimensional presence.</p>
+  </div>
+
+  <div class="showcase three-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="logo-display">
+
+      <div class="three-name">
+        VOLT
+      </div>
+
+      <div class="three-sub">
+        Digital Energy
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+    <h3>3D Logo Design</h3>
+    <p>
+      Dimensional branding created with depth, lighting and
+      visual impact for digital-first brands.
+    </p>
+    <div class="sample-note">
+      Concept design — not a real client project.
+    </div>
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h4>Basic</h4>
+      <div class="price">$60</div>
+      <ul>
+        <li>1 concept</li>
+        <li>2 revisions</li>
+        <li>3D presentation</li>
+        <li>PNG + JPG</li>
+        <li>5-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%203D%20Logo%20Basic%20package.">Get Started</a>
+    </div>
+
+    <div class="package featured">
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+      <div class="price">$100</div>
+      <ul>
+        <li>2 concepts</li>
+        <li>3 revisions</li>
+        <li>Color + black + white</li>
+        <li>Transparent background</li>
+        <li>PNG + JPG + PDF</li>
+        <li>7-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%203D%20Logo%20Standard%20package.">Get Started</a>
+    </div>
+
+    <div class="package">
+      <h4>Premium</h4>
+      <div class="price">$150</div>
+      <ul>
+        <li>3 concepts</li>
+        <li>5 revisions</li>
+        <li>Full 3D logo system</li>
+        <li>Color + black + white</li>
+        <li>Transparent files</li>
+        <li>Source-ready formats</li>
+        <li>10-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%203D%20Logo%20Premium%20package.">Get Started</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     11 SIGNATURE
+========================= -->
+
+<section class="logo-section">
+
+  <div class="logo-header">
+    <div>
+      <div class="logo-number">11 / Signature</div>
+      <h2>Signature Logo</h2>
+    </div>
+    <p>Personal, expressive and elegant.</p>
+  </div>
+
+  <div class="showcase signature-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="logo-display">
+
+      <div class="signature-name">
+        Livia Rose
+      </div>
+
+      <div class="signature-line"></div>
+
+      <div class="signature-sub">
+        Personal Brand
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+    <h3>Signature Logo Design</h3>
+    <p>
+      Elegant handwritten-style identities for creators,
+      professionals and personal brands.
+    </p>
+    <div class="sample-note">
+      Concept design — not a real client project.
+    </div>
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h4>Basic</h4>
+      <div class="price">$40</div>
+      <ul>
+        <li>1 signature concept</li>
+        <li>2 revisions</li>
+        <li>Color version</li>
+        <li>PNG + JPG</li>
+        <li>4-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Signature%20Logo%20Basic%20package.">Get Started</a>
+    </div>
+
+    <div class="package featured">
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+      <div class="price">$65</div>
+      <ul>
+        <li>2 concepts</li>
+        <li>3 revisions</li>
+        <li>Color + black + white</li>
+        <li>Transparent background</li>
+        <li>PNG + JPG + PDF</li>
+        <li>5-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Signature%20Logo%20Standard%20package.">Get Started</a>
+    </div>
+
+    <div class="package">
+      <h4>Premium</h4>
+      <div class="price">$100</div>
+      <ul>
+        <li>3 concepts</li>
+        <li>5 revisions</li>
+        <li>Complete signature system</li>
+        <li>Color + black + white</li>
+        <li>Transparent files</li>
+        <li>Source-ready formats</li>
+        <li>6-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Signature%20Logo%20Premium%20package.">Get Started</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     12 COMBINATION
+========================= -->
+
+<section class="logo-section">
+
+  <div class="logo-header">
+    <div>
+      <div class="logo-number">12 / Combination</div>
+      <h2>Combination Logo</h2>
+    </div>
+    <p>Symbol and wordmark working together.</p>
+  </div>
+
+  <div class="showcase combination-showcase">
+
+    <div class="showcase-label">Sample Concept</div>
+
+    <div class="logo-display combination-wrap">
+
+      <div class="combination-symbol"></div>
+
+      <div>
+
+        <div class="combination-name">
+          ORION
+        </div>
+
+        <div class="combination-sub">
+          Creative Labs
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="description">
+    <h3>Combination Logo Design</h3>
+    <p>
+      A custom symbol paired with a wordmark, giving your brand
+      both an independent icon and a complete identity.
+    </p>
+    <div class="sample-note">
+      Concept design — not a real client project.
+    </div>
+  </div>
+
+  <div class="packages-title">
+    <span>Choose your package</span>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h4>Basic</h4>
+      <div class="price">$45</div>
+      <ul>
+        <li>1 concept</li>
+        <li>2 revisions</li>
+        <li>Color version</li>
+        <li>PNG + JPG</li>
+        <li>4-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Combination%20Logo%20Basic%20package.">Get Started</a>
+    </div>
+
+    <div class="package featured">
+      <div class="package-top">
+        <h4>Standard</h4>
+        <span class="recommended">Popular</span>
+      </div>
+      <div class="price">$75</div>
+      <ul>
+        <li>2 concepts</li>
+        <li>3 revisions</li>
+        <li>Color + black + white</li>
+        <li>Transparent background</li>
+        <li>PNG + JPG + PDF</li>
+        <li>5-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Combination%20Logo%20Standard%20package.">Get Started</a>
+    </div>
+
+    <div class="package">
+      <h4>Premium</h4>
+      <div class="price">$120</div>
+      <ul>
+        <li>3 concepts</li>
+        <li>5 revisions</li>
+        <li>Complete identity mark</li>
+        <li>Color + black + white</li>
+        <li>Transparent files</li>
+        <li>Source-ready formats</li>
+        <li>7-day delivery</li>
+      </ul>
+      <a class="package-btn" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20Combination%20Logo%20Premium%20package.">Get Started</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
 
 <section class="cta">
+
   <div class="cta-box">
-    <div class="eyebrow">Ready to create?</div>
-    <h2>Build the mark<br>your brand deserves.</h2>
+
+    <div class="eyebrow">
+      Start your identity
+    </div>
+
+    <h2>
+      Create a mark<br>
+      worth remembering.
+    </h2>
+
     <p>
-      Choose a logo direction and package, then contact Victor Phoenix
-      to begin your project.
+      Choose your preferred logo direction and package,
+      then contact Victor Phoenix to begin your project.
     </p>
-    <a class="cta-button" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20discuss%20a%20logo%20design%20project.">
+
+    <a
+      class="cta-button"
+      href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20discuss%20a%20logo%20design%20project."
+    >
       Start a Logo Project →
     </a>
+
   </div>
+
 </section>
 
-<footer class="footer">
+
+<footer>
   © 2026 Victor Phoenix. Create What’s Next.
 </footer>
 

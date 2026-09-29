@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Business Materials — Victor Phoenix</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#050505;
+  color:#fff;
+  font-family:Arial, Helvetica, sans-serif;
+  line-height:1.6;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 7%;
+  background:rgba(5,5,5,.92);
+  border-bottom:1px solid #222;
+  backdrop-filter:blur(15px);
+}
+
+.logo{
+  width:150px;
+  max-width:45vw;
+}
+
+.back{
+  color:#aaa;
+  text-decoration:none;
+  font-size:14px;
+  transition:.3s;
+}
+
+.back:hover{
+  color:#fff;
+}
+
+.hero{
+  padding:110px 7% 80px;
+  max-width:1000px;
+}
+
+.hero span{
+  color:#888;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:12px;
+}
+
+.hero h1{
+  font-size:clamp(48px,8vw,100px);
+  line-height:.95;
+  margin:20px 0;
+  letter-spacing:-4px;
+}
+
+.hero p{
+  max-width:700px;
+  color:#aaa;
+  font-size:18px;
+}
+
+.catalogue{
+  padding:20px 7% 100px;
+  display:grid;
+  gap:40px;
+}
+
+.material-card{
+  background:linear-gradient(145deg,#111,#080808);
+  border:1px solid #252525;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,.35);
+}
+
+.material-info{
+  padding:35px;
+}
+
+.tag{
+  display:inline-block;
+  color:#aaa;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:12px;
+}
+
+.material-info h2{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.material-info p{
+  color:#999;
+  max-width:700px;
+}
+
+.size{
+  display:inline-block;
+  margin-top:15px;
+  padding:8px 12px;
+  border:1px solid #333;
+  border-radius:30px;
+  color:#bbb;
+  font-size:12px;
+}
+
+.material-preview{
+  padding:40px;
+  background:#090909;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:360px;
+}
+
+.material{
+  width:min(700px,90%);
+  min-height:300px;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,#202020,#080808);
+  border:1px solid #444;
+  border-radius:14px;
+  padding:40px;
+  box-shadow:0 25px 60px rgba(0,0,0,.6);
+}
+
+.material-content{
+  position:relative;
+  z-index:2;
+}
+
+.material-content h3{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.material-content p{
+  color:#aaa;
+}
+
+.concept{
+  margin-top:25px;
+  color:#666;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.material-visual{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+}
+
+.orb{
+  position:absolute;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  right:-50px;
+  bottom:-80px;
+  background:radial-gradient(circle at 30% 30%,#fff,#777 18%,#222 55%,#050505 75%);
+  opacity:.5;
+}
+
+.ring{
+  position:absolute;
+  width:300px;
+  height:300px;
+  border:1px solid #555;
+  border-radius:50%;
+  right:-90px;
+  bottom:-120px;
+  opacity:.5;
+}
+
+.packages{
+  padding:35px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  border-top:1px solid #222;
+}
+
+.package{
+  border:1px solid #292929;
+  border-radius:18px;
+  padding:25px;
+  background:#0b0b0b;
+}
+
+.package h3{
+  margin-bottom:8px;
+}
+
+.price{
+  font-size:28px;
+  margin:15px 0;
+}
+
+.package p{
+  color:#999;
+  font-size:14px;
+}
+
+.start{
+  display:inline-block;
+  margin-top:20px;
+  color:#fff;
+  text-decoration:none;
+  font-size:13px;
+  letter-spacing:1px;
+}
+
+.contact{
+  text-align:center;
+  padding:120px 7%;
+  border-top:1px solid #222;
+}
+
+.contact h2{
+  font-size:clamp(40px,6vw,75px);
+  letter-spacing:-3px;
+}
+
+.contact p{
+  color:#999;
+  margin:15px 0 30px;
+}
+
+.contact-btn{
+  display:inline-block;
+  padding:16px 28px;
+  border:1px solid #555;
+  border-radius:50px;
+  color:#fff;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.contact-btn:hover{
+  background:#fff;
+  color:#000;
+}
+
+footer{
+  padding:30px 7%;
+  border-top:1px solid #222;
+  color:#666;
+  text-align:center;
+  font-size:13px;
+}
+
+@media(max-width:800px){
+
+  header{
+    padding:18px 5%;
+  }
+
+  .hero{
+    padding:80px 5% 60px;
+  }
+
+  .catalogue{
+    padding:20px 5% 80px;
+  }
+
+  .packages{
+    grid-template-columns:1fr;
+  }
+
+  .material-info{
+    padding:25px;
+  }
+
+  .material-preview{
+    padding:20px;
+  }
+
+  .material{
+    min-height:260px;
+    padding:25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html">
+<img src="logo.png" class="logo" alt="Victor Phoenix">
+</a>
+
+<a href="graphics.html" class="back">
+← Graphics & Design
+</a>
+
+</header>
+
+<section class="hero">
+
+<span>Victor Phoenix Creative</span>
+
+<h1>Business Materials.</h1>
+
+<p>
+Professional business materials designed to give companies,
+organisations and professionals a polished, consistent and
+credible visual presence.
+</p>
+
+</section>
+
+<section class="catalogue">
+
+<!-- BUSINESS MATERIALS WILL BE ADDED HERE -->
+
+</section>
+
+<section class="contact">
+
+<h2>Let's Create What's Next.</h2>
+
+<p>Tell Victor Phoenix what you want to create.</p>
+
+<a
+href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
+class="contact-btn">
+START A PROJECT →
+</a>
+
+</section>
+
+<footer>
+© 2026 Victor Phoenix. Create What's Next.
+</footer>
+
+</body>
+</html>

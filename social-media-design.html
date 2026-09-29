@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Social Media Design — Victor Phoenix</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#050505;
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 7%;
+  background:rgba(5,5,5,.92);
+  border-bottom:1px solid #222;
+  backdrop-filter:blur(15px);
+}
+
+.logo{
+  width:150px;
+  max-width:45vw;
+}
+
+.back{
+  color:#aaa;
+  text-decoration:none;
+  font-size:14px;
+  transition:.3s;
+}
+
+.back:hover{
+  color:#fff;
+}
+
+.hero{
+  padding:110px 7% 80px;
+  max-width:1050px;
+}
+
+.hero span{
+  color:#888;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:12px;
+}
+
+.hero h1{
+  font-size:clamp(48px,8vw,100px);
+  line-height:.95;
+  margin:20px 0;
+  letter-spacing:-4px;
+}
+
+.hero p{
+  max-width:720px;
+  color:#aaa;
+  font-size:18px;
+}
+
+.catalogue{
+  padding:20px 7% 100px;
+  display:grid;
+  gap:45px;
+}
+
+.social-card{
+  background:linear-gradient(145deg,#111,#080808);
+  border:1px solid #252525;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,.35);
+}
+
+.social-info{
+  padding:35px;
+}
+
+.tag{
+  display:inline-block;
+  color:#aaa;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:12px;
+}
+
+.social-info h2{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.social-info p{
+  color:#999;
+  max-width:720px;
+}
+
+.size{
+  display:inline-block;
+  margin-top:15px;
+  padding:8px 12px;
+  border:1px solid #333;
+  border-radius:30px;
+  color:#bbb;
+  font-size:12px;
+}
+
+.social-preview{
+  padding:50px;
+  background:#090909;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:500px;
+}
+
+/* Main social canvas */
+
+.social-canvas{
+  width:min(420px,90%);
+  aspect-ratio:1/1;
+  position:relative;
+  overflow:hidden;
+  border:1px solid #333;
+  border-radius:18px;
+  background:#151515;
+  box-shadow:0 30px 70px rgba(0,0,0,.65);
+}
+
+.social-content{
+  position:absolute;
+  inset:0;
+  padding:35px;
+  z-index:3;
+}
+
+.social-content .mini-brand{
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#aaa;
+}
+
+.social-content h3{
+  font-size:42px;
+  line-height:.95;
+  margin-top:80px;
+  max-width:85%;
+  letter-spacing:-2px;
+}
+
+.social-content p{
+  color:#bbb;
+  margin-top:15px;
+  max-width:75%;
+  font-size:13px;
+}
+
+.cta{
+  position:absolute;
+  left:35px;
+  bottom:35px;
+  padding:10px 16px;
+  border:1px solid #777;
+  border-radius:30px;
+  font-size:10px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+/* Visual elements */
+
+.social-visual{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+}
+
+.social-orb{
+  position:absolute;
+  width:270px;
+  height:270px;
+  border-radius:50%;
+  right:-70px;
+  top:80px;
+  background:
+    radial-gradient(circle at 30% 25%,#fff 0%,#aaa 8%,#555 25%,#181818 58%,#030303 78%);
+  opacity:.65;
+  filter:blur(.2px);
+}
+
+.social-ring{
+  position:absolute;
+  width:360px;
+  height:360px;
+  border:1px solid #555;
+  border-radius:50%;
+  right:-120px;
+  top:35px;
+  transform:rotate(25deg);
+  opacity:.5;
+}
+
+.social-glow{
+  position:absolute;
+  width:240px;
+  height:240px;
+  border-radius:50%;
+  left:-100px;
+  bottom:-100px;
+  background:#fff;
+  filter:blur(100px);
+  opacity:.08;
+}
+
+/* Alternate visual shapes */
+
+.social-block{
+  position:absolute;
+  right:35px;
+  bottom:80px;
+  width:110px;
+  height:150px;
+  border:1px solid #666;
+  transform:rotate(8deg);
+  background:linear-gradient(145deg,#333,#0b0b0b);
+}
+
+.social-line{
+  position:absolute;
+  width:170px;
+  height:1px;
+  background:#777;
+  right:25px;
+  top:50px;
+  transform:rotate(-35deg);
+}
+
+/* Packages */
+
+.packages{
+  padding:35px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  border-top:1px solid #222;
+}
+
+.package{
+  border:1px solid #292929;
+  border-radius:18px;
+  padding:25px;
+  background:#0b0b0b;
+}
+
+.package h3{
+  margin-bottom:8px;
+}
+
+.price{
+  font-size:28px;
+  margin:15px 0;
+}
+
+.package p{
+  color:#999;
+  font-size:14px;
+}
+
+.start{
+  display:inline-block;
+  margin-top:20px;
+  color:#fff;
+  text-decoration:none;
+  font-size:13px;
+  letter-spacing:1px;
+}
+
+.start:hover{
+  color:#aaa;
+}
+
+/* Contact */
+
+.contact{
+  text-align:center;
+  padding:120px 7%;
+  border-top:1px solid #222;
+}
+
+.contact h2{
+  font-size:clamp(40px,6vw,75px);
+  letter-spacing:-3px;
+}
+
+.contact p{
+  color:#999;
+  margin:15px 0 30px;
+}
+
+.contact-btn{
+  display:inline-block;
+  padding:16px 28px;
+  border:1px solid #555;
+  border-radius:50px;
+  color:#fff;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.contact-btn:hover{
+  background:#fff;
+  color:#000;
+}
+
+footer{
+  padding:30px 7%;
+  border-top:1px solid #222;
+  color:#666;
+  text-align:center;
+  font-size:13px;
+}
+
+@media(max-width:800px){
+
+  header{
+    padding:18px 5%;
+  }
+
+  .hero{
+    padding:80px 5% 60px;
+  }
+
+  .catalogue{
+    padding:20px 5% 80px;
+  }
+
+  .social-preview{
+    padding:25px;
+    min-height:430px;
+  }
+
+  .social-content{
+    padding:25px;
+  }
+
+  .social-content h3{
+    font-size:32px;
+    margin-top:65px;
+  }
+
+  .cta{
+    left:25px;
+    bottom:25px;
+  }
+
+  .packages{
+    grid-template-columns:1fr;
+  }
+
+  .social-info{
+    padding:25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html">
+<img src="logo.png" class="logo" alt="Victor Phoenix">
+</a>
+
+<a href="graphics.html" class="back">
+← Graphics & Design
+</a>
+
+</header>
+
+
+<section class="hero">
+
+<span>Victor Phoenix Creative</span>
+
+<h1>Social Media Design.</h1>
+
+<p>
+Scroll-stopping social media graphics designed to help brands,
+businesses, products and creators communicate clearly and
+look professional across digital platforms.
+</p>
+
+</section>
+
+
+<section class="catalogue">
+
+<!-- SOCIAL MEDIA DESIGNS WILL BE ADDED HERE -->
+
+</section>
+
+
+<section class="contact">
+
+<h2>Let's Create What's Next.</h2>
+
+<p>Tell Victor Phoenix what you want to create.</p>
+
+<a
+href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
+class="contact-btn">
+START A PROJECT →
+</a>
+
+</section>
+
+
+<footer>
+© 2026 Victor Phoenix. Create What's Next.
+</footer>
+
+</body>
+</html>

@@ -1,1379 +1,1618 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Business Materials — Victor Phoenix</title>
+  <title>Business Materials — Victor Phoenix</title>
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+  <meta
+    name="description"
+    content="Professional business materials and corporate document design by Victor Phoenix."
+  >
 
-body{
-  background:#050505;
-  color:#fff;
-  font-family:Arial, Helvetica, sans-serif;
-  line-height:1.6;
-}
+  <meta name="theme-color" content="#080808">
 
-header{
-  position:sticky;
-  top:0;
-  z-index:100;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 7%;
-  background:rgba(5,5,5,.92);
-  border-bottom:1px solid #222;
-  backdrop-filter:blur(15px);
-}
+  <style>
 
-.logo{
-  width:150px;
-  max-width:45vw;
-}
+    /* =========================================================
+       VICTOR PHOENIX — BUSINESS MATERIALS
+       COMPLETE PAGE
+       ========================================================= */
 
-.back{
-  color:#aaa;
-  text-decoration:none;
-  font-size:14px;
-  transition:.3s;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.back:hover{
-  color:#fff;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.hero{
-  padding:110px 7% 80px;
-  max-width:1000px;
-}
+    body {
+      background: #080808;
+      color: #f5f5f5;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-.hero span{
-  color:#888;
-  text-transform:uppercase;
-  letter-spacing:3px;
-  font-size:12px;
-}
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: .22;
 
-.hero h1{
-  font-size:clamp(48px,8vw,100px);
-  line-height:.95;
-  margin:20px 0;
-  letter-spacing:-4px;
-}
+      background:
+        linear-gradient(
+          90deg,
+          transparent 49.8%,
+          rgba(255,255,255,.035) 50%,
+          transparent 50.2%
+        ),
+        linear-gradient(
+          rgba(255,255,255,.025) 1px,
+          transparent 1px
+        );
 
-.hero p{
-  max-width:700px;
-  color:#aaa;
-  font-size:18px;
-}
+      background-size: 120px 120px;
+    }
 
-.catalogue{
-  padding:20px 7% 100px;
-  display:grid;
-  gap:40px;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.material-card{
-  background:linear-gradient(145deg,#111,#080808);
-  border:1px solid #252525;
-  border-radius:24px;
-  overflow:hidden;
-  box-shadow:0 30px 80px rgba(0,0,0,.35);
-}
 
-.material-info{
-  padding:35px;
-}
+    /* =========================================================
+       HEADER
+       ========================================================= */
 
-.tag{
-  display:inline-block;
-  color:#aaa;
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  margin-bottom:12px;
-}
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
 
-.material-info h2{
-  font-size:32px;
-  margin-bottom:10px;
-}
+      height: 82px;
+      padding: 0 clamp(20px, 5vw, 72px);
 
-.material-info p{
-  color:#999;
-  max-width:700px;
-}
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-.size{
-  display:inline-block;
-  margin-top:15px;
-  padding:8px 12px;
-  border:1px solid #333;
-  border-radius:30px;
-  color:#bbb;
-  font-size:12px;
-}
+      background: rgba(7,7,7,.88);
+      backdrop-filter: blur(18px);
 
-.material-preview{
-  padding:40px;
-  background:#090909;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:360px;
-}
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
 
-.material{
-  width:min(700px,90%);
-  min-height:300px;
-  position:relative;
-  overflow:hidden;
-  background:linear-gradient(135deg,#202020,#080808);
-  border:1px solid #444;
-  border-radius:14px;
-  padding:40px;
-  box-shadow:0 25px 60px rgba(0,0,0,.6);
-}
+    .brand img {
+      width: 145px;
+      max-height: 55px;
+      object-fit: contain;
+      display: block;
+    }
 
-.material-content{
-  position:relative;
-  z-index:2;
-}
+    .back-link {
+      color: #999;
+      font-size: 13px;
+      transition: .25s ease;
+    }
 
-.material-content h3{
-  font-size:32px;
-  margin-bottom:10px;
-}
+    .back-link:hover {
+      color: #fff;
+      transform: translateX(-4px);
+    }
 
-.material-content p{
-  color:#aaa;
-}
 
-.concept{
-  margin-top:25px;
-  color:#666;
-  font-size:10px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
+    /* =========================================================
+       HERO
+       ========================================================= */
 
-.material-visual{
-  position:absolute;
-  inset:0;
-  overflow:hidden;
-}
+    .hero {
+      width: min(1180px, 92%);
+      margin: auto;
+      padding: 105px 0 75px;
+    }
 
-.orb{
-  position:absolute;
-  width:220px;
-  height:220px;
-  border-radius:50%;
-  right:-50px;
-  bottom:-80px;
-  background:radial-gradient(circle at 30% 30%,#fff,#777 18%,#222 55%,#050505 75%);
-  opacity:.5;
-}
+    .eyebrow {
+      display: inline-block;
 
-.ring{
-  position:absolute;
-  width:300px;
-  height:300px;
-  border:1px solid #555;
-  border-radius:50%;
-  right:-90px;
-  bottom:-120px;
-  opacity:.5;
-}
+      margin-bottom: 16px;
 
-.packages{
-  padding:35px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-  border-top:1px solid #222;
-}
+      color: #888;
 
-.package{
-  border:1px solid #292929;
-  border-radius:18px;
-  padding:25px;
-  background:#0b0b0b;
-}
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
 
-.package h3{
-  margin-bottom:8px;
-}
+    .hero h1 {
+      max-width: 950px;
 
-.price{
-  font-size:28px;
-  margin:15px 0;
-}
+      font-size: clamp(50px, 8vw, 105px);
+      line-height: .9;
+      letter-spacing: -.07em;
+    }
 
-.package p{
-  color:#999;
-  font-size:14px;
-}
+    .hero h1 span {
+      color: #777;
+    }
 
-.start{
-  display:inline-block;
-  margin-top:20px;
-  color:#fff;
-  text-decoration:none;
-  font-size:13px;
-  letter-spacing:1px;
-}
+    .hero-description {
+      max-width: 720px;
+      margin-top: 30px;
 
-.contact{
-  text-align:center;
-  padding:120px 7%;
-  border-top:1px solid #222;
-}
+      color: #999;
+      font-size: 16px;
+    }
 
-.contact h2{
-  font-size:clamp(40px,6vw,75px);
-  letter-spacing:-3px;
-}
+    .hero-line {
+      width: 100%;
+      height: 1px;
+      margin-top: 55px;
 
-.contact p{
-  color:#999;
-  margin:15px 0 30px;
-}
+      background:
+        linear-gradient(
+          90deg,
+          #777,
+          rgba(255,255,255,.08),
+          transparent
+        );
+    }
 
-.contact-btn{
-  display:inline-block;
-  padding:16px 28px;
-  border:1px solid #555;
-  border-radius:50px;
-  color:#fff;
-  text-decoration:none;
-  transition:.3s;
-}
 
-.contact-btn:hover{
-  background:#fff;
-  color:#000;
-}
+    /* =========================================================
+       CATALOGUE
+       ========================================================= */
 
-footer{
-  padding:30px 7%;
-  border-top:1px solid #222;
-  color:#666;
-  text-align:center;
-  font-size:13px;
-}
+    .catalogue {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
 
-@media(max-width:800px){
 
-  header{
-    padding:18px 5%;
-  }
+    /* =========================================================
+       MATERIAL ITEM
+       ========================================================= */
 
-  .hero{
-    padding:80px 5% 60px;
-  }
+    .material-item {
+      margin-bottom: 100px;
+      padding: 34px;
 
-  .catalogue{
-    padding:20px 5% 80px;
-  }
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 30px;
 
-  .packages{
-    grid-template-columns:1fr;
-  }
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.055),
+          rgba(255,255,255,.015)
+        );
 
-  .material-info{
-    padding:25px;
-  }
+      box-shadow:
+        0 30px 100px rgba(0,0,0,.4);
+    }
 
-  .material-preview{
-    padding:20px;
-  }
 
-  .material{
-    min-height:260px;
-    padding:25px;
-  }
-}
-</style>
+    /* =========================================================
+       CONCEPT PREVIEW
+       ========================================================= */
+
+    .concept-preview {
+      position: relative;
+
+      min-height: 330px;
+      padding: 30px;
+
+      overflow: hidden;
+
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 23px;
+
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(255,255,255,.12),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #0d0d0d,
+          #252525
+        );
+    }
+
+    .concept-preview::before {
+      content: "";
+
+      position: absolute;
+
+      width: 350px;
+      height: 350px;
+
+      right: -150px;
+      bottom: -180px;
+
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 50%;
+    }
+
+    .concept-preview::after {
+      content: "";
+
+      position: absolute;
+
+      width: 170px;
+      height: 170px;
+
+      right: 30px;
+      top: 70px;
+
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 50%;
+    }
+
+    .preview-top {
+      position: relative;
+      z-index: 2;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      color: #777;
+
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .preview-content {
+      position: relative;
+      z-index: 3;
+
+      max-width: 720px;
+
+      padding: 60px 0 45px;
+    }
+
+    .preview-kicker {
+      margin-bottom: 12px;
+
+      color: #888;
+
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .2em;
+    }
+
+    .preview-content h3 {
+      max-width: 700px;
+
+      font-size: clamp(32px, 5vw, 64px);
+      line-height: .95;
+      letter-spacing: -.055em;
+    }
+
+    .preview-content p {
+      max-width: 600px;
+      margin-top: 18px;
+
+      color: #9a9a9a;
+      font-size: 13px;
+    }
+
+    .preview-lines {
+      display: flex;
+      gap: 7px;
+      margin-top: 27px;
+    }
+
+    .preview-lines span {
+      display: block;
+
+      width: 55px;
+      height: 2px;
+
+      background: #888;
+    }
+
+    .preview-lines span:nth-child(2) {
+      width: 28px;
+      background: #555;
+    }
+
+    .preview-lines span:nth-child(3) {
+      width: 12px;
+      background: #333;
+    }
+
+    .preview-bottom {
+      position: absolute;
+
+      left: 30px;
+      right: 30px;
+      bottom: 25px;
+
+      display: flex;
+      justify-content: space-between;
+
+      color: #666;
+
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       ITEM HEADING
+       ========================================================= */
+
+    .item-heading {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 22px;
+
+      margin: 35px 0 30px;
+    }
+
+    .item-number {
+      width: 62px;
+      height: 62px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 50%;
+
+      color: #999;
+
+      font-size: 12px;
+      letter-spacing: .1em;
+    }
+
+    .item-heading h2 {
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1;
+      letter-spacing: -.05em;
+    }
+
+    .item-heading p {
+      max-width: 760px;
+      margin-top: 12px;
+
+      color: #8e8e8e;
+      font-size: 14px;
+    }
+
+    .item-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      margin-top: 17px;
+    }
+
+    .item-meta span {
+      padding: 6px 11px;
+
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 999px;
+
+      background: rgba(255,255,255,.025);
+
+      color: #7f7f7f;
+
+      font-size: 9px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       PACKAGE GRID
+       ========================================================= */
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 17px;
+    }
+
+
+    /* =========================================================
+       PACKAGE CARD
+       ========================================================= */
+
+    .package {
+      display: flex;
+      flex-direction: column;
+
+      min-width: 0;
+      padding: 27px;
+
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 22px;
+
+      background: #151515;
+    }
+
+    .package.standard {
+      background: #181818;
+    }
+
+    .package.premium {
+      background:
+        linear-gradient(
+          145deg,
+          #202020,
+          #101010
+        );
+
+      border-color: rgba(255,255,255,.17);
+    }
+
+    .package-label {
+      color: #777;
+
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .18em;
+    }
+
+    .package h3 {
+      margin-top: 7px;
+
+      font-size: 22px;
+      letter-spacing: -.025em;
+    }
+
+    .price {
+      margin-top: 8px;
+
+      font-size: 35px;
+      font-weight: 700;
+      letter-spacing: -.045em;
+    }
+
+    .package-intro {
+      min-height: 58px;
+      margin: 9px 0 24px;
+
+      color: #888;
+
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+
+    /* =========================================================
+       WHAT YOU GET
+       ========================================================= */
+
+    .what-you-get h4 {
+      margin-bottom: 11px;
+
+      color: #ddd;
+
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .15em;
+    }
+
+    .package-list {
+      list-style: none;
+    }
+
+    .package-list li {
+      position: relative;
+
+      padding-left: 15px;
+      margin-bottom: 7px;
+
+      color: #aaa;
+
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .package-list li::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      top: .68em;
+
+      width: 4px;
+      height: 4px;
+
+      background: #777;
+      border-radius: 50%;
+    }
+
+
+    /* =========================================================
+       DIVIDING LINE
+       ========================================================= */
+
+    .package-divider {
+      height: 1px;
+      margin: 23px 0 18px;
+
+      background: rgba(255,255,255,.11);
+    }
+
+
+    /* =========================================================
+       PACKAGE DETAILS
+       ========================================================= */
+
+    .package-details {
+      display: grid;
+      gap: 10px;
+    }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+
+      padding-bottom: 10px;
+
+      border-bottom: 1px solid rgba(255,255,255,.055);
+    }
+
+    .detail-row:last-child {
+      border-bottom: 0;
+    }
+
+    .detail-label {
+      color: #666;
+
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .12em;
+    }
+
+    .detail-value {
+      max-width: 155px;
+
+      color: #c1c1c1;
+
+      font-size: 10px;
+      font-weight: 600;
+
+      text-align: right;
+    }
+
+
+    /* =========================================================
+       START BUTTON
+       ========================================================= */
+
+    .start-button {
+      display: block;
+
+      margin-top: 22px;
+      padding: 12px 0;
+
+      border-top: 1px solid #444;
+      border-bottom: 1px solid #444;
+
+      color: #eee;
+
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .12em;
+
+      transition: .25s ease;
+    }
+
+    .start-button span {
+      float: right;
+      color: #777;
+
+      transition: .25s ease;
+    }
+
+    .start-button:hover {
+      padding-left: 5px;
+      border-color: #aaa;
+    }
+
+    .start-button:hover span {
+      color: #fff;
+    }
+
+
+    /* =========================================================
+       FINAL CONTACT
+       ========================================================= */
+
+    .final-contact {
+      width: min(1180px, 92%);
+      margin: 20px auto 100px;
+
+      padding: 75px 45px;
+
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 30px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #191919,
+          #0d0d0d
+        );
+
+      text-align: center;
+    }
+
+    .final-contact h2 {
+      max-width: 800px;
+      margin: auto;
+
+      font-size: clamp(38px, 6vw, 74px);
+      line-height: .95;
+      letter-spacing: -.06em;
+    }
+
+    .final-contact p {
+      max-width: 620px;
+      margin: 22px auto 30px;
+
+      color: #8d8d8d;
+      font-size: 14px;
+    }
+
+    .contact-button {
+      display: inline-flex;
+
+      padding: 13px 23px;
+
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .12em;
+
+      transition: .25s ease;
+    }
+
+    .contact-button:hover {
+      background: #fff;
+      color: #080808;
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+
+      padding: 35px 5%;
+
+      border-top: 1px solid rgba(255,255,255,.08);
+
+      color: #666;
+
+      font-size: 9px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    footer strong {
+      color: #999;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .site-header {
+        height: 70px;
+        padding: 0 20px;
+      }
+
+      .brand img {
+        width: 125px;
+      }
+
+      .hero {
+        padding: 75px 0 55px;
+      }
+
+      .material-item {
+        padding: 20px;
+        border-radius: 24px;
+        margin-bottom: 65px;
+      }
+
+      .concept-preview {
+        min-height: 280px;
+        padding: 22px;
+      }
+
+      .preview-content {
+        padding: 50px 0 45px;
+      }
+
+      .item-heading {
+        grid-template-columns: 56px 1fr;
+        gap: 14px;
+      }
+
+      .item-number {
+        width: 50px;
+        height: 50px;
+      }
+
+      .packages {
+        grid-template-columns: 1fr;
+      }
+
+      .package {
+        padding: 25px;
+      }
+
+      .package-intro {
+        min-height: auto;
+      }
+
+      .final-contact {
+        padding: 55px 25px;
+      }
+    }
+
+    @media (max-width: 520px) {
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+      .preview-top,
+      .preview-bottom {
+        font-size: 7px;
+      }
+
+      .preview-content h3 {
+        font-size: 35px;
+      }
+
+      .item-heading h2 {
+        font-size: 30px;
+      }
+
+      .item-heading p {
+        font-size: 13px;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+
+  </style>
 </head>
+
 
 <body>
 
-<header>
-
-<a href="index.html">
-<img src="logo.png" class="logo" alt="Victor Phoenix">
-</a>
-
-<a href="graphics.html" class="back">
-← Graphics & Design
-</a>
-
-</header>
-
-<section class="hero">
-
-<span>Victor Phoenix Creative</span>
-
-<h1>Business Materials.</h1>
-
-<p>
-Professional business materials designed to give companies,
-organisations and professionals a polished, consistent and
-credible visual presence.
-</p>
-
-</section>
-
-<section class="catalogue">
-
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">01 · Business Identity</span>
-    <h2>Business Card</h2>
-    <p>
-      Professional business cards designed to present your name,
-      role and business information with a polished visual identity.
-    </p>
-    <span class="size">90 × 54 mm · Print & Digital</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>PHOENIX</h3>
-        <p>Victor Phoenix</p>
-        <p>Digital Technology & Creative Solutions</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$20</div>
-      <p>1 concept · 2 revisions · Front design · Print-ready file</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Business%20Card%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$35</div>
-      <p>2 concepts · 3 revisions · Front & back · Print + digital files</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Business%20Card%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$55</div>
-      <p>3 concepts · 5 revisions · Premium layout · Full print-ready delivery</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Business%20Card%20package.">START NOW →</a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">02 · Corporate Stationery</span>
-    <h2>Letterhead</h2>
-    <p>
-      Clean professional letterhead designs for official company
-      correspondence, proposals, documents and business communication.
-    </p>
-    <span class="size">A4 · 210 × 297 mm</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>VICTOR PHOENIX</h3>
-        <p>Official Business Letterhead</p>
-        <p>Digital Technology · Creative · Innovation</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$20</div>
-      <p>1 concept · 2 revisions · Professional A4 layout · PDF delivery</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Letterhead%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$35</div>
-      <p>2 concepts · 3 revisions · Editable business layout · Print-ready files</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Letterhead%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$55</div>
-      <p>3 concepts · 5 revisions · Premium stationery system · Full delivery</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Letterhead%20package.">START NOW →</a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">03 · Financial Document</span>
-    <h2>Invoice</h2>
-    <p>
-      Professional invoice designs that organize business,
-      client and payment information clearly and consistently.
-    </p>
-    <span class="size">A4 · 210 × 297 mm</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>INVOICE</h3>
-        <p>Invoice No. · Client · Services · Total</p>
-        <p>Professional Business Document</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$25</div>
-      <p>1 concept · 2 revisions · Clean invoice layout · PDF delivery</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Invoice%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$40</div>
-      <p>2 concepts · 3 revisions · Branded invoice system · Print-ready file</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Invoice%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$65</div>
-      <p>3 concepts · 5 revisions · Premium branded document · Multiple formats</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Invoice%20package.">START NOW →</a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">04 · Recognition Document</span>
-    <h2>Certificate</h2>
-    <p>
-      Elegant certificate designs for awards, achievements,
-      training, recognition, events and professional programs.
-    </p>
-    <span class="size">A4 · 210 × 297 mm</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>CERTIFICATE</h3>
-        <p>Certificate of Achievement</p>
-        <p>Presented in recognition of excellence</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$25</div>
-      <p>1 concept · 2 revisions · Professional certificate layout</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Certificate%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$40</div>
-      <p>2 concepts · 3 revisions · Branded certificate · Print-ready delivery</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Certificate%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$65</div>
-      <p>3 concepts · 5 revisions · Premium certificate system · Multiple formats</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Certificate%20package.">START NOW →</a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">05 · Presentation</span>
-    <h2>Presentation Design</h2>
-    <p>
-      High-quality presentation designs that organize information
-      into clear, engaging and professional visual slides.
-    </p>
-    <span class="size">16:9 · 1920 × 1080 px</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>THE NEXT IDEA</h3>
-        <p>Technology · Strategy · Growth</p>
-        <p>Premium Presentation Concept</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$50</div>
-      <p>Up to 5 slides · 1 concept · 2 revisions · Professional layout</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Presentation%20Design%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$90</div>
-      <p>Up to 10 slides · 2 concepts · 3 revisions · Branded presentation</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Presentation%20Design%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$150</div>
-      <p>Up to 20 slides · 3 concepts · 5 revisions · Premium visual system</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Presentation%20Design%20package.">START NOW →</a>
-    </div>
-
-  </div>
-
-</article>
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">06 · Business Communication</span>
-    <h2>Invitation</h2>
-    <p>
-      Professional invitation designs for business events,
-      launches, meetings, celebrations and special occasions.
-    </p>
-    <span class="size">A5 · 148 × 210 mm</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>YOU'RE INVITED</h3>
-        <p>Exclusive Business Event</p>
-        <p>Join us for an evening of ideas and connections.</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$25</div>
-      <p>1 concept · 2 revisions · Professional invitation layout</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Invitation%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$40</div>
-      <p>2 concepts · 3 revisions · Branded design · Print-ready delivery</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Invitation%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$65</div>
-      <p>3 concepts · 5 revisions · Premium invitation system · Multiple formats</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Invitation%20package.">START NOW →</a>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">07 · Corporate Identification</span>
-    <h2>Company ID Card</h2>
-    <p>
-      Professional identification card designs for companies,
-      organisations and corporate teams.
-    </p>
-    <span class="size">85.6 × 54 mm · CR80</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>VICTOR PHOENIX</h3>
-        <p>STAFF IDENTIFICATION</p>
-        <p>NAME · POSITION · ID NUMBER</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$25</div>
-      <p>1 concept · 2 revisions · Front ID design · Print-ready file</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Company%20ID%20Card%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$40</div>
-      <p>2 concepts · 3 revisions · Front & back · Branded layout</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Company%20ID%20Card%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$65</div>
-      <p>3 concepts · 5 revisions · Complete ID system · Multiple formats</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Company%20ID%20Card%20package.">START NOW →</a>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">08 · Staff Identification</span>
-    <h2>Employee ID Card</h2>
-    <p>
-      Clean employee identification cards designed for staff,
-      employees and team members.
-    </p>
-    <span class="size">85.6 × 54 mm · CR80</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>STAFF MEMBER</h3>
-        <p>Employee Name</p>
-        <p>Department · Employee ID</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$25</div>
-      <p>1 concept · 2 revisions · Professional employee ID design</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Employee%20ID%20Card%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$40</div>
-      <p>2 concepts · 3 revisions · Front & back · Branded system</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Employee%20ID%20Card%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$65</div>
-      <p>3 concepts · 5 revisions · Complete staff ID system · Multiple formats</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Employee%20ID%20Card%20package.">START NOW →</a>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">09 · Corporate Presentation</span>
-    <h2>Company Folder</h2>
-    <p>
-      Professional folder designs for proposals, documents,
-      presentations and client-facing business materials.
-    </p>
-    <span class="size">A4 · 210 × 297 mm</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>VICTOR PHOENIX</h3>
-        <p>BUSINESS DOCUMENTS</p>
-        <p>Corporate Presentation Folder</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$30</div>
-      <p>1 concept · 2 revisions · Professional folder cover design</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Company%20Folder%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$50</div>
-      <p>2 concepts · 3 revisions · Front & back · Print-ready layout</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Company%20Folder%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$75</div>
-      <p>3 concepts · 5 revisions · Premium corporate stationery design</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Company%20Folder%20package.">START NOW →</a>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">10 · Business Branding</span>
-    <h2>Email Signature</h2>
-    <p>
-      Professional email signature designs that keep business
-      communication visually consistent across digital correspondence.
-    </p>
-    <span class="size">Responsive · Email Compatible</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>VICTOR PHOENIX</h3>
-        <p>Digital Technology & Creative Solutions</p>
-        <p>Web · AI · Design · Digital</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$25</div>
-      <p>1 concept · 2 revisions · Professional email signature layout</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Email%20Signature%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$40</div>
-      <p>2 concepts · 3 revisions · Branded signature · Digital delivery</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Email%20Signature%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$65</div>
-      <p>3 concepts · 5 revisions · Premium signature system · Multiple layouts</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Email%20Signature%20package.">START NOW →</a>
-    </div>
-  </div>
-
-</article>
-  <article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">11 · Financial Document</span>
-    <h2>Receipt Design</h2>
-    <p>Professional receipt layouts for businesses, shops, services and organizations.</p>
-    <span class="size">A5 / 80 × 200 mm · Print Ready</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>RECEIPT</h3>
-        <p>Payment Received · Items · Amount · Date</p>
-        <p>Professional Business Receipt</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$20</div>
-      <p>1 concept · 2 revisions · Clean receipt layout</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Receipt%20Design%20package.">START NOW →</a>
-    </div>
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$35</div>
-      <p>2 concepts · 3 revisions · Branded receipt · Print-ready file</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Receipt%20Design%20package.">START NOW →</a>
-    </div>
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$55</div>
-      <p>3 concepts · 5 revisions · Premium receipt system · Multiple formats</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Receipt%20Design%20package.">START NOW →</a>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">12 · Business Document</span>
-    <h2>Proposal Document</h2>
-    <p>Professional proposal layouts for presenting services, projects, offers and business ideas.</p>
-    <span class="size">A4 · Multi-Page</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>BUSINESS PROPOSAL</h3>
-        <p>Strategy · Scope · Investment · Timeline</p>
-        <p>Premium Proposal Presentation</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$40</div>
-      <p>Up to 5 pages · 1 concept · 2 revisions · Professional layout</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Proposal%20Document%20package.">START NOW →</a>
-    </div>
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$70</div>
-      <p>Up to 10 pages · 2 concepts · 3 revisions · Branded document</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Proposal%20Document%20package.">START NOW →</a>
-    </div>
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$110</div>
-      <p>Up to 20 pages · 3 concepts · 5 revisions · Premium editorial system</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Proposal%20Document%20package.">START NOW →</a>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">13 · Business Information</span>
-    <h2>Price List</h2>
-    <p>Clear, attractive price-list designs for products, services, menus and business offerings.</p>
-    <span class="size">A4 / A5 · Print & Digital</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>PRICE LIST</h3>
-        <p>Services · Packages · Products · Pricing</p>
-        <p>Clean Business Pricing Layout</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$25</div>
-      <p>1 concept · 2 revisions · Up to 15 items · Digital delivery</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Price%20List%20package.">START NOW →</a>
-    </div>
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$45</div>
-      <p>2 concepts · 3 revisions · Up to 30 items · Print-ready delivery</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Price%20List%20package.">START NOW →</a>
-    </div>
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$70</div>
-      <p>3 concepts · 5 revisions · Up to 50 items · Multiple formats</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Price%20List%20package.">START NOW →</a>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">14 · Corporate Communication</span>
-    <h2>Media Kit</h2>
-    <p>Professional media kits that present a brand, creator or business to partners, clients and media.</p>
-    <span class="size">A4 · Multi-Page PDF</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>MEDIA KIT</h3>
-        <p>Brand · Audience · Services · Partnerships</p>
-        <p>Professional Media Presentation</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$50</div>
-      <p>Up to 5 pages · 1 concept · 2 revisions · Professional layout</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Media%20Kit%20package.">START NOW →</a>
-    </div>
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$80</div>
-      <p>Up to 10 pages · 2 concepts · 3 revisions · Branded presentation</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Media%20Kit%20package.">START NOW →</a>
-    </div>
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$120</div>
-      <p>Up to 20 pages · 3 concepts · 5 revisions · Premium media system</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Media%20Kit%20package.">START NOW →</a>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">15 · Corporate Document</span>
-    <h2>Business Report</h2>
-    <p>Structured report designs for presenting research, performance, financial information and business results.</p>
-    <span class="size">A4 · Multi-Page</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>ANNUAL REPORT</h3>
-        <p>Performance · Insights · Growth · Results</p>
-        <p>Professional Corporate Report</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$50</div>
-      <p>Up to 6 pages · 1 concept · 2 revisions · Professional report layout</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Business%20Report%20package.">START NOW →</a>
-    </div>
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$85</div>
-      <p>Up to 12 pages · 2 concepts · 3 revisions · Charts and information layout</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Business%20Report%20package.">START NOW →</a>
-    </div>
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$130</div>
-      <p>Up to 20 pages · 3 concepts · 5 revisions · Premium editorial report</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Business%20Report%20package.">START NOW →</a>
-    </div>
-  </div>
-
-</article>
-  <article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">16 · Corporate Identity</span>
-    <h2>Company Stamp</h2>
-    <p>Professional stamp designs for businesses, organisations and official documents.</p>
-    <span class="size">Custom · Print & Digital</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>OFFICIAL</h3>
-        <p>VICTOR PHOENIX · VERIFIED BUSINESS</p>
-        <p>Corporate Stamp Concept</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$20</div>
-      <p>1 concept · 2 revisions · Clean stamp layout</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Company%20Stamp%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$35</div>
-      <p>2 concepts · 3 revisions · Branded stamp design · Multiple formats</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Company%20Stamp%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$55</div>
-      <p>3 concepts · 5 revisions · Complete stamp identity · Print-ready delivery</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Company%20Stamp%20package.">START NOW →</a>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">17 · Digital Business Identity</span>
-    <h2>Social Media Business Kit</h2>
-    <p>Coordinated social media assets that give a business a consistent and professional online appearance.</p>
-    <span class="size">1080 × 1080 px · Digital</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>BUSINESS KIT</h3>
-        <p>Profile · Posts · Stories · Brand Assets</p>
-        <p>Consistent Social Media Identity</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$40</div>
-      <p>1 concept · 2 revisions · Up to 3 branded social assets</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Social%20Media%20Business%20Kit.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$65</div>
-      <p>2 concepts · 3 revisions · Up to 6 branded social assets</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Social%20Media%20Business%20Kit.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$100</div>
-      <p>3 concepts · 5 revisions · Up to 12 coordinated social assets</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Social%20Media%20Business%20Kit.">START NOW →</a>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">18 · Corporate Communication</span>
-    <h2>Corporate Memo</h2>
-    <p>Clean internal communication templates for company announcements, notices and official messages.</p>
-    <span class="size">A4 · Digital & Print</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>MEMORANDUM</h3>
-        <p>To · From · Date · Subject</p>
-        <p>Official Corporate Communication</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$20</div>
-      <p>1 concept · 2 revisions · Professional memo layout</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Corporate%20Memo%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$35</div>
-      <p>2 concepts · 3 revisions · Branded memo system · Print-ready file</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Corporate%20Memo%20package.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$55</div>
-      <p>3 concepts · 5 revisions · Complete corporate communication system</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Corporate%20Memo%20package.">START NOW →</a>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">19 · Corporate Stationery</span>
-    <h2>Business Stationery Set</h2>
-    <p>A coordinated collection of business stationery designed to keep the entire brand visually consistent.</p>
-    <span class="size">A4 / A5 · Complete Set</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>STATIONERY SET</h3>
-        <p>Card · Letterhead · Invoice · Envelope</p>
-        <p>Complete Corporate Identity System</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$60</div>
-      <p>Business card + letterhead · 1 concept · 2 revisions</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Business%20Stationery%20Set.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$100</div>
-      <p>Card + letterhead + invoice + envelope · 2 concepts · 3 revisions</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Business%20Stationery%20Set.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$150</div>
-      <p>Complete stationery system · 3 concepts · 5 revisions · Multiple formats</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Business%20Stationery%20Set.">START NOW →</a>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="material-card">
-
-  <div class="material-info">
-    <span class="tag">20 · Corporate Branding</span>
-    <h2>Business Document Template</h2>
-    <p>Reusable branded document templates for proposals, reports, quotations and everyday business communication.</p>
-    <span class="size">A4 · Editable Template</span>
-  </div>
-
-  <div class="material-preview">
-    <div class="material">
-      <div class="material-content">
-        <h3>BUSINESS TEMPLATE</h3>
-        <p>Documents · Reports · Proposals · Quotations</p>
-        <p>Consistent Corporate Document System</p>
-        <div class="concept">Victor Phoenix Concept</div>
-      </div>
-      <div class="material-visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$35</div>
-      <p>1 template · 2 revisions · Professional branded layout</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Basic%20Business%20Document%20Template.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$60</div>
-      <p>3 templates · 3 revisions · Consistent branded system</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Standard%20Business%20Document%20Template.">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$90</div>
-      <p>5 templates · 5 revisions · Complete business document system</p>
-      <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20order%20the%20Premium%20Business%20Document%20Template.">START NOW →</a>
-    </div>
-  </div>
-
-</article>
-</section>
-
-<section class="contact">
-
-<h2>Let's Create What's Next.</h2>
-
-<p>Tell Victor Phoenix what you want to create.</p>
-
-<a
-href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
-class="contact-btn">
-START A PROJECT →
-</a>
-
-</section>
-
-<footer>
-© 2026 Victor Phoenix. Create What's Next.
-</footer>
+
+  <!-- =======================================================
+       HEADER
+       ======================================================= -->
+
+  <header class="site-header">
+
+    <a
+      class="brand"
+      href="graphics.html"
+      aria-label="Victor Phoenix Graphics and Design"
+    >
+      <img
+        src="logo.png"
+        alt="Victor Phoenix"
+      >
+    </a>
+
+    <a
+      class="back-link"
+      href="graphics.html"
+    >
+      ← Graphics &amp; Design
+    </a>
+
+  </header>
+
+
+  <!-- =======================================================
+       MAIN
+       ======================================================= -->
+
+  <main>
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="hero">
+
+      <span class="eyebrow">
+        Victor Phoenix · Graphics &amp; Design
+      </span>
+
+      <h1>
+        Business
+        <span>Materials.</span>
+      </h1>
+
+      <p class="hero-description">
+        Professional business documents and branded materials
+        designed to make everyday business communication
+        look clear, consistent and premium.
+      </p>
+
+      <div class="hero-line"></div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ALL 20 BUSINESS MATERIAL TYPES
+         ===================================================== -->
+
+    <div
+      class="catalogue"
+      id="catalogue"
+    ></div>
+
+
+    <!-- =====================================================
+         FINAL CONTACT
+         ===================================================== -->
+
+    <section class="final-contact">
+
+      <span class="eyebrow">
+        Ready to create?
+      </span>
+
+      <h2>
+        Tell Victor Phoenix what you want to build.
+      </h2>
+
+      <p>
+        Need a business material that is not listed?
+        Send the brief directly and we can discuss the
+        right design direction for your business.
+      </p>
+
+      <a
+        class="contact-button"
+        target="_blank"
+        rel="noopener"
+        href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%20have%20a%20business%20materials%20design%20project%20I%27d%20like%20to%20discuss.%20Please%20send%20me%20the%20next%20steps."
+      >
+        CONTACT VICTOR PHOENIX →
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
+  <footer>
+
+    <span>
+      © 2026 <strong>Victor Phoenix</strong>.
+      All rights reserved.
+    </span>
+
+    <span>
+      Create. Innovate. Evolve.
+    </span>
+
+  </footer>
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+       ======================================================= -->
+
+  <script>
+
+    /* =========================================================
+       BUSINESS MATERIALS
+       ========================================================= */
+
+    const materials = [
+
+      {
+        number: 1,
+        title: "Business Card",
+        description:
+          "A professional business card designed to create a strong first impression and present essential contact information clearly.",
+        format: "90 × 54 mm",
+        prices: [20, 35, 55],
+        scope: [
+          "Front + back design",
+          "Professional typography",
+          "Print-ready layout"
+        ],
+        delivery: ["2–3", "3–5", "5–7"]
+      },
+
+      {
+        number: 2,
+        title: "Letterhead",
+        description:
+          "A clean branded letterhead that gives official business communication a consistent and professional appearance.",
+        format: "A4",
+        prices: [20, 35, 55],
+        scope: [
+          "Branded header + footer",
+          "Professional document layout",
+          "Print + digital-ready design"
+        ],
+        delivery: ["2–3", "3–5", "5–7"]
+      },
+
+      {
+        number: 3,
+        title: "Invoice",
+        description:
+          "A professional invoice design that organizes billing information clearly while maintaining your brand identity.",
+        format: "A4",
+        prices: [25, 40, 65],
+        scope: [
+          "Invoice structure",
+          "Branded business information",
+          "Clear payment sections"
+        ],
+        delivery: ["2–3", "3–5", "5–7"]
+      },
+
+      {
+        number: 4,
+        title: "Certificate",
+        description:
+          "A polished certificate design for awards, achievements, training, recognition and official presentations.",
+        format: "A4",
+        prices: [25, 40, 65],
+        scope: [
+          "Professional certificate layout",
+          "Recipient information area",
+          "Print-ready composition"
+        ],
+        delivery: ["2–3", "3–5", "5–7"]
+      },
+
+      {
+        number: 5,
+        title: "Presentation Design",
+        description:
+          "A professional presentation system designed to turn business information into clear, engaging visual slides.",
+        format: "16:9 · 1920 × 1080",
+        prices: [50, 90, 150],
+        scope: [
+          "Slide design system",
+          "Professional typography",
+          "Visual content hierarchy"
+        ],
+        delivery: ["3–4", "4–6", "6–8"]
+      },
+
+      {
+        number: 6,
+        title: "Invitation",
+        description:
+          "A polished invitation design for business events, private occasions, launches, meetings and special events.",
+        format: "A5 · 148 × 210 mm",
+        prices: [25, 40, 65],
+        scope: [
+          "Front + back design",
+          "Event information layout",
+          "Print + digital-ready file"
+        ],
+        delivery: ["2–3", "3–5", "5–7"]
+      },
+
+      {
+        number: 7,
+        title: "Company ID Card",
+        description:
+          "A professional company identification card designed for staff, representatives and official business use.",
+        format: "CR80 · 85.6 × 54 mm",
+        prices: [25, 40, 65],
+        scope: [
+          "Front + back ID design",
+          "Photo + information layout",
+          "Print-ready specification"
+        ],
+        delivery: ["2–3", "3–5", "5–7"]
+      },
+
+      {
+        number: 8,
+        title: "Employee ID Card",
+        description:
+          "A clean employee identification system that keeps staff information consistent with the company brand.",
+        format: "CR80 · 85.6 × 54 mm",
+        prices: [25, 40, 65],
+        scope: [
+          "Employee information layout",
+          "Photo + identification areas",
+          "Branded front + back design"
+        ],
+        delivery: ["2–3", "3–5", "5–7"]
+      },
+
+      {
+        number: 9,
+        title: "Company Folder",
+        description:
+          "A branded company folder designed to organize proposals, documents and business materials in a professional format.",
+        format: "A4",
+        prices: [30, 50, 75],
+        scope: [
+          "Front + back design",
+          "Folder panel structure",
+          "Print-ready artwork"
+        ],
+        delivery: ["2–3", "3–5", "5–7"]
+      },
+
+      {
+        number: 10,
+        title: "Email Signature",
+        description:
+          "A professional email signature that keeps every business email visually consistent with your brand.",
+        format: "Email-ready",
+        prices: [25, 40, 65],
+        scope: [
+          "Name + role layout",
+          "Contact information",
+          "Email-compatible structure"
+        ],
+        delivery: ["2–3", "3–5", "5–7"]
+      },
+
+      {
+        number: 11,
+        title: "Receipt Design",
+        description:
+          "A clean receipt layout designed to organize transaction details while keeping the business identity visible.",
+        format: "A5 / 80 × 200 mm",
+        prices: [20, 35, 55],
+        scope: [
+          "Receipt structure",
+          "Business information",
+          "Clear transaction sections"
+        ],
+        delivery: ["2–3", "3–5", "5–7"]
+      },
+
+      {
+        number: 12,
+        title: "Proposal Document",
+        description:
+          "A professional proposal document designed to present business offers, services, strategies and recommendations clearly.",
+        format: "A4 · Multi-page",
+        prices: [40, 70, 110],
+        scope: [
+          "Multi-page document layout",
+          "Professional section hierarchy",
+          "Proposal-ready formatting"
+        ],
+        delivery: ["3–4", "4–6", "6–8"]
+      },
+
+      {
+        number: 13,
+        title: "Price List",
+        description:
+          "A clean and easy-to-read price list designed to present products or services with a professional visual hierarchy.",
+        format: "A4 / A5",
+        prices: [25, 45, 70],
+        scope: [
+          "Price structure",
+          "Product/service sections",
+          "Clear visual hierarchy"
+        ],
+        delivery: ["2–3", "3–5", "5–7"]
+      },
+
+      {
+        number: 14,
+        title: "Media Kit",
+        description:
+          "A professional media kit that presents brand information, audience details, services and collaboration opportunities.",
+        format: "A4 · Multi-page PDF",
+        prices: [50, 80, 120],
+        scope: [
+          "Multi-page media kit",
+          "Brand information layout",
+          "Professional presentation system"
+        ],
+        delivery: ["3–4", "4–6", "6–8"]
+      },
+
+      {
+        number: 15,
+        title: "Business Report",
+        description:
+          "A structured business report that transforms important information, figures and findings into a professional document.",
+        format: "A4 · Multi-page",
+        prices: [50, 85, 130],
+        scope: [
+          "Multi-page report layout",
+          "Information hierarchy",
+          "Professional document styling"
+        ],
+        delivery: ["3–4", "4–6", "6–8"]
+      },
+
+      {
+        number: 16,
+        title: "Company Stamp",
+        description:
+          "A simple branded company stamp design prepared for professional business documentation and official use.",
+        format: "Custom",
+        prices: [20, 35, 55],
+        scope: [
+          "Stamp artwork",
+          "Company information",
+          "Production-ready design"
+        ],
+        delivery: ["2–3", "3–5", "5–7"]
+      },
+
+      {
+        number: 17,
+        title: "Social Media Business Kit",
+        description:
+          "A coordinated set of branded social graphics designed to make a business look consistent across its social channels.",
+        format: "1080 × 1080",
+        prices: [40, 65, 100],
+        scope: [
+          "Coordinated social templates",
+          "Brand typography + layout",
+          "Multi-design consistency"
+        ],
+        delivery: ["3–4", "4–6", "6–8"]
+      },
+
+      {
+        number: 18,
+        title: "Corporate Memo",
+        description:
+          "A professional internal memo design for official announcements, updates and corporate communication.",
+        format: "A4",
+        prices: [20, 35, 55],
+        scope: [
+          "Memo header structure",
+          "Branded document layout",
+          "Print + digital-ready file"
+        ],
+        delivery: ["2–3", "3–5", "5–7"]
+      },
+
+      {
+        number: 19,
+        title: "Business Stationery Set",
+        description:
+          "A coordinated business stationery system bringing essential business documents together under one visual identity.",
+        format: "A4 / A5 · Complete Set",
+        prices: [60, 100, 150],
+        scope: [
+          "Coordinated stationery designs",
+          "Consistent brand system",
+          "Print-ready document set"
+        ],
+        delivery: ["3–4", "4–6", "6–8"]
+      },
+
+      {
+        number: 20,
+        title: "Business Document Template",
+        description:
+          "An editable branded document template designed to make repeated business communication faster and more consistent.",
+        format: "A4 · Editable",
+        prices: [35, 60, 90],
+        scope: [
+          "Reusable document layout",
+          "Branded typography",
+          "Editable structure"
+        ],
+        delivery: ["2–3", "3–5", "5–7"]
+      }
+
+    ];
+
+
+    /* =========================================================
+       WHATSAPP
+       ========================================================= */
+
+    function whatsappLink(packageName, materialName) {
+
+      const message =
+        `Hello Victor Phoenix, I'm interested in the ${packageName} ${materialName} package. I'd like to get started. Please send me the package details and next steps.`;
+
+      return (
+        "https://wa.me/2349165831007?text=" +
+        encodeURIComponent(message)
+      );
+
+    }
+
+
+    /* =========================================================
+       PACKAGE
+       ========================================================= */
+
+    function createPackage(
+      packageName,
+      price,
+      material,
+      index
+    ) {
+
+      const concepts =
+        index === 0 ? 1 :
+        index === 1 ? 2 :
+        3;
+
+      const revisions =
+        index === 0 ? 2 :
+        index === 1 ? 3 :
+        5;
+
+      const intro =
+        index === 0
+          ? "A focused solution for essential business use."
+          : index === 1
+            ? "A stronger system with more creative direction and flexibility."
+            : "A complete premium treatment with expanded creative direction.";
+
+      const files =
+        index === 0
+          ? "PDF + JPG/PNG"
+          : "PDF + JPG/PNG + Editable Source";
+
+      let extra = "";
+
+      if (index === 0) {
+
+        extra = `
+          <li>Professional typography</li>
+          <li>Clean information hierarchy</li>
+          <li>Print + digital-ready layout</li>
+        `;
+
+      }
+
+      if (index === 1) {
+
+        extra = `
+          <li>Enhanced visual direction</li>
+          <li>Stronger content hierarchy</li>
+          <li>Print + digital-ready layout</li>
+        `;
+
+      }
+
+      if (index === 2) {
+
+        extra = `
+          <li>Premium art direction</li>
+          <li>Detailed visual finishing</li>
+          <li>Print + digital-ready layout</li>
+        `;
+
+      }
+
+      return `
+
+        <article class="package ${index === 1 ? "standard" : ""} ${index === 2 ? "premium" : ""}">
+
+          <span class="package-label">
+            ${packageName.toUpperCase()}
+          </span>
+
+          <h3>
+            ${packageName} Package
+          </h3>
+
+          <div class="price">
+            $${price}
+          </div>
+
+          <p class="package-intro">
+            ${intro}
+          </p>
+
+
+          <div class="what-you-get">
+
+            <h4>
+              WHAT YOU GET
+            </h4>
+
+            <ul class="package-list">
+
+              <li>
+                ${concepts}
+                concept${concepts > 1 ? "s" : ""}
+              </li>
+
+              ${material.scope.map(item => `<li>${item}</li>`).join("")}
+
+              ${extra}
+
+            </ul>
+
+          </div>
+
+
+          <div class="package-divider"></div>
+
+
+          <div class="package-details">
+
+            <div class="detail-row">
+
+              <span class="detail-label">
+                CONCEPTS
+              </span>
+
+              <strong class="detail-value">
+                ${concepts}
+              </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+              <span class="detail-label">
+                REVISIONS
+              </span>
+
+              <strong class="detail-value">
+                ${revisions}
+              </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+              <span class="detail-label">
+                DELIVERY
+              </span>
+
+              <strong class="detail-value">
+                ${material.delivery[index]} business days
+              </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+              <span class="detail-label">
+                FINAL DELIVERY
+              </span>
+
+              <strong class="detail-value">
+                ${files}
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <a
+            class="start-button"
+            href="${whatsappLink(packageName, material.title)}"
+            target="_blank"
+            rel="noopener"
+          >
+            START NOW
+            <span>→</span>
+          </a>
+
+        </article>
+
+      `;
+
+    }
+
+
+    /* =========================================================
+       MATERIAL CARD
+       ========================================================= */
+
+    function createMaterial(material) {
+
+      return `
+
+        <section
+          class="material-item"
+          id="material-${material.number}"
+        >
+
+
+          <!-- CONCEPT -->
+
+          <div class="concept-preview">
+
+            <div class="preview-top">
+
+              <span>
+                VICTOR PHOENIX
+              </span>
+
+              <span>
+                CONCEPT ${String(material.number).padStart(2, "0")}
+              </span>
+
+            </div>
+
+
+            <div class="preview-content">
+
+              <div class="preview-kicker">
+                BUSINESS MATERIAL
+              </div>
+
+              <h3>
+                ${material.title}
+              </h3>
+
+              <p>
+                ${material.description}
+              </p>
+
+              <div class="preview-lines">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+              </div>
+
+            </div>
+
+
+            <div class="preview-bottom">
+
+              <span>
+                ${material.format}
+              </span>
+
+              <span>
+                CREATE WHAT'S NEXT.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- TITLE -->
+
+          <div class="item-heading">
+
+            <div class="item-number">
+              ${String(material.number).padStart(2, "0")}
+            </div>
+
+            <div>
+
+              <span class="eyebrow">
+                VICTOR PHOENIX CONCEPT
+              </span>
+
+              <h2>
+                ${material.title}
+              </h2>
+
+              <p>
+                ${material.description}
+              </p>
+
+
+              <div class="item-meta">
+
+                <span>
+                  ${material.format}
+                </span>
+
+                <span>
+                  Professional Design
+                </span>
+
+                <span>
+                  Print + Digital
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- PACKAGES -->
+
+          <div class="packages">
+
+            ${createPackage(
+              "Basic",
+              material.prices[0],
+              material,
+              0
+            )}
+
+            ${createPackage(
+              "Standard",
+              material.prices[1],
+              material,
+              1
+            )}
+
+            ${createPackage(
+              "Premium",
+              material.prices[2],
+              material,
+              2
+            )}
+
+          </div>
+
+        </section>
+
+      `;
+
+    }
+
+
+    /* =========================================================
+       DISPLAY ALL 20
+       ========================================================= */
+
+    document.getElementById("catalogue").innerHTML =
+      materials.map(createMaterial).join("");
+
+  </script>
 
 </body>
 </html>

@@ -1,3507 +1,1292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Banner Design | Victor Phoenix</title>
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Arial, Helvetica, sans-serif;
-  background:#050505;
-  color:#fff;
-  line-height:1.6;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-header{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(5,5,5,.92);
-  backdrop-filter:blur(16px);
-  border-bottom:1px solid #222;
-}
-
-.nav{
-  max-width:1400px;
-  margin:auto;
-  padding:18px 5%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.logo{
-  width:170px;
-  max-height:60px;
-  object-fit:contain;
-}
-
-.back{
-  color:#aaa;
-  font-size:14px;
-  transition:.3s;
-}
-
-.back:hover{
-  color:#fff;
-}
-
-.hero{
-  max-width:1200px;
-  margin:auto;
-  padding:100px 5% 70px;
-  text-align:center;
-}
-
-.hero span{
-  color:#888;
-  font-size:13px;
-  text-transform:uppercase;
-  letter-spacing:4px;
-}
-
-.hero h1{
-  font-size:clamp(48px,8vw,100px);
-  line-height:.95;
-  margin:20px 0;
-  letter-spacing:-5px;
-}
-
-.hero p{
-  max-width:720px;
-  margin:auto;
-  color:#999;
-  font-size:17px;
-}
-
-.catalogue{
-  max-width:1450px;
-  margin:auto;
-  padding:20px 5% 100px;
-}
-
-.banner-card{
-  margin-bottom:80px;
-  padding:35px;
-  background:linear-gradient(145deg,#111,#080808);
-  border:1px solid #242424;
-  border-radius:24px;
-  box-shadow:0 30px 80px rgba(0,0,0,.35);
-}
-
-.banner-info{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  align-items:flex-start;
-  margin-bottom:28px;
-}
-
-.banner-info h2{
-  font-size:30px;
-  margin-bottom:7px;
-}
-
-.banner-info p{
-  color:#888;
-  font-size:14px;
-}
-
-.size{
-  white-space:nowrap;
-  padding:10px 15px;
-  border:1px solid #333;
-  border-radius:30px;
-  color:#bbb;
-  font-size:13px;
-}
-
-.banner-preview{
-  width:100%;
-  overflow:hidden;
-  border-radius:18px;
-  border:1px solid #292929;
-  background:#111;
-  position:relative;
-}
-
-/* Banner format helpers */
-
-.ratio-wide{
-  aspect-ratio:16/7;
-}
-
-.ratio-standard{
-  aspect-ratio:16/9;
-}
-
-.ratio-square{
-  aspect-ratio:1/1;
-}
-
-.ratio-portrait{
-  aspect-ratio:4/5;
-}
-
-.ratio-story{
-  aspect-ratio:9/16;
-}
-
-.ratio-ultrawide{
-  aspect-ratio:3/1;
-}
-
-.sample{
-  width:100%;
-  height:100%;
-  position:absolute;
-  inset:0;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:7%;
-}
-
-/* Visual effects */
-
-.sample::before{
-  content:"";
-  position:absolute;
-  width:40%;
-  height:150%;
-  right:-10%;
-  top:-25%;
-  background:radial-gradient(circle,rgba(255,255,255,.22),transparent 65%);
-  filter:blur(20px);
-}
-
-.grid{
-  position:absolute;
-  inset:0;
-  background-image:
-    linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
-  background-size:35px 35px;
-}
-
-.content{
-  position:relative;
-  z-index:2;
-  max-width:55%;
-}
-
-.content small{
-  display:block;
-  font-size:11px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  opacity:.7;
-  margin-bottom:12px;
-}
-
-.content h3{
-  font-size:clamp(24px,4vw,58px);
-  line-height:.95;
-  letter-spacing:-2px;
-  margin-bottom:15px;
-}
-
-.content p{
-  font-size:14px;
-  opacity:.75;
-  max-width:450px;
-  margin-bottom:20px;
-}
-
-.cta{
-  display:inline-block;
-  padding:10px 18px;
-  border-radius:30px;
-  background:#fff;
-  color:#000;
-  font-size:11px;
-  font-weight:bold;
-  letter-spacing:1px;
-}
-
-.visual{
-  position:relative;
-  z-index:2;
-  width:34%;
-  height:80%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.orb{
-  width:220px;
-  height:220px;
-  border-radius:50%;
-  background:linear-gradient(135deg,#fff,#555,#111);
-  box-shadow:
-    0 0 60px rgba(255,255,255,.2),
-    inset -30px -30px 50px rgba(0,0,0,.6);
-}
-
-.ring{
-  position:absolute;
-  width:280px;
-  height:280px;
-  border:1px solid rgba(255,255,255,.4);
-  border-radius:50%;
-  transform:rotate(25deg);
-}
-
-.tag{
-  position:absolute;
-  top:20px;
-  right:20px;
-  padding:7px 12px;
-  border-radius:20px;
-  background:rgba(0,0,0,.45);
-  border:1px solid rgba(255,255,255,.2);
-  font-size:10px;
-  letter-spacing:1px;
-  z-index:5;
-}
-
-.concept{
-  margin-top:12px;
-  color:#666;
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:2px;
-}
-
-.packages{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
-  margin-top:30px;
-}
-
-.package{
-  padding:24px;
-  border:1px solid #292929;
-  border-radius:16px;
-  background:#0b0b0b;
-}
-
-.package h4{
-  font-size:18px;
-  margin-bottom:8px;
-}
-
-.price{
-  font-size:27px;
-  font-weight:bold;
-  margin-bottom:15px;
-}
-
-.package ul{
-  list-style:none;
-  color:#888;
-  font-size:13px;
-  margin-bottom:20px;
-}
-
-.package li{
-  margin-bottom:7px;
-}
-
-.start{
-  display:block;
-  text-align:center;
-  padding:12px;
-  border:1px solid #444;
-  border-radius:30px;
-  font-size:12px;
-  letter-spacing:1px;
-  transition:.3s;
-}
-
-.start:hover{
-  background:#fff;
-  color:#000;
-}
-
-.contact{
-  max-width:900px;
-  margin:0 auto 100px;
-  padding:70px 5%;
-  text-align:center;
-  border-top:1px solid #222;
-}
-
-.contact h2{
-  font-size:45px;
-  letter-spacing:-2px;
-  margin-bottom:15px;
-}
-
-.contact p{
-  color:#888;
-  margin-bottom:25px;
-}
-
-.contact-btn{
-  display:inline-block;
-  padding:15px 28px;
-  border-radius:40px;
-  background:#fff;
-  color:#000;
-  font-weight:bold;
-}
-
-footer{
-  border-top:1px solid #222;
-  padding:30px 5%;
-  text-align:center;
-  color:#555;
-  font-size:12px;
-}
-
-@media(max-width:800px){
-
-  .banner-card{
-    padding:20px;
-  }
-
-  .banner-info{
-    flex-direction:column;
-  }
-
-  .size{
-    white-space:normal;
-  }
-
-  .packages{
-    grid-template-columns:1fr;
-  }
-
-  .sample{
-    padding:8%;
-  }
-
-  .content{
-    max-width:65%;
-  }
-
-  .visual{
-    width:30%;
-  }
-
-  .orb{
-    width:110px;
-    height:110px;
-  }
-
-  .ring{
-    width:145px;
-    height:145px;
-  }
-
-  .content h3{
-    font-size:28px;
-  }
-
-  .content p{
-    font-size:10px;
-  }
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Banner Design — Victor Phoenix</title>
+
+  <meta
+    name="description"
+    content="Premium banner design services by Victor Phoenix. Website, social media, advertising, event, business, technology, real estate and promotional banners."
+  />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(255,255,255,.07), transparent 28%),
+        radial-gradient(circle at 85% 25%, rgba(255,255,255,.04), transparent 30%),
+        #070707;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1240px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7,7,7,.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .header-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand img {
+      width: 150px;
+      max-height: 52px;
+      object-fit: contain;
+    }
+
+    .back-link {
+      color: #aaa;
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    .back-link:hover {
+      color: #fff;
+      transform: translateX(-3px);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 110px 0 90px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .eyebrow {
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 11px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 8vw, 100px);
+      line-height: .95;
+      letter-spacing: -5px;
+      font-weight: 800;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      color: #777;
+    }
+
+    .hero p {
+      max-width: 740px;
+      margin: auto;
+      color: #aaa;
+      font-size: 17px;
+    }
+
+    /* INTRO */
+
+    .intro {
+      padding: 70px 0 35px;
+      text-align: center;
+    }
+
+    .intro h2 {
+      font-size: clamp(30px,5vw,48px);
+      letter-spacing: -1.5px;
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      max-width: 720px;
+      margin: auto;
+      color: #999;
+    }
+
+    /* CATALOGUE */
+
+    .catalogue {
+      padding: 35px 0 100px;
+    }
+
+    .banner-item {
+      margin-bottom: 110px;
+    }
+
+    /* CONCEPT */
+
+    .concept {
+      min-height: 330px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 26px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(145deg,#1a1a1a,#080808);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      margin-bottom: 35px;
+    }
+
+    .concept::before {
+      content: "";
+      position: absolute;
+      width: 430px;
+      height: 430px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(255,255,255,.13),
+        transparent 68%
+      );
+      top: -190px;
+      right: -100px;
+    }
+
+    .concept::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(255,255,255,.08),
+        transparent 68%
+      );
+      bottom: -150px;
+      left: -80px;
+    }
+
+    .concept-inner {
+      position: relative;
+      z-index: 2;
+      width: min(780px,100%);
+      text-align: center;
+    }
+
+    .concept-number {
+      color: #888;
+      font-size: 11px;
+      letter-spacing: 4px;
+      margin-bottom: 12px;
+    }
+
+    .concept-inner h3 {
+      font-size: clamp(30px,5vw,58px);
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 16px;
+    }
+
+    .concept-inner p {
+      color: #999;
+      max-width: 620px;
+      margin: auto;
+      font-size: 14px;
+    }
+
+    .concept-label {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 8px 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      color: #aaa;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    /* ITEM HEADING */
+
+    .item-heading {
+      margin-bottom: 28px;
+    }
+
+    .item-heading .number {
+      color: #777;
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-bottom: 7px;
+    }
+
+    .item-heading h2 {
+      font-size: clamp(28px,4vw,46px);
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      margin-bottom: 12px;
+    }
+
+    .item-heading p {
+      color: #999;
+      max-width: 780px;
+      font-size: 15px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .badge {
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.1);
+      color: #999;
+      font-size: 10px;
+    }
+
+    /* PACKAGES */
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .package {
+      background: linear-gradient(150deg,#151515,#0b0b0b);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 20px;
+      padding: 28px;
+      min-height: 590px;
+      display: flex;
+      flex-direction: column;
+      transition: .3s;
+    }
+
+    .package:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255,255,255,.22);
+    }
+
+    .package.featured {
+      background: linear-gradient(150deg,#1b1b1b,#0c0c0c);
+      border-color: rgba(255,255,255,.2);
+    }
+
+    .package-label {
+      color: #777;
+      font-size: 10px;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+
+    .package h3 {
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .package-intro {
+      color: #999;
+      font-size: 13px;
+      min-height: 55px;
+    }
+
+    .package h4 {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #bbb;
+    }
+
+    .package ul {
+      list-style: none;
+      margin-top: 13px;
+    }
+
+    .package li {
+      position: relative;
+      padding-left: 18px;
+      color: #aaa;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .package li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #fff;
+    }
+
+    .package-details {
+      border-top: 1px solid rgba(255,255,255,.1);
+      margin-top: 20px;
+      padding-top: 16px;
+    }
+
+    .detail {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      font-size: 12px;
+    }
+
+    .detail:last-child {
+      border-bottom: 0;
+    }
+
+    .detail span:first-child {
+      color: #777;
+    }
+
+    .detail span:last-child {
+      color: #ddd;
+      text-align: right;
+    }
+
+    .start-btn {
+      margin-top: auto;
+      padding-top: 22px;
+    }
+
+    .start-btn a {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: #fff;
+      color: #080808;
+      font-size: 12px;
+      font-weight: 700;
+      transition: .3s;
+    }
+
+    .start-btn a:hover {
+      background: #d9d9d9;
+      transform: translateY(-2px);
+    }
+
+    /* CONTACT */
+
+    .contact {
+      padding: 100px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+      text-align: center;
+      background: #050505;
+    }
+
+    .contact h2 {
+      font-size: clamp(34px,6vw,70px);
+      letter-spacing: -3px;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      color: #999;
+      max-width: 620px;
+      margin: auto;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: #111;
+      font-size: 13px;
+      transition: .3s;
+    }
+
+    .contact-btn:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 28px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .footer-copy {
+      color: #555;
+      font-size: 11px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width:900px) {
+
+      .packages {
+        grid-template-columns: 1fr;
+      }
+
+      .package {
+        min-height: auto;
+      }
+
+      .hero {
+        padding: 80px 0 65px;
+      }
+
+      .concept {
+        min-height: 280px;
+      }
+    }
+
+    @media (max-width:600px) {
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .brand img {
+        width: 125px;
+      }
+
+      .back-link {
+        font-size: 12px;
+      }
+
+      .hero h1 {
+        letter-spacing: -3px;
+      }
+
+      .concept {
+        padding: 30px 20px;
+        border-radius: 20px;
+      }
+
+      .package {
+        padding: 23px;
+        border-radius: 17px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="nav">
+  <!-- HEADER -->
 
-    <a href="index.html">
-      <img src="logo.png" class="logo" alt="Victor Phoenix">
-    </a>
+  <header>
 
-    <a href="graphics.html" class="back">
-      ← Graphics & Design
-    </a>
+    <div class="container header-inner">
 
-  </div>
-</header>
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="Victor Phoenix" />
+      </a>
 
-<section class="hero">
+      <a href="graphics.html" class="back-link">
+        ← Back to Graphics & Design
+      </a>
 
-  <span>Victor Phoenix Creative</span>
-
-  <h1>Banner Design.</h1>
-
-  <p>
-    Professional banners designed for websites, social media,
-    advertising, campaigns, products, events and brands —
-    built in the correct dimensions for their intended platform.
-  </p>
-
-</section>
-
-<section class="catalogue">
-  <!-- 01 WEBSITE HERO BANNER -->
-<article class="banner-card">
-
-  <div class="banner-info">
-    <div>
-      <h2>Website Hero Banner</h2>
-      <p>Large visual banner for the main hero section of a website.</p>
-    </div>
-    <div class="size">1920 × 800 px</div>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-
-    <div class="sample" style="background:linear-gradient(110deg,#090909,#252525,#111);">
-
-      <div class="grid"></div>
-
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>NEW SEASON · 2026</small>
-
-        <h3>DEFINE<br>YOUR STYLE.</h3>
-
-        <p>
-          A premium fashion collection designed for
-          people who create their own direction.
-        </p>
-
-        <span class="cta">SHOP COLLECTION</span>
-      </div>
-
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="concept">Fashion / Website Hero Example</div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$35</div>
-      <ul>
-        <li>1 design concept</li>
-        <li>2 revisions</li>
-        <li>Web-ready format</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Hero%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$55</div>
-      <ul>
-        <li>2 design concepts</li>
-        <li>3 revisions</li>
-        <li>Desktop + mobile sizing</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Hero%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$85</div>
-      <ul>
-        <li>3 design concepts</li>
-        <li>5 revisions</li>
-        <li>Desktop + tablet + mobile</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Hero%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<!-- 02 WEBSITE PROMOTIONAL BANNER -->
-<article class="banner-card">
-
-  <div class="banner-info">
-    <div>
-      <h2>Website Promotional Banner</h2>
-      <p>Promotional banner designed to highlight a product, service or campaign.</p>
-    </div>
-    <div class="size">1600 × 600 px</div>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-
-    <div class="sample" style="background:linear-gradient(115deg,#101010,#343434,#0b0b0b);">
-
-      <div class="grid"></div>
-
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>LIMITED OFFER</small>
-
-        <h3>UPGRADE<br>YOUR LOOK.</h3>
-
-        <p>
-          Premium essentials created for a modern
-          lifestyle.
-        </p>
-
-        <span class="cta">EXPLORE NOW</span>
-      </div>
-
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="concept">Fashion Promotion / Website Example</div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$30</div>
-      <ul>
-        <li>1 design concept</li>
-        <li>2 revisions</li>
-        <li>Web-ready export</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Promotional%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$50</div>
-      <ul>
-        <li>2 design concepts</li>
-        <li>3 revisions</li>
-        <li>2 platform sizes</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Promotional%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$80</div>
-      <ul>
-        <li>3 design concepts</li>
-        <li>5 revisions</li>
-        <li>Desktop + mobile versions</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Promotional%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<!-- 03 WEBSITE SALE BANNER -->
-<article class="banner-card">
-
-  <div class="banner-info">
-    <div>
-      <h2>Website Sale Banner</h2>
-      <p>High-impact promotional banner for sales, discounts and special offers.</p>
-    </div>
-    <div class="size">1600 × 500 px</div>
-  </div>
-
-  <div class="banner-preview ratio-ultrawide">
-
-    <div class="sample" style="background:linear-gradient(105deg,#050505,#202020,#080808);">
-
-      <div class="grid"></div>
-
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>SEASONAL SALE</small>
-
-        <h3>UP TO<br>50% OFF.</h3>
-
-        <p>
-          Selected pieces. Limited time.
-          Shop before the collection moves on.
-        </p>
-
-        <span class="cta">SHOP SALE</span>
-      </div>
-
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="concept">Fashion Sale / Website Example</div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$30</div>
-      <ul>
-        <li>1 design concept</li>
-        <li>2 revisions</li>
-        <li>Web-ready export</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Sale%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$50</div>
-      <ul>
-        <li>2 design concepts</li>
-        <li>3 revisions</li>
-        <li>2 banner sizes</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Sale%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$80</div>
-      <ul>
-        <li>3 design concepts</li>
-        <li>5 revisions</li>
-        <li>Multiple responsive sizes</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Sale%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<!-- 04 YOUTUBE CHANNEL BANNER -->
-<article class="banner-card">
-
-  <div class="banner-info">
-    <div>
-      <h2>YouTube Channel Banner</h2>
-      <p>Channel artwork designed for YouTube with the important content kept within the safe viewing area.</p>
-    </div>
-    <div class="size">2560 × 1440 px</div>
-  </div>
-
-  <div class="banner-preview ratio-standard">
-
-    <div class="sample" style="background:linear-gradient(120deg,#050505,#292929,#0b0b0b);">
-
-      <div class="grid"></div>
-
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>FASHION CHANNEL</small>
-
-        <h3>STYLE.<br>CREATIVITY.<br>CONFIDENCE.</h3>
-
-        <p>
-          New looks, fashion ideas and creative inspiration.
-        </p>
-
-        <span class="cta">SUBSCRIBE</span>
-      </div>
-
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="concept">Fashion Creator / YouTube Example</div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$35</div>
-      <ul>
-        <li>1 channel banner</li>
-        <li>2 revisions</li>
-        <li>YouTube-ready sizing</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20YouTube%20Channel%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$55</div>
-      <ul>
-        <li>2 concepts</li>
-        <li>3 revisions</li>
-        <li>Desktop + mobile optimization</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20YouTube%20Channel%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$85</div>
-      <ul>
-        <li>3 concepts</li>
-        <li>5 revisions</li>
-        <li>Full responsive channel artwork</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20YouTube%20Channel%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-
-  </div>
-
-</article>
-<!-- 01 WEBSITE HERO BANNER -->
-<article class="banner-card">
-
-  <div class="banner-info">
-    <div>
-      <h2>Website Hero Banner</h2>
-      <p>Large visual banner for the main hero section of a website.</p>
-    </div>
-    <div class="size">1920 × 800 px</div>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-
-    <div class="sample" style="background:linear-gradient(110deg,#090909,#252525,#111);">
-
-      <div class="grid"></div>
-
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>NEW SEASON · 2026</small>
-
-        <h3>DEFINE<br>YOUR STYLE.</h3>
-
-        <p>
-          A premium fashion collection designed for
-          people who create their own direction.
-        </p>
-
-        <span class="cta">SHOP COLLECTION</span>
-      </div>
-
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="concept">Fashion / Website Hero Example</div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$35</div>
-      <ul>
-        <li>1 design concept</li>
-        <li>2 revisions</li>
-        <li>Web-ready format</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Hero%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$55</div>
-      <ul>
-        <li>2 design concepts</li>
-        <li>3 revisions</li>
-        <li>Desktop + mobile sizing</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Hero%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$85</div>
-      <ul>
-        <li>3 design concepts</li>
-        <li>5 revisions</li>
-        <li>Desktop + tablet + mobile</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Hero%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<!-- 02 WEBSITE PROMOTIONAL BANNER -->
-<article class="banner-card">
-
-  <div class="banner-info">
-    <div>
-      <h2>Website Promotional Banner</h2>
-      <p>Promotional banner designed to highlight a product, service or campaign.</p>
-    </div>
-    <div class="size">1600 × 600 px</div>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-
-    <div class="sample" style="background:linear-gradient(115deg,#101010,#343434,#0b0b0b);">
-
-      <div class="grid"></div>
-
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>LIMITED OFFER</small>
-
-        <h3>UPGRADE<br>YOUR LOOK.</h3>
-
-        <p>
-          Premium essentials created for a modern
-          lifestyle.
-        </p>
-
-        <span class="cta">EXPLORE NOW</span>
-      </div>
-
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="concept">Fashion Promotion / Website Example</div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$30</div>
-      <ul>
-        <li>1 design concept</li>
-        <li>2 revisions</li>
-        <li>Web-ready export</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Promotional%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$50</div>
-      <ul>
-        <li>2 design concepts</li>
-        <li>3 revisions</li>
-        <li>2 platform sizes</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Promotional%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$80</div>
-      <ul>
-        <li>3 design concepts</li>
-        <li>5 revisions</li>
-        <li>Desktop + mobile versions</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Promotional%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<!-- 03 WEBSITE SALE BANNER -->
-<article class="banner-card">
-
-  <div class="banner-info">
-    <div>
-      <h2>Website Sale Banner</h2>
-      <p>High-impact promotional banner for sales, discounts and special offers.</p>
-    </div>
-    <div class="size">1600 × 500 px</div>
-  </div>
-
-  <div class="banner-preview ratio-ultrawide">
-
-    <div class="sample" style="background:linear-gradient(105deg,#050505,#202020,#080808);">
-
-      <div class="grid"></div>
-
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>SEASONAL SALE</small>
-
-        <h3>UP TO<br>50% OFF.</h3>
-
-        <p>
-          Selected pieces. Limited time.
-          Shop before the collection moves on.
-        </p>
-
-        <span class="cta">SHOP SALE</span>
-      </div>
-
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="concept">Fashion Sale / Website Example</div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$30</div>
-      <ul>
-        <li>1 design concept</li>
-        <li>2 revisions</li>
-        <li>Web-ready export</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Sale%20Banner%20Basic%20package." class="start">START NOW →</a>
     </div>
 
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$50</div>
-      <ul>
-        <li>2 design concepts</li>
-        <li>3 revisions</li>
-        <li>2 banner sizes</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Sale%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$80</div>
-      <ul>
-        <li>3 design concepts</li>
-        <li>5 revisions</li>
-        <li>Multiple responsive sizes</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Website%20Sale%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<!-- 04 YOUTUBE CHANNEL BANNER -->
-<article class="banner-card">
-
-  <div class="banner-info">
-    <div>
-      <h2>YouTube Channel Banner</h2>
-      <p>Channel artwork designed for YouTube with the important content kept within the safe viewing area.</p>
-    </div>
-    <div class="size">2560 × 1440 px</div>
-  </div>
-
-  <div class="banner-preview ratio-standard">
-
-    <div class="sample" style="background:linear-gradient(120deg,#050505,#292929,#0b0b0b);">
-
-      <div class="grid"></div>
-
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>FASHION CHANNEL</small>
-
-        <h3>STYLE.<br>CREATIVITY.<br>CONFIDENCE.</h3>
-
-        <p>
-          New looks, fashion ideas and creative inspiration.
-        </p>
-
-        <span class="cta">SUBSCRIBE</span>
-      </div>
-
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="concept">Fashion Creator / YouTube Example</div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$35</div>
-      <ul>
-        <li>1 channel banner</li>
-        <li>2 revisions</li>
-        <li>YouTube-ready sizing</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20YouTube%20Channel%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$55</div>
-      <ul>
-        <li>2 concepts</li>
-        <li>3 revisions</li>
-        <li>Desktop + mobile optimization</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20YouTube%20Channel%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$85</div>
-      <ul>
-        <li>3 concepts</li>
-        <li>5 revisions</li>
-        <li>Full responsive channel artwork</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20YouTube%20Channel%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
+  </header>
 
-  </div>
-
-</article>
-<!-- 10 GOOGLE DISPLAY AD BANNER -->
-<article class="banner-card">
-  <div class="banner-info">
-    <div>
-      <h2>Google Display Ad Banner</h2>
-      <p>Advertising creative designed for display campaigns and promotional placements.</p>
-    </div>
-    <div class="size">1200 × 628 px</div>
-  </div>
-
-  <div class="banner-preview ratio-standard">
-    <div class="sample" style="background:linear-gradient(110deg,#080808,#303030,#111);">
-      <div class="grid"></div>
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>FASHION ADVERTISEMENT</small>
-        <h3>NEW<br>SEASON.</h3>
-        <p>Discover premium pieces created for your everyday statement.</p>
-        <span class="cta">SHOP NOW</span>
-      </div>
-
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="concept">Fashion Advertising / Google Display Example</div>
-
-  <div class="packages">
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$30</div>
-      <ul>
-        <li>1 concept</li>
-        <li>2 revisions</li>
-        <li>Display-ready export</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Google%20Display%20Ad%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$55</div>
-      <ul>
-        <li>2 concepts</li>
-        <li>3 revisions</li>
-        <li>2 ad sizes</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Google%20Display%20Ad%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
 
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$85</div>
-      <ul>
-        <li>3 concepts</li>
-        <li>5 revisions</li>
-        <li>Multiple campaign sizes</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Google%20Display%20Ad%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 11 PRODUCT ADVERTISING BANNER -->
-<article class="banner-card">
-  <div class="banner-info">
-    <div>
-      <h2>Product Advertising Banner</h2>
-      <p>Product-focused advertising artwork with a strong visual hierarchy.</p>
-    </div>
-    <div class="size">1600 × 900 px</div>
-  </div>
-
-  <div class="banner-preview ratio-standard">
-    <div class="sample" style="background:linear-gradient(120deg,#090909,#282828,#080808);">
-      <div class="grid"></div>
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>PREMIUM PRODUCT</small>
-        <h3>DESIGNED<br>TO STAND OUT.</h3>
-        <p>Clean design. Powerful performance. Made for modern life.</p>
-        <span class="cta">DISCOVER PRODUCT</span>
-      </div>
+  <!-- HERO -->
 
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="concept">Technology Product / Advertising Example</div>
-
-  <div class="packages">
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$35</div>
-      <ul>
-        <li>1 concept</li>
-        <li>2 revisions</li>
-        <li>Product-focused layout</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Product%20Advertising%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+  <section class="hero">
 
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$55</div>
-      <ul>
-        <li>2 concepts</li>
-        <li>3 revisions</li>
-        <li>2 platform sizes</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Product%20Advertising%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+    <div class="container">
 
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$90</div>
-      <ul>
-        <li>3 concepts</li>
-        <li>5 revisions</li>
-        <li>Multiple campaign formats</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Product%20Advertising%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 12 PRODUCT LAUNCH BANNER -->
-<article class="banner-card">
-  <div class="banner-info">
-    <div>
-      <h2>Product Launch Banner</h2>
-      <p>Launch campaign banner designed to introduce a new product.</p>
-    </div>
-    <div class="size">1920 × 1080 px</div>
-  </div>
-
-  <div class="banner-preview ratio-standard">
-    <div class="sample" style="background:linear-gradient(115deg,#050505,#353535,#0c0c0c);">
-      <div class="grid"></div>
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>COMING SOON</small>
-        <h3>MEET<br>THE NEXT.</h3>
-        <p>A new generation of technology is about to arrive.</p>
-        <span class="cta">GET NOTIFIED</span>
+      <div class="eyebrow">
+        Victor Phoenix / Graphics & Design
       </div>
 
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="concept">Technology Launch / Campaign Example</div>
-
-  <div class="packages">
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$35</div>
-      <ul>
-        <li>1 launch concept</li>
-        <li>2 revisions</li>
-        <li>Digital export</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Product%20Launch%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+      <h1>
+        Banner<br>
+        <span>Design.</span>
+      </h1>
 
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$60</div>
-      <ul>
-        <li>2 launch concepts</li>
-        <li>3 revisions</li>
-        <li>2 campaign sizes</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Product%20Launch%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+      <p>
+        Premium banners designed for websites, social platforms,
+        advertising campaigns, events, businesses, products and digital experiences.
+      </p>
 
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$95</div>
-      <ul>
-        <li>3 launch concepts</li>
-        <li>5 revisions</li>
-        <li>Multi-platform campaign</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Product%20Launch%20Banner%20Premium%20package." class="start">START NOW →</a>
     </div>
-  </div>
-</article>
-
-
-<!-- 13 BRAND AWARENESS BANNER -->
-<article class="banner-card">
-  <div class="banner-info">
-    <div>
-      <h2>Brand Awareness Banner</h2>
-      <p>Visual campaign artwork focused on brand recognition and positioning.</p>
-    </div>
-    <div class="size">1920 × 800 px</div>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample" style="background:linear-gradient(110deg,#080808,#303030,#080808);">
-      <div class="grid"></div>
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>GLOBAL FASHION BRAND</small>
-        <h3>MAKE<br>AN IMPRESSION.</h3>
-        <p>Identity isn't just what you wear. It's what you communicate.</p>
-        <span class="cta">EXPLORE THE BRAND</span>
-      </div>
 
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="concept">Fashion Brand / Awareness Campaign</div>
-
-  <div class="packages">
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$35</div>
-      <ul>
-        <li>1 concept</li>
-        <li>2 revisions</li>
-        <li>Campaign-ready export</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Brand%20Awareness%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+  </section>
 
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$55</div>
-      <ul>
-        <li>2 concepts</li>
-        <li>3 revisions</li>
-        <li>2 campaign sizes</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Brand%20Awareness%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
 
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$90</div>
-      <ul>
-        <li>3 concepts</li>
-        <li>5 revisions</li>
-        <li>Full campaign adaptation</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Brand%20Awareness%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 14 BUSINESS PROMOTION BANNER -->
-<article class="banner-card">
-  <div class="banner-info">
-    <div>
-      <h2>Business Promotion Banner</h2>
-      <p>Professional promotional banner for companies and service businesses.</p>
-    </div>
-    <div class="size">1920 × 800 px</div>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample" style="background:linear-gradient(110deg,#070707,#292929,#0c0c0c);">
-      <div class="grid"></div>
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>DIGITAL BUSINESS</small>
-        <h3>YOUR BUSINESS.<br>ONLINE.</h3>
-        <p>Modern digital solutions designed to help businesses move forward.</p>
-        <span class="cta">GET STARTED</span>
-      </div>
+  <!-- INTRO -->
 
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="concept">Digital Business / Promotion Example</div>
-
-  <div class="packages">
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$30</div>
-      <ul>
-        <li>1 concept</li>
-        <li>2 revisions</li>
-        <li>Digital export</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Business%20Promotion%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+  <section class="intro">
 
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$50</div>
-      <ul>
-        <li>2 concepts</li>
-        <li>3 revisions</li>
-        <li>2 promotional sizes</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Business%20Promotion%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+    <div class="container">
 
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$80</div>
-      <ul>
-        <li>3 concepts</li>
-        <li>5 revisions</li>
-        <li>Multi-platform versions</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Business%20Promotion%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 15 EVENT BANNER -->
-<article class="banner-card">
-  <div class="banner-info">
-    <div>
-      <h2>Event Banner</h2>
-      <p>Event promotional artwork for conferences, launches, parties and special occasions.</p>
-    </div>
-    <div class="size">1920 × 1080 px</div>
-  </div>
-
-  <div class="banner-preview ratio-standard">
-    <div class="sample" style="background:linear-gradient(125deg,#050505,#303030,#0b0b0b);">
-      <div class="grid"></div>
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>LIVE EVENT · 2026</small>
-        <h3>THE<br>FUTURE<br>STARTS HERE.</h3>
-        <p>One night. Great ideas. New connections.</p>
-        <span class="cta">GET YOUR TICKET</span>
-      </div>
+      <h2>
+        Designed to stand out.
+      </h2>
 
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="concept">Technology Event / Promotional Example</div>
-
-  <div class="packages">
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$30</div>
-      <ul>
-        <li>1 event concept</li>
-        <li>2 revisions</li>
-        <li>Digital export</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20an%20Event%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+      <p>
+        From website heroes and social media banners to advertising,
+        event and large-format designs, every banner is created around
+        strong visual hierarchy and clear communication.
+      </p>
 
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$50</div>
-      <ul>
-        <li>2 concepts</li>
-        <li>3 revisions</li>
-        <li>2 event sizes</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20an%20Event%20Banner%20Standard%20package." class="start">START NOW →</a>
     </div>
 
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$80</div>
-      <ul>
-        <li>3 concepts</li>
-        <li>5 revisions</li>
-        <li>Multi-platform event campaign</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20an%20Event%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-<!-- 16 CONCERT BANNER -->
-<article class="banner-card">
-  <div class="banner-info">
-    <div>
-      <h2>Concert Banner</h2>
-      <p>High-impact promotional artwork for concerts and live music events.</p>
-    </div>
-    <div class="size">1920 × 1080 px</div>
-  </div>
-
-  <div class="banner-preview ratio-standard">
-    <div class="sample" style="background:linear-gradient(120deg,#050505,#252525,#050505);">
-      <div class="grid"></div>
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>LIVE · ONE NIGHT ONLY</small>
-        <h3>FEEL<br>THE<br>ENERGY.</h3>
-        <p>Music, lights and an unforgettable night.</p>
-        <span class="cta">GET TICKETS</span>
-      </div>
+  </section>
 
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="concept">Music Event / Concert Example</div>
-
-  <div class="packages">
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$35</div>
-      <ul>
-        <li>1 concept</li>
-        <li>2 revisions</li>
-        <li>Digital export</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Concert%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
 
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$60</div>
-      <ul>
-        <li>2 concepts</li>
-        <li>3 revisions</li>
-        <li>2 event sizes</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Concert%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+  <!-- CATALOGUE -->
 
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$95</div>
-      <ul>
-        <li>3 concepts</li>
-        <li>5 revisions</li>
-        <li>Full event campaign set</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Concert%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 17 CONFERENCE BANNER -->
-<article class="banner-card">
-  <div class="banner-info">
-    <div>
-      <h2>Conference Banner</h2>
-      <p>Professional conference artwork for business, technology and industry events.</p>
-    </div>
-    <div class="size">1920 × 1080 px</div>
-  </div>
-
-  <div class="banner-preview ratio-standard">
-    <div class="sample" style="background:linear-gradient(120deg,#070707,#303030,#0a0a0a);">
-      <div class="grid"></div>
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>GLOBAL TECHNOLOGY SUMMIT</small>
-        <h3>BUILD.<br>CONNECT.<br>EVOLVE.</h3>
-        <p>Ideas and people shaping the next generation of technology.</p>
-        <span class="cta">REGISTER NOW</span>
-      </div>
+  <main class="catalogue">
 
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="concept">Technology Conference / Event Example</div>
-
-  <div class="packages">
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$35</div>
-      <ul>
-        <li>1 concept</li>
-        <li>2 revisions</li>
-        <li>Digital export</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Conference%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+    <div class="container" id="catalogue"></div>
 
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$55</div>
-      <ul>
-        <li>2 concepts</li>
-        <li>3 revisions</li>
-        <li>2 conference sizes</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Conference%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+  </main>
 
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$90</div>
-      <ul>
-        <li>3 concepts</li>
-        <li>5 revisions</li>
-        <li>Complete event campaign set</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Conference%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 18 WEBINAR BANNER -->
-<article class="banner-card">
-  <div class="banner-info">
-    <div>
-      <h2>Webinar Banner</h2>
-      <p>Digital event banner designed for online seminars and live sessions.</p>
-    </div>
-    <div class="size">1920 × 1080 px</div>
-  </div>
-
-  <div class="banner-preview ratio-standard">
-    <div class="sample" style="background:linear-gradient(120deg,#080808,#292929,#090909);">
-      <div class="grid"></div>
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>LIVE WEBINAR</small>
-        <h3>THE FUTURE<br>OF AI.</h3>
-        <p>Learn how intelligent technology is changing modern business.</p>
-        <span class="cta">RESERVE YOUR SEAT</span>
-      </div>
 
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="concept">AI Education / Webinar Example</div>
-
-  <div class="packages">
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$30</div>
-      <ul>
-        <li>1 concept</li>
-        <li>2 revisions</li>
-        <li>Webinar-ready export</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Webinar%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+  <!-- CONTACT -->
 
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$50</div>
-      <ul>
-        <li>2 concepts</li>
-        <li>3 revisions</li>
-        <li>2 digital sizes</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Webinar%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+  <section class="contact">
 
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$80</div>
-      <ul>
-        <li>3 concepts</li>
-        <li>5 revisions</li>
-        <li>Multi-platform webinar campaign</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Webinar%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 19 REAL ESTATE BANNER -->
-<article class="banner-card">
-  <div class="banner-info">
-    <div>
-      <h2>Real Estate Banner</h2>
-      <p>Premium property promotion banner for real estate brands and agents.</p>
-    </div>
-    <div class="size">1920 × 800 px</div>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample" style="background:linear-gradient(110deg,#080808,#303030,#0b0b0b);">
-      <div class="grid"></div>
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>LUXURY PROPERTY</small>
-        <h3>LIVE<br>ABOVE<br>EXPECTATIONS.</h3>
-        <p>Discover a new standard of modern living.</p>
-        <span class="cta">VIEW PROPERTY</span>
-      </div>
+    <div class="container">
 
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="concept">Luxury Real Estate / Property Example</div>
-
-  <div class="packages">
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$40</div>
-      <ul>
-        <li>1 concept</li>
-        <li>2 revisions</li>
-        <li>Property-ready export</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Real%20Estate%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+      <h2>
+        Ready to create?
+      </h2>
 
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$65</div>
-      <ul>
-        <li>2 concepts</li>
-        <li>3 revisions</li>
-        <li>2 property sizes</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Real%20Estate%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+      <p>
+        Tell Victor Phoenix what you need and let's create a banner
+        that gives your brand, campaign or event the attention it deserves.
+      </p>
 
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$100</div>
-      <ul>
-        <li>3 concepts</li>
-        <li>5 revisions</li>
-        <li>Multi-platform property campaign</li>
-        <li>Source-ready files</li>
-        <li>3 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Real%20Estate%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 20 RESTAURANT / FOOD BANNER -->
-<article class="banner-card">
-  <div class="banner-info">
-    <div>
-      <h2>Restaurant / Food Banner</h2>
-      <p>Appetizing promotional artwork for restaurants, food brands and delivery businesses.</p>
-    </div>
-    <div class="size">1920 × 800 px</div>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample" style="background:linear-gradient(115deg,#080808,#292929,#090909);">
-      <div class="grid"></div>
-      <div class="tag">VICTOR PHOENIX CONCEPT</div>
-
-      <div class="content">
-        <small>PREMIUM DINING</small>
-        <h3>TASTE<br>THE<br>DIFFERENCE.</h3>
-        <p>Fresh ingredients. Bold flavours. Delivered to your table.</p>
-        <span class="cta">ORDER NOW</span>
-      </div>
+      <div class="contact-buttons">
 
-      <div class="visual">
-        <div class="ring"></div>
-        <div class="orb"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="concept">Restaurant / Food Delivery Example</div>
-
-  <div class="packages">
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$30</div>
-      <ul>
-        <li>1 concept</li>
-        <li>2 revisions</li>
-        <li>Digital export</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Restaurant%20Food%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+        <a
+          class="contact-btn"
+          href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
+          target="_blank"
+          rel="noopener"
+        >
+          WhatsApp →
+        </a>
 
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$50</div>
-      <ul>
-        <li>2 concepts</li>
-        <li>3 revisions</li>
-        <li>2 promotional sizes</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Restaurant%20Food%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+        <a
+          class="contact-btn"
+          href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20Banner%20Design%20Inquiry"
+        >
+          Email →
+        </a>
 
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$80</div>
-      <ul>
-        <li>3 concepts</li>
-        <li>5 revisions</li>
-        <li>Multi-platform food campaign</li>
-        <li>Source-ready files</li>
-        <li>2 days delivery</li>
-      </ul>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Restaurant%20Food%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-<!-- 21. Fashion Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">21</span>
-    <h2>Fashion Banner</h2>
-    <div class="size">1920 × 800 px</div>
-    <p>Stylish promotional banners for fashion brands, clothing collections, launches and campaigns.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample fashion">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>NEW<br>COLLECTION</h3>
-        <p>Designed for the bold.</p>
-        <strong>SHOP NOW →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
       </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$35</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Fashion%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$55</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Fashion%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$90</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Fashion%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 22. Beauty & Skincare Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">22</span>
-    <h2>Beauty &amp; Skincare Banner</h2>
-    <div class="size">1920 × 800 px</div>
-    <p>Elegant promotional banners for beauty brands, skincare products, cosmetics and personal care campaigns.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample beauty">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>GLOW<br>BEYOND</h3>
-        <p>Discover your new skincare ritual.</p>
-        <strong>EXPLORE →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
     </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$30</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Beauty%20and%20Skincare%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$50</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Beauty%20and%20Skincare%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+  </section>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$85</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Beauty%20and%20Skincare%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 23. Fitness / Gym Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">23</span>
-    <h2>Fitness / Gym Banner</h2>
-    <div class="size">1920 × 800 px</div>
-    <p>High-energy banners for gyms, fitness brands, workout programs, trainers and wellness campaigns.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample fitness">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>TRAIN<br>STRONGER</h3>
-        <p>Your next level starts here.</p>
-        <strong>JOIN TODAY →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$30</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Fitness%20Gym%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$50</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Fitness%20Gym%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+  <!-- FOOTER -->
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$80</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Fitness%20Gym%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 24. Sports Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">24</span>
-    <h2>Sports Banner</h2>
-    <div class="size">1920 × 1080 px</div>
-    <p>Bold promotional banners for sports teams, tournaments, athletes, competitions and sporting events.</p>
-  </div>
-
-  <div class="banner-preview ratio-standard">
-    <div class="sample sports">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>GAME<br>ON.</h3>
-        <p>Champions are built, not born.</p>
-        <strong>GET READY →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$30</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Sports%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+  <footer>
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$50</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Sports%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+    <div class="container footer-inner">
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$85</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Sports%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 25. Technology / AI Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">25</span>
-    <h2>Technology / AI Banner</h2>
-    <div class="size">1920 × 800 px</div>
-    <p>Futuristic banners for technology companies, AI products, software platforms and digital innovations.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample technology">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>THE NEXT<br>INTELLIGENCE</h3>
-        <p>Technology built for what comes next.</p>
-        <strong>DISCOVER →</strong>
+      <div class="footer-brand">
+        Victor Phoenix
       </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$35</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Technology%20AI%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$60</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Technology%20AI%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$95</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Technology%20AI%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-<!-- 26. App Promotion Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">26</span>
-    <h2>App Promotion Banner</h2>
-    <div class="size">1920 × 1080 px</div>
-    <p>High-impact promotional banners designed to introduce mobile apps, highlight features and drive downloads.</p>
-  </div>
-
-  <div class="banner-preview ratio-standard">
-    <div class="sample app">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>YOUR WORLD.<br>ONE APP.</h3>
-        <p>Everything you need, right at your fingertips.</p>
-        <strong>DOWNLOAD NOW →</strong>
+      <div class="footer-copy">
+        Create What’s Next. © 2026 Victor Phoenix.
       </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$30</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20App%20Promotion%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$50</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20App%20Promotion%20Banner%20Standard%20package." class="start">START NOW →</a>
     </div>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$85</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20App%20Promotion%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 27. Website Launch Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">27</span>
-    <h2>Website Launch Banner</h2>
-    <div class="size">1920 × 800 px</div>
-    <p>Premium launch banners for new websites, digital platforms, online businesses and major website releases.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample website">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>WE'RE<br>LIVE.</h3>
-        <p>A new digital experience has arrived.</p>
-        <strong>VISIT NOW →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$30</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Website%20Launch%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+  </footer>
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$50</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Website%20Launch%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$85</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Website%20Launch%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 28. Seasonal / Holiday Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">28</span>
-    <h2>Seasonal / Holiday Banner</h2>
-    <div class="size">1920 × 800 px</div>
-    <p>Creative seasonal banners for holidays, festive campaigns, special occasions and limited-time promotions.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample seasonal">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>SEASON<br>OF JOY</h3>
-        <p>Celebrate something special.</p>
-        <strong>SHOP THE SEASON →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$30</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Seasonal%20Holiday%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+  <script>
+
+    const banners = [
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$50</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Seasonal%20Holiday%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+      {
+        name: "Website Hero Banner",
+        size: "1920 × 800",
+        description: "A premium hero banner designed to create an immediate visual statement on a website.",
+        prices: ["$35","$60","$90"]
+      },
+
+      {
+        name: "Website Promotional Banner",
+        size: "1600 × 600",
+        description: "Promotional website banners designed to communicate offers, services and campaigns.",
+        prices: ["$30","$55","$85"]
+      },
+
+      {
+        name: "Website Sale Banner",
+        size: "1600 × 500",
+        description: "High-impact website sale banners designed to make promotions immediately visible.",
+        prices: ["$30","$50","$80"]
+      },
+
+      {
+        name: "YouTube Channel Banner",
+        size: "2560 × 1440",
+        description: "Channel branding banners designed to create a strong visual identity across YouTube.",
+        prices: ["$30","$55","$85"]
+      },
+
+      {
+        name: "Facebook Cover Banner",
+        size: "1640 × 856",
+        description: "Professional Facebook cover banners designed for businesses, creators and brands.",
+        prices: ["$25","$45","$70"]
+      },
+
+      {
+        name: "LinkedIn Company Banner",
+        size: "1128 × 191",
+        description: "Clean professional LinkedIn banners designed for company pages and corporate branding.",
+        prices: ["$25","$45","$70"]
+      },
+
+      {
+        name: "X/Twitter Header",
+        size: "1500 × 500",
+        description: "Modern profile header designs for personal brands, businesses and organizations.",
+        prices: ["$25","$45","$70"]
+      },
+
+      {
+        name: "Instagram Promotional Banner",
+        size: "1080 × 1350",
+        description: "Portrait promotional banners optimized for Instagram campaigns and announcements.",
+        prices: ["$25","$45","$70"]
+      },
+
+      {
+        name: "Social Media Advertising Banner",
+        size: "1080 × 1080",
+        description: "Advertising-focused social banners designed around clear offers and calls to action.",
+        prices: ["$30","$50","$80"]
+      },
+
+      {
+        name: "Google Display Ad Banner",
+        size: "1200 × 628",
+        description: "Digital advertising banners designed for display campaigns and promotional messaging.",
+        prices: ["$30","$55","$85"]
+      },
+
+      {
+        name: "Product Advertising Banner",
+        size: "1600 × 900",
+        description: "Product advertising banners designed to showcase products and their key benefits.",
+        prices: ["$30","$55","$85"]
+      },
+
+      {
+        name: "Product Launch Banner",
+        size: "1920 × 1080",
+        description: "Launch banners designed to introduce a new product and create attention around its release.",
+        prices: ["$35","$60","$95"]
+      },
+
+      {
+        name: "Brand Awareness Banner",
+        size: "1920 × 800",
+        description: "Brand-focused banners designed to strengthen recognition and communicate a visual message.",
+        prices: ["$30","$55","$85"]
+      },
+
+      {
+        name: "Business Promotion Banner",
+        size: "1920 × 800",
+        description: "Professional banners designed to promote a business, service or commercial offer.",
+        prices: ["$30","$50","$80"]
+      },
+
+      {
+        name: "Event Banner",
+        size: "1920 × 1080",
+        description: "Event banners designed to communicate event details while creating visual excitement.",
+        prices: ["$30","$55","$85"]
+      },
+
+      {
+        name: "Concert Banner",
+        size: "1920 × 1080",
+        description: "Dynamic concert banners designed for artists, performances and entertainment events.",
+        prices: ["$35","$60","$95"]
+      },
+
+      {
+        name: "Conference Banner",
+        size: "1920 × 1080",
+        description: "Professional conference banners designed for speakers, schedules and event promotion.",
+        prices: ["$30","$55","$85"]
+      },
+
+      {
+        name: "Webinar Banner",
+        size: "1920 × 1080",
+        description: "Digital webinar banners designed to clearly communicate speakers, topics and registration.",
+        prices: ["$30","$50","$80"]
+      },
+
+      {
+        name: "Real Estate Banner",
+        size: "1920 × 800",
+        description: "Professional real estate banners designed to showcase properties and developments.",
+        prices: ["$35","$60","$90"]
+      },
+
+      {
+        name: "Restaurant/Food Banner",
+        size: "1920 × 800",
+        description: "Food-focused banners designed to promote restaurants, menus, meals and special offers.",
+        prices: ["$30","$50","$80"]
+      },
+
+      {
+        name: "Fashion Banner",
+        size: "1920 × 800",
+        description: "Stylish fashion banners designed for collections, campaigns, products and brands.",
+        prices: ["$35","$60","$95"]
+      },
+
+      {
+        name: "Beauty & Skincare Banner",
+        size: "1920 × 800",
+        description: "Elegant banners designed for beauty, skincare, cosmetics and lifestyle businesses.",
+        prices: ["$30","$55","$85"]
+      },
+
+      {
+        name: "Fitness/Gym Banner",
+        size: "1920 × 800",
+        description: "Energetic fitness banners designed for gyms, trainers, programs and wellness brands.",
+        prices: ["$30","$50","$80"]
+      },
+
+      {
+        name: "Sports Banner",
+        size: "1920 × 1080",
+        description: "Dynamic sports banners designed for teams, tournaments, matches and sporting events.",
+        prices: ["$30","$55","$85"]
+      },
+
+      {
+        name: "Technology/AI Banner",
+        size: "1920 × 800",
+        description: "Modern technology banners designed for AI products, software and digital businesses.",
+        prices: ["$35","$60","$95"]
+      },
+
+      {
+        name: "App Promotion Banner",
+        size: "1920 × 1080",
+        description: "App-focused promotional banners designed to showcase features, benefits and downloads.",
+        prices: ["$35","$60","$95"]
+      },
+
+      {
+        name: "Website Launch Banner",
+        size: "1920 × 800",
+        description: "Launch banners designed to introduce a new website or digital platform.",
+        prices: ["$30","$55","$85"]
+      },
+
+      {
+        name: "Seasonal/Holiday Banner",
+        size: "1920 × 800",
+        description: "Seasonal banners designed for holidays, celebrations and limited-time campaigns.",
+        prices: ["$30","$50","$80"]
+      },
+
+      {
+        name: "E-commerce Promotional Banner",
+        size: "1600 × 600",
+        description: "E-commerce banners designed to promote products, collections, discounts and campaigns.",
+        prices: ["$30","$55","$85"]
+      },
+
+      {
+        name: "Travel/Tourism Banner",
+        size: "1920 × 800",
+        description: "Travel banners designed to showcase destinations, experiences, packages and offers.",
+        prices: ["$30","$55","$85"]
+      },
+
+      {
+        name: "Hotel/Hospitality Banner",
+        size: "1920 × 800",
+        description: "Premium hospitality banners designed for hotels, resorts and accommodation brands.",
+        prices: ["$35","$60","$90"]
+      },
+
+      {
+        name: "Corporate Banner",
+        size: "1920 × 800",
+        description: "Professional corporate banners designed for companies, announcements and business communication.",
+        prices: ["$35","$60","$90"]
+      },
+
+      {
+        name: "Recruitment Banner",
+        size: "1920 × 800",
+        description: "Recruitment banners designed to communicate vacancies, opportunities and application information.",
+        prices: ["$30","$50","$80"]
+      },
+
+      {
+        name: "Service Promotion Banner",
+        size: "1920 × 800",
+        description: "Service promotion banners designed to clearly communicate what a business provides.",
+        prices: ["$30","$50","$80"]
+      },
+
+      {
+        name: "Grand Opening Banner",
+        size: "1920 × 1080",
+        description: "Opening banners designed to announce a new business, location or establishment.",
+        prices: ["$30","$55","$85"]
+      },
+
+      {
+        name: "Digital Billboard Banner",
+        size: "1920 × 1080",
+        description: "Large-format digital advertising banners designed for screens and digital displays.",
+        prices: ["$40","$70","$110"]
+      },
+
+      {
+        name: "Advertising Campaign Banner",
+        size: "1920 × 800",
+        description: "Campaign banners designed for coordinated promotional and advertising campaigns.",
+        prices: ["$35","$65","$100"]
+      },
+
+      {
+        name: "Email Marketing Banner",
+        size: "1200 × 600",
+        description: "Email-ready promotional banners designed for newsletters and marketing campaigns.",
+        prices: ["$25","$45","$70"]
+      },
+
+      {
+        name: "Newsletter Header Banner",
+        size: "1200 × 400",
+        description: "Clean newsletter headers designed to strengthen the visual identity of email content.",
+        prices: ["$25","$45","$70"]
+      },
+
+      {
+        name: "Mobile App Banner",
+        size: "1080 × 1920",
+        description: "Vertical mobile banners designed for app promotions, mobile campaigns and digital advertising.",
+        prices: ["$30","$55","$85"]
+      },
+
+      {
+        name: "Exhibition/Trade Show Banner",
+        size: "1920 × 1080",
+        description: "Professional exhibition banners designed to communicate brand messages at events and trade shows.",
+        prices: ["$40","$70","$110"]
+      },
+
+      {
+        name: "Roll-Up Banner",
+        size: "850 × 2000",
+        description: "Vertical roll-up banner designs created for exhibitions, businesses and physical events.",
+        prices: ["$40","$70","$110"]
+      },
+
+      {
+        name: "Pull-Up Banner",
+        size: "850 × 2000",
+        description: "Professional pull-up banner designs for promotions, exhibitions and business presentations.",
+        prices: ["$40","$70","$110"]
+      },
+
+      {
+        name: "Outdoor Advertising Banner",
+        size: "1920 × 800",
+        description: "Bold outdoor advertising banners designed for visibility and quick message recognition.",
+        prices: ["$40","$70","$110"]
+      },
+
+      {
+        name: "Event Backdrop",
+        size: "3000 × 2000",
+        description: "Large-format event backdrops designed for conferences, celebrations, launches and branded spaces.",
+        prices: ["$50","$85","$130"]
+      },
+
+      {
+        name: "YouTube Thumbnail-Style Promotional Banner",
+        size: "1280 × 720",
+        description: "High-impact promotional graphics inspired by thumbnail-style visual communication.",
+        prices: ["$25","$45","$70"]
+      },
+
+      {
+        name: "Social Media Story Banner",
+        size: "1080 × 1920",
+        description: "Vertical story banners designed for mobile social media campaigns and announcements.",
+        prices: ["$25","$45","$70"]
+      },
+
+      {
+        name: "LinkedIn Post Banner",
+        size: "1200 × 627",
+        description: "Professional LinkedIn graphics designed for company posts, announcements and campaigns.",
+        prices: ["$25","$45","$70"]
+      },
+
+      {
+        name: "Facebook Ad Banner",
+        size: "1200 × 628",
+        description: "Facebook advertising banners designed around clear offers, visuals and calls to action.",
+        prices: ["$30","$50","$80"]
+      },
+
+      {
+        name: "Instagram Landscape Banner",
+        size: "1080 × 566",
+        description: "Landscape Instagram banners designed for promotional posts and branded campaigns.",
+        prices: ["$25","$45","$70"]
+      }
+
+    ];
+
+
+    function createWhatsAppLink(packageName, bannerName) {
+
+      const message =
+        `Hello Victor Phoenix, I'm interested in the ${packageName} ${bannerName} package. I'd like to get started. Please send me the package details and next steps.`;
+
+      return `https://wa.me/2349165831007?text=${encodeURIComponent(message)}`;
+
+    }
+
+
+    function packageCard(banner, level) {
+
+      const packageNames = [
+        "Basic",
+        "Standard",
+        "Premium"
+      ];
+
+      const intros = [
+
+        "A clean professional banner solution for a focused visual message.",
+
+        "A stronger banner package with more creative development and flexibility.",
+
+        "A complete premium banner solution with advanced visual development."
+
+      ];
+
+      const concepts = [
+        "1 concept",
+        "2 concepts",
+        "3 concepts"
+      ];
+
+      const revisions = [
+        "2 revisions",
+        "3 revisions",
+        "5 revisions"
+      ];
+
+      const deliveries = [
+
+        "PDF + JPG/PNG",
+
+        "PDF + JPG/PNG + Editable Source",
+
+        "PDF + JPG/PNG + Editable Source"
+
+      ];
+
+      const deliveryTimes = [
+
+        "2–3 business days / 3–5 business days / 5–7 business days",
+
+        "3–5 business days / 4–6 business days / 6–8 business days",
+
+        "3–5 business days / 4–6 business days / 6–8 business days"
+
+      ];
+
+      return `
+
+        <div class="package ${level === 1 ? "featured" : ""}">
+
+          <div class="package-label">
+            ${packageNames[level].toUpperCase()}
+          </div>
+
+          <h3>
+            ${banner.name}
+          </h3>
+
+          <div class="price">
+            ${banner.prices[level]}
+          </div>
+
+          <p class="package-intro">
+            ${intros[level]}
+          </p>
+
+          <h4>
+            WHAT YOU GET
+          </h4>
+
+          <ul>
+
+            <li>
+              ${banner.size} banner design
+            </li>
+
+            <li>
+              Professional visual hierarchy
+            </li>
+
+            <li>
+              Brand-ready composition
+            </li>
+
+            ${
+              level === 0
+                ? "<li>Standard design refinement</li>"
+                : ""
+            }
+
+            ${
+              level === 1
+                ? "<li>Enhanced creative direction</li><li>Additional visual refinement</li>"
+                : ""
+            }
+
+            ${
+              level === 2
+                ? "<li>Advanced creative direction</li><li>Premium visual refinement</li><li>Priority attention to detail</li>"
+                : ""
+            }
+
+          </ul>
+
+          <div class="package-details">
+
+            <div class="detail">
+              <span>Concepts</span>
+              <span>${concepts[level]}</span>
+            </div>
+
+            <div class="detail">
+              <span>Revisions</span>
+              <span>${revisions[level]}</span>
+            </div>
+
+            <div class="detail">
+              <span>Delivery</span>
+              <span>${deliveryTimes[level]}</span>
+            </div>
+
+            <div class="detail">
+              <span>Final Delivery</span>
+              <span>${deliveries[level]}</span>
+            </div>
+
+          </div>
+
+          <div class="start-btn">
+
+            <a
+              href="${createWhatsAppLink(
+                packageNames[level],
+                banner.name
+              )}"
+              target="_blank"
+              rel="noopener"
+            >
+
+              START NOW
+
+              <span>
+                →
+              </span>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$80</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Seasonal%20Holiday%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 29. E-commerce Promotional Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">29</span>
-    <h2>E-commerce Promotional Banner</h2>
-    <div class="size">1600 × 600 px</div>
-    <p>Conversion-focused banners for online stores, product collections, sales campaigns and e-commerce promotions.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample ecommerce">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>BIG<br>SALE</h3>
-        <p>Up to 50% off selected products.</p>
-        <strong>SHOP NOW →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$30</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20E-commerce%20Promotional%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+            </a>
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$55</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20E-commerce%20Promotional%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+          </div>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$85</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20E-commerce%20Promotional%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 30. Travel / Tourism Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">30</span>
-    <h2>Travel / Tourism Banner</h2>
-    <div class="size">1920 × 800 px</div>
-    <p>Beautiful promotional banners for travel agencies, destinations, tourism campaigns, tours and holiday packages.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample travel">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>GO<br>FURTHER.</h3>
-        <p>Your next destination is waiting.</p>
-        <strong>EXPLORE NOW →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$30</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Travel%20Tourism%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+        </div>
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$50</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Travel%20Tourism%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+      `;
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$85</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Travel%20Tourism%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-<!-- 31. Hotel / Hospitality Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">31</span>
-    <h2>Hotel / Hospitality Banner</h2>
-    <div class="size">1920 × 800 px</div>
-    <p>Premium promotional banners for hotels, resorts, restaurants, hospitality brands and accommodation offers.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample hotel">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>STAY<br>BEYOND.</h3>
-        <p>Luxury, comfort and unforgettable moments.</p>
-        <strong>BOOK YOUR STAY →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$35</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Hotel%20Hospitality%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+    }
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$55</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Hotel%20Hospitality%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$90</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Hotel%20Hospitality%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 32. Corporate Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">32</span>
-    <h2>Corporate Banner</h2>
-    <div class="size">1920 × 800 px</div>
-    <p>Professional banners for companies, corporate communications, announcements, campaigns and business presentations.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample corporate">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>BUILDING<br>WHAT'S NEXT.</h3>
-        <p>Innovation with purpose.</p>
-        <strong>LEARN MORE →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$35</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Corporate%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+    const catalogue =
+      document.getElementById("catalogue");
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$55</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Corporate%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$90</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Corporate%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 33. Recruitment Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">33</span>
-    <h2>Recruitment Banner</h2>
-    <div class="size">1920 × 800 px</div>
-    <p>Clear, professional recruitment banners for job openings, hiring campaigns, career opportunities and talent acquisition.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample recruitment">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>WE'RE<br>HIRING.</h3>
-        <p>Join a team creating the future.</p>
-        <strong>APPLY NOW →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$25</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Recruitment%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+    banners.forEach((banner, index) => {
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$45</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Recruitment%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+      const section =
+        document.createElement("section");
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$70</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Recruitment%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 34. Service Promotion Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">34</span>
-    <h2>Service Promotion Banner</h2>
-    <div class="size">1920 × 800 px</div>
-    <p>Conversion-focused banners designed to promote professional services, offers, consultations and business solutions.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample service">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>YOUR<br>NEXT MOVE.</h3>
-        <p>Professional solutions built around your goals.</p>
-        <strong>GET STARTED →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$25</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Service%20Promotion%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+      section.className =
+        "banner-item";
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$45</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Service%20Promotion%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$75</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Service%20Promotion%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 35. Grand Opening Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">35</span>
-    <h2>Grand Opening Banner</h2>
-    <div class="size">1920 × 1080 px</div>
-    <p>Eye-catching banners for new business openings, stores, restaurants, offices, venues and brand launches.</p>
-  </div>
-
-  <div class="banner-preview ratio-standard">
-    <div class="sample opening">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>WE ARE<br>OPEN.</h3>
-        <p>A new experience begins here.</p>
-        <strong>JOIN THE OPENING →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$30</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Grand%20Opening%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+      section.innerHTML = `
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$50</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Grand%20Opening%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+        <div class="concept">
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$80</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Grand%20Opening%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-<!-- 36. Digital Billboard Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">36</span>
-    <h2>Digital Billboard Banner</h2>
-    <div class="size">1920 × 1080 px</div>
-    <p>High-visibility digital billboard designs for advertising screens, public displays, campaigns and large-format digital advertising.</p>
-  </div>
-
-  <div class="banner-preview ratio-standard">
-    <div class="sample billboard">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>BE<br>UNFORGETTABLE.</h3>
-        <p>Make your brand impossible to miss.</p>
-        <strong>DISCOVER MORE →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$40</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Digital%20Billboard%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+          <div class="concept-inner">
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$65</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Digital%20Billboard%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+            <div class="concept-number">
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$100</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Digital%20Billboard%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 37. Advertising Campaign Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">37</span>
-    <h2>Advertising Campaign Banner</h2>
-    <div class="size">1920 × 800 px</div>
-    <p>Strategic promotional banners for advertising campaigns, product promotions, brand launches and marketing campaigns.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample campaign">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>MAKE<br>AN IMPACT.</h3>
-        <p>A campaign designed to move people.</p>
-        <strong>LEARN MORE →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$35</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Advertising%20Campaign%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+              VICTOR PHOENIX · CONCEPT
+              ${String(index + 1).padStart(2,"0")}
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$60</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Advertising%20Campaign%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+            </div>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$95</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Advertising%20Campaign%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 38. Email Marketing Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">38</span>
-    <h2>Email Marketing Banner</h2>
-    <div class="size">1200 × 600 px</div>
-    <p>Promotional email graphics designed for product launches, offers, newsletters, campaigns and customer communications.</p>
-  </div>
-
-  <div class="banner-preview ratio-standard">
-    <div class="sample email">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>EXCLUSIVE<br>OFFER</h3>
-        <p>A special offer, delivered straight to your inbox.</p>
-        <strong>CLAIM OFFER →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$25</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Email%20Marketing%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+            <h3>
+              ${banner.name}
+            </h3>
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$45</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Email%20Marketing%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+            <p>
+              ${banner.description}
+            </p>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$70</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Email%20Marketing%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 39. Newsletter Header Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">39</span>
-    <h2>Newsletter Header Banner</h2>
-    <div class="size">1200 × 400 px</div>
-    <p>Clean, branded header banners for newsletters, email publications, digital magazines and regular audience updates.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample newsletter">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>THE<br>WEEKLY.</h3>
-        <p>Ideas, insights and what's happening next.</p>
-        <strong>READ MORE →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$25</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Newsletter%20Header%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+            <div class="concept-label">
+              BANNER DESIGN
+            </div>
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$45</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Newsletter%20Header%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+          </div>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$70</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Newsletter%20Header%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 40. Mobile App Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">40</span>
-    <h2>Mobile App Banner</h2>
-    <div class="size">1080 × 1920 px</div>
-    <p>Vertical promotional banners optimized for mobile screens, app campaigns, stories and mobile-first advertising.</p>
-  </div>
-
-  <div class="banner-preview ratio-portrait">
-    <div class="sample mobile">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>BUILT<br>FOR MOBILE.</h3>
-        <p>A digital experience made for the way you move.</p>
-        <strong>GET THE APP →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$30</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Mobile%20App%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+        </div>
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$50</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Mobile%20App%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$85</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Mobile%20App%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-<!-- 41. Exhibition / Trade Show Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">41</span>
-    <h2>Exhibition / Trade Show Banner</h2>
-    <div class="size">1920 × 1080 px</div>
-    <p>Professional exhibition graphics for trade shows, business expos, conferences, brand activations and industry events.</p>
-  </div>
-
-  <div class="banner-preview ratio-standard">
-    <div class="sample exhibition">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>MEET<br>THE FUTURE.</h3>
-        <p>Innovation on display.</p>
-        <strong>VISIT OUR BOOTH →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$35</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Exhibition%20Trade%20Show%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+        <div class="item-heading">
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$60</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Exhibition%20Trade%20Show%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+          <div class="number">
+            ${String(index + 1).padStart(2,"0")}
+          </div>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$95</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Exhibition%20Trade%20Show%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 42. Roll-Up Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">42</span>
-    <h2>Roll-Up Banner</h2>
-    <div class="size">850 × 2000 px</div>
-    <p>Vertical roll-up display designs for exhibitions, offices, conferences, retail spaces and promotional events.</p>
-  </div>
-
-  <div class="banner-preview ratio-portrait">
-    <div class="sample rollup">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>CREATE.<br>INNOVATE.</h3>
-        <p>Professional brand presentation wherever you go.</p>
-        <strong>DISCOVER →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$35</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Roll-Up%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+          <h2>
+            ${banner.name}
+          </h2>
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$55</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Roll-Up%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+          <p>
+            ${banner.description}
+          </p>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$90</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Roll-Up%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 43. Pull-Up Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">43</span>
-    <h2>Pull-Up Banner</h2>
-    <div class="size">850 × 2000 px</div>
-    <p>Portable pull-up display graphics for businesses, events, exhibitions, product demonstrations and promotional spaces.</p>
-  </div>
-
-  <div class="banner-preview ratio-portrait">
-    <div class="sample pullup">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>YOUR<br>BRAND.</h3>
-        <p>Designed to stand tall.</p>
-        <strong>LEARN MORE →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$35</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Pull-Up%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+          <div class="badges">
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$55</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Pull-Up%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+            <span class="badge">
+              ${banner.size}
+            </span>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$90</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Pull-Up%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 44. Outdoor Advertising Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">44</span>
-    <h2>Outdoor Advertising Banner</h2>
-    <div class="size">1920 × 800 px</div>
-    <p>Large-format promotional graphics designed for outdoor campaigns, storefronts, roadside advertising and public spaces.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample outdoor">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>GET<br>NOTICED.</h3>
-        <p>Big visuals. Clear message. Strong impact.</p>
-        <strong>DISCOVER MORE →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$40</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Outdoor%20Advertising%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+            <span class="badge">
+              Premium Design
+            </span>
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$65</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Outdoor%20Advertising%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+            <span class="badge">
+              Victor Phoenix
+            </span>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$100</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Outdoor%20Advertising%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 45. Event Backdrop -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">45</span>
-    <h2>Event Backdrop</h2>
-    <div class="size">3000 × 2000 px</div>
-    <p>Large-format branded backdrops for conferences, photo areas, award ceremonies, launches, parties and corporate events.</p>
-  </div>
-
-  <div class="banner-preview ratio-standard">
-    <div class="sample backdrop">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>THE<br>MAIN EVENT.</h3>
-        <p>A powerful visual backdrop for memorable moments.</p>
-        <strong>CREATE THE MOMENT →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$45</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 backdrop size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Event%20Backdrop%20Basic%20package." class="start">START NOW →</a>
-    </div>
+          </div>
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$70</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Event%20Backdrop%20Standard%20package." class="start">START NOW →</a>
-    </div>
+        </div>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$110</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Event%20Backdrop%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-<!-- 46. YouTube Thumbnail-Style Promotional Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">46</span>
-    <h2>YouTube Thumbnail-Style Promotional Banner</h2>
-    <div class="size">1280 × 720 px</div>
-    <p>High-impact promotional graphics designed for YouTube videos, campaigns, product promotions and creator content.</p>
-  </div>
-
-  <div class="banner-preview ratio-standard">
-    <div class="sample youtube">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>THE<br>NEXT MOVE.</h3>
-        <p>Discover what's changing the game.</p>
-        <strong>WATCH NOW →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$25</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 banner size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20YouTube%20Promotional%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$45</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20YouTube%20Promotional%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+        <div class="packages">
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$75</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 banner sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20YouTube%20Promotional%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 47. Social Media Story Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">47</span>
-    <h2>Social Media Story Banner</h2>
-    <div class="size">1080 × 1920 px</div>
-    <p>Vertical promotional graphics for Instagram Stories, Facebook Stories and other mobile-first social campaigns.</p>
-  </div>
-
-  <div class="banner-preview ratio-story">
-    <div class="sample story">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>LIMITED<br>DROP.</h3>
-        <p>Don't miss what's next.</p>
-        <strong>SWIPE / TAP →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$25</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 story size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Social%20Media%20Story%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+          ${packageCard(banner,0)}
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$45</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 story sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Social%20Media%20Story%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+          ${packageCard(banner,1)}
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$75</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 story sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Social%20Media%20Story%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 48. LinkedIn Post Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">48</span>
-    <h2>LinkedIn Post Banner</h2>
-    <div class="size">1200 × 627 px</div>
-    <p>Professional social graphics for LinkedIn announcements, business promotions, company updates and thought leadership.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample linkedin">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>BUILD<br>FORWARD.</h3>
-        <p>Ideas that turn into meaningful progress.</p>
-        <strong>LEARN MORE →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$25</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 LinkedIn size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20LinkedIn%20Post%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+          ${packageCard(banner,2)}
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$45</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20LinkedIn%20Post%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+        </div>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$75</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20LinkedIn%20Post%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 49. Facebook Ad Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">49</span>
-    <h2>Facebook Ad Banner</h2>
-    <div class="size">1200 × 628 px</div>
-    <p>Attention-grabbing advertising graphics for Facebook campaigns, promotions, products and services.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample facebook">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>YOUR<br>OFFER.</h3>
-        <p>Turn attention into action.</p>
-        <strong>GET STARTED →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$25</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 ad size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Facebook%20Ad%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+      `;
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$45</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 ad sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Facebook%20Ad%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$75</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 ad sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Facebook%20Ad%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-
-
-<!-- 50. Instagram Landscape Banner -->
-<article class="banner-card">
-  <div class="banner-info">
-    <span class="tag">50</span>
-    <h2>Instagram Landscape Banner</h2>
-    <div class="size">1080 × 566 px</div>
-    <p>Landscape promotional graphics for Instagram posts, campaigns, product promotions and branded content.</p>
-  </div>
-
-  <div class="banner-preview ratio-wide">
-    <div class="sample instagram">
-      <div class="content">
-        <span class="concept">VICTOR PHOENIX CONCEPT</span>
-        <h3>MAKE IT<br>YOURS.</h3>
-        <p>A visual built to stop the scroll.</p>
-        <strong>EXPLORE NOW →</strong>
-      </div>
-      <div class="visual">
-        <div class="orb"></div>
-        <div class="ring"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">$25</div>
-      <p>1 concept · 2 revisions</p>
-      <p>1 Instagram size</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Instagram%20Landscape%20Banner%20Basic%20package." class="start">START NOW →</a>
-    </div>
+      catalogue.appendChild(section);
 
-    <div class="package">
-      <h3>Standard</h3>
-      <div class="price">$45</div>
-      <p>2 concepts · 3 revisions</p>
-      <p>Up to 2 sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Instagram%20Landscape%20Banner%20Standard%20package." class="start">START NOW →</a>
-    </div>
+    });
 
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">$75</div>
-      <p>3 concepts · 5 revisions</p>
-      <p>Up to 3 sizes</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20the%20Instagram%20Landscape%20Banner%20Premium%20package." class="start">START NOW →</a>
-    </div>
-  </div>
-</article>
-</section>
-
-<section class="contact">
-  <h2>Let's Create What's Next.</h2>
-  <p>Tell Victor Phoenix what you want to create.</p>
-
-  <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry." class="contact-btn">
-    START A PROJECT →
-  </a>
-</section>
-
-<footer>
-  © 2026 Victor Phoenix. Create What's Next.
-</footer>
+  </script>
 
 </body>
 </html>

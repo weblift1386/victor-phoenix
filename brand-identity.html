@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Brand Identity — Victor Phoenix</title>
-  <meta name="description" content="Premium brand identity and visual identity design by Victor Phoenix.">
+  <meta
+    name="description"
+    content="Premium brand identity design services by Victor Phoenix. Build a clear, consistent and memorable visual identity for your brand."
+  />
 
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     html {
@@ -21,12 +24,11 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at 15% 10%, rgba(255,255,255,.06), transparent 28%),
-        radial-gradient(circle at 85% 20%, rgba(150,150,150,.05), transparent 25%),
-        #050505;
+        radial-gradient(circle at 15% 10%, rgba(255,255,255,.07), transparent 28%),
+        radial-gradient(circle at 85% 25%, rgba(255,255,255,.04), transparent 30%),
+        #070707;
       color: #fff;
       line-height: 1.6;
-      overflow-x: hidden;
     }
 
     a {
@@ -34,292 +36,387 @@
       text-decoration: none;
     }
 
+    .container {
+      width: min(1240px, 92%);
+      margin: auto;
+    }
+
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      height: 82px;
-      padding: 0 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(5,5,5,.82);
+      background: rgba(7,7,7,.88);
       backdrop-filter: blur(18px);
       border-bottom: 1px solid rgba(255,255,255,.08);
     }
 
-    .logo {
-      width: 150px;
-      height: auto;
-      display: block;
+    .header-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    .back {
-      color: #bbb;
+    .brand img {
+      width: 150px;
+      max-height: 52px;
+      object-fit: contain;
+    }
+
+    .back-link {
+      color: #aaa;
       font-size: 14px;
       transition: .3s;
     }
 
-    .back:hover {
+    .back-link:hover {
       color: #fff;
       transform: translateX(-3px);
     }
 
     .hero {
-      min-height: 58vh;
-      padding: 110px 7% 80px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
+      padding: 110px 0 90px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,.08);
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 520px;
-      height: 520px;
-      right: -180px;
-      top: 40px;
-      border-radius: 50%;
-      background: radial-gradient(
-        circle,
-        rgba(255,255,255,.11),
-        rgba(255,255,255,.02) 45%,
-        transparent 70%
-      );
-      filter: blur(8px);
-    }
-
-    .hero span {
-      color: #999;
+    .eyebrow {
+      color: #888;
       text-transform: uppercase;
       letter-spacing: 4px;
-      font-size: 12px;
+      font-size: 11px;
       margin-bottom: 20px;
     }
 
     .hero h1 {
-      max-width: 900px;
-      font-size: clamp(52px, 9vw, 120px);
-      line-height: .9;
+      font-size: clamp(48px, 8vw, 100px);
+      line-height: .95;
       letter-spacing: -5px;
       font-weight: 800;
-      position: relative;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      color: #777;
     }
 
     .hero p {
-      max-width: 720px;
+      max-width: 740px;
+      margin: auto;
       color: #aaa;
-      margin-top: 30px;
       font-size: 17px;
-      position: relative;
+    }
+
+    .intro {
+      padding: 70px 0 35px;
+      text-align: center;
+    }
+
+    .intro h2 {
+      font-size: clamp(30px,5vw,48px);
+      letter-spacing: -1.5px;
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      max-width: 720px;
+      margin: auto;
+      color: #999;
     }
 
     .catalogue {
-      width: 86%;
-      margin: 0 auto;
-      padding: 40px 0 120px;
-      display: grid;
-      gap: 35px;
+      padding: 35px 0 100px;
     }
 
-    .identity-card {
-      display: grid;
-      grid-template-columns: 1fr 1.1fr;
-      gap: 35px;
-      padding: 25px;
-      border: 1px solid rgba(255,255,255,.09);
-      background: linear-gradient(
-        145deg,
-        rgba(255,255,255,.06),
-        rgba(255,255,255,.015)
-      );
-      border-radius: 24px;
-      box-shadow: 0 25px 80px rgba(0,0,0,.35);
-    }
-
-    .identity-info {
-      padding: 25px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .tag {
-      display: inline-block;
-      width: fit-content;
-      padding: 7px 12px;
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 999px;
-      color: #aaa;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 18px;
-    }
-
-    .identity-info h2 {
-      font-size: 32px;
-      margin-bottom: 12px;
-    }
-
-    .identity-info p {
-      color: #999;
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-
-    .scope {
-      color: #ccc;
-      font-size: 13px;
-      margin-bottom: 22px;
-    }
-
-    .identity-preview {
-      min-height: 390px;
-      border-radius: 20px;
-      overflow: hidden;
-      position: relative;
-      background:
-        radial-gradient(circle at 25% 25%, rgba(255,255,255,.14), transparent 20%),
-        linear-gradient(135deg, #151515, #050505 60%);
-      border: 1px solid rgba(255,255,255,.08);
-    }
-
-    .identity {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .identity-content {
-      width: 72%;
-      position: relative;
-      z-index: 3;
+    .identity-item {
+      margin-bottom: 110px;
     }
 
     .concept {
-      color: #777;
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 30px;
+      min-height: 330px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 26px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(145deg,#1a1a1a,#080808);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      margin-bottom: 35px;
     }
 
-    .brand-name {
-      font-size: clamp(34px, 5vw, 65px);
-      font-weight: 800;
-      letter-spacing: -3px;
+    .concept::before {
+      content: "";
+      position: absolute;
+      width: 430px;
+      height: 430px;
+      border-radius: 50%;
+      background: radial-gradient(circle,rgba(255,255,255,.13),transparent 68%);
+      top: -190px;
+      right: -100px;
     }
 
-    .brand-line {
-      width: 80px;
-      height: 2px;
-      background: #aaa;
-      margin: 18px 0;
+    .concept::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle,rgba(255,255,255,.08),transparent 68%);
+      bottom: -150px;
+      left: -80px;
     }
 
-    .brand-tagline {
+    .concept-inner {
+      position: relative;
+      z-index: 2;
+      width: min(720px,100%);
+      text-align: center;
+    }
+
+    .concept-number {
+      color: #888;
+      font-size: 11px;
+      letter-spacing: 4px;
+      margin-bottom: 12px;
+    }
+
+    .concept-inner h3 {
+      font-size: clamp(30px,5vw,58px);
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 16px;
+    }
+
+    .concept-inner p {
+      color: #999;
+      max-width: 580px;
+      margin: auto;
+      font-size: 14px;
+    }
+
+    .concept-label {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 8px 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
       color: #aaa;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    .item-heading {
+      margin-bottom: 28px;
+    }
+
+    .item-heading .number {
+      color: #777;
       font-size: 12px;
       letter-spacing: 3px;
-      text-transform: uppercase;
+      margin-bottom: 7px;
     }
 
-    .orb {
-      position: absolute;
-      width: 230px;
-      height: 230px;
-      border-radius: 50%;
-      right: -70px;
-      bottom: -80px;
-      background:
-        radial-gradient(circle at 30% 25%, #fff, #999 12%, #333 38%, #090909 70%);
-      box-shadow:
-        inset -25px -25px 50px rgba(0,0,0,.75),
-        0 20px 80px rgba(255,255,255,.08);
+    .item-heading h2 {
+      font-size: clamp(28px,4vw,46px);
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      margin-bottom: 12px;
     }
 
-    .ring {
-      position: absolute;
-      width: 330px;
-      height: 110px;
-      right: -80px;
-      bottom: 35px;
-      border: 1px solid rgba(255,255,255,.2);
-      border-radius: 50%;
-      transform: rotate(-25deg);
+    .item-heading p {
+      color: #999;
+      max-width: 780px;
+      font-size: 15px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .badge {
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.1);
+      color: #999;
+      font-size: 10px;
     }
 
     .packages {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 15px;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+      margin-top: 30px;
     }
 
     .package {
-      border: 1px solid rgba(255,255,255,.08);
-      padding: 18px;
-      border-radius: 15px;
-      background: rgba(255,255,255,.025);
+      background: linear-gradient(150deg,#151515,#0b0b0b);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 20px;
+      padding: 28px;
+      min-height: 580px;
+      display: flex;
+      flex-direction: column;
+      transition: .3s;
+    }
+
+    .package:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255,255,255,.22);
+    }
+
+    .package.featured {
+      background: linear-gradient(150deg,#1b1b1b,#0c0c0c);
+      border-color: rgba(255,255,255,.2);
+    }
+
+    .package-label {
+      color: #777;
+      font-size: 10px;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
     }
 
     .package h3 {
-      font-size: 14px;
+      font-size: 23px;
       margin-bottom: 8px;
     }
 
     .price {
-      font-size: 21px;
+      font-size: 32px;
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
-    .package p {
-      font-size: 11px;
-      color: #888;
-      margin-bottom: 14px;
+    .package-intro {
+      color: #999;
+      font-size: 13px;
+      min-height: 55px;
     }
 
-    .start {
-      display: inline-block;
+    .package h4 {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.1);
       font-size: 10px;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
+      color: #bbb;
+    }
+
+    .package ul {
+      list-style: none;
+      margin-top: 13px;
+    }
+
+    .package li {
+      position: relative;
+      padding-left: 18px;
+      color: #aaa;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .package li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
       color: #fff;
     }
 
+    .package-details {
+      border-top: 1px solid rgba(255,255,255,.1);
+      margin-top: 20px;
+      padding-top: 16px;
+    }
+
+    .detail {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      font-size: 12px;
+    }
+
+    .detail:last-child {
+      border-bottom: 0;
+    }
+
+    .detail span:first-child {
+      color: #777;
+    }
+
+    .detail span:last-child {
+      color: #ddd;
+      text-align: right;
+    }
+
+    .start-btn {
+      margin-top: auto;
+      padding-top: 22px;
+    }
+
+    .start-btn a {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: #fff;
+      color: #080808;
+      font-size: 12px;
+      font-weight: 700;
+      transition: .3s;
+    }
+
+    .start-btn a:hover {
+      background: #d9d9d9;
+      transform: translateY(-2px);
+    }
+
     .contact {
-      width: 86%;
-      margin: 0 auto 100px;
-      padding: 90px 30px;
-      text-align: center;
+      padding: 100px 0;
       border-top: 1px solid rgba(255,255,255,.08);
-      border-bottom: 1px solid rgba(255,255,255,.08);
+      text-align: center;
+      background: #050505;
     }
 
     .contact h2 {
-      font-size: clamp(38px, 6vw, 75px);
+      font-size: clamp(34px,6vw,70px);
       letter-spacing: -3px;
+      line-height: 1;
+      margin-bottom: 20px;
     }
 
     .contact p {
       color: #999;
-      margin: 18px 0 30px;
+      max-width: 620px;
+      margin: auto;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
     }
 
     .contact-btn {
-      display: inline-block;
-      padding: 15px 25px;
-      border: 1px solid rgba(255,255,255,.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 20px;
       border-radius: 999px;
-      font-size: 12px;
-      letter-spacing: 2px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: #111;
+      font-size: 13px;
       transition: .3s;
     }
 
@@ -329,54 +426,75 @@
     }
 
     footer {
-      padding: 35px 7%;
-      color: #666;
-      font-size: 12px;
-      text-align: center;
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 28px 0;
     }
 
-    @media (max-width: 850px) {
-      .identity-card {
-        grid-template-columns: 1fr;
-      }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
 
+    .footer-brand {
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .footer-copy {
+      color: #555;
+      font-size: 11px;
+    }
+
+    @media (max-width:900px) {
       .packages {
         grid-template-columns: 1fr;
       }
 
+      .package {
+        min-height: auto;
+      }
+
       .hero {
-        padding-top: 80px;
+        padding: 80px 0 65px;
+      }
+
+      .concept {
+        min-height: 280px;
       }
     }
 
-    @media (max-width: 500px) {
-      header {
-        padding: 0 5%;
+    @media (max-width:600px) {
+      .header-inner {
+        min-height: 68px;
       }
 
-      .logo {
+      .brand img {
         width: 125px;
+      }
+
+      .back-link {
+        font-size: 12px;
       }
 
       .hero h1 {
         letter-spacing: -3px;
       }
 
-      .catalogue,
-      .contact {
-        width: 92%;
+      .concept {
+        padding: 30px 20px;
+        border-radius: 20px;
       }
 
-      .identity-card {
-        padding: 14px;
+      .package {
+        padding: 23px;
+        border-radius: 17px;
       }
 
-      .identity-info {
-        padding: 15px;
-      }
-
-      .identity-preview {
-        min-height: 300px;
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
       }
     }
   </style>
@@ -385,712 +503,565 @@
 <body>
 
 <header>
-  <a href="index.html">
-    <img src="logo.png" class="logo" alt="Victor Phoenix">
-  </a>
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="Victor Phoenix" />
+    </a>
 
-  <a href="graphics.html" class="back">
-    ← Graphics & Design
-  </a>
+    <a href="graphics.html" class="back-link">
+      ← Back to Graphics & Design
+    </a>
+  </div>
 </header>
 
 <section class="hero">
-  <span>Victor Phoenix Creative</span>
+  <div class="container">
+    <div class="eyebrow">Victor Phoenix / Graphics & Design</div>
 
-  <h1>Brand Identity.</h1>
+    <h1>
+      Brand Identity<br>
+      <span>Systems.</span>
+    </h1>
 
-  <p>
-    Strategic visual identity systems designed to give brands a
-    recognizable, consistent and professional presence across every
-    touchpoint.
-  </p>
+    <p>
+      Strategic visual identity systems designed to give brands
+      clarity, consistency, recognition and a distinctive presence.
+    </p>
+  </div>
 </section>
 
-<section class="catalogue">
-
-  <article class="identity-card">
-
-  <div class="identity-info">
-    <span class="tag">01 · Identity System</span>
-
-    <h2>Brand Identity System</h2>
+<section class="intro">
+  <div class="container">
+    <h2>Build a brand people remember.</h2>
 
     <p>
-      A complete visual foundation that brings a brand together through
-      its logo system, colours, typography and supporting visual elements.
+      From colour and typography to complete identity systems,
+      Victor Phoenix creates visual foundations that help brands
+      communicate consistently across every touchpoint.
     </p>
-
-    <div class="scope">
-      <strong>Scope:</strong> Logo system · Colour · Typography · Visual direction
-    </div>
-
-    <div class="packages">
-
-      <div class="package">
-        <h3>Basic</h3>
-        <div class="price">$120</div>
-        <p>Core identity direction · 1 concept · 2 revisions</p>
-        <a class="start"
-           href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Brand%20Identity%20System%20Basic%20package.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Standard</h3>
-        <div class="price">$200</div>
-        <p>Complete identity foundation · 2 concepts · 3 revisions</p>
-        <a class="start"
-           href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Brand%20Identity%20System%20Standard%20package.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Premium</h3>
-        <div class="price">$300</div>
-        <p>Advanced identity system · 3 concepts · 5 revisions</p>
-        <a class="start"
-           href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20the%20Brand%20Identity%20System%20Premium%20package.">
-          START NOW →
-        </a>
-      </div>
-
-    </div>
   </div>
-
-  <div class="identity-preview">
-    <div class="identity">
-      <div class="identity-content">
-        <div class="concept">Victor Phoenix Concept</div>
-        <div class="brand-name">NOVA</div>
-        <div class="brand-line"></div>
-        <div class="brand-tagline">Move Beyond</div>
-      </div>
-
-      <div class="orb"></div>
-      <div class="ring"></div>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="identity-card">
-
-  <div class="identity-info">
-    <span class="tag">02 · Guidelines</span>
-
-    <h2>Brand Guidelines</h2>
-
-    <p>
-      A professional guide that defines how a brand should look and
-      communicate consistently across different platforms.
-    </p>
-
-    <div class="scope">
-      <strong>Scope:</strong> Logo rules · Colours · Typography · Usage guidelines
-    </div>
-
-    <div class="packages">
-
-      <div class="package">
-        <h3>Basic</h3>
-        <div class="price">$80</div>
-        <p>Essential brand rules · 2 revisions</p>
-        <a class="start"
-           href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Brand%20Guidelines%20Basic.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Standard</h3>
-        <div class="price">$140</div>
-        <p>Expanded guideline document · 3 revisions</p>
-        <a class="start"
-           href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Brand%20Guidelines%20Standard.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Premium</h3>
-        <div class="price">$220</div>
-        <p>Comprehensive brand guide · 5 revisions</p>
-        <a class="start"
-           href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Brand%20Guidelines%20Premium.">
-          START NOW →
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="identity-preview">
-    <div class="identity">
-      <div class="identity-content">
-        <div class="concept">Brand Guide Concept</div>
-        <div class="brand-name">AXIS</div>
-        <div class="brand-line"></div>
-        <div class="brand-tagline">Built With Purpose</div>
-      </div>
-
-      <div class="orb"></div>
-      <div class="ring"></div>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="identity-card">
-
-  <div class="identity-info">
-    <span class="tag">03 · Colour System</span>
-
-    <h2>Brand Colour Palette</h2>
-
-    <p>
-      A carefully structured colour system that gives a brand a
-      recognizable visual language across digital and print applications.
-    </p>
-
-    <div class="scope">
-      <strong>Scope:</strong> Primary colours · Secondary colours · Neutrals · Usage
-    </div>
-
-    <div class="packages">
-
-      <div class="package">
-        <h3>Basic</h3>
-        <div class="price">$35</div>
-        <p>Core palette · HEX values · 2 revisions</p>
-        <a class="start"
-           href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Brand%20Colour%20Palette%20Basic.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Standard</h3>
-        <div class="price">$60</div>
-        <p>Expanded palette · HEX/RGB/CMYK · 3 revisions</p>
-        <a class="start"
-           href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Brand%20Colour%20Palette%20Standard.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Premium</h3>
-        <div class="price">$90</div>
-        <p>Complete colour system · print & digital · 5 revisions</p>
-        <a class="start"
-           href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Brand%20Colour%20Palette%20Premium.">
-          START NOW →
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="identity-preview">
-    <div class="identity">
-      <div class="identity-content">
-        <div class="concept">Colour System Concept</div>
-        <div class="brand-name">LUMA</div>
-        <div class="brand-line"></div>
-        <div class="brand-tagline">Colour With Character</div>
-      </div>
-
-      <div class="orb"></div>
-      <div class="ring"></div>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="identity-card">
-
-  <div class="identity-info">
-    <span class="tag">04 · Typography</span>
-
-    <h2>Brand Typography System</h2>
-
-    <p>
-      A curated typography system that establishes the right visual
-      hierarchy for headlines, body text, captions and digital content.
-    </p>
-
-    <div class="scope">
-      <strong>Scope:</strong> Font selection · Hierarchy · Pairing · Usage
-    </div>
-
-    <div class="packages">
-
-      <div class="package">
-        <h3>Basic</h3>
-        <div class="price">$40</div>
-        <p>Primary font pairing · 2 revisions</p>
-        <a class="start"
-           href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Brand%20Typography%20System%20Basic.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Standard</h3>
-        <div class="price">$70</div>
-        <p>Full hierarchy · font pairing · 3 revisions</p>
-        <a class="start"
-           href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Brand%20Typography%20System%20Standard.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Premium</h3>
-        <div class="price">$100</div>
-        <p>Complete typography system · digital & print · 5 revisions</p>
-        <a class="start"
-           href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Brand%20Typography%20System%20Premium.">
-          START NOW →
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="identity-preview">
-    <div class="identity">
-      <div class="identity-content">
-        <div class="concept">Typography Concept</div>
-        <div class="brand-name">FORM</div>
-        <div class="brand-line"></div>
-        <div class="brand-tagline">Designed To Speak</div>
-      </div>
-
-      <div class="orb"></div>
-      <div class="ring"></div>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="identity-card">
-
-  <div class="identity-info">
-    <span class="tag">05 · Logo System</span>
-
-    <h2>Brand Logo System</h2>
-
-    <p>
-      A flexible logo system created for consistent use across websites,
-      social media, print materials, packaging and other brand touchpoints.
-    </p>
-
-    <div class="scope">
-      <strong>Scope:</strong> Primary logo · Alternate logo · Mark · Responsive versions
-    </div>
-
-    <div class="packages">
-
-      <div class="package">
-        <h3>Basic</h3>
-        <div class="price">$70</div>
-        <p>Primary logo system · 1 concept · 2 revisions</p>
-        <a class="start"
-           href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Brand%20Logo%20System%20Basic.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Standard</h3>
-        <div class="price">$120</div>
-        <p>Primary + alternate versions · 3 revisions</p>
-        <a class="start"
-           href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Brand%20Logo%20System%20Standard.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Premium</h3>
-        <div class="price">$180</div>
-        <p>Complete responsive logo system · 3 concepts · 5 revisions</p>
-        <a class="start"
-           href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Brand%20Logo%20System%20Premium.">
-          START NOW →
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="identity-preview">
-    <div class="identity">
-      <div class="identity-content">
-        <div class="concept">Logo System Concept</div>
-        <div class="brand-name">VANTA</div>
-        <div class="brand-line"></div>
-        <div class="brand-tagline">Shape The Future</div>
-      </div>
-
-      <div class="orb"></div>
-      <div class="ring"></div>
-    </div>
-  </div>
-
-</article>
-  
-  <article class="identity-card">
-
-  <div class="identity-info">
-    <span class="tag">06 · Brand Stationery</span>
-
-    <h2>Brand Stationery System</h2>
-
-    <p>
-      A coordinated stationery system that keeps business documents,
-      correspondence and printed materials visually consistent.
-    </p>
-
-    <div class="scope">
-      <strong>Scope:</strong> Letterhead · Business card · Envelope · Document styling
-    </div>
-
-    <div class="packages">
-
-      <div class="package">
-        <h3>Basic</h3>
-        <div class="price">$60</div>
-        <p>2 stationery items · 2 revisions</p>
-        <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Brand%20Stationery%20System%20Basic.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Standard</h3>
-        <div class="price">$100</div>
-        <p>4 stationery items · 3 revisions</p>
-        <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Brand%20Stationery%20System%20Standard.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Premium</h3>
-        <div class="price">$150</div>
-        <p>Complete stationery system · 5 revisions</p>
-        <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Brand%20Stationery%20System%20Premium.">
-          START NOW →
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="identity-preview">
-    <div class="identity">
-      <div class="identity-content">
-        <div class="concept">Stationery Concept</div>
-        <div class="brand-name">MONO</div>
-        <div class="brand-line"></div>
-        <div class="brand-tagline">Precision In Every Detail</div>
-      </div>
-
-      <div class="orb"></div>
-      <div class="ring"></div>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="identity-card">
-
-  <div class="identity-info">
-    <span class="tag">07 · Social Branding</span>
-
-    <h2>Social Media Brand Identity</h2>
-
-    <p>
-      A visual system adapted for social platforms so a brand remains
-      recognizable and consistent across its online presence.
-    </p>
-
-    <div class="scope">
-      <strong>Scope:</strong> Profile visuals · Covers · Post direction · Story style
-    </div>
-
-    <div class="packages">
-
-      <div class="package">
-        <h3>Basic</h3>
-        <div class="price">$55</div>
-        <p>Core social identity · 2 revisions</p>
-        <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Social%20Media%20Brand%20Identity%20Basic.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Standard</h3>
-        <div class="price">$95</div>
-        <p>Multi-platform identity · 3 revisions</p>
-        <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Social%20Media%20Brand%20Identity%20Standard.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Premium</h3>
-        <div class="price">$145</div>
-        <p>Complete social visual system · 5 revisions</p>
-        <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Social%20Media%20Brand%20Identity%20Premium.">
-          START NOW →
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="identity-preview">
-    <div class="identity">
-      <div class="identity-content">
-        <div class="concept">Social Identity Concept</div>
-        <div class="brand-name">PULSE</div>
-        <div class="brand-line"></div>
-        <div class="brand-tagline">Stay Connected</div>
-      </div>
-
-      <div class="orb"></div>
-      <div class="ring"></div>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="identity-card">
-
-  <div class="identity-info">
-    <span class="tag">08 · Packaging</span>
-
-    <h2>Packaging Brand Identity</h2>
-
-    <p>
-      A visual identity adapted for product packaging, helping products
-      maintain a recognizable and professional appearance on shelves and online.
-    </p>
-
-    <div class="scope">
-      <strong>Scope:</strong> Packaging direction · Labels · Colour · Typography
-    </div>
-
-    <div class="packages">
-
-      <div class="package">
-        <h3>Basic</h3>
-        <div class="price">$70</div>
-        <p>Single packaging direction · 2 revisions</p>
-        <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Packaging%20Brand%20Identity%20Basic.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Standard</h3>
-        <div class="price">$120</div>
-        <p>Packaging system · 3 revisions</p>
-        <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Packaging%20Brand%20Identity%20Standard.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Premium</h3>
-        <div class="price">$180</div>
-        <p>Complete packaging identity · 5 revisions</p>
-        <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Packaging%20Brand%20Identity%20Premium.">
-          START NOW →
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="identity-preview">
-    <div class="identity">
-      <div class="identity-content">
-        <div class="concept">Packaging Concept</div>
-        <div class="brand-name">ORBIT</div>
-        <div class="brand-line"></div>
-        <div class="brand-tagline">Made To Stand Out</div>
-      </div>
-
-      <div class="orb"></div>
-      <div class="ring"></div>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="identity-card">
-
-  <div class="identity-info">
-    <span class="tag">09 · Corporate Identity</span>
-
-    <h2>Corporate Identity</h2>
-
-    <p>
-      A structured identity system for organizations that need a polished,
-      consistent and professional visual presence across business touchpoints.
-    </p>
-
-    <div class="scope">
-      <strong>Scope:</strong> Corporate visuals · Logo system · Stationery · Guidelines
-    </div>
-
-    <div class="packages">
-
-      <div class="package">
-        <h3>Basic</h3>
-        <div class="price">$150</div>
-        <p>Core corporate identity · 2 revisions</p>
-        <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Corporate%20Identity%20Basic.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Standard</h3>
-        <div class="price">$250</div>
-        <p>Expanded corporate system · 3 revisions</p>
-        <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Corporate%20Identity%20Standard.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Premium</h3>
-        <div class="price">$375</div>
-        <p>Complete corporate identity · 5 revisions</p>
-        <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Corporate%20Identity%20Premium.">
-          START NOW →
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="identity-preview">
-    <div class="identity">
-      <div class="identity-content">
-        <div class="concept">Corporate Identity Concept</div>
-        <div class="brand-name">NORTH</div>
-        <div class="brand-line"></div>
-        <div class="brand-tagline">Built To Lead</div>
-      </div>
-
-      <div class="orb"></div>
-      <div class="ring"></div>
-    </div>
-  </div>
-
-</article>
-
-
-<article class="identity-card">
-
-  <div class="identity-info">
-    <span class="tag">10 · Startup Identity</span>
-
-    <h2>Startup Brand Identity</h2>
-
-    <p>
-      A focused identity package for new businesses that need a strong,
-      professional visual foundation from launch.
-    </p>
-
-    <div class="scope">
-      <strong>Scope:</strong> Logo direction · Colours · Typography · Launch visuals
-    </div>
-
-    <div class="packages">
-
-      <div class="package">
-        <h3>Basic</h3>
-        <div class="price">$100</div>
-        <p>Startup core identity · 1 concept · 2 revisions</p>
-        <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Startup%20Brand%20Identity%20Basic.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Standard</h3>
-        <div class="price">$175</div>
-        <p>Complete launch identity · 2 concepts · 3 revisions</p>
-        <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Startup%20Brand%20Identity%20Standard.">
-          START NOW →
-        </a>
-      </div>
-
-      <div class="package">
-        <h3>Premium</h3>
-        <div class="price">$275</div>
-        <p>Advanced startup identity · 3 concepts · 5 revisions</p>
-        <a class="start" href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27m%20interested%20in%20Startup%20Brand%20Identity%20Premium.">
-          START NOW →
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="identity-preview">
-    <div class="identity">
-      <div class="identity-content">
-        <div class="concept">Startup Identity Concept</div>
-        <div class="brand-name">VECTOR</div>
-        <div class="brand-line"></div>
-        <div class="brand-tagline">Build What's Next</div>
-      </div>
-
-      <div class="orb"></div>
-      <div class="ring"></div>
-    </div>
-  </div>
-
-</article>
-  
 </section>
+
+<main class="catalogue">
+  <div class="container" id="catalogue"></div>
+</main>
 
 <section class="contact">
-  <h2>Let's Create What's Next.</h2>
+  <div class="container">
+    <h2>Ready to build your identity?</h2>
 
-  <p>
-    Tell Victor Phoenix what you want to create.
-  </p>
+    <p>
+      Tell Victor Phoenix what you want your brand to become,
+      and let's build a visual identity around it.
+    </p>
 
-  <a
-    href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
-    class="contact-btn"
-  >
-    START A PROJECT →
-  </a>
+    <div class="contact-buttons">
+      <a
+        class="contact-btn"
+        href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
+        target="_blank"
+        rel="noopener"
+      >
+        WhatsApp →
+      </a>
+
+      <a
+        class="contact-btn"
+        href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20Brand%20Identity%20Inquiry"
+      >
+        Email →
+      </a>
+    </div>
+  </div>
 </section>
 
 <footer>
-  © 2026 Victor Phoenix. Create What's Next.
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      Victor Phoenix
+    </div>
+
+    <div class="footer-copy">
+      Create What’s Next. © 2026 Victor Phoenix.
+    </div>
+  </div>
 </footer>
+
+<script>
+const brandIdentities = [
+
+  {
+    name: "Brand Identity System",
+    format: "Complete visual identity",
+    description: "A complete visual foundation that brings your brand's look, feel and communication together.",
+    prices: ["$120","$200","$300"],
+    delivery: ["4–5 business days","6–8 business days","8–12 business days"],
+    get: [
+      "Core visual identity direction",
+      "Brand colour system",
+      "Typography direction",
+      "Supporting visual elements"
+    ]
+  },
+
+  {
+    name: "Brand Guidelines",
+    format: "Digital brand guide",
+    description: "A clear reference system that explains how your brand should look and communicate consistently.",
+    prices: ["$80","$140","$220"],
+    delivery: ["3–4 business days","5–7 business days","7–10 business days"],
+    get: [
+      "Brand usage rules",
+      "Colour and typography guidance",
+      "Logo usage guidance",
+      "Professional digital guideline document"
+    ]
+  },
+
+  {
+    name: "Brand Colour Palette",
+    format: "Digital colour system",
+    description: "A purposeful colour system designed to give your brand a recognizable visual language.",
+    prices: ["$35","$60","$90"],
+    delivery: ["2–3 business days","3–5 business days","5–7 business days"],
+    get: [
+      "Primary colour palette",
+      "Secondary colour direction",
+      "HEX / RGB colour values",
+      "Usage recommendations"
+    ]
+  },
+
+  {
+    name: "Brand Typography System",
+    format: "Typography system",
+    description: "A structured typography direction that gives your brand a consistent and professional voice.",
+    prices: ["$40","$70","$100"],
+    delivery: ["2–3 business days","3–5 business days","5–7 business days"],
+    get: [
+      "Primary typeface direction",
+      "Secondary typeface direction",
+      "Heading and body hierarchy",
+      "Typography usage guidance"
+    ]
+  },
+
+  {
+    name: "Brand Logo System",
+    format: "Logo family system",
+    description: "A flexible logo system designed to keep your identity recognizable across different applications.",
+    prices: ["$70","$120","$180"],
+    delivery: ["3–4 business days","5–7 business days","7–10 business days"],
+    get: [
+      "Primary logo direction",
+      "Logo variations",
+      "Light and dark applications",
+      "Logo usage structure"
+    ]
+  },
+
+  {
+    name: "Brand Stationery System",
+    format: "Business stationery",
+    description: "A coordinated stationery system that carries your brand identity into professional business materials.",
+    prices: ["$60","$100","$150"],
+    delivery: ["3–4 business days","5–7 business days","7–10 business days"],
+    get: [
+      "Business card direction",
+      "Letterhead direction",
+      "Document styling",
+      "Consistent brand application"
+    ]
+  },
+
+  {
+    name: "Social Media Brand Identity",
+    format: "Social media system",
+    description: "A consistent visual identity designed specifically for your social media presence.",
+    prices: ["$55","$95","$145"],
+    delivery: ["3–4 business days","5–7 business days","7–10 business days"],
+    get: [
+      "Social visual direction",
+      "Post styling",
+      "Typography and colour application",
+      "Reusable social design system"
+    ]
+  },
+
+  {
+    name: "Packaging Brand Identity",
+    format: "Packaging visual system",
+    description: "A brand identity direction designed to make products feel consistent, recognizable and professionally presented.",
+    prices: ["$70","$120","$180"],
+    delivery: ["4–5 business days","6–8 business days","8–12 business days"],
+    get: [
+      "Packaging visual direction",
+      "Brand colour application",
+      "Typography direction",
+      "Supporting packaging elements"
+    ]
+  },
+
+  {
+    name: "Corporate Identity",
+    format: "Corporate visual system",
+    description: "A structured identity system created for businesses that require a polished and professional corporate presence.",
+    prices: ["$150","$250","$375"],
+    delivery: ["5–6 business days","7–9 business days","10–14 business days"],
+    get: [
+      "Corporate identity direction",
+      "Visual system",
+      "Professional colour and typography",
+      "Business application guidance"
+    ]
+  },
+
+  {
+    name: "Startup Brand Identity",
+    format: "Startup identity system",
+    description: "A scalable identity foundation designed to help a new business establish a strong visual presence.",
+    prices: ["$100","$175","$275"],
+    delivery: ["4–5 business days","6–8 business days","8–12 business days"],
+    get: [
+      "Startup visual direction",
+      "Colour and typography",
+      "Core identity elements",
+      "Scalable brand foundation"
+    ]
+  },
+
+  {
+    name: "Personal Brand Identity",
+    format: "Personal brand system",
+    description: "A distinctive visual identity designed around an individual, creator, professional or public-facing personal brand.",
+    prices: ["$90","$160","$250"],
+    delivery: ["4–5 business days","6–8 business days","8–12 business days"],
+    get: [
+      "Personal visual direction",
+      "Colour system",
+      "Typography direction",
+      "Personal brand applications"
+    ]
+  },
+
+  {
+    name: "Product Brand Identity",
+    format: "Product identity system",
+    description: "A focused identity system designed to give a product its own recognizable visual presence.",
+    prices: ["$85","$150","$230"],
+    delivery: ["4–5 business days","6–8 business days","8–12 business days"],
+    get: [
+      "Product visual direction",
+      "Colour and typography",
+      "Supporting graphic elements",
+      "Product identity applications"
+    ]
+  },
+
+  {
+    name: "Brand Rebranding",
+    format: "Brand transformation",
+    description: "A strategic visual transformation for an existing brand that needs a stronger, newer or more relevant identity.",
+    prices: ["$120","$220","$350"],
+    delivery: ["5–6 business days","7–10 business days","10–14 business days"],
+    get: [
+      "Existing identity review",
+      "New visual direction",
+      "Updated colour and typography",
+      "Rebranding application guidance"
+    ]
+  },
+
+  {
+    name: "Visual Identity Refresh",
+    format: "Identity refresh",
+    description: "A focused visual update that modernizes an existing identity without completely rebuilding the brand.",
+    prices: ["$75","$130","$200"],
+    delivery: ["3–4 business days","5–7 business days","7–10 business days"],
+    get: [
+      "Visual review",
+      "Updated design direction",
+      "Refined colours and typography",
+      "Modernized visual elements"
+    ]
+  },
+
+  {
+    name: "Brand Pattern Design",
+    format: "Custom visual pattern",
+    description: "Custom patterns that extend your brand identity into packaging, backgrounds, stationery and digital applications.",
+    prices: ["$45","$75","$110"],
+    delivery: ["2–3 business days","3–5 business days","5–7 business days"],
+    get: [
+      "Custom pattern direction",
+      "Brand-aligned visual elements",
+      "Repeatable pattern design",
+      "Digital-ready files"
+    ]
+  },
+
+  {
+    name: "Brand Icon & Graphic System",
+    format: "Icon and graphic system",
+    description: "A coordinated set of icons and graphic elements that gives your brand a distinctive visual vocabulary.",
+    prices: ["$50","$85","$130"],
+    delivery: ["3–4 business days","4–6 business days","6–8 business days"],
+    get: [
+      "Custom icon direction",
+      "Supporting graphic elements",
+      "Consistent visual language",
+      "Digital-ready assets"
+    ]
+  },
+
+  {
+    name: "Brand Presentation Design",
+    format: "16:9 presentation system",
+    description: "A branded presentation system designed to make business presentations feel consistent and professional.",
+    prices: ["$55","$95","$145"],
+    delivery: ["3–4 business days","5–7 business days","7–10 business days"],
+    get: [
+      "Branded presentation direction",
+      "Slide visual system",
+      "Typography and colour application",
+      "Professional presentation styling"
+    ]
+  },
+
+  {
+    name: "Digital Brand Identity",
+    format: "Digital-first identity",
+    description: "A modern identity system optimized for websites, apps, social platforms and other digital environments.",
+    prices: ["$100","$175","$260"],
+    delivery: ["4–5 business days","6–8 business days","8–12 business days"],
+    get: [
+      "Digital visual direction",
+      "Screen-friendly colour system",
+      "Digital typography direction",
+      "Online brand applications"
+    ]
+  },
+
+  {
+    name: "Brand Touchpoint System",
+    format: "Multi-touchpoint identity",
+    description: "A coordinated system for applying your identity consistently across the places customers interact with your brand.",
+    prices: ["$100","$175","$275"],
+    delivery: ["4–5 business days","6–8 business days","8–12 business days"],
+    get: [
+      "Touchpoint mapping direction",
+      "Visual consistency system",
+      "Brand application guidance",
+      "Key customer-facing applications"
+    ]
+  },
+
+  {
+    name: "Complete Brand Identity Package",
+    format: "Complete premium identity",
+    description: "The complete visual foundation for brands that need a deeper, more comprehensive identity system.",
+    prices: ["$200","$350","$500"],
+    delivery: ["6–8 business days","9–12 business days","12–16 business days"],
+    get: [
+      "Complete visual identity direction",
+      "Colour system",
+      "Typography system",
+      "Logo system",
+      "Supporting graphic direction",
+      "Brand application guidance"
+    ]
+  }
+
+];
+
+const catalogue = document.getElementById("catalogue");
+
+function whatsapp(packageName, identityName) {
+  const message =
+    `Hello Victor Phoenix, I'm interested in the ${packageName} ${identityName} package. I'd like to get started. Please send me the package details and next steps.`;
+
+  return `https://wa.me/2349165831007?text=${encodeURIComponent(message)}`;
+}
+
+function packageCard(identity, level) {
+
+  const names = ["Basic","Standard","Premium"];
+
+  const intros = [
+    "A focused identity solution for establishing a clear professional foundation.",
+    "A stronger identity system with more creative development and flexibility.",
+    "A complete premium identity solution for deeper brand development."
+  ];
+
+  const concepts = [
+    "1 concept",
+    "2 concepts",
+    "3 concepts"
+  ];
+
+  const revisions = [
+    "2 revisions",
+    "3 revisions",
+    "5 revisions"
+  ];
+
+  const finalDelivery = [
+    "PDF + JPG/PNG",
+    "PDF + JPG/PNG + Editable Source",
+    "PDF + JPG/PNG + Editable Source"
+  ];
+
+  return `
+    <div class="package ${level === 1 ? "featured" : ""}">
+
+      <div class="package-label">
+        ${names[level].toUpperCase()}
+      </div>
+
+      <h3>${identity.name}</h3>
+
+      <div class="price">
+        ${identity.prices[level]}
+      </div>
+
+      <p class="package-intro">
+        ${intros[level]}
+      </p>
+
+      <h4>WHAT YOU GET</h4>
+
+      <ul>
+        ${identity.get.map(item => `<li>${item}</li>`).join("")}
+
+        ${
+          level === 1
+          ? "<li>Enhanced visual refinement</li>"
+          : ""
+        }
+
+        ${
+          level === 2
+          ? "<li>Expanded identity development</li><li>Additional brand applications</li>"
+          : ""
+        }
+
+        ${
+          level === 3
+          ? "<li>Advanced creative direction</li><li>Expanded brand applications</li><li>Premium identity refinement</li>"
+          : ""
+        }
+      </ul>
+
+      <div class="package-details">
+
+        <div class="detail">
+          <span>Concepts</span>
+          <span>${concepts[level]}</span>
+        </div>
+
+        <div class="detail">
+          <span>Revisions</span>
+          <span>${revisions[level]}</span>
+        </div>
+
+        <div class="detail">
+          <span>Delivery</span>
+          <span>${identity.delivery[level]}</span>
+        </div>
+
+        <div class="detail">
+          <span>Final Delivery</span>
+          <span>${finalDelivery[level]}</span>
+        </div>
+
+      </div>
+
+      <div class="start-btn">
+        <a
+          href="${whatsapp(names[level], identity.name)}"
+          target="_blank"
+          rel="noopener"
+        >
+          START NOW
+          <span>→</span>
+        </a>
+      </div>
+
+    </div>
+  `;
+}
+
+brandIdentities.forEach((identity, index) => {
+
+  const section = document.createElement("section");
+
+  section.className = "identity-item";
+
+  section.innerHTML = `
+    <div class="concept">
+
+      <div class="concept-inner">
+
+        <div class="concept-number">
+          VICTOR PHOENIX · CONCEPT ${String(index + 1).padStart(2,"0")}
+        </div>
+
+        <h3>${identity.name}</h3>
+
+        <p>
+          ${identity.description}
+        </p>
+
+        <div class="concept-label">
+          BRAND IDENTITY
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="item-heading">
+
+      <div class="number">
+        ${String(index + 1).padStart(2,"0")}
+      </div>
+
+      <h2>${identity.name}</h2>
+
+      <p>
+        ${identity.description}
+      </p>
+
+      <div class="badges">
+
+        <span class="badge">
+          ${identity.format}
+        </span>
+
+        <span class="badge">
+          Premium Identity
+        </span>
+
+        <span class="badge">
+          Victor Phoenix
+        </span>
+
+      </div>
+
+    </div>
+
+    <div class="packages">
+
+      ${packageCard(identity, 0)}
+      ${packageCard(identity, 1)}
+      ${packageCard(identity, 2)}
+
+    </div>
+  `;
+
+  catalogue.appendChild(section);
+});
+</script>
 
 </body>
 </html>

@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Creative Content — Victor Phoenix</title>
-
   <meta
     name="description"
-    content="Premium creative content and visual design solutions by Victor Phoenix."
-  >
+    content="Premium creative content design services by Victor Phoenix. Social creatives, advertising graphics, thumbnails, covers, posters and more."
+  />
 
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     html {
@@ -23,9 +22,12 @@
     }
 
     body {
-      background: #050505;
-      color: #f5f5f5;
       font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(255,255,255,.07), transparent 28%),
+        radial-gradient(circle at 85% 25%, rgba(255,255,255,.04), transparent 30%),
+        #070707;
+      color: #fff;
       line-height: 1.6;
     }
 
@@ -34,306 +36,412 @@
       text-decoration: none;
     }
 
+    .container {
+      width: min(1240px, 92%);
+      margin: auto;
+    }
+
     /* HEADER */
 
     header {
-      width: 100%;
-      padding: 24px 6%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7,7,7,.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .header-inner {
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      background: rgba(5,5,5,0.88);
-      backdrop-filter: blur(16px);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      gap: 20px;
     }
 
-    .logo {
+    .brand img {
       width: 150px;
-      height: auto;
-      display: block;
+      max-height: 52px;
+      object-fit: contain;
     }
 
-    .back {
+    .back-link {
       color: #aaa;
       font-size: 14px;
-      transition: 0.3s ease;
+      transition: .3s;
     }
 
-    .back:hover {
+    .back-link:hover {
       color: #fff;
+      transform: translateX(-3px);
     }
 
     /* HERO */
 
     .hero {
-      min-height: 55vh;
-      padding: 110px 6% 80px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
+      padding: 110px 0 90px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,.08);
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      right: -180px;
-      top: -160px;
-      border-radius: 50%;
-      background: radial-gradient(
-        circle,
-        rgba(255,255,255,0.12),
-        transparent 65%
-      );
-      filter: blur(20px);
-    }
-
-    .hero span {
-      color: #999;
+    .eyebrow {
+      color: #888;
       text-transform: uppercase;
       letter-spacing: 4px;
-      font-size: 12px;
-      margin-bottom: 18px;
+      font-size: 11px;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-size: clamp(56px, 9vw, 120px);
-      line-height: 0.95;
+      font-size: clamp(48px, 8vw, 100px);
+      line-height: .95;
       letter-spacing: -5px;
-      max-width: 1000px;
-      position: relative;
-      z-index: 2;
+      font-weight: 800;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      color: #777;
     }
 
     .hero p {
-      max-width: 720px;
+      max-width: 740px;
+      margin: auto;
       color: #aaa;
       font-size: 17px;
-      margin-top: 30px;
-      position: relative;
-      z-index: 2;
+    }
+
+    /* INTRO */
+
+    .intro {
+      padding: 70px 0 35px;
+      text-align: center;
+    }
+
+    .intro h2 {
+      font-size: clamp(30px,5vw,48px);
+      letter-spacing: -1.5px;
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      max-width: 720px;
+      margin: auto;
+      color: #999;
     }
 
     /* CATALOGUE */
 
     .catalogue {
-      padding: 50px 6% 120px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
+      padding: 35px 0 100px;
     }
 
-    .creative-card {
-      border: 1px solid rgba(255,255,255,0.1);
-      background: linear-gradient(
-        145deg,
-        rgba(255,255,255,0.055),
-        rgba(255,255,255,0.015)
-      );
-      border-radius: 24px;
-      overflow: hidden;
-      transition: 0.4s ease;
+    .content-item {
+      margin-bottom: 110px;
     }
 
-    .creative-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(255,255,255,0.25);
-    }
+    /* CONCEPT */
 
-    .creative-info {
-      padding: 30px;
-    }
-
-    .tag {
-      display: inline-block;
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #aaa;
-      margin-bottom: 12px;
-    }
-
-    .creative-info h2 {
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-
-    .creative-info p {
-      color: #999;
-      font-size: 14px;
-    }
-
-    /* PREVIEW */
-
-    .creative-preview {
-      padding: 30px;
-      background: #080808;
-    }
-
-    .creative {
+    .concept {
       min-height: 330px;
-      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 26px;
       overflow: hidden;
       position: relative;
-      background:
-        radial-gradient(
-          circle at 75% 25%,
-          rgba(255,255,255,0.25),
-          transparent 20%
-        ),
-        linear-gradient(
-          135deg,
-          #111,
-          #292929 48%,
-          #090909
-        );
-      border: 1px solid rgba(255,255,255,0.12);
+      background: linear-gradient(145deg,#1a1a1a,#080808);
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 40px;
+      margin-bottom: 35px;
     }
 
-    .creative-content {
-      width: 82%;
+    .concept::before {
+      content: "";
+      position: absolute;
+      width: 430px;
+      height: 430px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(255,255,255,.13),
+        transparent 68%
+      );
+      top: -190px;
+      right: -100px;
+    }
+
+    .concept::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(255,255,255,.08),
+        transparent 68%
+      );
+      bottom: -150px;
+      left: -80px;
+    }
+
+    .concept-inner {
       position: relative;
       z-index: 2;
+      width: min(720px,100%);
+      text-align: center;
     }
 
-    .concept {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      color: #aaa;
-      margin-bottom: 18px;
+    .concept-number {
+      color: #888;
+      font-size: 11px;
+      letter-spacing: 4px;
+      margin-bottom: 12px;
     }
 
-    .creative-content h3 {
-      font-size: clamp(34px, 5vw, 62px);
-      line-height: 0.95;
+    .concept-inner h3 {
+      font-size: clamp(30px,5vw,58px);
+      line-height: 1;
       letter-spacing: -2px;
-      max-width: 600px;
+      margin-bottom: 16px;
     }
 
-    .creative-content p {
-      margin-top: 20px;
-      color: #bbb;
-      max-width: 450px;
+    .concept-inner p {
+      color: #999;
+      max-width: 580px;
+      margin: auto;
       font-size: 14px;
     }
 
-    .creative-orb {
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      right: 8%;
-      bottom: 8%;
-      background:
-        radial-gradient(
-          circle at 30% 25%,
-          #fff,
-          #aaa 12%,
-          #555 42%,
-          #111 72%
-        );
-      box-shadow:
-        0 0 70px rgba(255,255,255,0.15);
+    .concept-label {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 8px 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      color: #aaa;
+      font-size: 10px;
+      letter-spacing: 2px;
     }
 
-    .creative-ring {
-      position: absolute;
-      width: 270px;
-      height: 270px;
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 50%;
-      right: -30px;
-      bottom: -60px;
-      transform: rotate(-25deg);
+    /* HEADING */
+
+    .item-heading {
+      margin-bottom: 28px;
+    }
+
+    .item-heading .number {
+      color: #777;
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-bottom: 7px;
+    }
+
+    .item-heading h2 {
+      font-size: clamp(28px,4vw,46px);
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      margin-bottom: 12px;
+    }
+
+    .item-heading p {
+      color: #999;
+      max-width: 780px;
+      font-size: 15px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .badge {
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.1);
+      color: #999;
+      font-size: 10px;
     }
 
     /* PACKAGES */
 
     .packages {
-      padding: 0 30px 30px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+      margin-top: 30px;
     }
 
     .package {
-      padding: 20px;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      background: rgba(255,255,255,0.025);
+      background: linear-gradient(150deg,#151515,#0b0b0b);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 20px;
+      padding: 28px;
+      min-height: 580px;
+      display: flex;
+      flex-direction: column;
+      transition: .3s;
     }
 
-    .package h4 {
-      font-size: 15px;
+    .package:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255,255,255,.22);
+    }
+
+    .package.featured {
+      background: linear-gradient(150deg,#1b1b1b,#0c0c0c);
+      border-color: rgba(255,255,255,.2);
+    }
+
+    .package-label {
+      color: #777;
+      font-size: 10px;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+
+    .package h3 {
+      font-size: 23px;
       margin-bottom: 8px;
     }
 
     .price {
-      font-size: 23px;
-      font-weight: bold;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .package-intro {
+      color: #999;
+      font-size: 13px;
+      min-height: 55px;
+    }
+
+    .package h4 {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #bbb;
+    }
+
+    .package ul {
+      list-style: none;
+      margin-top: 13px;
+    }
+
+    .package li {
+      position: relative;
+      padding-left: 18px;
+      color: #aaa;
+      font-size: 13px;
       margin-bottom: 8px;
     }
 
-    .package p {
-      color: #888;
-      font-size: 12px;
-      margin-bottom: 16px;
+    .package li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #fff;
     }
 
-    .start {
-      display: inline-block;
-      font-size: 11px;
-      letter-spacing: 1px;
-      color: #fff;
-      border-bottom: 1px solid #777;
-      padding-bottom: 3px;
+    .package-details {
+      border-top: 1px solid rgba(255,255,255,.1);
+      margin-top: 20px;
+      padding-top: 16px;
+    }
+
+    .detail {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      font-size: 12px;
+    }
+
+    .detail:last-child {
+      border-bottom: 0;
+    }
+
+    .detail span:first-child {
+      color: #777;
+    }
+
+    .detail span:last-child {
+      color: #ddd;
+      text-align: right;
+    }
+
+    .start-btn {
+      margin-top: auto;
+      padding-top: 22px;
+    }
+
+    .start-btn a {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: #fff;
+      color: #080808;
+      font-size: 12px;
+      font-weight: 700;
+      transition: .3s;
+    }
+
+    .start-btn a:hover {
+      background: #d9d9d9;
+      transform: translateY(-2px);
     }
 
     /* CONTACT */
 
     .contact {
-      margin: 40px 6% 80px;
-      padding: 90px 40px;
+      padding: 100px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
       text-align: center;
-      border-radius: 28px;
-      border: 1px solid rgba(255,255,255,0.1);
-      background:
-        radial-gradient(
-          circle at center,
-          rgba(255,255,255,0.08),
-          transparent 60%
-        ),
-        #090909;
+      background: #050505;
     }
 
     .contact h2 {
-      font-size: clamp(38px, 6vw, 72px);
+      font-size: clamp(34px,6vw,70px);
       letter-spacing: -3px;
+      line-height: 1;
+      margin-bottom: 20px;
     }
 
     .contact p {
       color: #999;
-      margin: 18px 0 30px;
+      max-width: 620px;
+      margin: auto;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
     }
 
     .contact-btn {
-      display: inline-block;
-      padding: 15px 26px;
-      border: 1px solid rgba(255,255,255,0.25);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 20px;
       border-radius: 999px;
-      font-size: 12px;
-      letter-spacing: 1px;
-      transition: 0.3s ease;
+      border: 1px solid rgba(255,255,255,.12);
+      background: #111;
+      font-size: 13px;
+      transition: .3s;
     }
 
     .contact-btn:hover {
@@ -341,77 +449,82 @@
       color: #000;
     }
 
+    /* FOOTER */
+
     footer {
-      padding: 30px 6%;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      color: #666;
-      font-size: 12px;
-      text-align: center;
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 28px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .footer-copy {
+      color: #555;
+      font-size: 11px;
     }
 
     /* MOBILE */
 
-    @media (max-width: 850px) {
-      .catalogue {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width:900px) {
 
       .packages {
         grid-template-columns: 1fr;
       }
 
+      .package {
+        min-height: auto;
+      }
+
       .hero {
-        min-height: 48vh;
+        padding: 80px 0 65px;
       }
 
-      .creative {
+      .concept {
         min-height: 280px;
-      }
-
-      .creative-orb {
-        width: 120px;
-        height: 120px;
-      }
-
-      .creative-ring {
-        width: 190px;
-        height: 190px;
       }
     }
 
-    @media (max-width: 520px) {
-      header {
-        padding: 18px 5%;
+    @media (max-width:600px) {
+
+      .header-inner {
+        min-height: 68px;
       }
 
-      .logo {
+      .brand img {
         width: 125px;
       }
 
-      .hero {
-        padding: 80px 5% 60px;
+      .back-link {
+        font-size: 12px;
       }
 
       .hero h1 {
         letter-spacing: -3px;
       }
 
-      .catalogue {
-        padding: 30px 5% 80px;
+      .concept {
+        padding: 30px 20px;
+        border-radius: 20px;
       }
 
-      .creative-info,
-      .creative-preview {
-        padding: 22px;
+      .package {
+        padding: 23px;
+        border-radius: 17px;
       }
 
-      .packages {
-        padding: 0 22px 22px;
-      }
-
-      .contact {
-        margin: 20px 5% 60px;
-        padding: 70px 22px;
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
       }
     }
   </style>
@@ -419,660 +532,574 @@
 
 <body>
 
-  <header>
-    <a href="index.html">
-      <img src="logo.png" class="logo" alt="Victor Phoenix">
-    </a>
+  <!-- HEADER -->
 
-    <a href="graphics.html" class="back">
-      ← Graphics & Design
-    </a>
+  <header>
+    <div class="container header-inner">
+
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="Victor Phoenix" />
+      </a>
+
+      <a href="graphics.html" class="back-link">
+        ← Back to Graphics & Design
+      </a>
+
+    </div>
   </header>
 
+
+  <!-- HERO -->
+
   <section class="hero">
-    <span>Victor Phoenix Creative</span>
+    <div class="container">
 
-    <h1>Creative Content.</h1>
+      <div class="eyebrow">
+        Victor Phoenix / Graphics & Design
+      </div>
 
-    <p>
-      High-impact visual content designed for brands, campaigns,
-      products, social platforms and digital experiences.
-    </p>
+      <h1>
+        Creative Content<br>
+        <span>Design.</span>
+      </h1>
+
+      <p>
+        High-impact creative visuals designed for digital content,
+        advertising, entertainment, publishing and modern brand communication.
+      </p>
+
+    </div>
   </section>
 
-  <section class="catalogue">
 
-    <!-- 1. Social Media Creative -->
+  <!-- INTRO -->
 
-<article class="creative-card">
+  <section class="intro">
+    <div class="container">
 
-  <div class="creative-info">
-    <span class="tag">01 · Social Content</span>
+      <h2>
+        Turn ideas into visuals.
+      </h2>
 
-    <h2>Social Media Creative</h2>
-
-    <p>
-      Branded visual content created for social media campaigns,
-      promotions and everyday audience engagement.
-    </p>
-  </div>
-
-  <div class="creative-preview">
-
-    <div class="creative">
-
-      <div class="creative-content">
-        <div class="concept">Victor Phoenix Concept</div>
-
-        <h3>CREATE<br>WHAT'S NEXT.</h3>
-
-        <p>
-          Digital ideas built to move brands forward.
-        </p>
-      </div>
-
-      <div class="creative-orb"></div>
-      <div class="creative-ring"></div>
+      <p>
+        From social creatives and advertising graphics to thumbnails,
+        covers and digital posters, every design is built to communicate
+        clearly and capture attention.
+      </p>
 
     </div>
-
-  </div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$25</div>
-      <p>1 creative design · 2 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Social%20Media%20Creative%20project." class="start">
-        START NOW →
-      </a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$45</div>
-      <p>2 creative concepts · 3 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Social%20Media%20Creative%20project." class="start">
-        START NOW →
-      </a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$70</div>
-      <p>3 creative concepts · 5 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Social%20Media%20Creative%20project." class="start">
-        START NOW →
-      </a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<!-- 2. Advertising Creative -->
-
-<article class="creative-card">
-
-  <div class="creative-info">
-    <span class="tag">02 · Advertising</span>
-
-    <h2>Advertising Creative</h2>
-
-    <p>
-      Attention-focused visual advertisements designed for digital
-      campaigns, promotions and paid advertising.
-    </p>
-  </div>
-
-  <div class="creative-preview">
-
-    <div class="creative">
-
-      <div class="creative-content">
-        <div class="concept">Victor Phoenix Concept</div>
-
-        <h3>MAKE<br>THE MOVE.</h3>
-
-        <p>
-          A campaign visual designed to capture attention.
-        </p>
-      </div>
-
-      <div class="creative-orb"></div>
-      <div class="creative-ring"></div>
-
-    </div>
-
-  </div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$30</div>
-      <p>1 advertising creative · 2 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20an%20Advertising%20Creative%20project." class="start">
-        START NOW →
-      </a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$55</div>
-      <p>2 creative concepts · 3 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20an%20Advertising%20Creative%20project." class="start">
-        START NOW →
-      </a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$85</div>
-      <p>3 creative concepts · 5 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20an%20Advertising%20Creative%20project." class="start">
-        START NOW →
-      </a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<!-- 3. Promotional Graphic -->
-
-<article class="creative-card">
-
-  <div class="creative-info">
-    <span class="tag">03 · Promotion</span>
-
-    <h2>Promotional Graphic</h2>
-
-    <p>
-      Bold promotional visuals created for offers, launches,
-      announcements and brand campaigns.
-    </p>
-  </div>
-
-  <div class="creative-preview">
-
-    <div class="creative">
-
-      <div class="creative-content">
-        <div class="concept">Victor Phoenix Concept</div>
-
-        <h3>YOUR<br>NEXT OFFER.</h3>
-
-        <p>
-          Promotional content with a strong visual presence.
-        </p>
-      </div>
-
-      <div class="creative-orb"></div>
-      <div class="creative-ring"></div>
-
-    </div>
-
-  </div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$25</div>
-      <p>1 promotional graphic · 2 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Promotional%20Graphic%20project." class="start">
-        START NOW →
-      </a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$45</div>
-      <p>2 creative concepts · 3 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Promotional%20Graphic%20project." class="start">
-        START NOW →
-      </a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$75</div>
-      <p>3 creative concepts · 5 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Promotional%20Graphic%20project." class="start">
-        START NOW →
-      </a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<!-- 4. Infographic -->
-
-<article class="creative-card">
-
-  <div class="creative-info">
-    <span class="tag">04 · Information Design</span>
-
-    <h2>Infographic</h2>
-
-    <p>
-      Information transformed into clear, engaging visual content
-      for education, presentations and digital publishing.
-    </p>
-  </div>
-
-  <div class="creative-preview">
-
-    <div class="creative">
-
-      <div class="creative-content">
-        <div class="concept">Victor Phoenix Concept</div>
-
-        <h3>IDEAS<br>IN MOTION.</h3>
-
-        <p>
-          Complex information presented through visual storytelling.
-        </p>
-      </div>
-
-      <div class="creative-orb"></div>
-      <div class="creative-ring"></div>
-
-    </div>
-
-  </div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$30</div>
-      <p>1 infographic · 2 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20an%20Infographic%20project." class="start">
-        START NOW →
-      </a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$55</div>
-      <p>2 concepts · 3 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20an%20Infographic%20project." class="start">
-        START NOW →
-      </a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$90</div>
-      <p>3 concepts · 5 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20an%20Infographic%20project." class="start">
-        START NOW →
-      </a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<!-- 5. Content Thumbnail -->
-
-<article class="creative-card">
-
-  <div class="creative-info">
-    <span class="tag">05 · Digital Content</span>
-
-    <h2>Content Thumbnail</h2>
-
-    <p>
-      High-impact thumbnail artwork designed to make digital content
-      immediately recognizable and attention-grabbing.
-    </p>
-  </div>
-
-  <div class="creative-preview">
-
-    <div class="creative">
-
-      <div class="creative-content">
-        <div class="concept">Victor Phoenix Concept</div>
-
-        <h3>STOP.<br>LOOK.<br>CREATE.</h3>
-
-        <p>
-          A strong visual concept built for digital content.
-        </p>
-      </div>
-
-      <div class="creative-orb"></div>
-      <div class="creative-ring"></div>
-
-    </div>
-
-  </div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$20</div>
-      <p>1 thumbnail · 2 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Content%20Thumbnail%20project." class="start">
-        START NOW →
-      </a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$35</div>
-      <p>2 concepts · 3 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Content%20Thumbnail%20project." class="start">
-        START NOW →
-      </a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$60</div>
-      <p>3 concepts · 5 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Content%20Thumbnail%20project." class="start">
-        START NOW →
-      </a>
-    </div>
-
-  </div>
-
-</article>
-<!-- 6. YouTube Thumbnail -->
-
-<article class="creative-card">
-
-  <div class="creative-info">
-    <span class="tag">06 · Video Content</span>
-    <h2>YouTube Thumbnail</h2>
-    <p>
-      High-impact thumbnail designs created to make videos stand out
-      and communicate the core idea instantly.
-    </p>
-  </div>
-
-  <div class="creative-preview">
-    <div class="creative">
-      <div class="creative-content">
-        <div class="concept">Victor Phoenix Concept</div>
-        <h3>THE FUTURE<br>OF AI.</h3>
-        <p>Designed to capture attention before the video even starts.</p>
-      </div>
-      <div class="creative-orb"></div>
-      <div class="creative-ring"></div>
-    </div>
-  </div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$25</div>
-      <p>1 thumbnail · 2 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20YouTube%20Thumbnail%20project." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$45</div>
-      <p>2 concepts · 3 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20YouTube%20Thumbnail%20project." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$70</div>
-      <p>3 concepts · 5 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20YouTube%20Thumbnail%20project." class="start">START NOW →</a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<!-- 7. Podcast Cover -->
-
-<article class="creative-card">
-
-  <div class="creative-info">
-    <span class="tag">07 · Audio Content</span>
-    <h2>Podcast Cover</h2>
-    <p>
-      Distinctive podcast artwork designed to establish a recognizable
-      visual identity across podcast platforms.
-    </p>
-  </div>
-
-  <div class="creative-preview">
-    <div class="creative">
-      <div class="creative-content">
-        <div class="concept">Victor Phoenix Concept</div>
-        <h3>THE<br>CREATOR'S<br>ROOM.</h3>
-        <p>Bold cover artwork for modern audio content.</p>
-      </div>
-      <div class="creative-orb"></div>
-      <div class="creative-ring"></div>
-    </div>
-  </div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$30</div>
-      <p>1 cover concept · 2 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Podcast%20Cover%20project." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$50</div>
-      <p>2 concepts · 3 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Podcast%20Cover%20project." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$80</div>
-      <p>3 concepts · 5 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Podcast%20Cover%20project." class="start">START NOW →</a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<!-- 8. Album / Music Cover -->
-
-<article class="creative-card">
-
-  <div class="creative-info">
-    <span class="tag">08 · Music Content</span>
-    <h2>Album / Music Cover</h2>
-    <p>
-      Artistic cover designs created to visually represent an artist,
-      single, EP or album.
-    </p>
-  </div>
-
-  <div class="creative-preview">
-    <div class="creative">
-      <div class="creative-content">
-        <div class="concept">Victor Phoenix Concept</div>
-        <h3>AFTER<br>MIDNIGHT.</h3>
-        <p>A cinematic visual direction for a modern music release.</p>
-      </div>
-      <div class="creative-orb"></div>
-      <div class="creative-ring"></div>
-    </div>
-  </div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$35</div>
-      <p>1 cover concept · 2 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20an%20Album%20Music%20Cover%20project." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$60</div>
-      <p>2 concepts · 3 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20an%20Album%20Music%20Cover%20project." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$95</div>
-      <p>3 concepts · 5 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20an%20Album%20Music%20Cover%20project." class="start">START NOW →</a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<!-- 9. Ebook Cover -->
-
-<article class="creative-card">
-
-  <div class="creative-info">
-    <span class="tag">09 · Publishing</span>
-    <h2>Ebook Cover</h2>
-    <p>
-      Professional digital book covers designed to communicate the
-      subject, tone and value of an ebook.
-    </p>
-  </div>
-
-  <div class="creative-preview">
-    <div class="creative">
-      <div class="creative-content">
-        <div class="concept">Victor Phoenix Concept</div>
-        <h3>BUILD<br>YOUR<br>FUTURE.</h3>
-        <p>A premium editorial concept for a modern self-development book.</p>
-      </div>
-      <div class="creative-orb"></div>
-      <div class="creative-ring"></div>
-    </div>
-  </div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$30</div>
-      <p>1 cover concept · 2 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20an%20Ebook%20Cover%20project." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$50</div>
-      <p>2 concepts · 3 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20an%20Ebook%20Cover%20project." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$80</div>
-      <p>3 concepts · 5 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20an%20Ebook%20Cover%20project." class="start">START NOW →</a>
-    </div>
-
-  </div>
-
-</article>
-
-
-<!-- 10. Digital Poster -->
-
-<article class="creative-card">
-
-  <div class="creative-info">
-    <span class="tag">10 · Campaign Content</span>
-    <h2>Digital Poster</h2>
-    <p>
-      Large-format digital poster artwork for events, campaigns,
-      announcements, launches and promotions.
-    </p>
-  </div>
-
-  <div class="creative-preview">
-    <div class="creative">
-      <div class="creative-content">
-        <div class="concept">Victor Phoenix Concept</div>
-        <h3>ONE NIGHT.<br>ONE MOMENT.</h3>
-        <p>A cinematic promotional poster concept for a major event.</p>
-      </div>
-      <div class="creative-orb"></div>
-      <div class="creative-ring"></div>
-    </div>
-  </div>
-
-  <div class="packages">
-
-    <div class="package">
-      <h4>Basic</h4>
-      <div class="price">$30</div>
-      <p>1 poster concept · 2 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Digital%20Poster%20project." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Standard</h4>
-      <div class="price">$50</div>
-      <p>2 concepts · 3 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Digital%20Poster%20project." class="start">START NOW →</a>
-    </div>
-
-    <div class="package">
-      <h4>Premium</h4>
-      <div class="price">$80</div>
-      <p>3 concepts · 5 revisions</p>
-      <a href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20Digital%20Poster%20project." class="start">START NOW →</a>
-    </div>
-
-  </div>
-
-</article>
   </section>
+
+
+  <!-- CATALOGUE -->
+
+  <main class="catalogue">
+    <div class="container" id="catalogue"></div>
+  </main>
+
+
+  <!-- CONTACT -->
 
   <section class="contact">
-    <h2>Let's Create What's Next.</h2>
 
-    <p>
-      Tell Victor Phoenix what you want to create.
-    </p>
+    <div class="container">
 
-    <a
-      href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
-      class="contact-btn"
-    >
-      START A PROJECT →
-    </a>
+      <h2>
+        Ready to create?
+      </h2>
+
+      <p>
+        Tell Victor Phoenix what you want to create,
+        and let's turn your idea into a strong visual.
+      </p>
+
+      <div class="contact-buttons">
+
+        <a
+          class="contact-btn"
+          href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
+          target="_blank"
+          rel="noopener"
+        >
+          WhatsApp →
+        </a>
+
+        <a
+          class="contact-btn"
+          href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20Creative%20Content%20Inquiry"
+        >
+          Email →
+        </a>
+
+      </div>
+
+    </div>
+
   </section>
 
+
+  <!-- FOOTER -->
+
   <footer>
-    © 2026 Victor Phoenix. Create What's Next.
+
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        Victor Phoenix
+      </div>
+
+      <div class="footer-copy">
+        Create What’s Next. © 2026 Victor Phoenix.
+      </div>
+
+    </div>
+
   </footer>
+
+
+  <script>
+
+    const creativeContent = [
+
+      {
+        name: "Social Media Creative",
+        format: "1080 × 1080 px",
+        description:
+          "Creative social visuals designed to make everyday digital content more engaging, polished and recognizable.",
+        prices: ["$25","$45","$70"],
+        delivery: [
+          "2–3 business days",
+          "3–5 business days",
+          "5–7 business days"
+        ],
+        get: [
+          "Custom social creative",
+          "Visual composition",
+          "Typography and graphic treatment"
+        ]
+      },
+
+      {
+        name: "Advertising Creative",
+        format: "Digital advertising",
+        description:
+          "Attention-focused advertising graphics created to communicate products, services and offers with impact.",
+        prices: ["$30","$55","$85"],
+        delivery: [
+          "2–3 business days",
+          "3–5 business days",
+          "5–7 business days"
+        ],
+        get: [
+          "Advertising-focused layout",
+          "Clear visual hierarchy",
+          "Call-to-action presentation"
+        ]
+      },
+
+      {
+        name: "Promotional Graphic",
+        format: "Digital promotional design",
+        description:
+          "Professional promotional visuals for launches, offers, services, events and brand campaigns.",
+        prices: ["$25","$45","$75"],
+        delivery: [
+          "2–3 business days",
+          "3–5 business days",
+          "5–7 business days"
+        ],
+        get: [
+          "Custom promotional layout",
+          "Offer or message emphasis",
+          "Brand-aligned visual styling"
+        ]
+      },
+
+      {
+        name: "Infographic",
+        format: "1080 × 1350 px",
+        description:
+          "Information-rich visual content that turns complex ideas, facts and statistics into clear visual communication.",
+        prices: ["$30","$55","$90"],
+        delivery: [
+          "2–3 business days",
+          "3–5 business days",
+          "5–7 business days"
+        ],
+        get: [
+          "Custom infographic structure",
+          "Information hierarchy",
+          "Icons and graphic elements"
+        ]
+      },
+
+      {
+        name: "Content Thumbnail",
+        format: "Platform-specific",
+        description:
+          "High-impact thumbnails designed to create a strong first impression and help digital content stand out.",
+        prices: ["$20","$35","$60"],
+        delivery: [
+          "2–3 business days",
+          "3–5 business days",
+          "5–7 business days"
+        ],
+        get: [
+          "Thumbnail composition",
+          "Strong visual hierarchy",
+          "Platform-ready export"
+        ]
+      },
+
+      {
+        name: "YouTube Thumbnail",
+        format: "1280 × 720 px",
+        description:
+          "Bold YouTube thumbnails designed to communicate the subject instantly and create visual curiosity.",
+        prices: ["$25","$45","$70"],
+        delivery: [
+          "2–3 business days",
+          "3–5 business days",
+          "5–7 business days"
+        ],
+        get: [
+          "Custom thumbnail design",
+          "Headline and image composition",
+          "YouTube-ready export"
+        ]
+      },
+
+      {
+        name: "Podcast Cover",
+        format: "3000 × 3000 px",
+        description:
+          "Distinctive podcast artwork designed to give your show a professional and recognizable visual identity.",
+        prices: ["$30","$50","$80"],
+        delivery: [
+          "2–3 business days",
+          "3–5 business days",
+          "5–7 business days"
+        ],
+        get: [
+          "Podcast cover artwork",
+          "Typography treatment",
+          "Platform-ready square format"
+        ]
+      },
+
+      {
+        name: "Album / Music Cover",
+        format: "3000 × 3000 px",
+        description:
+          "Creative music artwork designed to visually express the mood, identity and direction of a release.",
+        prices: ["$35","$60","$95"],
+        delivery: [
+          "3–4 business days",
+          "4–6 business days",
+          "6–8 business days"
+        ],
+        get: [
+          "Custom cover artwork",
+          "Creative visual direction",
+          "Music-platform-ready export"
+        ]
+      },
+
+      {
+        name: "Ebook Cover",
+        format: "Digital publishing",
+        description:
+          "Professional ebook covers designed to communicate the subject and positioning of a book at first glance.",
+        prices: ["$30","$50","$80"],
+        delivery: [
+          "2–3 business days",
+          "3–5 business days",
+          "5–7 business days"
+        ],
+        get: [
+          "Custom ebook cover",
+          "Title and author hierarchy",
+          "Digital publishing-ready export"
+        ]
+      },
+
+      {
+        name: "Digital Poster",
+        format: "Custom digital dimensions",
+        description:
+          "Large-format digital posters designed for events, campaigns, announcements, entertainment and promotions.",
+        prices: ["$30","$50","$80"],
+        delivery: [
+          "2–3 business days",
+          "3–5 business days",
+          "5–7 business days"
+        ],
+        get: [
+          "Custom poster composition",
+          "Strong visual hierarchy",
+          "High-resolution digital export"
+        ]
+      }
+
+    ];
+
+
+    const catalogue =
+      document.getElementById("catalogue");
+
+
+    function createWhatsAppLink(
+      packageName,
+      contentName
+    ) {
+
+      const message =
+        `Hello Victor Phoenix, I'm interested in the ${packageName} ${contentName} package. I'd like to get started. Please send me the package details and next steps.`;
+
+      return `https://wa.me/2349165831007?text=${encodeURIComponent(message)}`;
+    }
+
+
+    function packageCard(
+      content,
+      level
+    ) {
+
+      const packageNames = [
+        "Basic",
+        "Standard",
+        "Premium"
+      ];
+
+      const descriptions = [
+
+        "A clean professional creative designed to communicate your idea clearly.",
+
+        "A stronger creative package with more visual development and flexibility.",
+
+        "A complete premium creative solution with advanced visual development."
+
+      ];
+
+      const concepts = [
+        "1 concept",
+        "2 concepts",
+        "3 concepts"
+      ];
+
+      const revisions = [
+        "2 revisions",
+        "3 revisions",
+        "5 revisions"
+      ];
+
+      const finalDelivery = [
+
+        "PDF + JPG/PNG",
+
+        "PDF + JPG/PNG + Editable Source",
+
+        "PDF + JPG/PNG + Editable Source"
+
+      ];
+
+
+      return `
+
+        <div class="package ${level === 1 ? "featured" : ""}">
+
+          <div class="package-label">
+            ${packageNames[level].toUpperCase()}
+          </div>
+
+          <h3>
+            ${content.name}
+          </h3>
+
+          <div class="price">
+            ${content.prices[level]}
+          </div>
+
+          <p class="package-intro">
+            ${descriptions[level]}
+          </p>
+
+
+          <h4>
+            WHAT YOU GET
+          </h4>
+
+
+          <ul>
+
+            ${content.get
+              .map(item => `<li>${item}</li>`)
+              .join("")}
+
+            ${
+              level === 0
+                ? "<li>Standard creative refinement</li>"
+                : ""
+            }
+
+            ${
+              level === 1
+                ? "<li>Enhanced creative direction</li><li>Additional visual refinement</li>"
+                : ""
+            }
+
+            ${
+              level === 2
+                ? "<li>Advanced creative direction</li><li>Premium visual refinement</li><li>Priority attention to detail</li>"
+                : ""
+            }
+
+          </ul>
+
+
+          <div class="package-details">
+
+            <div class="detail">
+              <span>Concepts</span>
+              <span>${concepts[level]}</span>
+            </div>
+
+            <div class="detail">
+              <span>Revisions</span>
+              <span>${revisions[level]}</span>
+            </div>
+
+            <div class="detail">
+              <span>Delivery</span>
+              <span>${content.delivery[level]}</span>
+            </div>
+
+            <div class="detail">
+              <span>Final Delivery</span>
+              <span>${finalDelivery[level]}</span>
+            </div>
+
+          </div>
+
+
+          <div class="start-btn">
+
+            <a
+              href="${createWhatsAppLink(
+                packageNames[level],
+                content.name
+              )}"
+              target="_blank"
+              rel="noopener"
+            >
+
+              START NOW
+
+              <span>
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      `;
+    }
+
+
+    creativeContent.forEach(
+      (content, index) => {
+
+        const section =
+          document.createElement("section");
+
+        section.className =
+          "content-item";
+
+
+        section.innerHTML = `
+
+          <div class="concept">
+
+            <div class="concept-inner">
+
+              <div class="concept-number">
+                VICTOR PHOENIX · CONCEPT
+                ${String(index + 1).padStart(2,"0")}
+              </div>
+
+              <h3>
+                ${content.name}
+              </h3>
+
+              <p>
+                ${content.description}
+              </p>
+
+              <div class="concept-label">
+                CREATIVE CONTENT
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="item-heading">
+
+            <div class="number">
+              ${String(index + 1).padStart(2,"0")}
+            </div>
+
+            <h2>
+              ${content.name}
+            </h2>
+
+            <p>
+              ${content.description}
+            </p>
+
+
+            <div class="badges">
+
+              <span class="badge">
+                ${content.format}
+              </span>
+
+              <span class="badge">
+                Premium Design
+              </span>
+
+              <span class="badge">
+                Victor Phoenix
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="packages">
+
+            ${packageCard(content,0)}
+
+            ${packageCard(content,1)}
+
+            ${packageCard(content,2)}
+
+          </div>
+
+        `;
+
+
+        catalogue.appendChild(section);
+
+      }
+    );
+
+  </script>
 
 </body>
 </html>

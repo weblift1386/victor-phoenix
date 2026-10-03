@@ -1,841 +1,1629 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Logo Design | Victor Phoenix</title>
-
-<style>
-:root{
-  --bg:#070707;
-  --card:#111;
-  --card2:#151515;
-  --line:#292929;
-  --text:#f5f5f5;
-  --muted:#999;
-}
-
-*{box-sizing:border-box;margin:0;padding:0}
-
-html{scroll-behavior:smooth}
-
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.6;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-header{
-  position:sticky;
-  top:0;
-  z-index:50;
-  background:rgba(7,7,7,.92);
-  backdrop-filter:blur(15px);
-  border-bottom:1px solid var(--line);
-}
-
-.nav{
-  max-width:1300px;
-  margin:auto;
-  padding:18px 25px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.logo{
-  width:auto;
-  height:48px;
-}
-
-.back{
-  border:1px solid #444;
-  padding:10px 17px;
-  border-radius:30px;
-  font-size:14px;
-}
-
-.back:hover{
-  background:white;
-  color:black;
-}
-
-.hero{
-  max-width:1100px;
-  margin:auto;
-  padding:100px 25px 70px;
-  text-align:center;
-}
-
-.eyebrow{
-  color:#888;
-  text-transform:uppercase;
-  letter-spacing:.22em;
-  font-size:12px;
-  margin-bottom:20px;
-}
-
-.hero h1{
-  font-size:clamp(55px,9vw,110px);
-  line-height:.9;
-  letter-spacing:-.06em;
-}
-
-.hero p{
-  max-width:760px;
-  margin:30px auto 0;
-  color:var(--muted);
-  font-size:18px;
-}
-
-/* LOGO SECTIONS */
-
-.catalog{
-  max-width:1250px;
-  margin:auto;
-  padding:20px 24px 100px;
-}
-
-.logo-section{
-  margin-bottom:90px;
-}
-
-.showcase{
-  overflow:hidden;
-  border:1px solid var(--line);
-  border-radius:28px;
-  background:linear-gradient(145deg,#0d0d0d,#171717);
-}
-
-.showcase-label{
-  display:flex;
-  justify-content:space-between;
-  padding:14px 20px;
-  border-bottom:1px solid var(--line);
-  color:#777;
-  font-size:11px;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-}
-
-.sample{
-  min-height:430px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  overflow:hidden;
-  padding:60px 25px;
-}
-
-.sample:before{
-  content:"";
-  position:absolute;
-  width:450px;
-  height:450px;
-  border-radius:50%;
-  background:var(--accent);
-  opacity:.13;
-  filter:blur(100px);
-  top:-220px;
-  right:-150px;
-}
-
-.sample-content{
-  text-align:center;
-  position:relative;
-  z-index:2;
-}
-
-.symbol{
-  width:145px;
-  height:145px;
-  margin:auto auto 25px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color:var(--accent);
-  font-size:52px;
-  font-weight:900;
-}
-
-.brand{
-  font-size:clamp(34px,6vw,70px);
-  font-weight:900;
-  letter-spacing:-.055em;
-}
-
-.tagline{
-  margin-top:10px;
-  color:#aaa;
-  font-size:13px;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-}
-
-.sample-note{
-  margin-top:22px;
-  color:#666;
-  font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:.16em;
-}
-
-/* VISUAL STYLES */
-
-.minimalist .symbol{
-  border:5px solid var(--accent);
-  border-radius:50%;
-}
-
-.abstract .symbol{
-  background:linear-gradient(135deg,var(--accent),#fff2);
-  border-radius:35% 65% 60% 40%;
-  transform:rotate(-15deg);
-}
-
-.wordmark .symbol{
-  border-bottom:7px solid var(--accent);
-}
-
-.lettermark .symbol{
-  border:4px solid var(--accent);
-  border-radius:18px;
-}
-
-.monogram .symbol{
-  border:4px solid var(--accent);
-  border-radius:50%;
-}
-
-.luxury .symbol{
-  border:4px solid var(--accent);
-  transform:rotate(45deg);
-  border-radius:12px;
-}
-
-.vintage .symbol{
-  border:5px double var(--accent);
-  border-radius:50%;
-}
-
-.emblem .symbol{
-  border:4px solid var(--accent);
-  clip-path:polygon(50% 0,92% 22%,82% 82%,50% 100%,18% 82%,8% 22%);
-}
-
-.mascot .symbol{
-  background:#191919;
-  border:4px solid var(--accent);
-  border-radius:42%;
-}
-
-.threed .symbol{
-  background:linear-gradient(145deg,var(--accent),#fff2);
-  box-shadow:12px 12px 0 #ffffff0b,25px 25px 40px #000;
-  border-radius:18px;
-}
-
-.signature .symbol{
-  border-bottom:3px solid var(--accent);
-  border-radius:50%;
-  font-family:cursive;
-}
-
-.combination .symbol{
-  border:4px solid var(--accent);
-  border-radius:50%;
-}
-
-.industrial .symbol{
-  border:5px solid var(--accent);
-  background:#181818;
-  clip-path:polygon(
-    0 20%,20% 20%,20% 0,80% 0,
-    80% 20%,100% 20%,100% 80%,
-    80% 80%,80% 100%,20% 100%,
-    20% 80%,0 80%
-  );
-}
-
-.tech .symbol{
-  border:3px solid var(--accent);
-  border-radius:22px;
-  box-shadow:inset 0 0 35px #fff1;
-}
-
-.geometric .symbol{
-  background:var(--accent);
-  clip-path:polygon(50% 0,100% 100%,0 100%);
-  color:#111;
-}
-
-.negative .symbol{
-  border-radius:50%;
-  background:radial-gradient(circle at 35% 35%,transparent 0 23%,var(--accent) 24% 50%,transparent 51%);
-}
-
-.badge .symbol{
-  border:4px solid var(--accent);
-  border-radius:20px;
-}
-
-.pictorial .symbol{
-  border:4px solid var(--accent);
-  border-radius:50%;
-}
-
-.character .symbol{
-  border:4px solid var(--accent);
-  border-radius:45%;
-}
-
-.handcrafted .symbol{
-  border:3px dashed var(--accent);
-  border-radius:38%;
-}
-
-.sports .symbol{
-  border-left:9px solid var(--accent);
-  border-right:9px solid var(--accent);
-  transform:skewX(-10deg);
-}
-
-.gaming .symbol{
-  border:4px solid var(--accent);
-  clip-path:polygon(10% 0,90% 0,100% 70%,75% 100%,25% 100%,0 70%);
-}
-
-.fashion .symbol{
-  border-bottom:3px solid var(--accent);
-  border-radius:50%;
-}
-
-.corporate .symbol{
-  border:3px solid var(--accent);
-  border-radius:20px;
-}
-
-.food .symbol{
-  border:5px solid var(--accent);
-  border-radius:50%;
-}
-
-.realestate .symbol{
-  background:#151515;
-  border:3px solid var(--accent);
-  clip-path:polygon(50% 0,100% 38%,100% 100%,0 100%,0 38%);
-}
-
-.beauty .symbol{
-  border:3px solid var(--accent);
-  border-radius:50% 20% 50% 20%;
-  transform:rotate(45deg);
-}
-
-.automotive .symbol{
-  border:4px solid var(--accent);
-  border-radius:50%;
-}
-
-.entertainment .symbol{
-  border:4px solid var(--accent);
-  border-radius:50%;
-  box-shadow:0 0 35px #fff1;
-}
-
-.apparel .symbol{
-  border:4px solid var(--accent);
-  transform:skewX(-8deg);
-}
-
-/* INFO */
-
-.info{
-  padding:35px;
-}
-
-.info h2{
-  font-size:38px;
-  letter-spacing:-.04em;
-  margin-bottom:10px;
-}
-
-.description{
-  color:var(--muted);
-  max-width:900px;
-  margin-bottom:30px;
-}
-
-/* PACKAGES */
-
-.packages{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.package{
-  padding:25px;
-  background:#0c0c0c;
-  border:1px solid #2a2a2a;
-  border-radius:20px;
-}
-
-.package.standard{
-  border-color:#777;
-}
-
-.package h3{
-  font-size:21px;
-}
-
-.price{
-  font-size:36px;
-  font-weight:900;
-  margin:8px 0 16px;
-}
-
-.package ul{
-  list-style:none;
-  color:#aaa;
-  font-size:14px;
-}
-
-.package li{
-  padding:8px 0;
-  border-bottom:1px solid #202020;
-}
-
-.package li:last-child{
-  border-bottom:none;
-}
-
-/* ONLY START NOW ON PACKAGES */
-
-.start{
-  display:block;
-  margin-top:22px;
-  padding:12px;
-  text-align:center;
-  border-radius:30px;
-  background:white;
-  color:#000;
-  font-weight:800;
-  font-size:13px;
-}
-
-.start:hover{
-  background:#ddd;
-}
-
-/* FINAL CONTACT */
-
-.final-contact{
-  max-width:1250px;
-  margin:0 auto 100px;
-  padding:0 24px;
-}
-
-.contact-box{
-  border:1px solid #333;
-  border-radius:28px;
-  padding:60px 30px;
-  text-align:center;
-  background:linear-gradient(135deg,#131313,#080808);
-}
-
-.contact-box h2{
-  font-size:clamp(34px,5vw,60px);
-  letter-spacing:-.05em;
-}
-
-.contact-box p{
-  max-width:680px;
-  margin:18px auto 28px;
-  color:#999;
-}
-
-.contact-button{
-  display:inline-block;
-  background:white;
-  color:#000;
-  padding:14px 24px;
-  border-radius:30px;
-  font-weight:800;
-}
-
-footer{
-  border-top:1px solid var(--line);
-  padding:30px;
-  text-align:center;
-  color:#666;
-  font-size:13px;
-}
-
-@media(max-width:850px){
-
-  .packages{
-    grid-template-columns:1fr;
-  }
-
-  .sample{
-    min-height:360px;
-  }
-
-}
-
-@media(max-width:600px){
-
-  .nav{
-    padding:15px;
-  }
-
-  .logo{
-    height:40px;
-  }
-
-  .back{
-    font-size:12px;
-  }
-
-  .hero{
-    padding:75px 20px 50px;
-  }
-
-  .catalog{
-    padding-left:15px;
-    padding-right:15px;
-  }
-
-  .info{
-    padding:25px;
-  }
-
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Logo Design — Victor Phoenix</title>
+
+  <meta
+    name="description"
+    content="Premium logo design services by Victor Phoenix. Explore minimalist, abstract, wordmark, lettermark, monogram, luxury, vintage, emblem, mascot, 3D and more."
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 15% 5%, rgba(255,255,255,.07), transparent 28%),
+        radial-gradient(circle at 85% 20%, rgba(255,255,255,.04), transparent 30%),
+        #070707;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1240px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7,7,7,.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .header-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand img {
+      width: 150px;
+      max-height: 52px;
+      object-fit: contain;
+    }
+
+    .back-link {
+      color: #aaa;
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    .back-link:hover {
+      color: #fff;
+      transform: translateX(-3px);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 105px 0 90px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .eyebrow {
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 11px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(50px, 8vw, 100px);
+      line-height: .92;
+      letter-spacing: -5px;
+      font-weight: 800;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      color: #777;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      color: #aaa;
+      font-size: 17px;
+    }
+
+    /* INTRO */
+
+    .intro {
+      padding: 75px 0 45px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .intro-label {
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 10px;
+      margin-bottom: 16px;
+    }
+
+    .intro h2 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .intro-copy {
+      color: #999;
+      max-width: 650px;
+      font-size: 15px;
+    }
+
+    .intro-copy strong {
+      color: #ddd;
+    }
+
+    /* SAMPLE GALLERY */
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 40px;
+    }
+
+    .gallery-card {
+      height: 180px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(255,255,255,.09), transparent 50%),
+        #101010;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-card small {
+      position: absolute;
+      left: 14px;
+      bottom: 11px;
+      color: #666;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .gallery-logo {
+      transform: scale(.85);
+    }
+
+    /* CATALOGUE */
+
+    .catalogue {
+      padding: 80px 0 110px;
+    }
+
+    .section-heading {
+      margin-bottom: 45px;
+    }
+
+    .section-heading .label {
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 10px;
+      margin-bottom: 12px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(34px,5vw,58px);
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: #999;
+      max-width: 720px;
+    }
+
+    .logo-item {
+      margin-bottom: 115px;
+    }
+
+    /* LOGO PREVIEW */
+
+    .logo-preview {
+      min-height: 340px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 26px;
+      background:
+        radial-gradient(circle at 50% 45%, rgba(255,255,255,.09), transparent 38%),
+        linear-gradient(145deg,#151515,#080808);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 32px;
+    }
+
+    .logo-preview::before {
+      content: "";
+      position: absolute;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.04);
+    }
+
+    .logo-preview::after {
+      content: "";
+      position: absolute;
+      width: 680px;
+      height: 680px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.025);
+    }
+
+    .logo-preview-inner {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .preview-number {
+      color: #666;
+      font-size: 10px;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+    }
+
+    .preview-name {
+      color: #777;
+      font-size: 9px;
+      letter-spacing: 3px;
+      margin-top: 20px;
+      text-transform: uppercase;
+    }
+
+    /* LOGO TYPES */
+
+    .logo-symbol {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .minimalist {
+      width: 88px;
+      height: 88px;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      font-size: 30px;
+    }
+
+    .abstract {
+      width: 92px;
+      height: 92px;
+      position: relative;
+    }
+
+    .abstract::before,
+    .abstract::after {
+      content: "";
+      position: absolute;
+      width: 65px;
+      height: 24px;
+      border: 5px solid #fff;
+      transform: rotate(35deg);
+    }
+
+    .abstract::before {
+      top: 18px;
+      left: 8px;
+    }
+
+    .abstract::after {
+      bottom: 18px;
+      right: 8px;
+      transform: rotate(-35deg);
+    }
+
+    .wordmark {
+      font-size: 42px;
+      letter-spacing: -2px;
+      font-weight: 800;
+    }
+
+    .lettermark {
+      width: 105px;
+      height: 105px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      font-size: 44px;
+      letter-spacing: -8px;
+      padding-right: 7px;
+    }
+
+    .monogram {
+      font-size: 68px;
+      font-family: Georgia, serif;
+      letter-spacing: -20px;
+      padding-right: 18px;
+    }
+
+    .luxury {
+      font-family: Georgia, serif;
+      font-size: 55px;
+      border: 1px solid #aaa;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .vintage {
+      border: 4px double #fff;
+      padding: 17px 28px;
+      font-family: Georgia, serif;
+      font-size: 27px;
+      letter-spacing: 3px;
+    }
+
+    .emblem {
+      width: 120px;
+      height: 105px;
+      border: 3px solid #fff;
+      clip-path: polygon(50% 0%, 95% 22%, 88% 78%, 50% 100%, 12% 78%, 5% 22%);
+      font-size: 28px;
+    }
+
+    .mascot {
+      width: 100px;
+      height: 100px;
+      border-radius: 48% 52% 45% 55%;
+      border: 4px solid #fff;
+      position: relative;
+      font-size: 34px;
+    }
+
+    .mascot::before,
+    .mascot::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      top: 22px;
+    }
+
+    .mascot::before {
+      left: 18px;
+    }
+
+    .mascot::after {
+      right: 18px;
+    }
+
+    .three-d {
+      font-size: 62px;
+      font-weight: 900;
+      text-shadow:
+        5px 5px 0 #555,
+        10px 10px 0 #222;
+    }
+
+    .signature {
+      font-family: "Brush Script MT", cursive;
+      font-size: 58px;
+      font-style: italic;
+    }
+
+    .combination {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .combination .mark {
+      width: 65px;
+      height: 65px;
+      border: 3px solid #fff;
+      transform: rotate(45deg);
+    }
+
+    .combination span {
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .industrial {
+      padding: 15px 25px;
+      border: 5px solid #fff;
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+
+    .tech {
+      font-size: 55px;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .tech::before {
+      content: "<";
+    }
+
+    .tech::after {
+      content: "/>";
+    }
+
+    .geometric {
+      width: 100px;
+      height: 100px;
+      border: 4px solid #fff;
+      transform: rotate(45deg);
+      font-size: 28px;
+    }
+
+    .negative {
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      color: #080808;
+      border-radius: 50%;
+      font-size: 35px;
+      position: relative;
+    }
+
+    .negative::after {
+      content: "";
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      background: #080808;
+      border-radius: 50%;
+      top: 10px;
+      right: 8px;
+    }
+
+    .badge {
+      width: 115px;
+      height: 115px;
+      border: 4px solid #fff;
+      border-radius: 50%;
+      position: relative;
+      font-size: 27px;
+    }
+
+    .badge::before,
+    .badge::after {
+      content: "★";
+      position: absolute;
+      font-size: 10px;
+    }
+
+    .badge::before {
+      top: 10px;
+    }
+
+    .badge::after {
+      bottom: 10px;
+    }
+
+    .pictorial {
+      font-size: 72px;
+    }
+
+    .character {
+      font-size: 70px;
+      filter: grayscale(1);
+    }
+
+    .handcrafted {
+      font-family: Georgia, serif;
+      font-size: 48px;
+      border-bottom: 3px solid #fff;
+      padding-bottom: 8px;
+    }
+
+    .sports {
+      font-size: 60px;
+      transform: skewX(-12deg);
+      font-weight: 900;
+    }
+
+    .gaming {
+      border: 3px solid #fff;
+      padding: 10px 20px;
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: 4px;
+    }
+
+    .fashion {
+      font-family: Georgia, serif;
+      font-size: 46px;
+      letter-spacing: 6px;
+    }
+
+    .corporate {
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      border-left: 7px solid #fff;
+      padding-left: 15px;
+    }
+
+    .food {
+      font-size: 65px;
+    }
+
+    .real-estate {
+      width: 100px;
+      height: 80px;
+      border: 4px solid #fff;
+      position: relative;
+      font-size: 35px;
+    }
+
+    .real-estate::before {
+      content: "";
+      position: absolute;
+      width: 65px;
+      height: 65px;
+      border-left: 4px solid #fff;
+      border-top: 4px solid #fff;
+      transform: rotate(45deg);
+      top: -35px;
+      left: 14px;
+      background: #101010;
+    }
+
+    .beauty {
+      width: 95px;
+      height: 95px;
+      border: 2px solid #fff;
+      border-radius: 50% 50% 45% 45%;
+      font-family: Georgia, serif;
+      font-size: 35px;
+    }
+
+    .automotive {
+      font-size: 62px;
+      transform: skewX(-15deg);
+      font-weight: 900;
+    }
+
+    .entertainment {
+      width: 100px;
+      height: 100px;
+      border: 4px solid #fff;
+      transform: rotate(45deg);
+      font-size: 30px;
+    }
+
+    .sportswear {
+      font-size: 43px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      border-top: 3px solid #fff;
+      border-bottom: 3px solid #fff;
+      padding: 8px 20px;
+    }
+
+    /* ITEM CONTENT */
+
+    .item-heading {
+      margin-bottom: 28px;
+    }
+
+    .item-heading .number {
+      color: #777;
+      font-size: 11px;
+      letter-spacing: 4px;
+      margin-bottom: 7px;
+    }
+
+    .item-heading h2 {
+      font-size: clamp(29px,4vw,48px);
+      line-height: 1;
+      letter-spacing: -1.5px;
+      margin-bottom: 12px;
+    }
+
+    .item-heading p {
+      color: #999;
+      max-width: 760px;
+      font-size: 15px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .format-badge {
+      padding: 7px 11px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 999px;
+      color: #999;
+      font-size: 10px;
+    }
+
+    /* PACKAGES */
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .package {
+      background: linear-gradient(150deg,#151515,#0b0b0b);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 20px;
+      padding: 28px;
+      min-height: 620px;
+      display: flex;
+      flex-direction: column;
+      transition: .3s;
+    }
+
+    .package:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255,255,255,.22);
+    }
+
+    .package.featured {
+      border-color: rgba(255,255,255,.23);
+      background: linear-gradient(150deg,#1b1b1b,#0c0c0c);
+    }
+
+    .package-label {
+      color: #777;
+      font-size: 10px;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+
+    .package h3 {
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .package-intro {
+      color: #999;
+      font-size: 13px;
+      min-height: 55px;
+    }
+
+    .package h4 {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #bbb;
+    }
+
+    .package ul {
+      list-style: none;
+      margin-top: 13px;
+    }
+
+    .package li {
+      position: relative;
+      padding-left: 18px;
+      color: #aaa;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .package li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #fff;
+    }
+
+    .package-details {
+      border-top: 1px solid rgba(255,255,255,.1);
+      margin-top: 20px;
+      padding-top: 16px;
+    }
+
+    .detail {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      font-size: 12px;
+    }
+
+    .detail:last-child {
+      border-bottom: 0;
+    }
+
+    .detail span:first-child {
+      color: #777;
+    }
+
+    .detail span:last-child {
+      color: #ddd;
+      text-align: right;
+    }
+
+    .start-btn {
+      margin-top: auto;
+      padding-top: 22px;
+    }
+
+    .start-btn a {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: #fff;
+      color: #080808;
+      font-size: 12px;
+      font-weight: 700;
+      transition: .3s;
+    }
+
+    .start-btn a:hover {
+      background: #d9d9d9;
+      transform: translateY(-2px);
+    }
+
+    /* CONTACT */
+
+    .contact {
+      padding: 100px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+      text-align: center;
+      background: #050505;
+    }
+
+    .contact h2 {
+      font-size: clamp(35px,6vw,70px);
+      letter-spacing: -3px;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      color: #999;
+      max-width: 620px;
+      margin: auto;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: #111;
+      font-size: 13px;
+      transition: .3s;
+    }
+
+    .contact-btn:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 28px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    .footer-copy {
+      color: #555;
+      font-size: 11px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 1000px) {
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .packages {
+        grid-template-columns: 1fr;
+      }
+
+      .package {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .brand img {
+        width: 125px;
+      }
+
+      .back-link {
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 80px 0 65px;
+      }
+
+      .hero h1 {
+        letter-spacing: -3px;
+      }
+
+      .gallery-card {
+        height: 145px;
+      }
+
+      .logo-preview {
+        min-height: 280px;
+      }
+
+      .logo-item {
+        margin-bottom: 85px;
+      }
+
+      .package {
+        padding: 23px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
 
-<header>
-<nav class="nav">
+  <!-- HEADER -->
 
-<a href="graphics.html">
-<img src="logo.png" class="logo" alt="Victor Phoenix">
-</a>
+  <header>
 
-<a href="graphics.html" class="back">
-← Graphics & Design
-</a>
+    <div class="container header-inner">
 
-</nav>
-</header>
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="Victor Phoenix">
+      </a>
 
+      <a href="graphics.html" class="back-link">
+        ← Back to Graphics & Design
+      </a>
 
-<section class="hero">
+    </div>
 
-<div class="eyebrow">
-Phoenix Creative · Logo Design
-</div>
+  </header>
 
-<h1>
-Logo Design.
-</h1>
 
-<p>
-Explore professional logo styles for businesses, creators, technology brands, entertainment, fashion, sports, gaming, hospitality and more.
-</p>
+  <!-- HERO -->
 
-</section>
+  <section class="hero">
 
+    <div class="container">
 
-<main class="catalog" id="catalog"></main>
+      <div class="eyebrow">
+        Victor Phoenix / Graphics & Design
+      </div>
 
+      <h1>
+        Logo<br>
+        <span>Design.</span>
+      </h1>
 
-<!-- FINAL CONTACT SECTION — OUTSIDE ALL PACKAGES -->
+      <p>
+        Distinctive logo systems designed to give businesses, products
+        and brands a recognizable identity.
+      </p>
 
-<section class="final-contact">
+    </div>
 
-<div class="contact-box">
+  </section>
 
-<h2>
-Ready to create?
-</h2>
 
-<p>
-Tell Victor Phoenix what you want to create. Share your business, idea, preferred logo style or anything you already have in mind.
-</p>
+  <!-- INTRO -->
 
-<a
-class="contact-button"
-href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20create%20a%20logo.%20Here%20is%20what%20I%20want%3A"
->
-Contact Victor Phoenix →
-</a>
+  <section class="intro">
 
-</div>
+    <div class="container">
 
-</section>
+      <div class="intro-grid">
 
+        <div>
 
-<footer>
-© 2026 Victor Phoenix. Create What’s Next.
-</footer>
+          <div class="intro-label">
+            Introduction
+          </div>
 
+          <h2>
+            More than<br>
+            just a logo.
+          </h2>
 
-<script>
+        </div>
 
-const logos = [
+        <div class="intro-copy">
 
-["Minimalist","NOVA","Simply Forward","A clean and refined identity built around simplicity, balance and clarity.","●","#e8e8e8","minimalist","35","55","90"],
+          <p>
+            A strong logo should communicate what a brand represents
+            without needing a long explanation.
+          </p>
 
-["Abstract","VYRA","Beyond Form","An expressive identity using distinctive shapes and movement to create a memorable visual language.","◈","#ff5c7a","abstract","45","70","110"],
+          <br>
 
-["Wordmark","VELA","Move Beautifully","A typography-led identity where the brand name becomes the central visual asset.","V","#58a6ff","wordmark","35","55","90"],
+          <p>
+            Victor Phoenix creates <strong>clear, memorable and
+            purpose-driven logos</strong> across different visual styles —
+            from minimalist marks and wordmarks to mascots, emblems,
+            technology marks and premium identities.
+          </p>
 
-["Lettermark","ARC","Build With Purpose","A compact initial-based identity designed for strong recognition and clean applications.","A","#7ee787","lettermark","35","55","90"],
+        </div>
 
-["Monogram","MONARQ","Defined by Detail","An interlocking-letter identity designed for sophisticated and premium brands.","M","#d2a8ff","monogram","40","60","100"],
+      </div>
 
-["Luxury / Premium","VÉRONA","The Art of Living","An elegant identity direction with refined proportions and premium visual character.","◇","#f2c14e","luxury","55","85","130"],
 
-["Vintage / Retro","OLD TOWN","Since 1987","A heritage-inspired identity with classic typography and nostalgic character.","OT","#d69e6d","vintage","45","70","110"],
+      <!-- SAMPLE GALLERY -->
 
-["Emblem","VALOR","Strength in Unity","A structured badge-style identity for organizations, clubs, institutions and brands.","V","#4dd0e1","emblem","45","70","110"],
+      <div class="gallery">
 
-["Mascot","FANG","Play Without Limits","An expressive character-led identity ideal for gaming, sports, entertainment and youth brands.","◉","#ff7a18","mascot","65","105","160"],
+        <div class="gallery-card">
+          <div class="gallery-logo logo-symbol minimalist">V</div>
+          <small>Minimalist</small>
+        </div>
 
-["3D","VORTEX","Enter Another Dimension","A dimensional logo direction using depth, highlights and perspective.","3D","#8b9cff","threed","65","105","160"],
+        <div class="gallery-card">
+          <div class="gallery-logo logo-symbol abstract"></div>
+          <small>Abstract</small>
+        </div>
 
-["Signature","Eliana","Made Personally","A personal handwritten identity for creators, personalities, beauty and fashion brands.","E","#ff8fc7","signature","45","70","110"],
+        <div class="gallery-card">
+          <div class="gallery-logo wordmark">NOVA</div>
+          <small>Wordmark</small>
+        </div>
 
-["Combination","VERTEX","Build What Matters","A flexible identity combining a symbol with a strong wordmark.","V★","#36d399","combination","50","80","125"],
+        <div class="gallery-card">
+          <div class="gallery-logo lettermark">VP</div>
+          <small>Lettermark</small>
+        </div>
 
-["Industrial","FORGE","Built to Perform","A bold engineered identity for construction, manufacturing, engineering and industrial businesses.","F","#f97316","industrial","50","80","125"],
+        <div class="gallery-card">
+          <div class="gallery-logo monogram">VP</div>
+          <small>Monogram</small>
+        </div>
 
-["Tech / Technology","NEXORA","Technology in Motion","A futuristic technology identity using precise geometry and digital visual language.","N","#22d3ee","tech","50","80","125"],
+        <div class="gallery-card">
+          <div class="gallery-logo luxury">V</div>
+          <small>Luxury</small>
+        </div>
 
-["Geometric","AXIS","Precision in Motion","A structured identity built from balanced geometric forms.","△","#60a5fa","geometric","45","70","110"],
+        <div class="gallery-card">
+          <div class="gallery-logo emblem">VP</div>
+          <small>Emblem</small>
+        </div>
 
-["Negative Space","NOVAIR","See Beyond","A clever identity where a second visual idea is revealed through negative space.","◐","#a78bfa","negative","50","80","125"],
+        <div class="gallery-card">
+          <div class="gallery-logo tech">&nbsp;</div>
+          <small>Technology</small>
+        </div>
 
-["Badge","NORTHLINE","Made for the Journey","A strong enclosed identity for lifestyle brands, products, clubs and communities.","N","#34d399","badge","45","70","110"],
+      </div>
 
-["Pictorial / Symbol","LUMO","Light Your Way","A standalone visual symbol designed to communicate the brand independently.","✦","#fbbf24","pictorial","45","70","110"],
+    </div>
 
-["Character","ROO","Made to Stand Out","A personality-driven identity using character and illustration.","R","#fb7185","character","60","95","145"],
+  </section>
 
-["Handcrafted","MOSS & CO.","Naturally Made","An organic hand-drawn direction for natural, handmade and lifestyle brands.","✿","#84cc16","handcrafted","45","70","110"],
 
-["Sports","APEX","Push Further","A powerful high-energy identity for sports, fitness, clubs and athletes.","A","#ef4444","sports","50","80","125"],
+  <!-- CATALOGUE -->
 
-["Gaming","FANG//X","Enter the Arena","A bold gaming identity designed for strong digital recognition and character.","FX","#a855f7","gaming","60","100","155"],
+  <main class="catalogue">
 
-["Fashion","NOIRÉ","Designed to Be Seen","A refined fashion identity emphasizing typography, proportion and editorial style.","N","#f472b6","fashion","55","85","130"],
+    <div class="container">
 
-["Corporate","NORTHSTAR","Lead With Clarity","A professional identity designed for corporate organizations and long-term brand systems.","★","#94a3b8","corporate","50","80","125"],
+      <div class="section-heading">
 
-["Food / Restaurant","SAVORA","Made to Taste","A warm identity direction for restaurants, cafés, food brands and hospitality.","S","#fb923c","food","45","70","110"],
+        <div class="label">
+          All 30 logo styles
+        </div>
 
-["Real Estate","VERTEX ESTATES","Spaces With Purpose","An architectural identity designed for property, real estate and development brands.","V","#38bdf8","realestate","50","80","125"],
+        <h2>
+          Logo Design Catalogue.
+        </h2>
 
-["Beauty / Lifestyle","ELORA","Feel Beautiful","A refined identity for beauty, skincare, wellness and lifestyle businesses.","E","#f9a8d4","beauty","45","70","110"],
+        <p>
+          Choose the visual direction that best represents your brand.
+          Every style below has its own dedicated design approach.
+        </p>
 
-["Automotive","TORQ","Driven Forward","A performance-oriented identity using mechanical and speed-inspired visual language.","T","#ef4444","automotive","50","80","125"],
+      </div>
 
-["Entertainment","PULSE","Feel the Moment","A high-impact identity for music, media, events and entertainment brands.","P","#f43f5e","entertainment","50","80","125"],
+      <div id="logoCatalogue"></div>
 
-["Sportswear / Apparel","STRIKE","Wear the Energy","A bold flexible identity for clothing, apparel, merchandise and sportswear.","S","#facc15","apparel","50","80","125"]
+    </div>
 
-];
+  </main>
 
 
-function packageCard(name,price,concepts,revisions,formats,delivery,style){
+  <!-- CONTACT -->
 
-return `
+  <section class="contact">
 
-<div class="package ${name === "Standard" ? "standard" : ""}">
+    <div class="container">
 
-<h3>${name}</h3>
+      <h2>
+        Ready to create?
+      </h2>
 
-<div class="price">
-$${price}
-</div>
+      <p>
+        Tell Victor Phoenix what you want your logo to communicate,
+        and let's create an identity built around it.
+      </p>
 
-<ul>
+      <div class="contact-buttons">
 
-<li>${concepts} original concept${concepts>1?"s":""}</li>
+        <a
+          class="contact-btn"
+          href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20a%20logo%20design%20inquiry."
+          target="_blank"
+          rel="noopener"
+        >
+          WhatsApp →
+        </a>
 
-<li>${revisions} revision round${revisions>1?"s":""}</li>
+        <a
+          class="contact-btn"
+          href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20Logo%20Design%20Inquiry"
+        >
+          Email →
+        </a>
 
-<li>Selected concept professionally finalized</li>
+      </div>
 
-<li>Full-color logo</li>
+    </div>
 
-<li>Black & white logo</li>
+  </section>
 
-<li>Transparent background</li>
 
-<li>${formats}</li>
+  <!-- FOOTER -->
 
-<li>Commercial-ready files</li>
+  <footer>
 
-<li>Delivery: ${delivery}</li>
+    <div class="container footer-inner">
 
-</ul>
+      <div class="footer-brand">
+        Victor Phoenix
+      </div>
 
-<a
-class="start"
-href="https://wa.me/2349165831007?text=${encodeURIComponent(
-"Hello Victor Phoenix, I want to start the " +
-name +
-" package for " +
-style +
-" Logo Design."
-)}"
->
-START NOW →
-</a>
+      <div class="footer-copy">
+        Create What’s Next. © 2026 Victor Phoenix.
+      </div>
 
-</div>
+    </div>
 
-`;
+  </footer>
 
-}
+
+  <script>
 
+    const logos = [
+
+      {
+        name: "Minimalist Logo",
+        description: "A simple, clean logo built around restraint, clarity and recognizable form.",
+        sample: `<div class="logo-symbol minimalist">M</div>`,
+        prices: ["$30","$50","$80"]
+      },
+
+      {
+        name: "Abstract Logo",
+        description: "A conceptual symbol using unconventional shapes to create a distinctive visual identity.",
+        sample: `<div class="logo-symbol abstract"></div>`,
+        prices: ["$40","$65","$100"]
+      },
+
+      {
+        name: "Wordmark Logo",
+        description: "A logo built primarily from the brand name using carefully developed typography.",
+        sample: `<div class="wordmark">VECTRA</div>`,
+        prices: ["$30","$50","$80"]
+      },
+
+      {
+        name: "Lettermark Logo",
+        description: "A typography-based mark built from the initials of a brand or organization.",
+        sample: `<div class="logo-symbol lettermark">VP</div>`,
+        prices: ["$30","$50","$80"]
+      },
+
+      {
+        name: "Monogram Logo",
+        description: "Interlocking or stylized initials developed into a compact recognizable mark.",
+        sample: `<div class="logo-symbol monogram">VP</div>`,
+        prices: ["$35","$55","$90"]
+      },
+
+      {
+        name: "Luxury / Premium Logo",
+        description: "A refined identity designed around elegance, exclusivity and sophisticated typography.",
+        sample: `<div class="logo-symbol luxury">V</div>`,
+        prices: ["$50","$80","$120"]
+      },
+
+      {
+        name: "Vintage / Retro Logo",
+        description: "A nostalgic logo direction inspired by classic typography, badges and traditional branding.",
+        sample: `<div class="vintage">HERITAGE</div>`,
+        prices: ["$40","$65","$100"]
+      },
+
+      {
+        name: "Emblem Logo",
+        description: "A contained logo composition where typography and symbols work together inside a unified shape.",
+        sample: `<div class="logo-symbol emblem">VP</div>`,
+        prices: ["$40","$65","$100"]
+      },
+
+      {
+        name: "Mascot Logo",
+        description: "A character-led identity designed to give a brand personality and a memorable visual face.",
+        sample: `<div class="logo-symbol mascot">M</div>`,
+        prices: ["$60","$100","$150"]
+      },
+
+      {
+        name: "3D Logo",
+        description: "A dimensional logo treatment designed to create depth, volume and a modern visual presence.",
+        sample: `<div class="logo-symbol three-d">V</div>`,
+        prices: ["$60","$100","$150"]
+      },
+
+      {
+        name: "Signature Logo",
+        description: "A personal, flowing identity inspired by handwritten or signature-style lettering.",
+        sample: `<div class="signature">Victor</div>`,
+        prices: ["$40","$65","$100"]
+      },
+
+      {
+        name: "Combination Logo",
+        description: "A unified logo combining a symbol and wordmark into one complete brand identity.",
+        sample: `
+          <div class="combination">
+            <div class="mark"></div>
+            <span>PHOENIX</span>
+          </div>
+        `,
+        prices: ["$45","$75","$120"]
+      },
+
+      {
+        name: "Industrial Logo",
+        description: "Strong, structured branding designed for engineering, construction, manufacturing and industrial businesses.",
+        sample: `<div class="industrial">FORGE</div>`,
+        prices: ["$40","$65","$100"]
+      },
+
+      {
+        name: "Tech / Technology Logo",
+        description: "Modern technology-focused marks built for software, AI, digital products and technology companies.",
+        sample: `<div class="tech"></div>`,
+        prices: ["$45","$75","$115"]
+      },
+
+      {
+        name: "Geometric Logo",
+        description: "A structured identity built from precise geometric shapes and balanced visual proportions.",
+        sample: `<div class="logo-symbol geometric">G</div>`,
+        prices: ["$40","$65","$100"]
+      },
+
+      {
+        name: "Negative Space Logo",
+        description: "A clever logo where hidden imagery or meaning is created through intentional negative space.",
+        sample: `<div class="logo-symbol negative">N</div>`,
+        prices: ["$45","$75","$115"]
+      },
+
+      {
+        name: "Badge Logo",
+        description: "A compact badge-style identity designed for products, communities, clubs and organizations.",
+        sample: `<div class="logo-symbol badge">B</div>`,
+        prices: ["$40","$65","$100"]
+      },
+
+      {
+        name: "Pictorial / Symbol Logo",
+        description: "A recognizable standalone visual symbol representing the brand without relying on its full name.",
+        sample: `<div class="pictorial">◆</div>`,
+        prices: ["$40","$65","$100"]
+      },
+
+      {
+        name: "Character Logo",
+        description: "A character-driven identity created to give a brand a recognizable personality.",
+        sample: `<div class="character">♟</div>`,
+        prices: ["$55","$90","$135"]
+      },
+
+      {
+        name: "Handcrafted Logo",
+        description: "A natural, crafted visual style designed to feel personal, authentic and human.",
+        sample: `<div class="handcrafted">CRAFT</div>`,
+        prices: ["$40","$65","$100"]
+      },
+
+      {
+        name: "Sports Logo",
+        description: "Bold athletic branding designed for teams, competitions, clubs and sporting organizations.",
+        sample: `<div class="sports">X</div>`,
+        prices: ["$45","$75","$115"]
+      },
+
+      {
+        name: "Gaming Logo",
+        description: "Strong gaming-focused identities designed for gamers, teams, communities and gaming brands.",
+        sample: `<div class="gaming">NEX</div>`,
+        prices: ["$45","$75","$115"]
+      },
+
+      {
+        name: "Fashion Logo",
+        description: "Elegant typography-led branding designed for fashion labels, apparel and lifestyle brands.",
+        sample: `<div class="fashion">AURA</div>`,
+        prices: ["$45","$75","$115"]
+      },
+
+      {
+        name: "Corporate Logo",
+        description: "Professional, trustworthy branding designed for established companies and organizations.",
+        sample: `<div class="corporate">VECTOR</div>`,
+        prices: ["$45","$75","$115"]
+      },
+
+      {
+        name: "Food / Restaurant Logo",
+        description: "Memorable food and hospitality identities designed around recognizable culinary concepts.",
+        sample: `<div class="food">♨</div>`,
+        prices: ["$40","$65","$100"]
+      },
+
+      {
+        name: "Real Estate Logo",
+        description: "Property-focused identities using architectural and structural visual language.",
+        sample: `<div class="real-estate">R</div>`,
+        prices: ["$45","$75","$115"]
+      },
+
+      {
+        name: "Beauty / Lifestyle Logo",
+        description: "Elegant branding designed for beauty, skincare, wellness and lifestyle businesses.",
+        sample: `<div class="logo-symbol beauty">B</div>`,
+        prices: ["$40","$65","$100"]
+      },
+
+      {
+        name: "Automotive Logo",
+        description: "Strong streamlined identities designed for automotive businesses, products and communities.",
+        sample: `<div class="automotive">A</div>`,
+        prices: ["$45","$75","$115"]
+      },
+
+      {
+        name: "Entertainment Logo",
+        description: "Expressive branding designed for music, media, entertainment and creative industries.",
+        sample: `<div class="logo-symbol entertainment">E</div>`,
+        prices: ["$45","$75","$115"]
+      },
+
+      {
+        name: "Sportswear / Apparel Logo",
+        description: "Bold wearable identities designed for clothing lines, sportswear and apparel brands.",
+        sample: `<div class="sportswear">MOVE</div>`,
+        prices: ["$45","$75","$115"]
+      }
+
+    ];
+
+
+    function whatsappLink(packageName, logoName) {
+
+      const message =
+        `Hello Victor Phoenix, I'm interested in the ${packageName} ${logoName} package. I'd like to get started. Please send me the package details and next steps.`;
+
+      return `https://wa.me/2349165831007?text=${encodeURIComponent(message)}`;
+
+    }
+
+
+    function packageCard(logo, level) {
+
+      const names = [
+        "Basic",
+        "Standard",
+        "Premium"
+      ];
+
+      const intros = [
+
+        "A clean and professional logo solution for a strong brand foundation.",
+
+        "More creative options with enhanced flexibility and refinement.",
+
+        "A complete premium logo solution with advanced creative direction."
+
+      ];
+
+      const concepts = [
+        "1 concept",
+        "2 concepts",
+        "3 concepts"
+      ];
+
+      const revisions = [
+        "2 revisions",
+        "3 revisions",
+        "5 revisions"
+      ];
+
+      const delivery = [
+        "2–3 business days",
+        "3–5 business days",
+        "5–7 business days"
+      ];
+
+      const finalFiles = [
+        "PDF + JPG/PNG",
+        "PDF + JPG/PNG + Vector",
+        "PDF + JPG/PNG + Vector"
+      ];
+
+      return `
+
+        <div class="package ${level === 1 ? "featured" : ""}">
+
+          <div class="package-label">
+            ${names[level].toUpperCase()}
+          </div>
+
+          <h3>
+            Logo Design
+          </h3>
 
-logos.forEach((logo,index)=>{
+          <div class="price">
+            ${logo.prices[level]}
+          </div>
 
-const [
-style,
-brand,
-tagline,
-description,
-symbol,
-accent,
-className,
-basic,
-standard,
-premium
-]=logo;
+          <p class="package-intro">
+            ${intros[level]}
+          </p>
 
 
-const section=document.createElement("section");
+          <h4>
+            WHAT YOU GET
+          </h4>
 
-section.className="logo-section";
 
+          <ul>
 
-section.innerHTML=`
+            <li>
+              ${level === 0 ? "1" : level === 1 ? "2" : "3"}
+              logo concept${level === 0 ? "" : "s"}
+            </li>
 
-<div class="showcase">
+            <li>
+              High-resolution files
+            </li>
 
-<div class="showcase-label">
+            <li>
+              Transparent background
+            </li>
 
-<span>
-${String(index+1).padStart(2,"0")} · ${style}
-</span>
+            ${
+              level >= 1
+                ? "<li>Vector file included</li>"
+                : ""
+            }
 
-<span>
-Concept Sample
-</span>
+            ${
+              level === 2
+                ? "<li>Full-color + black & white versions</li><li>Commercial-ready delivery</li>"
+                : ""
+            }
 
-</div>
+          </ul>
 
 
-<div
-class="sample ${className}"
-style="--accent:${accent}"
->
+          <div class="package-details">
 
-<div class="sample-content">
+            <div class="detail">
+              <span>Concepts</span>
+              <span>${concepts[level]}</span>
+            </div>
 
-<div class="symbol">
-${symbol}
-</div>
+            <div class="detail">
+              <span>Revisions</span>
+              <span>${revisions[level]}</span>
+            </div>
 
-<div class="brand">
-${brand}
-</div>
+            <div class="detail">
+              <span>Delivery</span>
+              <span>${delivery[level]}</span>
+            </div>
 
-<div class="tagline">
-${tagline}
-</div>
+            <div class="detail">
+              <span>Final Delivery</span>
+              <span>${finalFiles[level]}</span>
+            </div>
 
-<div class="sample-note">
-Logo · Brand Name · Philosophy
-</div>
+          </div>
 
-</div>
 
-</div>
+          <div class="start-btn">
 
+            <a
+              href="${whatsappLink(names[level], logo.name)}"
+              target="_blank"
+              rel="noopener"
+            >
 
-<div class="info">
+              START NOW
 
-<h2>
-${style} Logo
-</h2>
+              <span>
+                →
+              </span>
 
-<p class="description">
-${description}
-</p>
+            </a>
 
+          </div>
 
-<div class="packages">
+        </div>
 
-${packageCard(
-"Basic",
-basic,
-1,
-2,
-"PNG, JPG, PDF",
-"3–4 days",
-style
-)}
+      `;
 
-${packageCard(
-"Standard",
-standard,
-2,
-3,
-"PNG, JPG, PDF, SVG",
-"4–5 days",
-style
-)}
+    }
 
-${packageCard(
-"Premium",
-premium,
-3,
-5,
-"PNG, JPG, PDF, SVG + editable source vector",
-"5–7 days",
-style
-)}
 
-</div>
+    const catalogue =
+      document.getElementById("logoCatalogue");
 
-</div>
 
-</div>
+    logos.forEach((logo,index) => {
 
-`;
+      const section =
+        document.createElement("section");
 
+      section.className =
+        "logo-item";
 
-document
-.getElementById("catalog")
-.appendChild(section);
 
-});
+      section.innerHTML = `
 
-</script>
+        <!-- LOGO SAMPLE -->
+
+        <div class="logo-preview">
+
+          <div class="logo-preview-inner">
+
+            <div class="preview-number">
+              VICTOR PHOENIX · LOGO STYLE
+              ${String(index + 1).padStart(2,"0")}
+            </div>
+
+            ${logo.sample}
+
+            <div class="preview-name">
+              ${logo.name}
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- HEADING -->
+
+        <div class="item-heading">
+
+          <div class="number">
+            ${String(index + 1).padStart(2,"0")}
+          </div>
+
+          <h2>
+            ${logo.name}
+          </h2>
+
+          <p>
+            ${logo.description}
+          </p>
+
+          <div class="badges">
+
+            <span class="format-badge">
+              Custom Logo
+            </span>
+
+            <span class="format-badge">
+              Premium Design
+            </span>
+
+            <span class="format-badge">
+              Victor Phoenix
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- PACKAGES -->
+
+        <div class="packages">
+
+          ${packageCard(logo,0)}
+
+          ${packageCard(logo,1)}
+
+          ${packageCard(logo,2)}
+
+        </div>
+
+      `;
+
+
+      catalogue.appendChild(section);
+
+    });
+
+  </script>
 
 </body>
 </html>

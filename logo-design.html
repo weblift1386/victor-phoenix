@@ -5,30 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Logo Design | Victor Phoenix</title>
-<meta name="description" content="Professional logo design services by Victor Phoenix. Explore modern, luxury, abstract, technology, fashion, mascot and industry-specific logo concepts.">
+<meta name="description" content="Professional logo design services by Victor Phoenix. Explore 30 professional logo styles and choose the right identity for your brand.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@500;600;700&family=DM+Serif+Display&family=Great+Vibes&family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&family=Orbitron:wght@500;600;700;800&family=Oswald:wght@500;600;700&family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Cormorant+Garamond:wght@500;600;700&family=DM+Serif+Display&family=Great+Vibes&family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&family=Orbitron:wght@500;600;700&family=Oswald:wght@500;600;700&family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#030405;
-  --bg2:#07090c;
-  --card:#090c10;
-  --line:rgba(255,255,255,.12);
-  --text:#f5f5f5;
-  --muted:#9da2aa;
-  --soft:#c8cbd0;
-  --white:#fff;
-  --green:#31d158;
+  --bg:#050607;
+  --bg2:#080a0d;
+  --card:#0b0e12;
+  --card2:#0f1217;
+  --line:rgba(255,255,255,.11);
+  --line2:rgba(255,255,255,.18);
+  --white:#f5f5f5;
+  --soft:#c5c9cf;
+  --muted:#858b94;
+  --dark:#050607;
 }
 
 *{
-  box-sizing:border-box;
   margin:0;
   padding:0;
+  box-sizing:border-box;
 }
 
 html{
@@ -37,9 +38,9 @@ html{
 
 body{
   background:
-    radial-gradient(circle at 50% -10%,rgba(50,75,110,.18),transparent 32%),
+    radial-gradient(circle at 50% -10%,rgba(110,130,155,.12),transparent 35%),
     var(--bg);
-  color:var(--text);
+  color:var(--white);
   font-family:Inter,Arial,sans-serif;
   line-height:1.5;
 }
@@ -58,16 +59,18 @@ img{
   margin:auto;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header{
   height:76px;
-  border-bottom:1px solid var(--line);
-  background:rgba(3,4,5,.78);
-  backdrop-filter:blur(18px);
   position:sticky;
   top:0;
   z-index:100;
+  border-bottom:1px solid var(--line);
+  background:rgba(5,6,7,.84);
+  backdrop-filter:blur(18px);
 }
 
 .header-inner{
@@ -80,248 +83,265 @@ header{
 .brand{
   display:flex;
   align-items:center;
-  gap:13px;
+  gap:12px;
 }
 
 .brand img{
-  width:38px;
-  height:38px;
+  width:40px;
+  height:40px;
   object-fit:contain;
 }
 
-.brand span{
-  font-size:14px;
-  font-weight:700;
+.brand-name{
+  font-size:13px;
+  font-weight:800;
   letter-spacing:.08em;
 }
 
-.back{
-  color:#aeb3ba;
-  font-size:12px;
+.back-link{
+  font-size:11px;
+  color:#999fa7;
   transition:.25s;
 }
 
-.back:hover{
-  color:white;
+.back-link:hover{
+  color:#fff;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
-  position:relative;
-  overflow:hidden;
-  padding:92px 0 74px;
+  padding:90px 0 75px;
   text-align:center;
   border-bottom:1px solid var(--line);
+  position:relative;
+  overflow:hidden;
 }
 
 .hero:before{
   content:"";
   position:absolute;
-  width:600px;
-  height:240px;
+  width:650px;
+  height:300px;
   left:50%;
-  top:-130px;
+  top:-170px;
   transform:translateX(-50%);
-  background:radial-gradient(ellipse,rgba(100,130,170,.25),transparent 68%);
-  filter:blur(20px);
+  background:radial-gradient(ellipse,rgba(120,145,175,.2),transparent 68%);
+  filter:blur(25px);
 }
 
 .eyebrow{
   position:relative;
-  color:#aeb4bc;
-  font-size:10px;
-  letter-spacing:.42em;
+  color:#9298a0;
   text-transform:uppercase;
-  margin-bottom:15px;
+  letter-spacing:.35em;
+  font-size:9px;
+  margin-bottom:17px;
 }
 
 .hero h1{
   position:relative;
-  font-size:clamp(54px,8vw,94px);
+  font-size:clamp(55px,8vw,94px);
   line-height:.95;
-  letter-spacing:-.055em;
+  letter-spacing:-.06em;
   font-weight:800;
 }
 
 .hero h1 span{
-  color:#717780;
+  color:#70767e;
 }
 
 .hero p{
   position:relative;
-  max-width:580px;
-  margin:24px auto 0;
-  color:#b5bac2;
-  font-size:15px;
+  max-width:630px;
+  margin:22px auto 0;
+  color:#a2a8b0;
+  font-size:14px;
 }
 
-/* INTRO */
+/* =========================
+   INTRO
+========================= */
 
 .intro{
-  padding:70px 0;
+  padding:65px 0;
   border-bottom:1px solid var(--line);
 }
 
 .intro-grid{
   display:grid;
-  grid-template-columns:.85fr 1.15fr;
+  grid-template-columns:.8fr 1.2fr;
   gap:60px;
   align-items:center;
 }
 
 .section-label{
-  font-size:10px;
-  letter-spacing:.3em;
-  color:#969ba3;
+  color:#8e949c;
+  font-size:9px;
   text-transform:uppercase;
-  margin-bottom:14px;
+  letter-spacing:.3em;
+  margin-bottom:13px;
 }
 
 .intro h2{
-  font-size:42px;
-  line-height:1.05;
+  font-size:40px;
+  line-height:1.04;
   letter-spacing:-.04em;
-  margin-bottom:18px;
+  margin-bottom:17px;
 }
 
 .intro p{
-  color:#9fa5ad;
-  font-size:14px;
+  color:#979da5;
   max-width:450px;
+  font-size:13px;
 }
 
-.pill{
-  display:inline-flex;
-  margin-top:24px;
-  border:1px solid #737982;
+.intro-note{
+  margin-top:23px;
+  display:inline-block;
+  border:1px solid #555c65;
+  padding:9px 15px;
   border-radius:100px;
-  padding:11px 18px;
-  font-size:10px;
-  letter-spacing:.22em;
+  font-size:9px;
   text-transform:uppercase;
+  letter-spacing:.2em;
 }
 
-/* SAMPLE FEATURE LOGOS */
+/* =========================
+   FEATURE SAMPLES
+========================= */
 
-.feature-logos{
+.feature-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:12px;
+  gap:10px;
 }
 
-.feature-logo{
-  min-height:108px;
+.feature{
+  min-height:105px;
   border:1px solid var(--line);
-  border-radius:9px;
-  background:linear-gradient(145deg,#0d1015,#050608);
+  border-radius:10px;
+  background:
+    linear-gradient(145deg,#11151a,#08090b);
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   text-align:center;
-  padding:16px;
+  padding:14px;
   transition:.3s;
 }
 
-.feature-logo:hover{
+.feature:hover{
   transform:translateY(-4px);
-  border-color:rgba(255,255,255,.3);
+  border-color:var(--line2);
 }
 
-.fl-icon{
-  font-size:30px;
-  margin-bottom:6px;
+.feature-icon{
+  font-size:25px;
+  margin-bottom:5px;
 }
 
-.fl-name{
-  font-weight:800;
-  font-size:17px;
+.feature-name{
+  font-size:16px;
+  font-weight:700;
 }
 
-.fl-tag{
-  color:#777d86;
+.feature-tag{
+  margin-top:3px;
   font-size:7px;
-  letter-spacing:.18em;
+  color:#777d85;
   text-transform:uppercase;
-  margin-top:2px;
+  letter-spacing:.18em;
 }
 
-/* COLORS */
+/* sample colors */
 
-.gold{color:#e8bd58}
-.green{color:#56c96d}
-.blue{color:#35a9ff}
-.cyan{color:#22d3ee}
-.pink{color:#f06bc4}
-.purple{color:#b78cff}
-.orange{color:#ff8a36}
-.red{color:#ff6262}
-.silver{color:#d8dce3}
+.gold{color:#e4b84e}
+.blue{color:#39aaff}
+.cyan{color:#28d2df}
+.green{color:#5bc96e}
+.pink{color:#ed72be}
+.purple{color:#ae82ff}
+.orange{color:#ff9145}
+.red{color:#ff6868}
+.white{color:#f2f2f2}
 
-/* CATALOGUE */
+/* =========================
+   LOGO CATALOGUE
+========================= */
 
 .catalogue{
-  padding:68px 0 20px;
-  border-bottom:1px solid var(--line);
+  padding:70px 0 40px;
 }
 
-.catalogue-head{
+.catalogue-header{
   margin-bottom:38px;
 }
 
-.catalogue h2{
-  font-size:34px;
-  letter-spacing:-.035em;
-  margin-bottom:10px;
+.catalogue-header h2{
+  font-size:35px;
+  letter-spacing:-.04em;
+  margin-bottom:9px;
 }
 
-.catalogue-intro{
-  color:#9298a1;
+.catalogue-header p{
+  color:#8f959d;
   font-size:13px;
-  max-width:650px;
+  max-width:680px;
 }
 
-.styles{
+/* =========================
+   LOGO SAMPLES
+========================= */
+
+.logo-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:14px;
+  gap:15px;
 }
 
-/* LOGO SAMPLE */
-
-.logo-card{
-  min-height:185px;
+.logo-item{
   border:1px solid var(--line);
-  border-radius:12px;
-  background:
-    radial-gradient(circle at 50% 0%,rgba(255,255,255,.045),transparent 55%),
-    linear-gradient(145deg,#0b0e12,#050607);
-  padding:20px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  position:relative;
+  border-radius:13px;
   overflow:hidden;
-  transition:.3s ease;
+  background:#090b0e;
+  transition:.3s;
 }
 
-.logo-card:after{
+.logo-item:hover{
+  transform:translateY(-5px);
+  border-color:rgba(255,255,255,.24);
+}
+
+.logo-preview{
+  min-height:245px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  text-align:center;
+  padding:35px 25px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 20%,rgba(255,255,255,.055),transparent 55%),
+    linear-gradient(145deg,#111419,#070809);
+}
+
+.logo-preview:after{
   content:"";
   position:absolute;
-  width:160px;
-  height:160px;
+  width:210px;
+  height:210px;
   border-radius:50%;
-  right:-100px;
-  bottom:-110px;
+  right:-150px;
+  bottom:-150px;
   background:var(--accent,#fff);
-  opacity:.06;
-  filter:blur(15px);
-}
-
-.logo-card:hover{
-  transform:translateY(-5px);
-  border-color:rgba(255,255,255,.25);
+  opacity:.07;
+  filter:blur(20px);
 }
 
 .logo-number{
@@ -333,187 +353,181 @@ header{
   letter-spacing:.15em;
 }
 
-.logo-preview{
-  min-height:115px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  text-align:center;
+.logo-type{
+  position:absolute;
+  top:13px;
+  left:15px;
+  color:#636971;
+  font-size:8px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+
+.logo-art{
   position:relative;
   z-index:2;
 }
 
-.logo-icon{
-  width:46px;
-  height:46px;
+.logo-title{
+  margin-top:10px;
+  font-size:26px;
+  line-height:1;
+}
+
+.logo-subtitle{
+  margin-top:7px;
+  color:#888e96;
+  font-size:7px;
+  letter-spacing:.27em;
+  text-transform:uppercase;
+}
+
+.logo-symbol{
+  width:54px;
+  height:54px;
   border:2px solid currentColor;
   display:flex;
   align-items:center;
   justify-content:center;
-  margin-bottom:10px;
-  font-size:20px;
+  margin:0 auto 11px;
+  font-size:22px;
 }
 
-.round{
+.circle{
   border-radius:50%;
+}
+
+.rounded{
+  border-radius:12px;
 }
 
 .diamond{
   transform:rotate(45deg);
-  width:38px;
-  height:38px;
 }
 
 .diamond span{
   transform:rotate(-45deg);
 }
 
-.badge{
-  border-radius:7px;
+.logo-info{
+  padding:18px 19px 19px;
+  border-top:1px solid var(--line);
 }
 
-.logo-name{
-  font-size:24px;
-  line-height:1;
-  font-weight:700;
-}
-
-.logo-sub{
-  font-size:7px;
-  letter-spacing:.28em;
-  margin-top:7px;
-  color:#858b94;
+.logo-info-number{
+  font-size:8px;
+  color:#686f78;
+  letter-spacing:.15em;
   text-transform:uppercase;
+  margin-bottom:5px;
 }
 
-.style-title{
-  position:absolute;
-  bottom:12px;
-  left:18px;
-  font-size:9px;
-  color:#686e77;
-  letter-spacing:.13em;
-  text-transform:uppercase;
+.logo-info h3{
+  font-size:18px;
+  margin-bottom:6px;
 }
 
-/* TYPOGRAPHY */
-
-.serif{
-  font-family:"Cormorant Garamond",serif;
+.logo-info p{
+  color:#858b93;
+  font-size:11px;
+  line-height:1.6;
 }
 
-.playfair{
-  font-family:"Playfair Display",serif;
-}
+/* Fonts */
 
-.dmserif{
-  font-family:"DM Serif Display",serif;
-}
+.f-inter{font-family:Inter,sans-serif}
+.f-mont{font-family:Montserrat,sans-serif}
+.f-poppins{font-family:Poppins,sans-serif}
+.f-space{font-family:"Space Grotesk",sans-serif}
+.f-syne{font-family:Syne,sans-serif}
+.f-playfair{font-family:"Playfair Display",serif}
+.f-cormorant{font-family:"Cormorant Garamond",serif}
+.f-dm{font-family:"DM Serif Display",serif}
+.f-script{font-family:"Great Vibes",cursive;font-weight:400}
+.f-bebas{font-family:"Bebas Neue",sans-serif;letter-spacing:.08em}
+.f-oswald{font-family:Oswald,sans-serif}
+.f-archivo{font-family:"Archivo Black",sans-serif}
+.f-orbitron{font-family:Orbitron,sans-serif}
+.f-raj{font-family:Rajdhani,sans-serif}
 
-.script{
-  font-family:"Great Vibes",cursive;
-  font-weight:400;
-}
-
-.modern{
-  font-family:"Space Grotesk",sans-serif;
-}
-
-.syne{
-  font-family:"Syne",sans-serif;
-}
-
-.mont{
-  font-family:Montserrat,sans-serif;
-}
-
-.poppins{
-  font-family:Poppins,sans-serif;
-}
-
-.bold{
-  font-family:"Bebas Neue",sans-serif;
-  letter-spacing:.06em;
-}
-
-.oswald{
-  font-family:Oswald,sans-serif;
-  letter-spacing:.03em;
-}
-
-.tech{
-  font-family:Orbitron,sans-serif;
-  letter-spacing:.04em;
-}
-
-.raj{
-  font-family:Rajdhani,sans-serif;
-}
-
-.italic{
-  font-style:italic;
-}
-
-/* PACKAGE SECTION */
+/* =========================
+   PACKAGES
+========================= */
 
 .packages{
-  padding:55px 0 30px;
+  padding:50px 0 70px;
+  border-top:1px solid var(--line);
+}
+
+.package-heading{
+  margin-bottom:30px;
+}
+
+.package-heading h2{
+  font-size:31px;
+  letter-spacing:-.035em;
+  margin-bottom:7px;
+}
+
+.package-heading p{
+  color:#898f97;
+  font-size:12px;
 }
 
 .package-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:14px;
+  gap:15px;
 }
 
 .package{
   border:1px solid var(--line);
-  border-radius:10px;
-  background:linear-gradient(145deg,#0b0e12,#050608);
+  background:
+    linear-gradient(145deg,#0d1014,#070809);
+  border-radius:11px;
   padding:25px;
   position:relative;
 }
 
-.package.popular{
-  border-color:#607c98;
-  box-shadow:0 0 35px rgba(75,120,170,.09);
+.package.featured{
+  border-color:#687b91;
+  box-shadow:0 0 35px rgba(80,110,145,.08);
 }
 
-.popular-tag{
+.popular{
   position:absolute;
-  top:-1px;
-  right:22px;
+  top:0;
+  right:20px;
   padding:5px 9px;
-  border-radius:0 0 5px 5px;
-  background:#dfe7ef;
-  color:#0b0d10;
-  font-size:8px;
+  background:#e9edf1;
+  color:#08090a;
+  font-size:7px;
   font-weight:800;
-  letter-spacing:.08em;
+  letter-spacing:.1em;
+  border-radius:0 0 5px 5px;
 }
 
 .package-label{
-  color:#9ca2aa;
   font-size:9px;
+  color:#858b93;
   letter-spacing:.25em;
   text-transform:uppercase;
 }
 
 .package h3{
-  font-size:21px;
+  font-size:20px;
   margin-top:6px;
 }
 
 .price{
-  font-size:31px;
+  font-size:30px;
   font-weight:800;
-  margin:5px 0 9px;
+  margin:3px 0 7px;
 }
 
 .package-intro{
-  color:#9298a1;
-  font-size:12px;
+  color:#858b93;
+  font-size:11px;
   min-height:38px;
 }
 
@@ -524,9 +538,9 @@ header{
 }
 
 .package h4{
-  font-size:9px;
-  letter-spacing:.2em;
-  color:#b7bdc5;
+  font-size:8px;
+  letter-spacing:.22em;
+  color:#b7bcc4;
   margin-bottom:10px;
 }
 
@@ -535,8 +549,8 @@ header{
 }
 
 .package li{
+  color:#adb2b9;
   font-size:11px;
-  color:#b5bac1;
   margin:7px 0;
 }
 
@@ -546,42 +560,42 @@ header{
   margin-right:8px;
 }
 
-.package-meta{
-  border-top:1px solid var(--line);
-  margin-top:18px;
+.meta{
+  margin-top:17px;
   padding-top:15px;
+  border-top:1px solid var(--line);
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
 }
 
-.meta span{
+.meta-item span{
   display:block;
-  color:#777e87;
-  font-size:8px;
+  color:#676e77;
+  font-size:7px;
   text-transform:uppercase;
   letter-spacing:.12em;
 }
 
-.meta strong{
+.meta-item strong{
   display:block;
-  color:#d8dbe0;
+  color:#d5d8dd;
   font-size:10px;
   margin-top:3px;
 }
 
 .start{
-  margin-top:20px;
+  display:block;
+  margin-top:19px;
   width:100%;
-  background:#f3f3f3;
-  color:#070707;
-  border:0;
-  border-radius:7px;
+  text-align:center;
+  background:#f1f1f1;
+  color:#070809;
   padding:13px;
+  border-radius:7px;
+  font-size:9px;
   font-weight:800;
-  font-size:10px;
-  letter-spacing:.12em;
-  cursor:pointer;
+  letter-spacing:.13em;
   transition:.25s;
 }
 
@@ -590,24 +604,26 @@ header{
   transform:translateY(-2px);
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact{
-  padding:60px 0 70px;
-  text-align:center;
+  padding:65px 0 70px;
   border-top:1px solid var(--line);
+  text-align:center;
 }
 
 .contact h2{
-  font-size:32px;
+  font-size:33px;
   letter-spacing:-.04em;
 }
 
 .contact p{
-  color:#9298a1;
+  color:#858b93;
+  max-width:480px;
+  margin:8px auto 22px;
   font-size:12px;
-  max-width:470px;
-  margin:8px auto 20px;
 }
 
 .contact-links{
@@ -617,27 +633,22 @@ header{
 }
 
 .contact-btn{
-  display:flex;
-  align-items:center;
-  gap:9px;
-  border:1px solid #515761;
+  border:1px solid #555c65;
   padding:11px 20px;
   border-radius:100px;
-  font-size:11px;
+  font-size:10px;
   transition:.25s;
 }
 
 .contact-btn:hover{
-  border-color:white;
-  background:white;
-  color:#050505;
+  background:#fff;
+  color:#050607;
+  border-color:#fff;
 }
 
-.contact-icon{
-  font-size:16px;
-}
-
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
   border-top:1px solid var(--line);
@@ -646,29 +657,33 @@ footer{
 
 .footer-inner{
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
 }
 
 .footer-brand{
-  font-size:12px;
-  font-weight:700;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.08em;
 }
 
 .footer-copy{
-  font-size:9px;
-  color:#666c74;
+  color:#5f656d;
+  font-size:8px;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:900px){
+
   .intro-grid{
     grid-template-columns:1fr;
     gap:40px;
   }
 
-  .styles{
+  .logo-grid{
     grid-template-columns:repeat(2,1fr);
   }
 
@@ -676,23 +691,25 @@ footer{
     grid-template-columns:1fr;
   }
 
-  .feature-logos{
-    grid-template-columns:repeat(2,1fr);
-  }
 }
 
 @media(max-width:600px){
+
   header{
     height:66px;
   }
 
   .brand img{
-    width:32px;
-    height:32px;
+    width:33px;
+    height:33px;
   }
 
-  .brand span{
-    font-size:11px;
+  .brand-name{
+    font-size:10px;
+  }
+
+  .back-link{
+    font-size:9px;
   }
 
   .hero{
@@ -700,31 +717,31 @@ footer{
   }
 
   .hero h1{
-    font-size:52px;
+    font-size:54px;
   }
 
   .hero p{
-    font-size:13px;
+    font-size:12px;
   }
 
   .intro{
-    padding:52px 0;
+    padding:50px 0;
   }
 
   .intro h2{
     font-size:34px;
   }
 
-  .styles{
-    grid-template-columns:1fr;
-  }
-
-  .feature-logos{
+  .feature-grid{
     grid-template-columns:1fr 1fr;
   }
 
-  .logo-card{
-    min-height:175px;
+  .logo-grid{
+    grid-template-columns:1fr;
+  }
+
+  .logo-preview{
+    min-height:225px;
   }
 
   .contact-links{
@@ -734,44 +751,61 @@ footer{
 
   .contact-btn{
     width:220px;
-    justify-content:center;
   }
 
   .footer-inner{
     flex-direction:column;
     gap:8px;
   }
+
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
+
   <div class="container header-inner">
 
     <a href="index.html" class="brand">
-      <img src="logo.png" alt="Victor Phoenix">
-      <span>VICTOR PHOENIX</span>
+
+      <img src="logo.png" alt="Victor Phoenix logo">
+
+      <span class="brand-name">
+        VICTOR PHOENIX
+      </span>
+
     </a>
 
-    <a href="graphics.html" class="back">← Back to Graphics & Design</a>
+    <a href="graphics.html" class="back-link">
+      ← Back to Graphics & Design
+    </a>
 
   </div>
+
 </header>
 
+
+<!-- HERO -->
 
 <section class="hero">
 
   <div class="container">
 
-    <div class="eyebrow">Victor Phoenix / Graphics & Design</div>
+    <div class="eyebrow">
+      Victor Phoenix / Graphics & Design
+    </div>
 
-    <h1>Logo <span>Design.</span></h1>
+    <h1>
+      Logo <span>Design.</span>
+    </h1>
 
     <p>
-      Unique and memorable logo designs that give your brand
-      its own identity, build trust and make a lasting impression.
+      Distinctive logos created to give businesses, brands and
+      personal ventures a recognizable visual identity.
     </p>
 
   </div>
@@ -779,76 +813,84 @@ footer{
 </section>
 
 
+<!-- INTRO -->
+
 <section class="intro">
 
   <div class="container intro-grid">
 
     <div>
 
-      <div class="section-label">Introduction</div>
+      <div class="section-label">
+        Logo Identity
+      </div>
 
-      <h2>More than just<br>a logo.</h2>
+      <h2>
+        Make your brand<br>
+        recognizable.
+      </h2>
 
       <p>
-        A great logo is the foundation of a strong brand.
-        We create distinctive, professional and versatile
-        logos that capture your vision, communicate your values
-        and set you apart from the competition.
+        Your logo is often the first thing people remember about
+        your brand. We create original, professional logo concepts
+        built around your personality, industry and vision.
       </p>
 
-      <a href="#catalogue" class="pill">Logo Design</a>
+      <div class="intro-note">
+        30 Logo Styles Available
+      </div>
 
     </div>
 
 
-    <div class="feature-logos">
+    <div class="feature-grid">
 
-      <div class="feature-logo">
-        <div class="fl-icon gold">VP</div>
-        <div class="fl-name serif gold">Veridan</div>
-        <div class="fl-tag">Luxury Living</div>
+      <div class="feature">
+        <div class="feature-icon gold">✦</div>
+        <div class="feature-name f-playfair gold">LUXE</div>
+        <div class="feature-tag">Premium Identity</div>
       </div>
 
-      <div class="feature-logo">
-        <div class="fl-icon green">✦</div>
-        <div class="fl-name modern green">NaturalLife</div>
-        <div class="fl-tag">Organic & Natural</div>
+      <div class="feature">
+        <div class="feature-icon blue">N</div>
+        <div class="feature-name f-orbitron blue">NEXA</div>
+        <div class="feature-tag">Technology</div>
       </div>
 
-      <div class="feature-logo">
-        <div class="fl-icon blue">S</div>
-        <div class="fl-name tech blue">SkyTech</div>
-        <div class="fl-tag">Innovation</div>
+      <div class="feature">
+        <div class="feature-icon green">⌁</div>
+        <div class="feature-name f-space green">VERDE</div>
+        <div class="feature-tag">Natural Brand</div>
       </div>
 
-      <div class="feature-logo">
-        <div class="fl-icon silver">R</div>
-        <div class="fl-name serif silver">Royal Crest</div>
-        <div class="fl-tag">Premium Brands</div>
+      <div class="feature">
+        <div class="feature-icon pink">L</div>
+        <div class="feature-name f-script pink">Lumi</div>
+        <div class="feature-tag">Beauty</div>
       </div>
 
-      <div class="feature-logo">
-        <div class="fl-icon orange">⌁</div>
-        <div class="fl-name bold orange">SummitPeak</div>
-        <div class="fl-tag">Adventures</div>
+      <div class="feature">
+        <div class="feature-icon orange">▲</div>
+        <div class="feature-name f-bebas orange">PEAK</div>
+        <div class="feature-tag">Sports</div>
       </div>
 
-      <div class="feature-logo">
-        <div class="fl-icon pink">◈</div>
-        <div class="fl-name script pink">Lumière</div>
-        <div class="fl-tag">Beauty & Skincare</div>
+      <div class="feature">
+        <div class="feature-icon cyan">+</div>
+        <div class="feature-name f-mont cyan">MEDIX</div>
+        <div class="feature-tag">Medical</div>
       </div>
 
-      <div class="feature-logo">
-        <div class="fl-icon cyan">N</div>
-        <div class="fl-name tech cyan">Nexora</div>
-        <div class="fl-tag">Digital Solutions</div>
+      <div class="feature">
+        <div class="feature-icon purple">◆</div>
+        <div class="feature-name f-syne purple">NOVA</div>
+        <div class="feature-tag">Creative</div>
       </div>
 
-      <div class="feature-logo">
-        <div class="fl-icon gold">☕</div>
-        <div class="fl-name dmserif gold">Brew & Co.</div>
-        <div class="fl-tag">Coffee House</div>
+      <div class="feature">
+        <div class="feature-icon gold">⌂</div>
+        <div class="feature-name f-dm gold">HAVEN</div>
+        <div class="feature-tag">Real Estate</div>
       </div>
 
     </div>
@@ -858,636 +900,1336 @@ footer{
 </section>
 
 
-<section class="catalogue" id="catalogue">
+<!-- LOGO CATALOGUE -->
+
+<section class="catalogue" id="logo-styles">
 
   <div class="container">
 
-    <div class="catalogue-head">
+    <div class="catalogue-header">
 
-      <div class="section-label">Complete Logo Catalogue</div>
+      <div class="section-label">
+        Logo Collection
+      </div>
 
-      <h2>Explore Logo Styles</h2>
+      <h2>
+        Explore Logo Styles
+      </h2>
 
-      <p class="catalogue-intro">
-        From clean minimalist marks to expressive mascot identities,
-        every logo style is designed to communicate a distinct
-        personality and visual direction.
+      <p>
+        Choose from a wide range of professional logo directions.
+        Every sample below represents an original visual direction
+        rather than a copied brand.
       </p>
 
     </div>
 
 
-    <div class="styles">
+    <div class="logo-grid">
 
 
-      <!-- 01 -->
+      <!-- 01 MINIMALIST -->
 
-      <article class="logo-card" style="--accent:#ffffff">
+      <article class="logo-item">
 
-        <span class="logo-number">01</span>
+        <div class="logo-preview" style="--accent:#fff">
 
-        <div class="logo-preview">
+          <span class="logo-number">01</span>
+          <span class="logo-type">Minimalist</span>
 
-          <div class="logo-icon round silver">M</div>
+          <div class="logo-art white">
 
-          <div class="logo-name modern silver">MONO</div>
+            <div class="logo-symbol circle">
+              M
+            </div>
 
-          <div class="logo-sub">Minimal Studio</div>
+            <div class="logo-title f-space">
+              MIRA
+            </div>
 
-        </div>
+            <div class="logo-subtitle">
+              Simple / Essential
+            </div>
 
-        <div class="style-title">Minimalist</div>
-
-      </article>
-
-
-      <!-- 02 -->
-
-      <article class="logo-card" style="--accent:#8c6cff">
-
-        <span class="logo-number">02</span>
-
-        <div class="logo-preview">
-
-          <div class="logo-icon diamond purple">
-            <span>V</span>
           </div>
 
-          <div class="logo-name syne purple">VERRA</div>
-
-          <div class="logo-sub">Creative House</div>
-
         </div>
 
-        <div class="style-title">Abstract</div>
+        <div class="logo-info">
 
-      </article>
-
-
-      <!-- 03 -->
-
-      <article class="logo-card" style="--accent:#e4bf63">
-
-        <span class="logo-number">03</span>
-
-        <div class="logo-preview">
-
-          <div class="logo-name playfair gold">VERIDAN</div>
-
-          <div class="logo-sub">Luxury Living</div>
-
-        </div>
-
-        <div class="style-title">Wordmark</div>
-
-      </article>
-
-
-      <!-- 04 -->
-
-      <article class="logo-card" style="--accent:#31a8ff">
-
-        <span class="logo-number">04</span>
-
-        <div class="logo-preview">
-
-          <div class="logo-name bold blue">NX</div>
-
-          <div class="logo-sub">North Exchange</div>
-
-        </div>
-
-        <div class="style-title">Lettermark</div>
-
-      </article>
-
-
-      <!-- 05 -->
-
-      <article class="logo-card" style="--accent:#f4c96b">
-
-        <span class="logo-number">05</span>
-
-        <div class="logo-preview">
-
-          <div class="logo-name serif gold italic">VP</div>
-
-          <div class="logo-sub">Victor Premium</div>
-
-        </div>
-
-        <div class="style-title">Monogram</div>
-
-      </article>
-
-
-      <!-- 06 -->
-
-      <article class="logo-card" style="--accent:#d8b15b">
-
-        <span class="logo-number">06</span>
-
-        <div class="logo-preview">
-
-          <div class="logo-icon gold">♛</div>
-
-          <div class="logo-name serif gold">ROYAL</div>
-
-          <div class="logo-sub">Premium Brands</div>
-
-        </div>
-
-        <div class="style-title">Luxury / Premium</div>
-
-      </article>
-
-
-      <!-- 07 -->
-
-      <article class="logo-card" style="--accent:#e3a85c">
-
-        <span class="logo-number">07</span>
-
-        <div class="logo-preview">
-
-          <div class="logo-name serif gold italic">Heritage</div>
-
-          <div class="logo-sub">Est. 1986</div>
-
-        </div>
-
-        <div class="style-title">Vintage / Retro</div>
-
-      </article>
-
-
-      <!-- 08 -->
-
-      <article class="logo-card" style="--accent:#e5b95b">
-
-        <span class="logo-number">08</span>
-
-        <div class="logo-preview">
-
-          <div class="logo-icon badge gold">V</div>
-
-          <div class="logo-name serif gold">CROWN & CO.</div>
-
-          <div class="logo-sub">Fine Goods</div>
-
-        </div>
-
-        <div class="style-title">Emblem</div>
-
-      </article>
-
-
-      <!-- 09 -->
-
-      <article class="logo-card" style="--accent:#ff7d45">
-
-        <span class="logo-number">09</span>
-
-        <div class="logo-preview">
-
-          <div class="logo-icon round orange">★</div>
-
-          <div class="logo-name bold orange">WILDPAW</div>
-
-          <div class="logo-sub">Outdoor Club</div>
-
-        </div>
-
-        <div class="style-title">Mascot</div>
-
-      </article>
-
-
-      <!-- 10 -->
-
-      <article class="logo-card" style="--accent:#5da8ff">
-
-        <span class="logo-number">10</span>
-
-        <div class="logo-preview">
-
-          <div class="logo-name tech blue">NEX<span class="cyan">3D</span></div>
-
-          <div class="logo-sub">Digital Studio</div>
-
-        </div>
-
-        <div class="style-title">3D</div>
-
-      </article>
-
-
-      <!-- 11 -->
-
-      <article class="logo-card" style="--accent:#ef72bc">
-
-        <span class="logo-number">11</span>
-
-        <div class="logo-preview">
-
-          <div class="logo-name script pink">Lumière</div>
-
-          <div class="logo-sub">Beauty Studio</div>
-
-        </div>
-
-        <div class="style-title">Signature</div>
-
-      </article>
-
-
-      <!-- 12 -->
-
-      <article class="logo-card" style="--accent:#35b6ff">
-
-        <span class="logo-number">12</span>
-
-        <div class="logo-preview">
-
-          <div class="logo-icon round blue">N</div>
-
-          <div class="logo-name modern blue">NEXORA</div>
-
-          <div class="logo-sub">Digital Solutions</div>
-
-        </div>
-
-        <div class="style-title">Combination</div>
-
-      </article>
-
-
-      <!-- 13 -->
-
-      <article class="logo-card" style="--accent:#ff923d">
-
-        <span class="logo-number">13</span>
-
-        <div class="logo-preview">
-
-          <div class="logo-name oswald orange">FORGE</div>
-
-          <div class="logo-sub">Industrial Works</div>
-
-        </div>
-
-        <div class="style-title">Industrial</div>
-
-      </article>
-
-
-      <!-- 14 -->
-
-      <article class="logo-card" style="--accent:#28b7ff">
-
-        <span class="logo-number">14</span>
-
-        <div class="logo-preview">
-
-          <div class="logo-icon diamond blue">
-            <span>F</span>
+          <div class="logo-info-number">
+            01 / Minimalist
           </div>
 
-          <div class="logo-name tech blue">FUTURA</div>
+          <h3>Minimalist Logo</h3>
 
-          <div class="logo-sub">Technology</div>
+          <p>
+            Clean shapes, restrained typography and a simple
+            visual system designed for clarity and versatility.
+          </p>
 
         </div>
-
-        <div class="style-title">Tech / Technology</div>
 
       </article>
 
 
-      <!-- 15 -->
+      <!-- 02 ABSTRACT -->
 
-      <article class="logo-card" style="--accent:#b48cff">
+      <article class="logo-item">
 
-        <span class="logo-number">15</span>
+        <div class="logo-preview" style="--accent:#ae82ff">
 
-        <div class="logo-preview">
+          <span class="logo-number">02</span>
+          <span class="logo-type">Abstract</span>
 
-          <div class="logo-icon diamond purple">
-            <span>Z</span>
+          <div class="logo-art purple">
+
+            <div class="logo-symbol diamond">
+              <span>V</span>
+            </div>
+
+            <div class="logo-title f-syne">
+              VERRA
+            </div>
+
+            <div class="logo-subtitle">
+              Creative Direction
+            </div>
+
           </div>
 
-          <div class="logo-name modern purple">ZENITH</div>
-
-          <div class="logo-sub">Architecture</div>
-
         </div>
 
-        <div class="style-title">Geometric</div>
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            02 / Abstract
+          </div>
+
+          <h3>Abstract Logo</h3>
+
+          <p>
+            Expressive shapes and distinctive forms that create
+            a unique visual identity without relying on literal imagery.
+          </p>
+
+        </div>
 
       </article>
 
 
-      <!-- 16 -->
+      <!-- 03 WORDMARK -->
 
-      <article class="logo-card" style="--accent:#43caff">
+      <article class="logo-item">
 
-        <span class="logo-number">16</span>
+        <div class="logo-preview" style="--accent:#e4b84e">
 
-        <div class="logo-preview">
+          <span class="logo-number">03</span>
+          <span class="logo-type">Wordmark</span>
 
-          <div class="logo-icon cyan">◐</div>
+          <div class="logo-art gold">
 
-          <div class="logo-name syne cyan">NOVA</div>
+            <div class="logo-title f-playfair" style="font-size:34px">
+              AURELIA
+            </div>
 
-          <div class="logo-sub">Creative Systems</div>
+            <div class="logo-subtitle">
+              Luxury House
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="style-title">Negative Space</div>
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            03 / Wordmark
+          </div>
+
+          <h3>Wordmark Logo</h3>
+
+          <p>
+            A typography-led identity where the brand name itself
+            becomes the main visual signature.
+          </p>
+
+        </div>
 
       </article>
 
 
-      <!-- 17 -->
+      <!-- 04 LETTERMARK -->
 
-      <article class="logo-card" style="--accent:#62ce70">
+      <article class="logo-item">
 
-        <span class="logo-number">17</span>
+        <div class="logo-preview" style="--accent:#39aaff">
 
-        <div class="logo-preview">
+          <span class="logo-number">04</span>
+          <span class="logo-type">Lettermark</span>
 
-          <div class="logo-icon round green">▲</div>
+          <div class="logo-art blue">
 
-          <div class="logo-name bold green">SUMMIT</div>
+            <div class="logo-title f-bebas" style="font-size:58px">
+              NX
+            </div>
 
-          <div class="logo-sub">Adventure Co.</div>
+            <div class="logo-subtitle">
+              North Exchange
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="style-title">Badge</div>
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            04 / Lettermark
+          </div>
+
+          <h3>Lettermark Logo</h3>
+
+          <p>
+            Strong initials transformed into a memorable and
+            scalable brand mark.
+          </p>
+
+        </div>
 
       </article>
 
 
-      <!-- 18 -->
+      <!-- 05 MONOGRAM -->
 
-      <article class="logo-card" style="--accent:#46a8ff">
+      <article class="logo-item">
 
-        <span class="logo-number">18</span>
+        <div class="logo-preview" style="--accent:#e5bd58">
 
-        <div class="logo-preview">
+          <span class="logo-number">05</span>
+          <span class="logo-type">Monogram</span>
 
-          <div class="logo-icon blue">N</div>
+          <div class="logo-art gold">
 
-          <div class="logo-name modern blue">NORTH</div>
+            <div class="logo-title f-cormorant italic" style="font-size:64px">
+              VP
+            </div>
 
-          <div class="logo-sub">Outdoor Gear</div>
+            <div class="logo-subtitle">
+              Signature Identity
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="style-title">Pictorial / Symbol</div>
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            05 / Monogram
+          </div>
+
+          <h3>Monogram Logo</h3>
+
+          <p>
+            Interlocking or carefully arranged initials designed
+            to create a sophisticated standalone symbol.
+          </p>
+
+        </div>
 
       </article>
 
 
-      <!-- 19 -->
+      <!-- 06 LUXURY -->
 
-      <article class="logo-card" style="--accent:#f28d53">
+      <article class="logo-item">
 
-        <span class="logo-number">19</span>
+        <div class="logo-preview" style="--accent:#e4b84e">
 
-        <div class="logo-preview">
+          <span class="logo-number">06</span>
+          <span class="logo-type">Luxury / Premium</span>
 
-          <div class="logo-icon round orange">T</div>
+          <div class="logo-art gold">
 
-          <div class="logo-name bold orange">TRIBE</div>
+            <div class="logo-symbol">
+              ♛
+            </div>
 
-          <div class="logo-sub">Fitness</div>
+            <div class="logo-title f-cormorant">
+              ROYALE
+            </div>
+
+            <div class="logo-subtitle">
+              Fine Living
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="style-title">Character</div>
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            06 / Luxury / Premium
+          </div>
+
+          <h3>Luxury Logo</h3>
+
+          <p>
+            Refined typography, elegant marks and premium visual
+            language designed for high-end brands.
+          </p>
+
+        </div>
 
       </article>
 
 
-      <!-- 20 -->
+      <!-- 07 VINTAGE -->
 
-      <article class="logo-card" style="--accent:#e0a96b">
+      <article class="logo-item">
 
-        <span class="logo-number">20</span>
+        <div class="logo-preview" style="--accent:#d8a65c">
 
-        <div class="logo-preview">
+          <span class="logo-number">07</span>
+          <span class="logo-type">Vintage / Retro</span>
 
-          <div class="logo-name serif gold italic">Atelier</div>
+          <div class="logo-art gold">
 
-          <div class="logo-sub">Handcrafted Goods</div>
+            <div class="logo-title f-cormorant italic" style="font-size:35px">
+              Heritage
+            </div>
+
+            <div class="logo-subtitle">
+              Est. 1986
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="style-title">Handcrafted</div>
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            07 / Vintage / Retro
+          </div>
+
+          <h3>Vintage Logo</h3>
+
+          <p>
+            Classic typography and nostalgic visual elements
+            inspired by timeless brand identities.
+          </p>
+
+        </div>
 
       </article>
 
 
-      <!-- 21 -->
+      <!-- 08 EMBLEM -->
 
-      <article class="logo-card" style="--accent:#51aaff">
+      <article class="logo-item">
 
-        <span class="logo-number">21</span>
+        <div class="logo-preview" style="--accent:#e5bd58">
 
-        <div class="logo-preview">
+          <span class="logo-number">08</span>
+          <span class="logo-type">Emblem</span>
 
-          <div class="logo-name bold blue">VOLTEX</div>
+          <div class="logo-art gold">
 
-          <div class="logo-sub">Performance</div>
+            <div class="logo-symbol rounded">
+              V
+            </div>
+
+            <div class="logo-title f-playfair" style="font-size:19px">
+              CROWN & CO.
+            </div>
+
+            <div class="logo-subtitle">
+              Fine Goods
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="style-title">Sports</div>
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            08 / Emblem
+          </div>
+
+          <h3>Emblem Logo</h3>
+
+          <p>
+            A contained symbol, badge or seal structure that gives
+            the identity authority and tradition.
+          </p>
+
+        </div>
 
       </article>
 
 
-      <!-- 22 -->
+      <!-- 09 MASCOT -->
 
-      <article class="logo-card" style="--accent:#a16cff">
+      <article class="logo-item">
 
-        <span class="logo-number">22</span>
+        <div class="logo-preview" style="--accent:#ff9145">
 
-        <div class="logo-preview">
+          <span class="logo-number">09</span>
+          <span class="logo-type">Mascot</span>
 
-          <div class="logo-icon purple">✦</div>
+          <div class="logo-art orange">
 
-          <div class="logo-name tech purple">NEXUS</div>
+            <div class="logo-symbol circle">
+              ★
+            </div>
 
-          <div class="logo-sub">Gaming</div>
+            <div class="logo-title f-archivo">
+              WILDPAW
+            </div>
+
+            <div class="logo-subtitle">
+              Outdoor Club
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="style-title">Gaming</div>
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            09 / Mascot
+          </div>
+
+          <h3>Mascot Logo</h3>
+
+          <p>
+            Character-driven identities designed to make brands
+            friendly, recognizable and memorable.
+          </p>
+
+        </div>
 
       </article>
 
 
-      <!-- 23 -->
+      <!-- 10 3D -->
 
-      <article class="logo-card" style="--accent:#e8c76c">
+      <article class="logo-item">
 
-        <span class="logo-number">23</span>
+        <div class="logo-preview" style="--accent:#39aaff">
 
-        <div class="logo-preview">
+          <span class="logo-number">10</span>
+          <span class="logo-type">3D</span>
 
-          <div class="logo-name playfair gold">THE LUXE</div>
+          <div class="logo-art blue">
 
-          <div class="logo-sub">Fashion House</div>
+            <div class="logo-title f-orbitron" style="text-shadow:4px 4px 0 #174f80">
+              NEX3D
+            </div>
+
+            <div class="logo-subtitle">
+              Digital Studio
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="style-title">Fashion</div>
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            10 / 3D
+          </div>
+
+          <h3>3D Logo</h3>
+
+          <p>
+            Dimensional branding with depth, highlights and
+            visual effects for a modern presentation.
+          </p>
+
+        </div>
 
       </article>
 
 
-      <!-- 24 -->
+      <!-- 11 SIGNATURE -->
 
-      <article class="logo-card" style="--accent:#5cc8ff">
+      <article class="logo-item">
 
-        <span class="logo-number">24</span>
+        <div class="logo-preview" style="--accent:#ed72be">
 
-        <div class="logo-preview">
+          <span class="logo-number">11</span>
+          <span class="logo-type">Signature</span>
 
-          <div class="logo-icon cyan">+</div>
+          <div class="logo-art pink">
 
-          <div class="logo-name modern cyan">HEALTHSYNC</div>
+            <div class="logo-title f-script" style="font-size:46px">
+              Elara
+            </div>
 
-          <div class="logo-sub">Medical Center</div>
+            <div class="logo-subtitle">
+              Personal Brand
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="style-title">Corporate</div>
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            11 / Signature
+          </div>
+
+          <h3>Signature Logo</h3>
+
+          <p>
+            Elegant handwritten and signature-inspired identities
+            for personal, fashion and lifestyle brands.
+          </p>
+
+        </div>
 
       </article>
 
 
-      <!-- 25 -->
+      <!-- 12 COMBINATION -->
 
-      <article class="logo-card" style="--accent:#f29ccf">
+      <article class="logo-item">
 
-        <span class="logo-number">25</span>
+        <div class="logo-preview" style="--accent:#28d2df">
 
-        <div class="logo-preview">
+          <span class="logo-number">12</span>
+          <span class="logo-type">Combination</span>
 
-          <div class="logo-name script pink">Belle</div>
+          <div class="logo-art cyan">
 
-          <div class="logo-sub">Beauty & Lifestyle</div>
+            <div class="logo-symbol circle">
+              N
+            </div>
+
+            <div class="logo-title f-space">
+              NEXORA
+            </div>
+
+            <div class="logo-subtitle">
+              Digital Solutions
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="style-title">Beauty / Lifestyle</div>
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            12 / Combination
+          </div>
+
+          <h3>Combination Logo</h3>
+
+          <p>
+            Symbol and typography working together as one complete
+            brand identity.
+          </p>
+
+        </div>
 
       </article>
 
 
-      <!-- 26 -->
+      <!-- 13 INDUSTRIAL -->
 
-      <article class="logo-card" style="--accent:#54a9ff">
+      <article class="logo-item">
 
-        <span class="logo-number">26</span>
+        <div class="logo-preview" style="--accent:#ff9145">
 
-        <div class="logo-preview">
+          <span class="logo-number">13</span>
+          <span class="logo-type">Industrial</span>
 
-          <div class="logo-icon blue">⌂</div>
+          <div class="logo-art orange">
 
-          <div class="logo-name modern blue">GOLDEN SPARROW</div>
+            <div class="logo-title f-oswald" style="font-size:36px">
+              FORGE
+            </div>
 
-          <div class="logo-sub">Real Estate</div>
+            <div class="logo-subtitle">
+              Industrial Works
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="style-title">Real Estate</div>
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            13 / Industrial
+          </div>
+
+          <h3>Industrial Logo</h3>
+
+          <p>
+            Strong, durable and structured visual identities for
+            construction, manufacturing and industrial brands.
+          </p>
+
+        </div>
 
       </article>
 
 
-      <!-- 27 -->
+      <!-- 14 TECHNOLOGY -->
 
-      <article class="logo-card" style="--accent:#ffb85c">
+      <article class="logo-item">
 
-        <span class="logo-number">27</span>
+        <div class="logo-preview" style="--accent:#39aaff">
 
-        <div class="logo-preview">
+          <span class="logo-number">14</span>
+          <span class="logo-type">Technology</span>
 
-          <div class="logo-icon orange">☕</div>
+          <div class="logo-art blue">
 
-          <div class="logo-name dmserif orange">BREW & CO.</div>
+            <div class="logo-symbol diamond">
+              <span>F</span>
+            </div>
 
-          <div class="logo-sub">Coffee House</div>
+            <div class="logo-title f-orbitron">
+              FUTURA
+            </div>
+
+            <div class="logo-subtitle">
+              Technology
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="style-title">Food / Restaurant</div>
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            14 / Tech / Technology
+          </div>
+
+          <h3>Technology Logo</h3>
+
+          <p>
+            Futuristic symbols and geometric typography built
+            for digital and technology-driven businesses.
+          </p>
+
+        </div>
 
       </article>
 
 
-      <!-- 28 -->
+      <!-- 15 GEOMETRIC -->
 
-      <article class="logo-card" style="--accent:#f0b95d">
+      <article class="logo-item">
 
-        <span class="logo-number">28</span>
+        <div class="logo-preview" style="--accent:#ae82ff">
 
-        <div class="logo-preview">
+          <span class="logo-number">15</span>
+          <span class="logo-type">Geometric</span>
 
-          <div class="logo-name serif gold">CARBONIX</div>
+          <div class="logo-art purple">
 
-          <div class="logo-sub">Automotive</div>
+            <div class="logo-symbol diamond">
+              <span>Z</span>
+            </div>
+
+            <div class="logo-title f-space">
+              ZENITH
+            </div>
+
+            <div class="logo-subtitle">
+              Architecture
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="style-title">Automotive</div>
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            15 / Geometric
+          </div>
+
+          <h3>Geometric Logo</h3>
+
+          <p>
+            Structured shapes, symmetry and balanced geometry
+            create a precise visual identity.
+          </p>
+
+        </div>
 
       </article>
 
 
-      <!-- 29 -->
+      <!-- 16 NEGATIVE SPACE -->
 
-      <article class="logo-card" style="--accent:#d85cff">
+      <article class="logo-item">
 
-        <span class="logo-number">29</span>
+        <div class="logo-preview" style="--accent:#28d2df">
 
-        <div class="logo-preview">
+          <span class="logo-number">16</span>
+          <span class="logo-type">Negative Space</span>
 
-          <div class="logo-icon purple">P</div>
+          <div class="logo-art cyan">
 
-          <div class="logo-name syne purple">PIXEL CRAFT</div>
+            <div class="logo-symbol circle">
+              ◐
+            </div>
 
-          <div class="logo-sub">Creative Studio</div>
+            <div class="logo-title f-syne">
+              NOVA
+            </div>
+
+            <div class="logo-subtitle">
+              Creative Systems
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="style-title">Entertainment</div>
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            16 / Negative Space
+          </div>
+
+          <h3>Negative Space Logo</h3>
+
+          <p>
+            Clever visual relationships that reveal hidden shapes
+            and create memorable brand marks.
+          </p>
+
+        </div>
 
       </article>
 
 
-      <!-- 30 -->
+      <!-- 17 BADGE -->
 
-      <article class="logo-card" style="--accent:#61c969">
+      <article class="logo-item">
 
-        <span class="logo-number">30</span>
+        <div class="logo-preview" style="--accent:#5bc96e">
 
-        <div class="logo-preview">
+          <span class="logo-number">17</span>
+          <span class="logo-type">Badge</span>
 
-          <div class="logo-icon round green">✦</div>
+          <div class="logo-art green">
 
-          <div class="logo-name modern green">ECOHARVEST</div>
+            <div class="logo-symbol circle">
+              ▲
+            </div>
 
-          <div class="logo-sub">Organic Farm</div>
+            <div class="logo-title f-bebas">
+              SUMMIT
+            </div>
+
+            <div class="logo-subtitle">
+              Adventure Co.
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="style-title">Environmental</div>
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            17 / Badge
+          </div>
+
+          <h3>Badge Logo</h3>
+
+          <p>
+            Compact, recognizable marks suitable for apparel,
+            communities, clubs and product branding.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 18 PICTORIAL -->
+
+      <article class="logo-item">
+
+        <div class="logo-preview" style="--accent:#39aaff">
+
+          <span class="logo-number">18</span>
+          <span class="logo-type">Pictorial / Symbol</span>
+
+          <div class="logo-art blue">
+
+            <div class="logo-symbol">
+              N
+            </div>
+
+            <div class="logo-title f-space">
+              NORTH
+            </div>
+
+            <div class="logo-subtitle">
+              Outdoor Gear
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            18 / Pictorial / Symbol
+          </div>
+
+          <h3>Pictorial Logo</h3>
+
+          <p>
+            A recognizable visual symbol representing the brand
+            without relying on complex text.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 19 CHARACTER -->
+
+      <article class="logo-item">
+
+        <div class="logo-preview" style="--accent:#ff9145">
+
+          <span class="logo-number">19</span>
+          <span class="logo-type">Character</span>
+
+          <div class="logo-art orange">
+
+            <div class="logo-symbol circle">
+              T
+            </div>
+
+            <div class="logo-title f-archivo">
+              TRIBE
+            </div>
+
+            <div class="logo-subtitle">
+              Fitness
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            19 / Character
+          </div>
+
+          <h3>Character Logo</h3>
+
+          <p>
+            Personality-driven visual identities built around a
+            recognizable character or brand personality.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 20 HANDCRAFTED -->
+
+      <article class="logo-item">
+
+        <div class="logo-preview" style="--accent:#d8a65c">
+
+          <span class="logo-number">20</span>
+          <span class="logo-type">Handcrafted</span>
+
+          <div class="logo-art gold">
+
+            <div class="logo-title f-cormorant italic" style="font-size:40px">
+              Atelier
+            </div>
+
+            <div class="logo-subtitle">
+              Handcrafted Goods
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            20 / Handcrafted
+          </div>
+
+          <h3>Handcrafted Logo</h3>
+
+          <p>
+            Organic typography and artisanal visual character
+            for handmade and creative businesses.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 21 SPORTS -->
+
+      <article class="logo-item">
+
+        <div class="logo-preview" style="--accent:#39aaff">
+
+          <span class="logo-number">21</span>
+          <span class="logo-type">Sports</span>
+
+          <div class="logo-art blue">
+
+            <div class="logo-title f-bebas" style="font-size:42px">
+              VOLTEX
+            </div>
+
+            <div class="logo-subtitle">
+              Performance
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            21 / Sports
+          </div>
+
+          <h3>Sports Logo</h3>
+
+          <p>
+            Energetic, bold and competitive branding designed
+            for teams, athletes and sports organizations.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 22 GAMING -->
+
+      <article class="logo-item">
+
+        <div class="logo-preview" style="--accent:#ae82ff">
+
+          <span class="logo-number">22</span>
+          <span class="logo-type">Gaming</span>
+
+          <div class="logo-art purple">
+
+            <div class="logo-symbol">
+              ✦
+            </div>
+
+            <div class="logo-title f-orbitron">
+              NEXUS
+            </div>
+
+            <div class="logo-subtitle">
+              Gaming
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            22 / Gaming
+          </div>
+
+          <h3>Gaming Logo</h3>
+
+          <p>
+            Strong, energetic and futuristic marks designed for
+            gaming brands, teams and digital communities.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 23 FASHION -->
+
+      <article class="logo-item">
+
+        <div class="logo-preview" style="--accent:#e4b84e">
+
+          <span class="logo-number">23</span>
+          <span class="logo-type">Fashion</span>
+
+          <div class="logo-art gold">
+
+            <div class="logo-title f-playfair" style="font-size:31px">
+              THE LUXE
+            </div>
+
+            <div class="logo-subtitle">
+              Fashion House
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            23 / Fashion
+          </div>
+
+          <h3>Fashion Logo</h3>
+
+          <p>
+            Refined editorial typography and sophisticated marks
+            designed for fashion and apparel brands.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 24 CORPORATE -->
+
+      <article class="logo-item">
+
+        <div class="logo-preview" style="--accent:#28d2df">
+
+          <span class="logo-number">24</span>
+          <span class="logo-type">Corporate</span>
+
+          <div class="logo-art cyan">
+
+            <div class="logo-symbol circle">
+              +
+            </div>
+
+            <div class="logo-title f-mont" style="font-size:20px">
+              HEALTHSYNC
+            </div>
+
+            <div class="logo-subtitle">
+              Medical Center
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            24 / Corporate
+          </div>
+
+          <h3>Corporate Logo</h3>
+
+          <p>
+            Professional, trustworthy and scalable identities
+            for established companies and organizations.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 25 FOOD -->
+
+      <article class="logo-item">
+
+        <div class="logo-preview" style="--accent:#ff9145">
+
+          <span class="logo-number">25</span>
+          <span class="logo-type">Food / Restaurant</span>
+
+          <div class="logo-art orange">
+
+            <div class="logo-symbol circle">
+              ☕
+            </div>
+
+            <div class="logo-title f-dm">
+              BREW & CO.
+            </div>
+
+            <div class="logo-subtitle">
+              Coffee House
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            25 / Food / Restaurant
+          </div>
+
+          <h3>Food & Restaurant Logo</h3>
+
+          <p>
+            Distinctive food-focused identities designed to make
+            restaurants, cafés and food businesses memorable.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 26 REAL ESTATE -->
+
+      <article class="logo-item">
+
+        <div class="logo-preview" style="--accent:#39aaff">
+
+          <span class="logo-number">26</span>
+          <span class="logo-type">Real Estate</span>
+
+          <div class="logo-art blue">
+
+            <div class="logo-symbol">
+              ⌂
+            </div>
+
+            <div class="logo-title f-space">
+              HAVEN
+            </div>
+
+            <div class="logo-subtitle">
+              Property Group
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            26 / Real Estate
+          </div>
+
+          <h3>Real Estate Logo</h3>
+
+          <p>
+            Professional property-focused branding using
+            architectural forms and premium typography.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 27 BEAUTY -->
+
+      <article class="logo-item">
+
+        <div class="logo-preview" style="--accent:#ed72be">
+
+          <span class="logo-number">27</span>
+          <span class="logo-type">Beauty / Lifestyle</span>
+
+          <div class="logo-art pink">
+
+            <div class="logo-title f-script" style="font-size:48px">
+              Belle
+            </div>
+
+            <div class="logo-subtitle">
+              Beauty Studio
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            27 / Beauty / Lifestyle
+          </div>
+
+          <h3>Beauty Logo</h3>
+
+          <p>
+            Elegant and expressive identities created for beauty,
+            skincare, wellness and lifestyle brands.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 28 AUTOMOTIVE -->
+
+      <article class="logo-item">
+
+        <div class="logo-preview" style="--accent:#e4b84e">
+
+          <span class="logo-number">28</span>
+          <span class="logo-type">Automotive</span>
+
+          <div class="logo-art gold">
+
+            <div class="logo-symbol">
+              ◆
+            </div>
+
+            <div class="logo-title f-raj" style="font-size:29px;font-weight:700">
+              CARBONIX
+            </div>
+
+            <div class="logo-subtitle">
+              Automotive
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            28 / Automotive
+          </div>
+
+          <h3>Automotive Logo</h3>
+
+          <p>
+            Strong, sleek and performance-oriented identities
+            for automotive and mobility brands.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 29 ENTERTAINMENT -->
+
+      <article class="logo-item">
+
+        <div class="logo-preview" style="--accent:#ae82ff">
+
+          <span class="logo-number">29</span>
+          <span class="logo-type">Entertainment</span>
+
+          <div class="logo-art purple">
+
+            <div class="logo-symbol">
+              P
+            </div>
+
+            <div class="logo-title f-syne">
+              PIXEL CRAFT
+            </div>
+
+            <div class="logo-subtitle">
+              Creative Studio
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            29 / Entertainment
+          </div>
+
+          <h3>Entertainment Logo</h3>
+
+          <p>
+            Expressive visual identities for music, media,
+            production and entertainment brands.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 30 SPORTSWEAR -->
+
+      <article class="logo-item">
+
+        <div class="logo-preview" style="--accent:#5bc96e">
+
+          <span class="logo-number">30</span>
+          <span class="logo-type">Sportswear / Apparel</span>
+
+          <div class="logo-art green">
+
+            <div class="logo-symbol circle">
+              ✦
+            </div>
+
+            <div class="logo-title f-bebas" style="font-size:34px">
+              MOTION
+            </div>
+
+            <div class="logo-subtitle">
+              Sportswear
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="logo-info">
+
+          <div class="logo-info-number">
+            30 / Sportswear / Apparel
+          </div>
+
+          <h3>Sportswear Logo</h3>
+
+          <p>
+            Bold, wearable branding designed for apparel,
+            activewear and performance-focused businesses.
+          </p>
+
+        </div>
 
       </article>
 
@@ -1498,10 +2240,30 @@ footer{
 
 </section>
 
+
+<!-- PACKAGES -->
 
 <section class="packages">
 
   <div class="container">
+
+    <div class="package-heading">
+
+      <div class="section-label">
+        Choose Your Package
+      </div>
+
+      <h2>
+        Logo Design Packages
+      </h2>
+
+      <p>
+        Choose the level of creative direction and final delivery
+        that best fits your project.
+      </p>
+
+    </div>
+
 
     <div class="package-grid">
 
@@ -1510,55 +2272,62 @@ footer{
 
       <div class="package">
 
-        <div class="package-label">Basic</div>
+        <div class="package-label">
+          Basic
+        </div>
 
-        <h3>Logo Design</h3>
+        <h3>
+          Essential Logo
+        </h3>
 
-        <div class="price">$30</div>
+        <div class="price">
+          $30
+        </div>
 
         <p class="package-intro">
-          A clean and professional logo for a strong
-          and clear brand identity.
+          A professional logo concept for a simple,
+          clear brand identity.
         </p>
 
         <hr>
 
-        <h4>WHAT YOU GET</h4>
+        <h4>
+          WHAT YOU GET
+        </h4>
 
         <ul>
-          <li>1 logo design — selected style</li>
-          <li>High-resolution files — JPG + PNG</li>
+          <li>1 original logo concept</li>
+          <li>Selected logo style</li>
+          <li>High-resolution JPG</li>
+          <li>High-resolution PNG</li>
           <li>Transparent background</li>
-          <li>2 revisions</li>
         </ul>
 
-        <div class="package-meta">
+        <div class="meta">
 
-          <div class="meta">
+          <div class="meta-item">
             <span>Concepts</span>
-            <strong>1 concept</strong>
+            <strong>1</strong>
           </div>
 
-          <div class="meta">
+          <div class="meta-item">
             <span>Revisions</span>
-            <strong>2 revisions</strong>
+            <strong>2</strong>
           </div>
 
-          <div class="meta">
+          <div class="meta-item">
             <span>Delivery</span>
             <strong>2–3 days</strong>
           </div>
 
-          <div class="meta">
+          <div class="meta-item">
             <span>Final Delivery</span>
             <strong>JPG / PNG</strong>
           </div>
 
         </div>
 
-        <a class="start"
-           href="#"
-           onclick="startWhatsApp('Basic')">
+        <a href="#" class="start" onclick="startWhatsApp('Basic')">
           START NOW →
         </a>
 
@@ -1567,59 +2336,69 @@ footer{
 
       <!-- STANDARD -->
 
-      <div class="package popular">
+      <div class="package featured">
 
-        <div class="popular-tag">MOST POPULAR</div>
+        <div class="popular">
+          MOST POPULAR
+        </div>
 
-        <div class="package-label">Standard</div>
+        <div class="package-label">
+          Standard
+        </div>
 
-        <h3>Logo Design</h3>
+        <h3>
+          Professional Logo
+        </h3>
 
-        <div class="price">$60</div>
+        <div class="price">
+          $60
+        </div>
 
         <p class="package-intro">
-          More creative options with enhanced flexibility
-          and refinement.
+          More creative direction, concepts and professional
+          files for a stronger brand identity.
         </p>
 
         <hr>
 
-        <h4>WHAT YOU GET</h4>
+        <h4>
+          WHAT YOU GET
+        </h4>
 
         <ul>
-          <li>2 logo concepts</li>
-          <li>High-resolution files — JPG + PNG</li>
-          <li>Vector file — AI / EPS / PDF</li>
-          <li>3 revisions</li>
+          <li>2 original logo concepts</li>
+          <li>Selected logo style</li>
+          <li>High-resolution JPG</li>
+          <li>High-resolution PNG</li>
+          <li>Transparent background</li>
+          <li>Vector PDF / AI / EPS</li>
         </ul>
 
-        <div class="package-meta">
+        <div class="meta">
 
-          <div class="meta">
+          <div class="meta-item">
             <span>Concepts</span>
-            <strong>2 concepts</strong>
+            <strong>2</strong>
           </div>
 
-          <div class="meta">
+          <div class="meta-item">
             <span>Revisions</span>
-            <strong>3 revisions</strong>
+            <strong>3</strong>
           </div>
 
-          <div class="meta">
+          <div class="meta-item">
             <span>Delivery</span>
             <strong>3–5 days</strong>
           </div>
 
-          <div class="meta">
+          <div class="meta-item">
             <span>Final Delivery</span>
-            <strong>JPG / PNG + Vector</strong>
+            <strong>JPG / PNG / Vector</strong>
           </div>
 
         </div>
 
-        <a class="start"
-           href="#"
-           onclick="startWhatsApp('Standard')">
+        <a href="#" class="start" onclick="startWhatsApp('Standard')">
           START NOW →
         </a>
 
@@ -1630,56 +2409,64 @@ footer{
 
       <div class="package">
 
-        <div class="package-label">Premium</div>
+        <div class="package-label">
+          Premium
+        </div>
 
-        <h3>Logo Design</h3>
+        <h3>
+          Complete Logo
+        </h3>
 
-        <div class="price">$90</div>
+        <div class="price">
+          $90
+        </div>
 
         <p class="package-intro">
-          A complete premium solution with advanced
-          creative direction and brand support.
+          A complete premium logo solution with multiple
+          concepts and professional brand-ready files.
         </p>
 
         <hr>
 
-        <h4>WHAT YOU GET</h4>
+        <h4>
+          WHAT YOU GET
+        </h4>
 
         <ul>
-          <li>3 logo concepts</li>
-          <li>High-resolution files — JPG + PNG</li>
-          <li>Vector file — AI / EPS / PDF</li>
-          <li>Basic brand style guide</li>
-          <li>5 revisions</li>
+          <li>3 original logo concepts</li>
+          <li>Selected logo style</li>
+          <li>High-resolution JPG</li>
+          <li>High-resolution PNG</li>
+          <li>Transparent background</li>
+          <li>Vector PDF / AI / EPS</li>
+          <li>Basic logo usage guide</li>
         </ul>
 
-        <div class="package-meta">
+        <div class="meta">
 
-          <div class="meta">
+          <div class="meta-item">
             <span>Concepts</span>
-            <strong>3 concepts</strong>
+            <strong>3</strong>
           </div>
 
-          <div class="meta">
+          <div class="meta-item">
             <span>Revisions</span>
-            <strong>5 revisions</strong>
+            <strong>5</strong>
           </div>
 
-          <div class="meta">
+          <div class="meta-item">
             <span>Delivery</span>
             <strong>5–7 days</strong>
           </div>
 
-          <div class="meta">
+          <div class="meta-item">
             <span>Final Delivery</span>
-            <strong>JPG / PNG + Vector</strong>
+            <strong>JPG / PNG / Vector</strong>
           </div>
 
         </div>
 
-        <a class="start"
-           href="#"
-           onclick="startWhatsApp('Premium')">
+        <a href="#" class="start" onclick="startWhatsApp('Premium')">
           START NOW →
         </a>
 
@@ -1693,31 +2480,39 @@ footer{
 </section>
 
 
+<!-- CONTACT -->
+
 <section class="contact">
 
   <div class="container">
 
-    <h2>Ready to create?</h2>
+    <div class="section-label">
+      Start Your Project
+    </div>
+
+    <h2>
+      Let's create your identity.
+    </h2>
 
     <p>
-      Tell Victor Phoenix what you need and let's create
-      a logo that builds your brand and leaves a lasting impression.
+      Tell us about your brand, the logo style you want and
+      the package that fits your project.
     </p>
 
     <div class="contact-links">
 
-      <a class="contact-btn"
-         href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
-         target="_blank">
-
-        <span class="contact-icon">◉</span>
+      <a
+        href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
+        target="_blank"
+        class="contact-btn"
+      >
         WhatsApp →
       </a>
 
-      <a class="contact-btn"
-         href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20Logo%20Design%20Inquiry">
-
-        <span class="contact-icon">✉</span>
+      <a
+        href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20Logo%20Design%20Inquiry"
+        class="contact-btn"
+      >
         Email →
       </a>
 
@@ -1728,12 +2523,14 @@ footer{
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
   <div class="container footer-inner">
 
     <div class="footer-brand">
-      Victor Phoenix
+      VICTOR PHOENIX
     </div>
 
     <div class="footer-copy">
@@ -1754,11 +2551,11 @@ function startWhatsApp(packageName){
     packageName +
     " Logo Design package. I'd like to get started. Please send me the package details and next steps.";
 
-  const url =
+  const whatsapp =
     "https://wa.me/2349165831007?text=" +
     encodeURIComponent(message);
 
-  window.open(url,"_blank");
+  window.open(whatsapp, "_blank");
 
 }
 

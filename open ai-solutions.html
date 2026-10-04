@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>AI Solutions | Victor Phoenix</title>
+
+<meta name="description" content="Premium AI solutions, automation, AI applications and intelligent digital systems developed by Victor Phoenix.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&family=Orbitron:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--bg:#040506;
+--card:#090c10;
+--card2:#0d1116;
+--white:#f5f6f7;
+--soft:#c5cad0;
+--muted:#858d96;
+--dim:#606872;
+--line:rgba(255,255,255,.10);
+--line2:rgba(255,255,255,.20);
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0
+}
+
+html{
+scroll-behavior:smooth
+}
+
+body{
+background:
+radial-gradient(circle at 50% -12%,rgba(90,170,190,.17),transparent 38%),
+var(--bg);
+color:var(--white);
+font-family:Inter,Arial,sans-serif;
+line-height:1.55
+}
+
+a{
+text-decoration:none;
+color:inherit
+}
+
+.container{
+width:min(1180px,92%);
+margin:auto
+}
+
+/* HEADER */
+
+header{
+height:76px;
+position:sticky;
+top:0;
+z-index:100;
+background:rgba(4,5,6,.88);
+backdrop-filter:blur(18px);
+border-bottom:1px solid var(--line)
+}
+
+.header-inner{
+height:100%;
+display:flex;
+align-items:center;
+justify-content:space-between
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:11px
+}
+
+.brand img{
+width:40px;
+height:40px;
+object-fit:contain
+}
+
+.brand-name{
+font-size:11px;
+font-weight:800;
+letter-spacing:.10em
+}
+
+.back{
+font-size:10px;
+color:#9199a2
+}
+
+/* HERO */
+
+.hero{
+padding:105px 0 85px;
+text-align:center;
+border-bottom:1px solid var(--line);
+position:relative;
+overflow:hidden
+}
+
+.hero:before{
+content:"";
+position:absolute;
+width:800px;
+height:350px;
+left:50%;
+top:-210px;
+transform:translateX(-50%);
+background:radial-gradient(
+ellipse,
+rgba(75,205,220,.20),
+transparent 68%
+);
+filter:blur(25px)
+}
+
+.eyebrow{
+position:relative;
+font-size:9px;
+letter-spacing:.35em;
+text-transform:uppercase;
+color:#8b949d;
+margin-bottom:18px
+}
+
+.hero h1{
+position:relative;
+font-size:clamp(54px,8vw,100px);
+line-height:.92;
+letter-spacing:-.065em
+}
+
+.hero h1 span{
+color:#68717b
+}
+
+.hero p{
+position:relative;
+max-width:700px;
+margin:25px auto 0;
+font-size:13px;
+color:#969ea7
+}
+
+/* INTRO */
+
+.intro{
+padding:70px 0;
+border-bottom:1px solid var(--line)
+}
+
+.intro-grid{
+display:grid;
+grid-template-columns:.9fr 1.1fr;
+gap:70px;
+align-items:center
+}
+
+.label{
+font-size:8px;
+letter-spacing:.30em;
+text-transform:uppercase;
+color:#858d96;
+margin-bottom:12px
+}
+
+.intro h2{
+font-size:42px;
+line-height:1.02;
+letter-spacing:-.05em;
+margin-bottom:18px
+}
+
+.intro p{
+max-width:520px;
+font-size:13px;
+color:#9098a1
+}
+
+.note{
+display:inline-block;
+margin-top:23px;
+border:1px solid #4e5761;
+border-radius:100px;
+padding:8px 15px;
+font-size:8px;
+letter-spacing:.16em;
+text-transform:uppercase
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px
+}
+
+.feature{
+min-height:145px;
+padding:25px;
+border:1px solid var(--line);
+border-radius:12px;
+background:linear-gradient(145deg,#11161b,#080a0d)
+}
+
+.feature strong{
+display:block;
+font-family:Orbitron,sans-serif;
+font-size:24px;
+margin-bottom:9px
+}
+
+.feature span{
+font-size:8px;
+color:#747d86;
+letter-spacing:.15em;
+text-transform:uppercase
+}
+
+/* CATALOGUE */
+
+.catalogue{
+padding:75px 0
+}
+
+.catalogue-head{
+margin-bottom:45px
+}
+
+.catalogue-head h2{
+font-size:38px;
+letter-spacing:-.045em;
+margin-bottom:8px
+}
+
+.catalogue-head p{
+font-size:12px;
+color:#858d96;
+max-width:720px
+}
+
+/* SERVICE */
+
+.ai-service{
+padding-bottom:75px;
+margin-bottom:75px;
+border-bottom:1px solid var(--line)
+}
+
+.service-top{
+display:grid;
+grid-template-columns:.8fr 1.2fr;
+gap:18px;
+margin-bottom:18px
+}
+
+.preview{
+min-height:330px;
+border:1px solid var(--line);
+border-radius:14px;
+background:
+radial-gradient(circle at 50% 20%,rgba(85,210,220,.10),transparent 48%),
+linear-gradient(145deg,#10161b,#060809);
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+overflow:hidden
+}
+
+.preview:after{
+content:"";
+position:absolute;
+width:300px;
+height:300px;
+border-radius:50%;
+right:-170px;
+bottom:-170px;
+background:var(--accent);
+opacity:.09;
+filter:blur(25px)
+}
+
+.number{
+position:absolute;
+top:16px;
+right:18px;
+font-size:9px;
+color:#626b74;
+letter-spacing:.18em
+}
+
+.type{
+position:absolute;
+top:16px;
+left:18px;
+font-size:8px;
+color:#69727b;
+letter-spacing:.14em;
+text-transform:uppercase
+}
+
+.ai-orb{
+position:relative;
+z-index:2;
+width:105px;
+height:105px;
+border-radius:50%;
+border:1px solid rgba(255,255,255,.35);
+box-shadow:
+0 0 35px rgba(80,210,220,.15),
+inset 0 0 30px rgba(255,255,255,.04);
+display:flex;
+align-items:center;
+justify-content:center;
+font-family:Orbitron,sans-serif;
+font-size:22px
+}
+
+.ai-orb:before,
+.ai-orb:after{
+content:"";
+position:absolute;
+border:1px solid rgba(255,255,255,.12);
+border-radius:50%
+}
+
+.ai-orb:before{
+width:135px;
+height:55px;
+transform:rotate(35deg)
+}
+
+.ai-orb:after{
+width:55px;
+height:135px;
+transform:rotate(35deg)
+}
+
+.description{
+padding:32px;
+border:1px solid var(--line);
+border-radius:14px;
+background:#090b0e
+}
+
+.description h2{
+font-size:30px;
+letter-spacing:-.04em;
+margin-bottom:10px
+}
+
+.description p{
+font-size:12px;
+color:#9199a2;
+max-width:680px
+}
+
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:7px;
+margin-top:21px
+}
+
+.tag{
+border:1px solid var(--line);
+border-radius:100px;
+padding:7px 10px;
+font-size:7px;
+color:#9ba3ab;
+text-transform:uppercase;
+letter-spacing:.10em
+}
+
+/* PACKAGES */
+
+.packages{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:13px
+}
+
+.package{
+padding:25px;
+border:1px solid var(--line);
+border-radius:12px;
+background:linear-gradient(145deg,#0d1115,#07090b)
+}
+
+.package.standard{
+border-color:#647c8e;
+box-shadow:0 0 35px rgba(70,160,180,.07)
+}
+
+.package-label{
+font-size:8px;
+letter-spacing:.25em;
+text-transform:uppercase;
+color:#858d96
+}
+
+.package h3{
+font-size:20px;
+margin-top:5px
+}
+
+.price{
+font-size:34px;
+font-weight:800;
+letter-spacing:-.04em;
+margin:2px 0 7px
+}
+
+.package-intro{
+font-size:10px;
+color:#858d96;
+min-height:42px
+}
+
+.package hr{
+border:0;
+border-top:1px solid var(--line);
+margin:18px 0
+}
+
+.package h4{
+font-size:8px;
+letter-spacing:.20em;
+color:#c5cbd1;
+margin-bottom:10px
+}
+
+.package ul{
+list-style:none
+}
+
+.package li{
+font-size:10px;
+color:#adb4bc;
+margin:7px 0;
+padding-left:15px;
+position:relative
+}
+
+.package li:before{
+content:"";
+position:absolute;
+left:0;
+top:7px;
+width:4px;
+height:4px;
+border-radius:50%;
+background:#c5cbd1
+}
+
+.meta{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:19px;
+padding-top:17px;
+border-top:1px solid var(--line)
+}
+
+.meta span{
+display:block;
+font-size:7px;
+letter-spacing:.12em;
+text-transform:uppercase;
+color:#606973
+}
+
+.meta strong{
+display:block;
+font-size:9px;
+color:#d2d7dc;
+margin-top:3px
+}
+
+.start{
+display:block;
+margin-top:19px;
+padding:12px;
+text-align:center;
+border-radius:7px;
+background:#f2f2f2;
+color:#050607;
+font-size:8px;
+font-weight:800;
+letter-spacing:.14em
+}
+
+.start:hover{
+background:#fff
+}
+
+/* CONTACT */
+
+.contact{
+padding:80px 0;
+text-align:center;
+border-top:1px solid var(--line)
+}
+
+.contact h2{
+font-size:38px;
+letter-spacing:-.045em
+}
+
+.contact p{
+max-width:590px;
+margin:10px auto 24px;
+font-size:12px;
+color:#858d96
+}
+
+.contact-links{
+display:flex;
+justify-content:center;
+gap:12px
+}
+
+.contact-btn{
+padding:12px 22px;
+border:1px solid #555e67;
+border-radius:100px;
+font-size:9px
+}
+
+.contact-btn:hover{
+background:#fff;
+color:#050607
+}
+
+/* FOOTER */
+
+footer{
+padding:23px 0;
+border-top:1px solid var(--line)
+}
+
+.footer{
+display:flex;
+align-items:center;
+justify-content:space-between
+}
+
+.footer strong{
+font-size:10px;
+letter-spacing:.10em
+}
+
+.footer span{
+font-size:8px;
+color:#606873
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.intro-grid,
+.service-top{
+grid-template-columns:1fr
+}
+
+.packages{
+grid-template-columns:1fr
+}
+
+}
+
+@media(max-width:650px){
+
+.hero{
+padding:80px 0 65px
+}
+
+.hero h1{
+font-size:58px
+}
+
+.intro h2{
+font-size:35px
+}
+
+.feature-grid{
+grid-template-columns:1fr 1fr
+}
+
+.description{
+padding:23px
+}
+
+.preview{
+min-height:270px
+}
+
+.footer{
+flex-direction:column;
+gap:8px
+}
+
+.contact-links{
+flex-direction:column;
+align-items:center
+}
+
+.contact-btn{
+width:220px
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container header-inner">
+
+<a href="index.html" class="brand">
+<img src="logo.png" alt="Victor Phoenix">
+<span class="brand-name">VICTOR PHOENIX</span>
+</a>
+
+<a href="services.html" class="back">
+← All Services
+</a>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="container">
+
+<div class="eyebrow">
+Victor Phoenix / Artificial Intelligence
+</div>
+
+<h1>
+AI <span>Solutions.</span>
+</h1>
+
+<p>
+Intelligent digital systems designed, developed and integrated
+to help businesses automate work, serve customers, process
+information and create new digital experiences.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="intro">
+
+<div class="container intro-grid">
+
+<div>
+
+<div class="label">
+Artificial Intelligence
+</div>
+
+<h2>
+We don't just use AI.<br>
+We build with it.
+</h2>
+
+<p>
+From intelligent assistants and automation to custom AI
+applications and complete AI platforms, Victor Phoenix develops
+solutions around the actual problem a business needs to solve.
+</p>
+
+<div class="note">
+20 AI Solutions
+</div>
+
+</div>
+
+
+<div class="feature-grid">
+
+<div class="feature">
+<strong>AI</strong>
+<span>Intelligent Systems</span>
+</div>
+
+<div class="feature">
+<strong>API</strong>
+<span>AI Integrations</span>
+</div>
+
+<div class="feature">
+<strong>BOT</strong>
+<span>Automation</span>
+</div>
+
+<div class="feature">
+<strong>∞</strong>
+<span>Custom AI Platforms</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="catalogue">
+
+<div class="container">
+
+<div class="catalogue-head">
+
+<div class="label">
+AI Solutions
+</div>
+
+<h2>
+Choose what we'll develop.
+</h2>
+
+<p>
+Each AI service has its own development scope and pricing.
+Higher packages involve more intelligence, integrations,
+automation, development, testing, infrastructure and deployment.
+</p>
+
+</div>
+
+<div id="aiServices"></div>
+
+</div>
+
+</section>
+
+
+<section class="contact">
+
+<div class="container">
+
+<div class="label">
+Start Your AI Project
+</div>
+
+<h2>
+Build something intelligent.
+</h2>
+
+<p>
+Tell Victor Phoenix what you want your AI system to accomplish.
+We'll discuss the requirements, technical approach and
+appropriate development level.
+</p>
+
+<div class="contact-links">
+
+<a
+class="contact-btn"
+href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20discuss%20an%20AI%20Solutions%20project."
+target="_blank">
+WhatsApp →
+</a>
+
+<a
+class="contact-btn"
+href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20AI%20Solutions">
+Email →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="container footer">
+
+<strong>VICTOR PHOENIX</strong>
+
+<span>
+Create What's Next. © 2026 Victor Phoenix.
+</span>
+
+</div>
+
+</footer>
+
+
+<script>
+
+const aiServices = [
+
+{
+n:1,
+name:"AI Website & AI Landing Experience",
+desc:"AI-powered websites and landing experiences designed to communicate intelligent products, services and technology.",
+basic:700,
+standard:1500,
+premium:3000,
+accent:"#58d9e4",
+basicIntro:"A professional AI-focused web experience.",
+basic:["Custom AI-focused interface","Responsive development","AI product/service presentation","Interactive sections","Basic AI integration","Basic SEO","Google indexing","Performance optimization"],
+standardIntro:"A stronger AI website with deeper product communication and integration.",
+standard:["Custom UI system","AI feature presentation","Interactive AI sections","API-ready architecture","Lead capture","AI demonstration interface","Advanced SEO","Google Search Console","Analytics","Performance optimization"],
+premiumIntro:"A premium AI web experience designed around product interaction and conversion.",
+premium:["Bespoke AI interface","Advanced AI interactions","AI demonstration experience","API integrations","Advanced forms","Advanced SEO","Structured data where appropriate","Analytics","Conversion tracking","Performance engineering","Security configuration","Launch testing"],
+bd:"8–12 days",sd:"14–21 days",pd:"21–35 days"
+},
+
+{
+n:2,
+name:"AI Chatbot",
+desc:"Intelligent conversational systems designed to answer questions, guide visitors and assist customers.",
+basic:600,
+standard:1400,
+premium:3000,
+accent:"#62c9ff",
+basicIntro:"A focused AI chatbot for common customer questions.",
+basic:["AI conversational interface","Knowledge/content setup","Basic question answering","Website integration","Conversation flow","Basic testing","Deployment setup"],
+standardIntro:"A more capable chatbot connected to business information and workflows.",
+standard:["Custom AI chatbot","Expanded knowledge base","Conversation routing","Lead capture","Website integration","Business FAQ system","API integration","Conversation testing","Analytics structure","Deployment"],
+premiumIntro:"An advanced AI support system designed around business operations.",
+premium:["Advanced AI agent","Large knowledge architecture","Multi-step conversations","Lead qualification","Workflow automation","External API integrations","Escalation logic","Conversation analytics","Advanced testing","Security configuration","Production deployment"],
+bd:"7–10 days",sd:"14–21 days",pd:"21–35 days"
+},
+
+{
+n:3,
+name:"AI Customer Support System",
+desc:"AI-powered customer assistance designed to handle common questions and support workflows.",
+basic:800,
+standard:1800,
+premium:4000,
+accent:"#69dfb4",
+basicIntro:"An AI support foundation for common customer enquiries.",
+basic:["AI support interface","FAQ knowledge base","Question answering","Website integration","Basic escalation flow","Testing","Deployment"],
+standardIntro:"A customer support system connected to business information and workflows.",
+standard:["Expanded knowledge base","Support categories","Conversation routing","Lead capture","Human escalation","Business data integration","API integration","Analytics","Testing","Deployment"],
+premiumIntro:"A comprehensive AI support operation designed for larger customer volumes.",
+premium:["Advanced AI support agent","Multi-step workflows","Customer classification","Ticket escalation","External integrations","CRM-ready architecture","Conversation analytics","Automation","Security","Performance optimization","Production deployment","Launch support"],
+bd:"8–12 days",sd:"15–25 days",pd:"25–45 days"
+},
+
+{
+n:4,
+name:"AI Business Assistant",
+desc:"An intelligent assistant designed to help businesses organize information, answer questions and perform repetitive tasks.",
+basic:900,
+standard:2000,
+premium:4500,
+accent:"#a68cff",
+basicIntro:"A focused AI assistant for business information.",
+basic:["Custom AI assistant","Business knowledge base","Question answering","Basic task handling","Web interface","Testing","Deployment"],
+standardIntro:"An AI assistant connected to business workflows and data.",
+standard:["Advanced knowledge base","Task automation","Document understanding","API integrations","Business workflow connection","User interface","Conversation history","Testing","Analytics"],
+premiumIntro:"A powerful AI business assistant capable of complex workflows and integrations.",
+premium:["Advanced AI agent","Multi-step reasoning workflows","External system integrations","Document processing","Automated actions","Role-based access","Advanced analytics","Security","Performance optimization","Testing","Production deployment"],
+bd:"10–14 days",sd:"18–28 days",pd:"28–50 days"
+},
+
+{
+n:5,
+name:"AI Content System",
+desc:"AI-assisted systems designed to help businesses generate, organize and manage digital content.",
+basic:600,
+standard:1400,
+premium:3000,
+accent:"#e3b86d",
+basicIntro:"An AI content generation foundation.",
+basic:["AI content interface","Prompt system","Content templates","Basic generation workflow","Export functionality","Responsive interface","Testing"],
+standardIntro:"A structured content system for recurring business production.",
+standard:["Multiple content workflows","Brand voice configuration","Content templates","Content categories","Generation history","Export tools","API integration","User interface","Analytics","Testing"],
+premiumIntro:"An advanced content production platform built around scalable workflows.",
+premium:["Advanced AI generation","Brand voice system","Multiple content types","Content workflow automation","Approval system","User roles","API integrations","Analytics","Performance optimization","Security","Production deployment"],
+bd:"7–10 days",sd:"14–21 days",pd:"21–35 days"
+},
+
+{
+n:6,
+name:"AI Lead Generation System",
+desc:"AI systems designed to identify, qualify and organize potential customer enquiries.",
+basic:900,
+standard:2000,
+premium:4500,
+accent:"#64d5e5",
+basicIntro:"An AI-assisted lead capture system.",
+basic:["Lead capture interface","AI qualification questions","Lead form","Basic classification","Email/WhatsApp routing","Testing","Deployment"],
+standardIntro:"An automated lead qualification and routing system.",
+standard:["AI lead qualification","Lead scoring","Custom questions","Automated routing","CRM-ready integration","Notifications","Analytics","API integration","Testing"],
+premiumIntro:"An advanced AI lead engine designed to automate qualification and business workflows.",
+premium:["Advanced lead scoring","AI qualification agent","Automated follow-up workflows","CRM integration","Multiple lead routes","Analytics dashboard","API integrations","Automation","Security","Performance optimization","Production deployment"],
+bd:"10–14 days",sd:"18–28 days",pd:"28–50 days"
+},
+
+{
+n:7,
+name:"AI Automation",
+desc:"Intelligent automation systems that reduce repetitive manual work across business processes.",
+basic:900,
+standard:2200,
+premium:5000,
+accent:"#72d8a9",
+basicIntro:"A focused automation workflow.",
+basic:["Process analysis","One AI automation workflow","Trigger setup","Basic integration","Testing","Deployment"],
+standardIntro:"Multiple connected AI automations for business operations.",
+standard:["Multiple workflows","AI decision logic","API integrations","Automated notifications","Data processing","Error handling","Monitoring structure","Testing","Deployment"],
+premiumIntro:"A larger AI automation system designed around complex business operations.",
+premium:["Advanced automation architecture","Multiple AI agents/workflows","External system integrations","Conditional workflows","Data processing","Monitoring","Error handling","Analytics","Security","Performance engineering","Production deployment","Launch support"],
+bd:"10–14 days",sd:"18–30 days",pd:"30–55 days"
+},
+
+{
+n:8,
+name:"AI Workflow Automation",
+desc:"AI-powered workflows designed to connect tasks, applications and business processes.",
+basic:800,
+standard:1900,
+premium:4200,
+accent:"#7aaaff",
+basicIntro:"One focused intelligent workflow.",
+basic:["Workflow mapping","AI task integration","Trigger and action system","Basic API connection","Testing","Deployment"],
+standardIntro:"A multi-step workflow connected to business tools.",
+standard:["Multiple workflow steps","AI decision points","API integrations","Automated notifications","Data transfer","Error handling","Testing","Monitoring"],
+premiumIntro:"A complex automation architecture connecting multiple business systems.",
+premium:["Advanced workflow engine","Multiple AI decision processes","Multiple integrations","Conditional logic","Automated actions","Monitoring","Analytics","Security","Performance optimization","Testing","Deployment"],
+bd:"8–12 days",sd:"16–25 days",pd:"25–45 days"
+},
+
+{
+n:9,
+name:"AI Document Assistant",
+desc:"AI systems that help businesses search, understand and interact with documents.",
+basic:900,
+standard:2000,
+premium:4500,
+accent:"#c19cff",
+basicIntro:"An AI assistant for document questions.",
+basic:["Document upload","AI document analysis","Question answering","Basic document search","Responsive interface","Testing","Deployment"],
+standardIntro:"A document intelligence system with multiple document workflows.",
+standard:["Multiple document types","Knowledge indexing","Document search","AI summaries","Question answering","Document organization","User interface","Testing","Analytics"],
+premiumIntro:"A powerful document intelligence platform for larger information collections.",
+premium:["Advanced document processing","Large knowledge base","Semantic search","Multi-document reasoning","AI summaries","User roles","Document management","API integration","Analytics","Security","Performance optimization","Deployment"],
+bd:"10–14 days",sd:"18–28 days",pd:"28–50 days"
+},
+
+{
+n:10,
+name:"AI Knowledge Base",
+desc:"Centralized intelligent knowledge systems that allow users to search and interact with business information.",
+basic:800,
+standard:1800,
+premium:4000,
+accent:"#55d6df",
+basicIntro:"A searchable AI knowledge foundation.",
+basic:["Knowledge upload","AI search","Question answering","Basic categorization","Web interface","Testing"],
+standardIntro:"An intelligent knowledge system with structured information retrieval.",
+standard:["Knowledge categories","Semantic search","AI responses","Document indexing","Source references","User interface","API integration","Analytics","Testing"],
+premiumIntro:"A large-scale intelligent knowledge platform for businesses and organizations.",
+premium:["Advanced knowledge architecture","Semantic retrieval","Multi-source knowledge","AI reasoning workflows","User permissions","API ecosystem","Analytics","Security","Performance engineering","Testing","Deployment"],
+bd:"10–14 days",sd:"18–28 days",pd:"28–50 days"
+},
+
+{
+n:11,
+name:"AI Recommendation System",
+desc:"Intelligent recommendation systems that help users discover relevant products, content or options.",
+basic:1200,
+standard:2800,
+premium:6000,
+accent:"#ff9b65",
+basicIntro:"A basic recommendation engine.",
+basic:["Recommendation logic","Data structure","User input system","Basic scoring","Interface integration","Testing"],
+standardIntro:"A personalized recommendation system with deeper logic.",
+standard:["Personalization","Recommendation scoring","User profiles","Data processing","API integration","Analytics","Testing","Deployment"],
+premiumIntro:"An advanced recommendation platform designed around personalized user experiences.",
+premium:["Advanced recommendation architecture","Personalization engine","Behavior-based recommendations","Data processing","Multiple recommendation models","Analytics","API integrations","Performance optimization","Security","Testing","Production deployment"],
+bd:"14–21 days",sd:"21–35 days",pd:"35–55 days"
+},
+
+{
+n:12,
+name:"AI Data / Analytics Assistant",
+desc:"AI-powered systems that help users understand business information and data.",
+basic:1200,
+standard:2800,
+premium:6000,
+accent:"#62c5ff",
+basicIntro:"An AI assistant for basic business data questions.",
+basic:["Data connection","AI question interface","Basic summaries","Simple charts","Responsive dashboard","Testing"],
+standardIntro:"A business analytics assistant with deeper data interaction.",
+standard:["Multiple data sources","AI analysis","Charts and dashboards","Natural-language questions","Data filtering","API integration","Analytics","Testing"],
+premiumIntro:"An advanced intelligent analytics platform for complex business data.",
+premium:["Advanced data architecture","Multiple data sources","AI analytics","Natural-language reporting","Advanced dashboards","Automated insights","Role-based access","API integrations","Security","Performance optimization","Production deployment"],
+bd:"14–21 days",sd:"21–35 days",pd:"35–60 days"
+},
+
+{
+n:13,
+name:"AI Image Generation System",
+desc:"Custom AI-powered image creation experiences for brands, products and digital platforms.",
+basic:1000,
+standard:2500,
+premium:5500,
+accent:"#d28cff",
+basicIntro:"A focused AI image generation interface.",
+basic:["Image generation interface","Prompt input","Basic generation workflow","Download functionality","Responsive interface","Testing"],
+standardIntro:"A branded AI image generation system with more control.",
+standard:["Custom generation interface","Prompt templates","Style controls","Generation history","Image management","API integration","User interface","Testing"],
+premiumIntro:"A complete AI image generation platform designed for advanced creative workflows.",
+premium:["Advanced generation interface","Multiple generation modes","Style systems","Image history","User accounts","Generation management","API integrations","Usage controls","Analytics","Security","Performance optimization","Deployment"],
+bd:"10–15 days",sd:"20–30 days",pd:"30–50 days"
+},
+
+{
+n:14,
+name:"AI Video / Content System",
+desc:"AI-powered systems for generating, organizing or managing video and digital content workflows.",
+basic:1200,
+standard:3000,
+premium:7000,
+accent:"#ff6fae",
+basicIntro:"An AI-assisted content workflow.",
+basic:["AI content interface","Content generation workflow","Basic media handling","Export structure","Responsive UI","Testing"],
+standardIntro:"A more advanced AI content production system.",
+standard:["Multiple content workflows","Media management","AI generation tools","Templates","User interface","API integration","Content organization","Testing"],
+premiumIntro:"A high-end AI content platform designed for scalable digital production.",
+premium:["Advanced AI content workflows","Multiple generation systems","Media processing","User accounts","Content management","API integrations","Automation","Analytics","Security","Performance engineering","Production deployment"],
+bd:"14–21 days",sd:"25–40 days",pd:"40–65 days"
+},
+
+{
+n:15,
+name:"AI Voice Assistant",
+desc:"Conversational voice experiences designed to let users interact with an AI system through speech.",
+basic:1200,
+standard:3000,
+premium:7000,
+accent:"#66e0cb",
+basicIntro:"A voice-enabled AI assistant foundation.",
+basic:["Voice input","AI response system","Basic voice output","Conversation interface","Testing","Deployment"],
+standardIntro:"A voice assistant connected to business information and workflows.",
+standard:["Speech input/output","Business knowledge base","Conversation memory","API integration","Task handling","Custom interface","Testing","Analytics"],
+premiumIntro:"An advanced conversational voice system with integrated business workflows.",
+premium:["Advanced voice interaction","AI agent architecture","Multi-step conversations","Business workflow integration","External APIs","User profiles","Conversation analytics","Security","Performance optimization","Testing","Production deployment"],
+bd:"14–21 days",sd:"25–40 days",pd:"40–65 days"
+},
+
+{
+n:16,
+name:"AI Avatar / Presenter System",
+desc:"AI-powered presenter experiences designed for training, marketing, education and digital communication.",
+basic:1500,
+standard:3500,
+premium:8000,
+accent:"#ff86b9",
+basicIntro:"A focused AI presenter experience.",
+basic:["AI presenter interface","Script input","AI voice workflow","Basic presentation flow","Responsive interface","Testing"],
+standardIntro:"A branded AI presenter system with richer content workflows.",
+standard:["Presenter workflow","Multiple scripts","Voice configuration","Content management","Media integration","API integration","User interface","Testing"],
+premiumIntro:"A sophisticated AI presenter platform for scalable content production.",
+premium:["Advanced presenter architecture","Multiple presenter workflows","Voice systems","Content generation","Media processing","User accounts","API integrations","Automation","Analytics","Security","Performance optimization","Production deployment"],
+bd:"18–25 days",sd:"30–45 days",pd:"45–75 days"
+},
+
+{
+n:17,
+name:"AI Marketing System",
+desc:"AI-powered marketing workflows for content, customer interaction, lead generation and campaign support.",
+basic:1000,
+standard:2500,
+premium:6000,
+accent:"#f2b86b",
+basicIntro:"An AI-assisted marketing foundation.",
+basic:["AI content workflow","Marketing prompt system","Lead capture","Basic automation","Responsive interface","Testing"],
+standardIntro:"A connected AI marketing system for recurring campaigns.",
+standard:["Content workflows","Lead qualification","Campaign assistance","Automation","Analytics","API integrations","Customer segmentation","Testing"],
+premiumIntro:"A comprehensive AI marketing platform designed around automated marketing operations.",
+premium:["Advanced AI marketing workflows","Content generation","Lead qualification","Customer segmentation","Campaign automation","CRM integration","Analytics","API ecosystem","Security","Performance optimization","Production deployment"],
+bd:"12–18 days",sd:"22–35 days",pd:"35–55 days"
+},
+
+{
+n:18,
+name:"AI SaaS Platform",
+desc:"A subscription-ready software platform built around an AI-powered product or service.",
+basic:1800,
+standard:4500,
+premium:9500,
+accent:"#61d5e5",
+basicIntro:"An AI SaaS product foundation.",
+basic:["AI product interface","Core application pages","Basic user flow","AI functionality","Responsive UI","Basic authentication","Deployment setup"],
+standardIntro:"A functional AI SaaS platform with user accounts and core workflows.",
+standard:["User authentication","Dashboard","AI workflows","Database integration","Subscription-ready architecture","API integration","User management","Analytics","Security","Testing","Deployment"],
+premiumIntro:"A substantial AI SaaS platform designed around complex product requirements.",
+premium:["Advanced SaaS architecture","Multiple user roles","AI agent workflows","Advanced dashboard","Subscription/payment integration","Usage tracking","API ecosystem","Admin panel","Analytics","Advanced security","Performance engineering","Testing","Production deployment","Launch support"],
+bd:"21–30 days",sd:"35–55 days",pd:"55–90+ days"
+},
+
+{
+n:19,
+name:"Custom AI Application",
+desc:"A bespoke AI application developed around a specific business problem or unique product idea.",
+basic:1800,
+standard:4500,
+premium:9500,
+accent:"#a77dff",
+basicIntro:"A custom AI application foundation.",
+basic:["Requirements analysis","Custom AI interface","Core AI workflow","Responsive application","Basic integration","Testing","Deployment"],
+standardIntro:"A complete custom AI application with deeper functionality.",
+standard:["Custom application architecture","AI workflow development","Database integration","User accounts","API integrations","Dashboard","Automation","Analytics","Security","Testing","Deployment"],
+premiumIntro:"A complex custom AI product developed around advanced business requirements.",
+premium:["Full AI application architecture","Advanced AI agents","Multiple workflows","User roles","Advanced database","API ecosystem","Automation","Admin system","Analytics","Security hardening","Performance engineering","Testing","Production deployment","Launch support"],
+bd:"21–35 days",sd:"35–60 days",pd:"60–100+ days"
+},
+
+{
+n:20,
+name:"Custom AI Solution",
+desc:"A fully bespoke AI technology solution designed around complex business, operational or product requirements.",
+basic:2500,
+standard:6000,
+premium:12000,
+accent:"#67d9c4",
+basicIntro:"A custom AI solution discovery and development foundation.",
+basic:["Requirements analysis","Technical planning","Custom AI architecture","Core prototype","Initial interface","Basic integration","Testing","Deployment planning"],
+standardIntro:"A production-focused custom AI solution with deeper integrations and automation.",
+standard:["Custom AI architecture","AI workflows","Database integration","API integrations","User interface","Automation","Authentication","Analytics","Security configuration","Testing","Deployment"],
+premiumIntro:"A large-scale bespoke AI system engineered around complex technology requirements.",
+premium:["Complete AI architecture","Multiple AI agents","Advanced workflows","Complex integrations","Custom database architecture","Admin system","User roles","Automation ecosystem","Advanced analytics","Security hardening","Performance engineering","Full testing","Production deployment","Launch support"],
+bd:"25–40 days",sd:"45–70 days",pd:"70–120+ days"
+}
+
+];
+
+
+/* PACKAGE BUILDER */
+
+function packageCard(
+service,
+level,
+price,
+intro,
+items,
+scope,
+revisions,
+delivery,
+finalFile
+){
+
+return `
+
+<div class="package ${level==="Standard"?"standard":""}">
+
+<div class="package-label">${level}</div>
+
+<h3>
+${
+level==="Basic"
+?"Foundation"
+:
+level==="Standard"
+?"Professional"
+:
+"Advanced"
+}
+</h3>
+
+<div class="price">
+$${price.toLocaleString()}
+</div>
+
+<p class="package-intro">
+${intro}
+</p>
+
+<hr>
+
+<h4>
+WHAT WE'LL DEVELOP
+</h4>
+
+<ul>
+
+${items.map(item=>`
+<li>${item}</li>
+`).join("")}
+
+</ul>
+
+<div class="meta">
+
+<div>
+<span>Scope</span>
+<strong>${scope}</strong>
+</div>
+
+<div>
+<span>Revisions</span>
+<strong>${revisions}</strong>
+</div>
+
+<div>
+<span>Delivery</span>
+<strong>${delivery}</strong>
+</div>
+
+<div>
+<span>Handover</span>
+<strong>${finalFile}</strong>
+</div>
+
+</div>
+
+<a
+href="#"
+class="start"
+onclick="contactAI(
+'${service.name}',
+'${level}',
+'$${price.toLocaleString()}'
+)">
+START PROJECT →
+</a>
+
+</div>
+
+`;
+}
+
+
+/* BUILD SERVICES */
+
+const holder=document.getElementById("aiServices");
+
+aiServices.forEach(service=>{
+
+const html=`
+
+<article class="ai-service">
+
+<div class="service-top">
+
+<div
+class="preview"
+style="--accent:${service.accent}"
+>
+
+<span class="number">
+${String(service.n).padStart(2,"0")}
+</span>
+
+<span class="type">
+${service.name}
+</span>
+
+<div class="ai-orb">
+AI
+</div>
+
+</div>
+
+
+<div class="description">
+
+<div class="label">
+${String(service.n).padStart(2,"0")} / AI Solutions
+</div>
+
+<h2>
+${service.name}
+</h2>
+
+<p>
+${service.desc}
+</p>
+
+<div class="tags">
+
+<span class="tag">AI Development</span>
+<span class="tag">Automation</span>
+<span class="tag">Integration</span>
+<span class="tag">Testing</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="packages">
+
+${packageCard(
+service,
+"Basic",
+service.basic,
+service.basicIntro,
+service.basic,
+"Focused",
+"2",
+service.bd,
+"Production handover"
+)}
+
+${packageCard(
+service,
+"Standard",
+service.standard,
+service.standardIntro,
+service.standard,
+"Expanded",
+"3",
+service.sd,
+"Production + source"
+)}
+
+${packageCard(
+service,
+"Premium",
+service.premium,
+service.premiumIntro,
+service.premium,
+"Advanced",
+"5",
+service.pd,
+"Full production handover"
+)}
+
+</div>
+
+</article>
+
+`;
+
+holder.insertAdjacentHTML("beforeend",html);
+
+});
+
+
+/* WHATSAPP */
+
+function contactAI(service,level,price){
+
+const message=
+"Hello Victor Phoenix, I'm interested in the "+
+level+
+" "+
+service+
+" package ("+
+price+
+"). I'd like to discuss the AI requirements, development scope and next steps.";
+
+window.open(
+"https://wa.me/2349165831007?text="+
+encodeURIComponent(message),
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>

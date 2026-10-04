@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact — Victor Phoenix</title>
+
+  <meta
+    name="description"
+    content="Contact Victor Phoenix about digital design, web development, AI solutions, and digital marketing projects."
+  >
+
+  <style>
+    :root {
+      --black: #050505;
+      --dark: #090909;
+      --surface: #101010;
+      --surface-2: #151515;
+      --line: rgba(255,255,255,.10);
+      --white: #f5f5f5;
+      --muted: #8b8b8b;
+      --soft: #c8c8c8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(5,5,5,.82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand img {
+      width: 145px;
+      max-height: 55px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .nav-links a {
+      transition: .25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: #fff;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon-button {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ddd;
+      transition: .25s ease;
+      font-size: 16px;
+    }
+
+    .icon-button:hover {
+      background: #fff;
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 82vh;
+      padding-top: 78px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      right: -280px;
+      top: 50px;
+      background: radial-gradient(
+        circle,
+        rgba(255,255,255,.09),
+        transparent 68%
+      );
+      pointer-events: none;
+    }
+
+    .hero-content {
+      padding: 100px 0;
+      max-width: 1000px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: clamp(60px, 10vw, 130px);
+      line-height: .88;
+      letter-spacing: -.07em;
+      font-weight: 700;
+    }
+
+    .hero h1 span {
+      color: #777;
+    }
+
+    .hero-intro {
+      max-width: 650px;
+      margin-top: 42px;
+      color: #aaa;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* CONTACT AREA */
+
+    section {
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-section {
+      padding: 120px 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 80px;
+    }
+
+    .section-number {
+      font-size: 12px;
+      color: #666;
+      letter-spacing: .15em;
+    }
+
+    .section-title {
+      font-size: clamp(40px, 5vw, 70px);
+      line-height: .98;
+      letter-spacing: -.045em;
+      margin-bottom: 30px;
+    }
+
+    .section-title span {
+      color: #777;
+    }
+
+    .description {
+      color: #999;
+      max-width: 620px;
+      font-size: 16px;
+      line-height: 1.9;
+      margin-bottom: 55px;
+    }
+
+    /* CONTACT OPTIONS */
+
+    .contact-options {
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-option {
+      display: grid;
+      grid-template-columns: 70px 1fr auto;
+      align-items: center;
+      gap: 25px;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--line);
+      transition: .25s ease;
+    }
+
+    .contact-option:hover {
+      padding-left: 8px;
+    }
+
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ddd;
+      font-size: 18px;
+    }
+
+    .contact-option h3 {
+      font-size: 21px;
+      font-weight: 500;
+    }
+
+    .contact-option p {
+      color: #777;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .contact-arrow {
+      font-size: 22px;
+      color: #777;
+      transition: .25s ease;
+    }
+
+    .contact-option:hover .contact-arrow {
+      color: #fff;
+      transform: translateX(5px);
+    }
+
+    /* PROJECT SECTION */
+
+    .project-section {
+      padding: 120px 0;
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(255,255,255,.06),
+          transparent 35%
+        ),
+        #080808;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin-top: 65px;
+    }
+
+    .project-card {
+      background: var(--surface);
+      padding: 42px;
+      min-height: 300px;
+    }
+
+    .project-card:nth-child(2) {
+      background: #0d0d0d;
+    }
+
+    .project-number {
+      color: #555;
+      font-size: 11px;
+      letter-spacing: .15em;
+      margin-bottom: 45px;
+    }
+
+    .project-card h3 {
+      font-size: 27px;
+      line-height: 1.15;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .project-card p {
+      color: #888;
+      font-size: 14px;
+      line-height: 1.8;
+      max-width: 430px;
+    }
+
+    /* PROCESS */
+
+    .process-section {
+      padding: 120px 0;
+    }
+
+    .process-list {
+      margin-top: 65px;
+      border-top: 1px solid var(--line);
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: 70px 1fr 1fr;
+      gap: 25px;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .process-number {
+      color: #555;
+      font-size: 12px;
+    }
+
+    .process h3 {
+      font-size: 21px;
+      font-weight: 500;
+    }
+
+    .process p {
+      color: #777;
+      font-size: 13px;
+    }
+
+    /* FINAL CTA */
+
+    .final-cta {
+      padding: 150px 0;
+      text-align: center;
+      border-top: 1px solid var(--line);
+    }
+
+    .final-cta h2 {
+      font-size: clamp(50px, 8vw, 100px);
+      line-height: .9;
+      letter-spacing: -.07em;
+    }
+
+    .final-cta h2 span {
+      color: #777;
+    }
+
+    .final-cta p {
+      color: #888;
+      max-width: 560px;
+      margin: 30px auto 40px;
+    }
+
+    .primary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 17px 27px;
+      background: #f5f5f5;
+      color: #050505;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      transition: .25s ease;
+    }
+
+    .primary-button:hover {
+      background: #ccc;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 35px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      color: #777;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      color: #666;
+      font-size: 12px;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .nav {
+        height: 70px;
+      }
+
+      .brand img {
+        width: 120px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 75vh;
+      }
+
+      .hero-content {
+        padding: 80px 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(54px, 17vw, 90px);
+      }
+
+      .hero-intro {
+        font-size: 16px;
+      }
+
+      .contact-section,
+      .project-section,
+      .process-section {
+        padding: 85px 0;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .contact-option {
+        grid-template-columns: 55px 1fr auto;
+        gap: 15px;
+      }
+
+      .contact-option h3 {
+        font-size: 18px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card {
+        padding: 32px;
+        min-height: 250px;
+      }
+
+      .process {
+        grid-template-columns: 45px 1fr;
+      }
+
+      .process p {
+        grid-column: 2;
+      }
+
+      .final-cta {
+        padding: 100px 0;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="container nav">
+
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="Victor Phoenix">
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">View Works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+
+        <a
+          class="icon-button"
+          href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
+          target="_blank"
+          rel="noopener"
+          aria-label="WhatsApp"
+        >
+          ◉
+        </a>
+
+        <a
+          class="icon-button"
+          href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20Inquiry"
+          aria-label="Email"
+        >
+          @
+        </a>
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            Contact Victor Phoenix
+          </div>
+
+          <h1>
+            Let's build<br>
+            <span>what's next.</span>
+          </h1>
+
+          <p class="hero-intro">
+            Have a project, idea, business, or digital experience
+            in mind? Tell us what you're building and let's start
+            the conversation.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT OPTIONS -->
+
+    <section class="contact-section">
+
+      <div class="container contact-grid">
+
+        <div>
+
+          <div class="section-number">
+            01 / GET IN TOUCH
+          </div>
+
+        </div>
+
+        <div>
+
+          <h2 class="section-title">
+            Start a<br>
+            <span>conversation.</span>
+          </h2>
+
+          <p class="description">
+            For project inquiries, service requests, collaborations,
+            or general questions, choose the contact method that
+            works best for you.
+          </p>
+
+
+          <div class="contact-options">
+
+            <!-- WHATSAPP -->
+
+            <a
+              class="contact-option"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20discuss%20a%20project."
+              target="_blank"
+              rel="noopener"
+            >
+
+              <div class="contact-icon">
+                ◉
+              </div>
+
+              <div>
+                <h3>WhatsApp</h3>
+                <p>
+                  Start a direct conversation with Victor Phoenix.
+                </p>
+              </div>
+
+              <div class="contact-arrow">
+                →
+              </div>
+
+            </a>
+
+
+            <!-- EMAIL -->
+
+            <a
+              class="contact-option"
+              href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20Project%20Inquiry"
+            >
+
+              <div class="contact-icon">
+                @
+              </div>
+
+              <div>
+                <h3>Email</h3>
+                <p>
+                  Send a project inquiry or detailed message.
+                </p>
+              </div>
+
+              <div class="contact-arrow">
+                →
+              </div>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROJECT TYPES -->
+
+    <section class="project-section">
+
+      <div class="container">
+
+        <div class="section-number">
+          02 / WHAT CAN WE BUILD?
+        </div>
+
+        <div style="margin-top:50px">
+
+          <h2 class="section-title">
+            Bring the<br>
+            <span>idea.</span>
+          </h2>
+
+          <p class="description">
+            Whether you need a visual identity, website, AI-powered
+            system, or digital growth strategy, Victor Phoenix can
+            help turn the idea into a digital experience.
+          </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+          <div class="project-card">
+
+            <div class="project-number">
+              01 / DESIGN
+            </div>
+
+            <h3>
+              Graphics &<br>
+              Design
+            </h3>
+
+            <p>
+              Logos, branding, flyers, banners, brochures,
+              business materials, social media design, and
+              creative content.
+            </p>
+
+          </div>
+
+
+          <div class="project-card">
+
+            <div class="project-number">
+              02 / DEVELOPMENT
+            </div>
+
+            <h3>
+              Web<br>
+              Development
+            </h3>
+
+            <p>
+              Business websites, landing pages, web applications,
+              custom websites, and digital platforms.
+            </p>
+
+          </div>
+
+
+          <div class="project-card">
+
+            <div class="project-number">
+              03 / INTELLIGENCE
+            </div>
+
+            <h3>
+              AI<br>
+              Solutions
+            </h3>
+
+            <p>
+              AI applications, automation systems, assistants,
+              intelligent tools, and custom AI experiences.
+            </p>
+
+          </div>
+
+
+          <div class="project-card">
+
+            <div class="project-number">
+              04 / GROWTH
+            </div>
+
+            <h3>
+              Digital<br>
+              Marketing
+            </h3>
+
+            <p>
+              SEO, social media marketing, advertising,
+              content strategy, analytics, and digital growth.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROCESS -->
+
+    <section class="process-section">
+
+      <div class="container">
+
+        <div class="section-grid">
+
+          <div>
+
+            <div class="section-number">
+              03 / HOW IT STARTS
+            </div>
+
+          </div>
+
+          <div>
+
+            <h2 class="section-title">
+              From idea<br>
+              <span>to execution.</span>
+            </h2>
+
+            <div class="text-content" style="color:#888">
+              A simple starting point for every project.
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="process-list">
+
+          <div class="process">
+
+            <div class="process-number">
+              01
+            </div>
+
+            <h3>
+              Tell us about it
+            </h3>
+
+            <p>
+              Share what you want to build, improve, design,
+              or launch.
+            </p>
+
+          </div>
+
+
+          <div class="process">
+
+            <div class="process-number">
+              02
+            </div>
+
+            <h3>
+              We understand the project
+            </h3>
+
+            <p>
+              We review the requirements, goals, scope,
+              and direction of the project.
+            </p>
+
+          </div>
+
+
+          <div class="process">
+
+            <div class="process-number">
+              03
+            </div>
+
+            <h3>
+              We move forward
+            </h3>
+
+            <p>
+              Once the direction is clear, we can begin
+              turning the idea into the final experience.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL CTA -->
+
+    <section class="final-cta">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Victor Phoenix
+        </div>
+
+        <h2>
+          Create.<br>
+          <span>What's Next.</span>
+        </h2>
+
+        <p>
+          Ready to start? Send us a message and let's discuss
+          your next digital project.
+        </p>
+
+        <a
+          class="primary-button"
+          href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20start%20a%20project."
+          target="_blank"
+          rel="noopener"
+        >
+          Start a Project →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        © 2026 Victor Phoenix. All rights reserved.
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">View Works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

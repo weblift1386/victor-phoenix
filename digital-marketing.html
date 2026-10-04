@@ -1,0 +1,2393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Digital Marketing | Victor Phoenix</title>
+
+  <meta
+    name="description"
+    content="Victor Phoenix provides digital marketing, SEO, social media strategy, advertising campaigns, content marketing, analytics and growth solutions."
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 85% 5%, rgba(255,255,255,.08), transparent 25%),
+        radial-gradient(circle at 10% 35%, rgba(255,255,255,.035), transparent 30%),
+        #070707;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7,7,7,.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand img {
+      width: 165px;
+      max-height: 60px;
+      object-fit: contain;
+    }
+
+    .back {
+      color: #aaa;
+      font-size: 14px;
+      transition: .25s ease;
+    }
+
+    .back:hover {
+      color: #fff;
+      transform: translateX(-3px);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(255,255,255,.10),
+        transparent 68%
+      );
+      right: -220px;
+      top: -250px;
+      filter: blur(15px);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 110px 0;
+    }
+
+    .eyebrow {
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 11px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(54px, 10vw, 120px);
+      line-height: .88;
+      letter-spacing: -6px;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: #777;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin-top: 32px;
+      color: #a5a5a5;
+      font-size: 18px;
+    }
+
+    /* INTRO */
+
+    .intro {
+      padding: 110px 0 70px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+    }
+
+    .section-number {
+      color: #555;
+      letter-spacing: 3px;
+      font-size: 12px;
+    }
+
+    .intro h2 {
+      margin-top: 12px;
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: .95;
+      letter-spacing: -3px;
+    }
+
+    .intro-copy {
+      color: #a0a0a0;
+      font-size: 17px;
+    }
+
+    .intro-copy p + p {
+      margin-top: 18px;
+    }
+
+    /* SERVICE */
+
+    .service {
+      padding: 90px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+
+    .service-header {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .service-number {
+      color: #555;
+      font-size: 17px;
+      letter-spacing: 3px;
+    }
+
+    .service-title {
+      font-size: clamp(34px, 5vw, 60px);
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .service-description {
+      max-width: 780px;
+      color: #999;
+      margin-top: 18px;
+      font-size: 16px;
+    }
+
+    /* SAMPLE */
+
+    .sample {
+      min-height: 270px;
+      margin-bottom: 45px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.10);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.07),
+          rgba(255,255,255,.015)
+        );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sample::before {
+      content: "";
+      width: 430px;
+      height: 430px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.05);
+      filter: blur(65px);
+      position: absolute;
+    }
+
+    .marketing-visual {
+      width: min(780px, 88%);
+      padding: 25px;
+      border: 1px solid #292929;
+      border-radius: 15px;
+      background: #0c0c0c;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 30px 80px rgba(0,0,0,.5);
+    }
+
+    .marketing-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .marketing-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .marketing-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #666;
+    }
+
+    .marketing-label {
+      color: #777;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .growth-line {
+      height: 115px;
+      border-left: 1px solid #242424;
+      border-bottom: 1px solid #242424;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .growth-line::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background:
+        linear-gradient(
+          145deg,
+          transparent 0 25%,
+          rgba(255,255,255,.18) 26% 27%,
+          transparent 28% 43%,
+          rgba(255,255,255,.3) 44% 45%,
+          transparent 46% 60%,
+          rgba(255,255,255,.5) 61% 62%,
+          transparent 63%
+        );
+      clip-path: polygon(
+        0 85%,
+        18% 72%,
+        35% 76%,
+        51% 47%,
+        67% 53%,
+        82% 27%,
+        100% 5%,
+        100% 100%,
+        0 100%
+      );
+    }
+
+    .marketing-boxes {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .marketing-box {
+      height: 60px;
+      border: 1px solid #252525;
+      border-radius: 9px;
+      background: linear-gradient(145deg,#1a1a1a,#0b0b0b);
+    }
+
+    /* PACKAGES */
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+    }
+
+    .package {
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 16px;
+      padding: 30px;
+      background: rgba(255,255,255,.025);
+      min-height: 780px;
+      display: flex;
+      flex-direction: column;
+      transition: .3s ease;
+    }
+
+    .package:hover {
+      transform: translateY(-7px);
+      border-color: rgba(255,255,255,.22);
+      background: rgba(255,255,255,.045);
+    }
+
+    .package.featured {
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.075),
+          rgba(255,255,255,.02)
+        );
+      border-color: rgba(255,255,255,.25);
+    }
+
+    .package-label {
+      color: #888;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .package h3 {
+      font-size: 27px;
+      margin-top: 8px;
+    }
+
+    /* PRICE */
+
+    .price-box {
+      margin: 18px 0 16px;
+      padding: 18px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .price-label {
+      color: #666;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+    }
+
+    .price {
+      font-size: 42px;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: -2px;
+    }
+
+    .package-description {
+      color: #999;
+      font-size: 14px;
+      min-height: 78px;
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(255,255,255,.09);
+      margin: 24px 0;
+    }
+
+    .scope-title {
+      color: #aaa;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .package ul {
+      list-style: none;
+    }
+
+    .package li {
+      position: relative;
+      padding-left: 17px;
+      color: #b8b8b8;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .package li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #666;
+    }
+
+    .meta {
+      margin-top: auto;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.09);
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 6px 0;
+      font-size: 13px;
+    }
+
+    .meta-row span:first-child {
+      color: #666;
+    }
+
+    .meta-row span:last-child {
+      color: #ddd;
+      text-align: right;
+    }
+
+    .start {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 14px;
+      background: #fff;
+      color: #000;
+      border-radius: 8px;
+      margin-top: 23px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: .25s ease;
+    }
+
+    .start:hover {
+      background: #ddd;
+      transform: translateY(-2px);
+    }
+
+    /* CTA */
+
+    .cta {
+      padding: 130px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(45px, 8vw, 92px);
+      line-height: .93;
+      letter-spacing: -5px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 25px auto 35px;
+      color: #999;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact-link {
+      border: 1px solid rgba(255,255,255,.15);
+      padding: 14px 24px;
+      border-radius: 8px;
+      background: #111;
+      transition: .25s ease;
+    }
+
+    .contact-link:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 30px 0;
+      color: #666;
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .packages {
+        grid-template-columns: 1fr;
+      }
+
+      .package {
+        min-height: auto;
+      }
+
+    }
+
+    @media (max-width: 650px) {
+
+      .nav {
+        min-height: 70px;
+      }
+
+      .brand img {
+        width: 135px;
+      }
+
+      .hero-content {
+        padding: 85px 0;
+      }
+
+      .hero h1 {
+        letter-spacing: -3px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .service-header {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .marketing-visual {
+        width: 92%;
+      }
+
+      .marketing-boxes {
+        gap: 6px;
+      }
+
+      .marketing-box {
+        height: 45px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="container nav">
+
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="Victor Phoenix">
+    </a>
+
+    <a href="services.html" class="back">
+      ← All Services
+    </a>
+
+  </div>
+
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container hero-content">
+
+      <div class="eyebrow">
+        Victor Phoenix / Digital Marketing
+      </div>
+
+      <h1>
+        Grow.
+        <span>With Purpose.</span>
+      </h1>
+
+      <p>
+        We build digital marketing systems that connect strategy,
+        content, search, advertising, audience growth and measurable
+        performance into one clear growth direction.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+
+  <section class="intro">
+
+    <div class="container intro-grid">
+
+      <div>
+
+        <div class="section-number">
+          01 / DIGITAL MARKETING
+        </div>
+
+        <h2>
+          Strategy<br>
+          that moves.
+        </h2>
+
+      </div>
+
+      <div class="intro-copy">
+
+        <p>
+          Digital marketing should be more than posting content or
+          running advertisements without a clear direction.
+        </p>
+
+        <p>
+          Victor Phoenix develops structured marketing systems around
+          visibility, search, content, social media, advertising,
+          audience development, analytics and conversion.
+        </p>
+
+        <p>
+          Each package is designed around the work required to build,
+          launch, manage and improve a digital growth strategy.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <div id="marketing-services"></div>
+
+</main>
+
+
+<script>
+
+const whatsappBase =
+  "https://wa.me/2349165831007?text=";
+
+
+/*
+  DIGITAL MARKETING SERVICES
+
+  Every service has:
+  - Basic
+  - Standard
+  - Premium
+  - Separate price
+  - Separate package description
+  - Actual marketing work
+*/
+
+const services = [
+
+  {
+    number: "01",
+    title: "Digital Marketing Strategy",
+    description:
+      "A complete digital marketing strategy designed around your business goals, audience, positioning, channels and growth objectives.",
+    prices: ["$300", "$650", "$1,200"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A focused strategy that establishes your digital marketing direction and priorities.",
+        scope: [
+          "Business and audience research",
+          "Competitor review",
+          "Digital channel assessment",
+          "Marketing objectives",
+          "Basic customer journey",
+          "Content direction",
+          "90-day action plan"
+        ],
+        concepts: "1 strategy",
+        revisions: "2 rounds",
+        delivery: "5–7 days",
+        final: "Marketing strategy document"
+      },
+      {
+        name: "Professional",
+        description:
+          "A broader growth strategy covering multiple channels and a structured execution plan.",
+        scope: [
+          "Audience and competitor research",
+          "Brand positioning review",
+          "Multi-channel strategy",
+          "Customer journey planning",
+          "Content strategy",
+          "SEO direction",
+          "Advertising direction",
+          "90-day campaign roadmap",
+          "Performance KPIs"
+        ],
+        concepts: "2 strategy directions",
+        revisions: "3 rounds",
+        delivery: "7–12 days",
+        final: "Complete marketing strategy"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A comprehensive marketing growth system designed around long-term digital expansion.",
+        scope: [
+          "Deep market research",
+          "Competitor positioning",
+          "Multi-channel architecture",
+          "Customer journey system",
+          "Content ecosystem",
+          "SEO strategy",
+          "Paid advertising strategy",
+          "Conversion strategy",
+          "Analytics framework",
+          "Long-term growth roadmap"
+        ],
+        concepts: "3 strategy directions",
+        revisions: "5 rounds",
+        delivery: "12–18 days",
+        final: "Advanced growth strategy"
+      }
+    ]
+  },
+
+  {
+    number: "02",
+    title: "Search Engine Optimization",
+    description:
+      "SEO work designed to improve website visibility, search relevance, technical structure and long-term organic discovery.",
+    prices: ["$350", "$750", "$1,500"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A focused SEO setup for a website that needs a stronger search foundation.",
+        scope: [
+          "Website SEO audit",
+          "Keyword research",
+          "Page title optimization",
+          "Meta description optimization",
+          "Heading structure review",
+          "Basic technical SEO",
+          "Google Search Console setup",
+          "Indexing review"
+        ],
+        concepts: "1 SEO plan",
+        revisions: "2 rounds",
+        delivery: "7–10 days",
+        final: "SEO setup and report"
+      },
+      {
+        name: "Professional",
+        description:
+          "A broader SEO campaign covering technical, on-page and content optimization.",
+        scope: [
+          "Full website SEO audit",
+          "Keyword research",
+          "On-page optimization",
+          "Technical SEO improvements",
+          "Internal linking strategy",
+          "Content opportunities",
+          "Google Search Console",
+          "Google Analytics",
+          "Indexing optimization",
+          "Performance recommendations"
+        ],
+        concepts: "2 SEO strategies",
+        revisions: "3 rounds",
+        delivery: "14–21 days",
+        final: "Optimized website + SEO report"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A comprehensive SEO growth campaign built for competitive search markets.",
+        scope: [
+          "Advanced SEO audit",
+          "Competitive keyword research",
+          "Technical SEO",
+          "On-page optimization",
+          "Content strategy",
+          "Internal linking architecture",
+          "Search Console optimization",
+          "Analytics configuration",
+          "Performance optimization",
+          "SEO reporting framework",
+          "Growth recommendations"
+        ],
+        concepts: "3 SEO strategies",
+        revisions: "5 rounds",
+        delivery: "21–35 days",
+        final: "Advanced SEO growth system"
+      }
+    ]
+  },
+
+  {
+    number: "03",
+    title: "Social Media Marketing",
+    description:
+      "Strategic social media marketing designed to strengthen brand visibility, audience engagement and consistent digital presence.",
+    prices: ["$300", "$700", "$1,400"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A structured social media foundation for businesses building a stronger presence.",
+        scope: [
+          "Social profile review",
+          "Audience definition",
+          "Content direction",
+          "Monthly content calendar",
+          "Post strategy",
+          "Engagement direction",
+          "Performance tracking"
+        ],
+        concepts: "1 content strategy",
+        revisions: "2 rounds",
+        delivery: "7–10 days",
+        final: "Social media strategy"
+      },
+      {
+        name: "Professional",
+        description:
+          "A complete social media marketing system covering content, engagement and performance.",
+        scope: [
+          "Multi-platform strategy",
+          "Audience research",
+          "Content calendar",
+          "Content themes",
+          "Engagement strategy",
+          "Campaign planning",
+          "Growth recommendations",
+          "Analytics setup",
+          "Monthly performance review"
+        ],
+        concepts: "2 campaign directions",
+        revisions: "3 rounds",
+        delivery: "14–21 days",
+        final: "Social marketing system"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A comprehensive social growth system designed for consistent audience and brand expansion.",
+        scope: [
+          "Multi-platform growth strategy",
+          "Audience segmentation",
+          "Content ecosystem",
+          "Campaign strategy",
+          "Engagement workflows",
+          "Growth experiments",
+          "Influencer direction",
+          "Analytics",
+          "Performance reporting",
+          "Optimization plan"
+        ],
+        concepts: "3 campaign directions",
+        revisions: "5 rounds",
+        delivery: "21–35 days",
+        final: "Advanced social growth system"
+      }
+    ]
+  },
+
+  {
+    number: "04",
+    title: "Content Marketing",
+    description:
+      "A content marketing system that turns useful, relevant content into visibility, authority and customer opportunities.",
+    prices: ["$300", "$700", "$1,400"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A focused content strategy designed around your audience and core business message.",
+        scope: [
+          "Audience research",
+          "Content pillars",
+          "Content topics",
+          "Content calendar",
+          "Basic SEO content direction",
+          "Distribution plan",
+          "Performance KPIs"
+        ],
+        concepts: "1 content system",
+        revisions: "2 rounds",
+        delivery: "7–10 days",
+        final: "Content strategy"
+      },
+      {
+        name: "Professional",
+        description:
+          "A multi-channel content system designed to consistently attract and educate your audience.",
+        scope: [
+          "Content strategy",
+          "Multiple content pillars",
+          "SEO content planning",
+          "Social content planning",
+          "Blog/topic strategy",
+          "Distribution system",
+          "Content calendar",
+          "Performance tracking",
+          "Optimization recommendations"
+        ],
+        concepts: "2 content directions",
+        revisions: "3 rounds",
+        delivery: "14–21 days",
+        final: "Complete content marketing system"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A comprehensive content ecosystem built around authority, organic growth and customer conversion.",
+        scope: [
+          "Advanced content strategy",
+          "Audience segmentation",
+          "SEO content architecture",
+          "Social content ecosystem",
+          "Lead-generation content",
+          "Content distribution",
+          "Conversion content",
+          "Analytics",
+          "Performance reporting",
+          "Continuous optimization plan"
+        ],
+        concepts: "3 content directions",
+        revisions: "5 rounds",
+        delivery: "21–35 days",
+        final: "Advanced content ecosystem"
+      }
+    ]
+  },
+
+  {
+    number: "05",
+    title: "Google Business & Local Marketing",
+    description:
+      "Local digital visibility work designed to help businesses improve their presence across Google and location-based searches.",
+    prices: ["$250", "$550", "$1,100"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A basic Google Business presence setup and optimization.",
+        scope: [
+          "Google Business Profile review",
+          "Business information optimization",
+          "Category selection",
+          "Service information",
+          "Business description",
+          "Basic local keyword research",
+          "Profile optimization"
+        ],
+        concepts: "1 local strategy",
+        revisions: "2 rounds",
+        delivery: "5–8 days",
+        final: "Optimized business profile"
+      },
+      {
+        name: "Professional",
+        description:
+          "A stronger local search system designed around visibility and customer discovery.",
+        scope: [
+          "Google Business optimization",
+          "Local keyword research",
+          "Service optimization",
+          "Location optimization",
+          "Review strategy",
+          "Local content direction",
+          "Google Search Console",
+          "Performance tracking"
+        ],
+        concepts: "2 local strategies",
+        revisions: "3 rounds",
+        delivery: "10–18 days",
+        final: "Local marketing system"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A comprehensive local growth strategy for businesses competing in local search.",
+        scope: [
+          "Advanced local SEO",
+          "Google Business optimization",
+          "Competitive local research",
+          "Location keyword strategy",
+          "Review growth strategy",
+          "Local content architecture",
+          "Search Console",
+          "Analytics",
+          "Performance tracking",
+          "Optimization roadmap"
+        ],
+        concepts: "3 local strategies",
+        revisions: "5 rounds",
+        delivery: "18–30 days",
+        final: "Advanced local growth system"
+      }
+    ]
+  },
+
+  {
+    number: "06",
+    title: "Paid Advertising Campaigns",
+    description:
+      "Strategic digital advertising campaigns designed around targeting, creative direction, campaign structure and measurable performance.",
+    prices: ["$350", "$800", "$1,600"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A focused advertising campaign for one platform and one primary objective.",
+        scope: [
+          "Campaign objective",
+          "Audience targeting",
+          "Basic campaign structure",
+          "Ad copy direction",
+          "Creative direction",
+          "Campaign setup",
+          "Tracking setup"
+        ],
+        concepts: "1 campaign",
+        revisions: "2 rounds",
+        delivery: "7–12 days",
+        final: "Configured ad campaign"
+      },
+      {
+        name: "Professional",
+        description:
+          "A multi-campaign advertising system with stronger targeting and performance tracking.",
+        scope: [
+          "Campaign strategy",
+          "Audience research",
+          "Multiple campaign structures",
+          "Ad copy",
+          "Creative direction",
+          "Conversion tracking",
+          "Retargeting setup",
+          "Analytics",
+          "Performance optimization"
+        ],
+        concepts: "2 campaign directions",
+        revisions: "3 rounds",
+        delivery: "14–21 days",
+        final: "Multi-campaign advertising system"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A comprehensive paid acquisition system designed around testing, optimization and scalable growth.",
+        scope: [
+          "Advanced campaign strategy",
+          "Audience segmentation",
+          "Multiple campaigns",
+          "Retargeting",
+          "Conversion tracking",
+          "Creative testing",
+          "Landing-page recommendations",
+          "Analytics",
+          "Performance optimization",
+          "Scaling strategy"
+        ],
+        concepts: "3 campaign directions",
+        revisions: "5 rounds",
+        delivery: "21–35 days",
+        final: "Advanced advertising system"
+      }
+    ]
+  },
+
+  {
+    number: "07",
+    title: "Google Ads",
+    description:
+      "Search and display advertising strategy designed to put your business in front of relevant audiences across Google.",
+    prices: ["$350", "$800", "$1,600"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A focused Google Ads campaign built around one primary search objective.",
+        scope: [
+          "Keyword research",
+          "Search campaign structure",
+          "Ad group setup",
+          "Ad copy direction",
+          "Negative keyword setup",
+          "Conversion tracking",
+          "Basic optimization"
+        ],
+        concepts: "1 campaign",
+        revisions: "2 rounds",
+        delivery: "7–12 days",
+        final: "Google Ads campaign"
+      },
+      {
+        name: "Professional",
+        description:
+          "A broader Google Ads setup with multiple campaign elements and stronger tracking.",
+        scope: [
+          "Advanced keyword research",
+          "Multiple campaigns",
+          "Search and display strategy",
+          "Ad copy",
+          "Conversion tracking",
+          "Audience targeting",
+          "Remarketing",
+          "Analytics integration",
+          "Performance optimization"
+        ],
+        concepts: "2 campaign directions",
+        revisions: "3 rounds",
+        delivery: "14–21 days",
+        final: "Google Ads system"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A comprehensive Google advertising strategy designed for competitive acquisition and optimization.",
+        scope: [
+          "Advanced Google Ads architecture",
+          "Multiple campaign types",
+          "Advanced keyword strategy",
+          "Audience segmentation",
+          "Remarketing",
+          "Conversion tracking",
+          "Landing-page recommendations",
+          "Analytics",
+          "Campaign testing",
+          "Optimization and scaling"
+        ],
+        concepts: "3 campaign directions",
+        revisions: "5 rounds",
+        delivery: "21–35 days",
+        final: "Advanced Google advertising system"
+      }
+    ]
+  },
+
+  {
+    number: "08",
+    title: "Social Media Advertising",
+    description:
+      "Paid social campaigns designed around audience targeting, creative strategy, conversion and measurable growth.",
+    prices: ["$300", "$700", "$1,400"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A focused paid social campaign for one platform and one objective.",
+        scope: [
+          "Campaign objective",
+          "Audience targeting",
+          "Campaign setup",
+          "Ad structure",
+          "Creative direction",
+          "Basic conversion tracking",
+          "Testing"
+        ],
+        concepts: "1 campaign",
+        revisions: "2 rounds",
+        delivery: "7–12 days",
+        final: "Paid social campaign"
+      },
+      {
+        name: "Professional",
+        description:
+          "A multi-campaign paid social system with audience segmentation and retargeting.",
+        scope: [
+          "Campaign strategy",
+          "Audience research",
+          "Multiple ad sets",
+          "Creative direction",
+          "Retargeting",
+          "Conversion tracking",
+          "Analytics",
+          "Performance optimization",
+          "Testing"
+        ],
+        concepts: "2 campaign directions",
+        revisions: "3 rounds",
+        delivery: "14–21 days",
+        final: "Social advertising system"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A complete paid social growth system built around testing, optimization and scalable acquisition.",
+        scope: [
+          "Advanced campaign architecture",
+          "Audience segmentation",
+          "Multiple campaigns",
+          "Retargeting",
+          "Creative testing",
+          "Conversion tracking",
+          "Lookalike audience strategy",
+          "Analytics",
+          "Performance optimization",
+          "Scaling strategy"
+        ],
+        concepts: "3 campaign directions",
+        revisions: "5 rounds",
+        delivery: "21–35 days",
+        final: "Advanced paid social system"
+      }
+    ]
+  },
+
+  {
+    number: "09",
+    title: "Email Marketing",
+    description:
+      "Email marketing systems designed to help businesses communicate with audiences, nurture leads and improve customer retention.",
+    prices: ["$300", "$700", "$1,400"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A basic email marketing setup for one focused communication workflow.",
+        scope: [
+          "Email strategy",
+          "Audience segmentation",
+          "Basic email structure",
+          "Lead capture direction",
+          "Email sequence planning",
+          "Tracking setup",
+          "Testing"
+        ],
+        concepts: "1 email system",
+        revisions: "2 rounds",
+        delivery: "7–12 days",
+        final: "Email marketing setup"
+      },
+      {
+        name: "Professional",
+        description:
+          "A complete email marketing system with automated sequences and customer journeys.",
+        scope: [
+          "Email marketing strategy",
+          "Multiple audience segments",
+          "Welcome sequence",
+          "Lead nurture sequence",
+          "Campaign planning",
+          "Automation workflows",
+          "Tracking",
+          "Analytics",
+          "Optimization"
+        ],
+        concepts: "2 email strategies",
+        revisions: "3 rounds",
+        delivery: "14–21 days",
+        final: "Email marketing system"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A sophisticated email growth system built around segmentation, automation and customer lifecycle marketing.",
+        scope: [
+          "Advanced email architecture",
+          "Customer segmentation",
+          "Multiple automated sequences",
+          "Lead nurturing",
+          "Customer retention flows",
+          "Behavior-based automation",
+          "Analytics",
+          "Performance testing",
+          "Optimization",
+          "Growth recommendations"
+        ],
+        concepts: "3 email strategies",
+        revisions: "5 rounds",
+        delivery: "21–35 days",
+        final: "Advanced email growth system"
+      }
+    ]
+  },
+
+  {
+    number: "10",
+    title: "Conversion Rate Optimization",
+    description:
+      "Optimization work focused on turning more website visitors into leads, customers or meaningful actions.",
+    prices: ["$350", "$800", "$1,600"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A focused conversion review that identifies the biggest barriers to action.",
+        scope: [
+          "Website conversion audit",
+          "User journey review",
+          "Call-to-action review",
+          "Landing-page review",
+          "Form review",
+          "Trust-element recommendations",
+          "Priority action plan"
+        ],
+        concepts: "1 optimization plan",
+        revisions: "2 rounds",
+        delivery: "7–12 days",
+        final: "CRO audit and action plan"
+      },
+      {
+        name: "Professional",
+        description:
+          "A broader conversion optimization project covering key customer journeys and pages.",
+        scope: [
+          "Full conversion audit",
+          "User journey analysis",
+          "Landing-page optimization",
+          "CTA optimization",
+          "Form optimization",
+          "Trust and credibility improvements",
+          "Analytics review",
+          "A/B testing recommendations",
+          "Implementation guidance"
+        ],
+        concepts: "2 optimization directions",
+        revisions: "3 rounds",
+        delivery: "14–25 days",
+        final: "Optimized conversion system"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A comprehensive conversion system built around testing, user behavior and measurable improvement.",
+        scope: [
+          "Advanced CRO analysis",
+          "Customer journey optimization",
+          "Multiple landing pages",
+          "CTA and funnel optimization",
+          "Behavior analysis",
+          "A/B testing strategy",
+          "Analytics",
+          "Conversion tracking",
+          "Performance reporting",
+          "Continuous optimization roadmap"
+        ],
+        concepts: "3 optimization directions",
+        revisions: "5 rounds",
+        delivery: "25–40 days",
+        final: "Advanced CRO system"
+      }
+    ]
+  },
+
+  {
+    number: "11",
+    title: "Marketing Analytics & Reporting",
+    description:
+      "Analytics systems that help businesses understand where traffic comes from, what users do and which marketing activities perform.",
+    prices: ["$300", "$700", "$1,400"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A basic analytics setup focused on understanding essential website activity.",
+        scope: [
+          "Google Analytics setup",
+          "Basic conversion tracking",
+          "Traffic source tracking",
+          "Key event configuration",
+          "Basic reporting",
+          "Performance review"
+        ],
+        concepts: "1 reporting system",
+        revisions: "2 rounds",
+        delivery: "5–8 days",
+        final: "Analytics setup and report"
+      },
+      {
+        name: "Professional",
+        description:
+          "A broader marketing analytics system connecting multiple important performance signals.",
+        scope: [
+          "Advanced Analytics setup",
+          "Conversion tracking",
+          "Campaign tracking",
+          "Traffic source analysis",
+          "Goal configuration",
+          "Search Console integration",
+          "Dashboard structure",
+          "Monthly reporting",
+          "Performance recommendations"
+        ],
+        concepts: "2 reporting directions",
+        revisions: "3 rounds",
+        delivery: "10–18 days",
+        final: "Marketing analytics system"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A comprehensive analytics environment for measuring marketing performance across multiple channels.",
+        scope: [
+          "Advanced analytics architecture",
+          "Multi-channel tracking",
+          "Conversion architecture",
+          "Campaign attribution",
+          "Search performance",
+          "Dashboard development",
+          "Performance reporting",
+          "KPI framework",
+          "Optimization insights",
+          "Growth recommendations"
+        ],
+        concepts: "3 reporting directions",
+        revisions: "5 rounds",
+        delivery: "18–30 days",
+        final: "Advanced marketing intelligence system"
+      }
+    ]
+  },
+
+  {
+    number: "12",
+    title: "Influencer & Creator Marketing",
+    description:
+      "Strategic creator marketing designed to connect brands with relevant audiences through planned partnerships and campaigns.",
+    prices: ["$350", "$800", "$1,600"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A focused creator strategy for one campaign or audience.",
+        scope: [
+          "Campaign objective",
+          "Creator audience research",
+          "Creator selection criteria",
+          "Campaign messaging",
+          "Outreach direction",
+          "Content requirements",
+          "Performance KPIs"
+        ],
+        concepts: "1 campaign",
+        revisions: "2 rounds",
+        delivery: "7–12 days",
+        final: "Creator campaign strategy"
+      },
+      {
+        name: "Professional",
+        description:
+          "A structured creator campaign with multiple partnership opportunities and content directions.",
+        scope: [
+          "Creator research",
+          "Audience matching",
+          "Campaign strategy",
+          "Creator shortlist",
+          "Outreach system",
+          "Content direction",
+          "Campaign tracking",
+          "Performance metrics",
+          "Optimization"
+        ],
+        concepts: "2 campaign directions",
+        revisions: "3 rounds",
+        delivery: "14–25 days",
+        final: "Influencer campaign system"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A larger creator marketing system designed around multiple campaigns and long-term partnerships.",
+        scope: [
+          "Advanced creator strategy",
+          "Audience segmentation",
+          "Creator research",
+          "Campaign architecture",
+          "Partnership strategy",
+          "Content ecosystem",
+          "Performance tracking",
+          "Analytics",
+          "Campaign optimization",
+          "Long-term creator roadmap"
+        ],
+        concepts: "3 campaign directions",
+        revisions: "5 rounds",
+        delivery: "25–40 days",
+        final: "Advanced creator growth system"
+      }
+    ]
+  },
+
+  {
+    number: "13",
+    title: "Brand Awareness Campaign",
+    description:
+      "Digital campaigns designed to increase brand recognition, visibility and familiarity with a target audience.",
+    prices: ["$350", "$800", "$1,600"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A focused awareness campaign designed around one audience and message.",
+        scope: [
+          "Campaign objective",
+          "Audience definition",
+          "Campaign messaging",
+          "Content direction",
+          "Channel selection",
+          "Basic campaign structure",
+          "Performance KPIs"
+        ],
+        concepts: "1 campaign",
+        revisions: "2 rounds",
+        delivery: "7–12 days",
+        final: "Brand awareness campaign"
+      },
+      {
+        name: "Professional",
+        description:
+          "A multi-channel awareness campaign designed to build stronger brand recognition.",
+        scope: [
+          "Audience research",
+          "Campaign positioning",
+          "Multi-channel strategy",
+          "Content direction",
+          "Social campaign",
+          "Advertising direction",
+          "Performance tracking",
+          "Analytics",
+          "Optimization"
+        ],
+        concepts: "2 campaign directions",
+        revisions: "3 rounds",
+        delivery: "14–25 days",
+        final: "Multi-channel awareness system"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A comprehensive brand awareness system designed around sustained visibility and audience growth.",
+        scope: [
+          "Advanced campaign architecture",
+          "Audience segmentation",
+          "Multi-channel campaigns",
+          "Content ecosystem",
+          "Paid advertising",
+          "Social growth",
+          "Performance analytics",
+          "Campaign testing",
+          "Optimization",
+          "Long-term awareness roadmap"
+        ],
+        concepts: "3 campaign directions",
+        revisions: "5 rounds",
+        delivery: "25–40 days",
+        final: "Advanced brand awareness system"
+      }
+    ]
+  },
+
+  {
+    number: "14",
+    title: "Lead Generation Marketing",
+    description:
+      "Digital campaigns designed to attract qualified prospects and create a structured path from discovery to inquiry.",
+    prices: ["$400", "$900", "$1,800"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A focused lead-generation campaign for one audience and one primary offer.",
+        scope: [
+          "Audience research",
+          "Lead offer strategy",
+          "Landing-page recommendations",
+          "Lead form strategy",
+          "Campaign structure",
+          "Basic tracking",
+          "Lead routing"
+        ],
+        concepts: "1 campaign",
+        revisions: "2 rounds",
+        delivery: "10–15 days",
+        final: "Lead generation campaign"
+      },
+      {
+        name: "Professional",
+        description:
+          "A complete lead-generation system combining traffic, campaigns and conversion workflows.",
+        scope: [
+          "Lead-generation strategy",
+          "Audience segmentation",
+          "Landing-page strategy",
+          "Lead forms",
+          "Paid campaign direction",
+          "Retargeting",
+          "Lead routing",
+          "Analytics",
+          "Conversion tracking",
+          "Optimization"
+        ],
+        concepts: "2 campaign directions",
+        revisions: "3 rounds",
+        delivery: "18–30 days",
+        final: "Lead generation system"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A comprehensive acquisition system designed around scalable lead generation and qualification.",
+        scope: [
+          "Advanced lead strategy",
+          "Multiple audiences",
+          "Multiple campaigns",
+          "Landing-page optimization",
+          "Retargeting",
+          "Lead qualification",
+          "CRM integration direction",
+          "Analytics",
+          "Conversion tracking",
+          "Performance optimization",
+          "Scaling strategy"
+        ],
+        concepts: "3 campaign directions",
+        revisions: "5 rounds",
+        delivery: "30–45 days",
+        final: "Advanced lead acquisition system"
+      }
+    ]
+  },
+
+  {
+    number: "15",
+    title: "E-commerce Marketing",
+    description:
+      "Digital marketing systems designed to increase product visibility, traffic, customer acquisition and online sales.",
+    prices: ["$400", "$900", "$1,800"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A focused marketing setup for an online store with a defined product range.",
+        scope: [
+          "Store marketing audit",
+          "Audience research",
+          "Product promotion strategy",
+          "Basic SEO direction",
+          "Social promotion",
+          "Advertising direction",
+          "Performance KPIs"
+        ],
+        concepts: "1 growth strategy",
+        revisions: "2 rounds",
+        delivery: "10–15 days",
+        final: "E-commerce marketing plan"
+      },
+      {
+        name: "Professional",
+        description:
+          "A multi-channel e-commerce growth system designed around traffic, products and conversion.",
+        scope: [
+          "E-commerce marketing strategy",
+          "Product campaign structure",
+          "SEO direction",
+          "Social marketing",
+          "Paid advertising",
+          "Retargeting",
+          "Conversion optimization",
+          "Analytics",
+          "Performance tracking"
+        ],
+        concepts: "2 growth strategies",
+        revisions: "3 rounds",
+        delivery: "18–30 days",
+        final: "E-commerce growth system"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A comprehensive e-commerce acquisition system built around scalable traffic, conversion and retention.",
+        scope: [
+          "Advanced e-commerce strategy",
+          "Product segmentation",
+          "SEO strategy",
+          "Paid campaigns",
+          "Retargeting",
+          "Conversion optimization",
+          "Customer retention strategy",
+          "Analytics",
+          "Performance reporting",
+          "Scaling roadmap"
+        ],
+        concepts: "3 growth strategies",
+        revisions: "5 rounds",
+        delivery: "30–45 days",
+        final: "Advanced e-commerce growth system"
+      }
+    ]
+  },
+
+  {
+    number: "16",
+    title: "App Marketing",
+    description:
+      "Marketing systems designed to increase awareness, downloads, user acquisition and engagement for mobile applications.",
+    prices: ["$400", "$900", "$1,800"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A focused marketing strategy designed to launch or promote a mobile application.",
+        scope: [
+          "App audience research",
+          "App positioning",
+          "Launch strategy",
+          "App Store listing recommendations",
+          "Google Play listing recommendations",
+          "Social campaign direction",
+          "Performance KPIs"
+        ],
+        concepts: "1 campaign",
+        revisions: "2 rounds",
+        delivery: "10–15 days",
+        final: "App marketing strategy"
+      },
+      {
+        name: "Professional",
+        description:
+          "A broader app acquisition system combining launch, advertising and audience growth.",
+        scope: [
+          "App acquisition strategy",
+          "Audience segmentation",
+          "App listing optimization",
+          "Social marketing",
+          "Paid advertising",
+          "Retargeting",
+          "Campaign tracking",
+          "Analytics",
+          "Optimization"
+        ],
+        concepts: "2 campaign directions",
+        revisions: "3 rounds",
+        delivery: "18–30 days",
+        final: "App growth system"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A comprehensive app marketing ecosystem designed around scalable acquisition and user growth.",
+        scope: [
+          "Advanced app growth strategy",
+          "User acquisition architecture",
+          "Store optimization",
+          "Multiple paid campaigns",
+          "Retargeting",
+          "Audience segmentation",
+          "Conversion optimization",
+          "Analytics",
+          "Retention strategy",
+          "Scaling roadmap"
+        ],
+        concepts: "3 campaign directions",
+        revisions: "5 rounds",
+        delivery: "30–45 days",
+        final: "Advanced app growth system"
+      }
+    ]
+  },
+
+  {
+    number: "17",
+    title: "Product Launch Marketing",
+    description:
+      "A structured digital campaign designed to create awareness, anticipation and demand around a new product launch.",
+    prices: ["$450", "$1,000", "$2,000"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A focused launch campaign built around one product and one target audience.",
+        scope: [
+          "Launch strategy",
+          "Audience research",
+          "Launch messaging",
+          "Content direction",
+          "Social campaign",
+          "Basic advertising direction",
+          "Launch timeline"
+        ],
+        concepts: "1 launch strategy",
+        revisions: "2 rounds",
+        delivery: "10–15 days",
+        final: "Product launch plan"
+      },
+      {
+        name: "Professional",
+        description:
+          "A multi-channel product launch system covering awareness, traffic and conversion.",
+        scope: [
+          "Launch campaign architecture",
+          "Audience segmentation",
+          "Content strategy",
+          "Social campaign",
+          "Paid advertising",
+          "Landing-page strategy",
+          "Lead capture",
+          "Retargeting",
+          "Analytics",
+          "Launch optimization"
+        ],
+        concepts: "2 launch directions",
+        revisions: "3 rounds",
+        delivery: "18–30 days",
+        final: "Complete launch campaign"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A full product launch ecosystem designed around anticipation, acquisition and scalable growth.",
+        scope: [
+          "Advanced launch architecture",
+          "Pre-launch strategy",
+          "Launch campaign",
+          "Audience segmentation",
+          "Multi-channel content",
+          "Paid advertising",
+          "Retargeting",
+          "Conversion optimization",
+          "Analytics",
+          "Performance reporting",
+          "Post-launch growth strategy"
+        ],
+        concepts: "3 launch directions",
+        revisions: "5 rounds",
+        delivery: "30–45 days",
+        final: "Advanced product launch system"
+      }
+    ]
+  },
+
+  {
+    number: "18",
+    title: "Reputation & Online Presence",
+    description:
+      "Digital reputation and presence strategies designed to improve how a business appears across search, social and online channels.",
+    prices: ["$350", "$800", "$1,600"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A focused review and improvement plan for a business's online presence.",
+        scope: [
+          "Online presence audit",
+          "Search visibility review",
+          "Social profile review",
+          "Business information review",
+          "Reputation review",
+          "Improvement recommendations",
+          "Action plan"
+        ],
+        concepts: "1 presence strategy",
+        revisions: "2 rounds",
+        delivery: "7–12 days",
+        final: "Online presence report"
+      },
+      {
+        name: "Professional",
+        description:
+          "A broader digital presence system designed to improve consistency and visibility.",
+        scope: [
+          "Online presence strategy",
+          "Search optimization",
+          "Social profile optimization",
+          "Google Business optimization",
+          "Review strategy",
+          "Content direction",
+          "Analytics",
+          "Performance tracking",
+          "Optimization"
+        ],
+        concepts: "2 presence strategies",
+        revisions: "3 rounds",
+        delivery: "14–25 days",
+        final: "Digital presence system"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A comprehensive reputation and visibility system designed for long-term digital positioning.",
+        scope: [
+          "Advanced reputation strategy",
+          "Search visibility",
+          "Social presence",
+          "Google Business",
+          "Review management direction",
+          "Content ecosystem",
+          "Authority-building strategy",
+          "Analytics",
+          "Performance monitoring",
+          "Long-term optimization roadmap"
+        ],
+        concepts: "3 presence strategies",
+        revisions: "5 rounds",
+        delivery: "25–40 days",
+        final: "Advanced reputation system"
+      }
+    ]
+  },
+
+  {
+    number: "19",
+    title: "Marketing Funnel Development",
+    description:
+      "Structured digital funnels that guide potential customers from awareness and interest toward inquiry, purchase or another defined action.",
+    prices: ["$450", "$1,000", "$2,000"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A focused marketing funnel designed around one offer and one customer journey.",
+        scope: [
+          "Customer journey mapping",
+          "Funnel structure",
+          "Landing-page direction",
+          "Lead capture",
+          "Call-to-action strategy",
+          "Basic email flow",
+          "Tracking setup"
+        ],
+        concepts: "1 funnel",
+        revisions: "2 rounds",
+        delivery: "10–15 days",
+        final: "Marketing funnel"
+      },
+      {
+        name: "Professional",
+        description:
+          "A multi-stage funnel combining traffic, lead capture, nurturing and conversion.",
+        scope: [
+          "Full funnel architecture",
+          "Landing-page strategy",
+          "Lead capture system",
+          "Email nurture flow",
+          "Retargeting",
+          "Conversion strategy",
+          "Analytics",
+          "Campaign tracking",
+          "Optimization"
+        ],
+        concepts: "2 funnel directions",
+        revisions: "3 rounds",
+        delivery: "18–30 days",
+        final: "Complete marketing funnel"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A sophisticated acquisition funnel designed around multiple audiences, automation and optimization.",
+        scope: [
+          "Advanced funnel architecture",
+          "Multiple customer journeys",
+          "Landing-page optimization",
+          "Lead qualification",
+          "Email automation",
+          "Retargeting",
+          "Conversion optimization",
+          "Analytics",
+          "Performance reporting",
+          "Scaling strategy"
+        ],
+        concepts: "3 funnel directions",
+        revisions: "5 rounds",
+        delivery: "30–45 days",
+        final: "Advanced marketing funnel system"
+      }
+    ]
+  },
+
+  {
+    number: "20",
+    title: "Complete Digital Growth System",
+    description:
+      "A comprehensive digital marketing system combining multiple growth channels into one coordinated strategy.",
+    prices: ["$1,000", "$2,500", "$5,000"],
+    packages: [
+      {
+        name: "Foundation",
+        description:
+          "A focused growth system combining the most important digital channels for your business.",
+        scope: [
+          "Digital marketing audit",
+          "Audience research",
+          "SEO direction",
+          "Social media strategy",
+          "Content strategy",
+          "Basic advertising direction",
+          "Analytics setup",
+          "90-day growth plan"
+        ],
+        concepts: "1 growth system",
+        revisions: "2 rounds",
+        delivery: "14–21 days",
+        final: "Digital growth strategy"
+      },
+      {
+        name: "Professional",
+        description:
+          "A multi-channel digital growth system connecting search, content, social, advertising and conversion.",
+        scope: [
+          "Complete digital marketing strategy",
+          "SEO",
+          "Social media marketing",
+          "Content marketing",
+          "Paid advertising",
+          "Lead generation",
+          "Conversion optimization",
+          "Analytics",
+          "Campaign tracking",
+          "90-day execution roadmap"
+        ],
+        concepts: "2 growth systems",
+        revisions: "3 rounds",
+        delivery: "25–40 days",
+        final: "Complete digital growth system"
+      },
+      {
+        name: "Advanced",
+        description:
+          "A premium digital growth ecosystem built around coordinated acquisition, conversion, analytics and long-term scaling.",
+        scope: [
+          "Advanced digital growth architecture",
+          "SEO strategy",
+          "Content ecosystem",
+          "Social growth",
+          "Paid advertising",
+          "Lead generation",
+          "Marketing funnels",
+          "Conversion optimization",
+          "Analytics infrastructure",
+          "Performance reporting",
+          "Customer retention strategy",
+          "Long-term scaling roadmap"
+        ],
+        concepts: "3 growth systems",
+        revisions: "5 rounds",
+        delivery: "40–60 days",
+        final: "Advanced digital growth ecosystem"
+      }
+    ]
+  }
+
+];
+
+
+/* WHATSAPP */
+
+function createWhatsApp(serviceTitle, packageName, price) {
+
+  const message =
+    `Hello Victor Phoenix, I'm interested in the ${packageName} ${serviceTitle} package priced at ${price}. I'd like to get started. Please send me the package details and next steps.`;
+
+  return whatsappBase + encodeURIComponent(message);
+}
+
+
+/* CREATE SERVICE */
+
+function createService(service) {
+
+  const section = document.createElement("section");
+
+  section.className = "service";
+
+  section.innerHTML = `
+
+    <div class="container">
+
+      <div class="service-header">
+
+        <div class="service-number">
+          ${service.number}
+        </div>
+
+        <div>
+
+          <h2 class="service-title">
+            ${service.title}
+          </h2>
+
+          <p class="service-description">
+            ${service.description}
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="sample">
+
+        <div class="marketing-visual">
+
+          <div class="marketing-top">
+
+            <div class="marketing-dots">
+              <div class="marketing-dot"></div>
+              <div class="marketing-dot"></div>
+              <div class="marketing-dot"></div>
+            </div>
+
+            <div class="marketing-label">
+              Growth / Victor Phoenix
+            </div>
+
+          </div>
+
+
+          <div class="growth-line"></div>
+
+
+          <div class="marketing-boxes">
+
+            <div class="marketing-box"></div>
+            <div class="marketing-box"></div>
+            <div class="marketing-box"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="packages">
+
+        ${service.packages.map((pkg, index) => {
+
+          const levels = [
+            "Basic",
+            "Standard",
+            "Premium"
+          ];
+
+          const price = service.prices[index];
+
+          const whatsapp =
+            createWhatsApp(
+              service.title,
+              levels[index],
+              price
+            );
+
+          return `
+
+            <div class="package ${index === 1 ? "featured" : ""}">
+
+              <div class="package-label">
+                ${levels[index]}
+              </div>
+
+              <h3>
+                ${pkg.name}
+              </h3>
+
+
+              <div class="price-box">
+
+                <div class="price-label">
+                  Package price
+                </div>
+
+                <div class="price">
+                  ${price}
+                </div>
+
+              </div>
+
+
+              <p class="package-description">
+                ${pkg.description}
+              </p>
+
+
+              <div class="divider"></div>
+
+
+              <div class="scope-title">
+                What we'll do
+              </div>
+
+
+              <ul>
+
+                ${pkg.scope.map(item => `
+                  <li>${item}</li>
+                `).join("")}
+
+              </ul>
+
+
+              <div class="meta">
+
+                <div class="meta-row">
+                  <span>Strategy</span>
+                  <span>${pkg.concepts}</span>
+                </div>
+
+                <div class="meta-row">
+                  <span>Revisions</span>
+                  <span>${pkg.revisions}</span>
+                </div>
+
+                <div class="meta-row">
+                  <span>Delivery</span>
+                  <span>${pkg.delivery}</span>
+                </div>
+
+                <div class="meta-row">
+                  <span>Final delivery</span>
+                  <span>${pkg.final}</span>
+                </div>
+
+
+                <a
+                  class="start"
+                  href="${whatsapp}"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  START NOW →
+                </a>
+
+              </div>
+
+            </div>
+
+          `;
+
+        }).join("")}
+
+      </div>
+
+    </div>
+
+  `;
+
+  return section;
+}
+
+
+/* INSERT ALL SERVICES */
+
+const serviceContainer =
+  document.getElementById("marketing-services");
+
+services.forEach(service => {
+
+  serviceContainer.appendChild(
+    createService(service)
+  );
+
+});
+
+
+/* FINAL CTA */
+
+const cta = document.createElement("section");
+
+cta.className = "cta";
+
+cta.innerHTML = `
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Victor Phoenix / Digital Marketing
+    </div>
+
+    <h2>
+      Create.<br>
+      Grow. Evolve.
+    </h2>
+
+    <p>
+      Have a business, product or idea that needs stronger digital
+      visibility? Tell us what you are building and let's create the
+      right marketing direction for it.
+    </p>
+
+    <div class="contact-links">
+
+      <a
+        class="contact-link"
+        href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'd%20like%20to%20discuss%20a%20digital%20marketing%20project."
+        target="_blank"
+        rel="noopener"
+      >
+        WhatsApp →
+      </a>
+
+      <a
+        class="contact-link"
+        href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20Digital%20Marketing%20Inquiry"
+      >
+        Email →
+      </a>
+
+    </div>
+
+  </div>
+
+`;
+
+document.querySelector("main").appendChild(cta);
+
+
+/* FOOTER */
+
+const footer = document.createElement("footer");
+
+footer.innerHTML = `
+
+  <div class="container footer-inner">
+
+    <div>
+      © 2026 Victor Phoenix. All rights reserved.
+    </div>
+
+    <div>
+      Create. Innovate. Evolve.
+    </div>
+
+  </div>
+
+`;
+
+document.body.appendChild(footer);
+
+</script>
+
+</body>
+</html>

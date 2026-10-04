@@ -1,2500 +1,2028 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Web Development | Victor Phoenix</title>
-
-<meta name="description"
-content="Premium web development services by Victor Phoenix. Professional websites, web applications, SEO, performance optimization and digital experiences.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Cormorant+Garamond:wght@500;600;700&family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&family=Orbitron:wght@500;600;700&family=Oswald:wght@500;600;700&family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-:root{
---bg:#050607;
---surface:#0a0d11;
---surface2:#10141a;
---surface3:#151a20;
---white:#f5f5f5;
---soft:#c7cbd1;
---muted:#858c95;
---muted2:#5e6670;
---line:rgba(255,255,255,.10);
---line2:rgba(255,255,255,.18);
-}
-
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-background:
-radial-gradient(circle at 50% -15%,rgba(115,140,170,.15),transparent 38%),
-var(--bg);
-color:var(--white);
-font-family:Inter,Arial,sans-serif;
-line-height:1.55;
-}
-
-a{
-color:inherit;
-text-decoration:none;
-}
-
-.container{
-width:min(1180px,92%);
-margin:auto;
-}
-
-/* HEADER */
-
-header{
-height:76px;
-position:sticky;
-top:0;
-z-index:100;
-background:rgba(5,6,7,.88);
-backdrop-filter:blur(18px);
-border-bottom:1px solid var(--line);
-}
-
-.header-inner{
-height:100%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-}
-
-.brand{
-display:flex;
-align-items:center;
-gap:11px;
-}
-
-.brand img{
-width:40px;
-height:40px;
-object-fit:contain;
-}
-
-.brand-name{
-font-size:11px;
-font-weight:800;
-letter-spacing:.10em;
-}
-
-.back{
-font-size:10px;
-color:#9299a2;
-}
-
-/* HERO */
-
-.hero{
-padding:105px 0 85px;
-text-align:center;
-border-bottom:1px solid var(--line);
-position:relative;
-overflow:hidden;
-}
-
-.hero:before{
-content:"";
-position:absolute;
-width:760px;
-height:330px;
-left:50%;
-top:-190px;
-transform:translateX(-50%);
-background:radial-gradient(
-ellipse,
-rgba(110,140,175,.20),
-transparent 68%
-);
-filter:blur(20px);
-}
-
-.eyebrow{
-position:relative;
-font-size:9px;
-letter-spacing:.34em;
-text-transform:uppercase;
-color:#8e959e;
-margin-bottom:18px;
-}
-
-.hero h1{
-position:relative;
-font-size:clamp(52px,8vw,100px);
-line-height:.92;
-letter-spacing:-.065em;
-}
-
-.hero h1 span{
-color:#6e747d;
-}
-
-.hero p{
-position:relative;
-max-width:690px;
-margin:24px auto 0;
-font-size:13px;
-color:#969da6;
-}
-
-/* INTRO */
-
-.intro{
-padding:70px 0;
-border-bottom:1px solid var(--line);
-}
-
-.intro-grid{
-display:grid;
-grid-template-columns:.9fr 1.1fr;
-gap:70px;
-align-items:center;
-}
-
-.label{
-font-size:8px;
-letter-spacing:.30em;
-text-transform:uppercase;
-color:#838a93;
-margin-bottom:12px;
-}
-
-.intro h2{
-font-size:42px;
-line-height:1.02;
-letter-spacing:-.05em;
-margin-bottom:18px;
-}
-
-.intro p{
-max-width:500px;
-font-size:13px;
-color:#9198a1;
-}
-
-.note{
-display:inline-block;
-margin-top:23px;
-border:1px solid #4d555e;
-border-radius:100px;
-padding:8px 15px;
-font-size:8px;
-letter-spacing:.16em;
-text-transform:uppercase;
-color:#aab0b8;
-}
-
-.feature-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-}
-
-.feature{
-min-height:145px;
-padding:25px;
-border:1px solid var(--line);
-border-radius:12px;
-background:
-linear-gradient(145deg,#11161c,#080a0d);
-}
-
-.feature strong{
-display:block;
-font-size:27px;
-letter-spacing:-.04em;
-margin-bottom:7px;
-}
-
-.feature span{
-font-size:9px;
-color:#747b84;
-text-transform:uppercase;
-letter-spacing:.14em;
-}
-
-/* CATALOGUE */
-
-.catalogue{
-padding:75px 0;
-}
-
-.catalogue-head{
-margin-bottom:45px;
-}
-
-.catalogue-head h2{
-font-size:38px;
-letter-spacing:-.045em;
-margin-bottom:8px;
-}
-
-.catalogue-head p{
-font-size:12px;
-color:#858c95;
-max-width:700px;
-}
-
-/* SERVICE */
-
-.web-service{
-padding-bottom:75px;
-margin-bottom:75px;
-border-bottom:1px solid var(--line);
-}
-
-.service-top{
-display:grid;
-grid-template-columns:.8fr 1.2fr;
-gap:18px;
-margin-bottom:18px;
-}
-
-.service-preview{
-min-height:330px;
-border:1px solid var(--line);
-border-radius:14px;
-background:
-radial-gradient(circle at 50% 25%,rgba(255,255,255,.08),transparent 45%),
-linear-gradient(145deg,#11161c,#07090b);
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-overflow:hidden;
-}
-
-.service-preview:after{
-content:"";
-position:absolute;
-width:270px;
-height:270px;
-border-radius:50%;
-right:-150px;
-bottom:-150px;
-background:var(--accent);
-opacity:.08;
-filter:blur(20px);
-}
-
-.service-number{
-position:absolute;
-top:16px;
-right:18px;
-font-size:9px;
-letter-spacing:.18em;
-color:#626a74;
-}
-
-.service-type{
-position:absolute;
-top:16px;
-left:18px;
-font-size:8px;
-text-transform:uppercase;
-letter-spacing:.14em;
-color:#69717a;
-}
-
-.preview-screen{
-position:relative;
-z-index:2;
-width:76%;
-border:1px solid rgba(255,255,255,.16);
-border-radius:10px;
-overflow:hidden;
-background:#090b0e;
-box-shadow:0 25px 70px rgba(0,0,0,.55);
-}
-
-.browser-bar{
-height:22px;
-border-bottom:1px solid var(--line);
-display:flex;
-align-items:center;
-gap:5px;
-padding-left:9px;
-}
-
-.dot{
-width:5px;
-height:5px;
-border-radius:50%;
-background:#5f6670;
-}
-
-.screen-body{
-padding:24px 18px;
-}
-
-.screen-line{
-height:7px;
-width:72%;
-background:#30363e;
-border-radius:20px;
-margin-bottom:9px;
-}
-
-.screen-line.short{
-width:42%;
-}
-
-.screen-blocks{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:6px;
-margin-top:18px;
-}
-
-.screen-block{
-height:55px;
-background:#181d23;
-border:1px solid var(--line);
-border-radius:5px;
-}
-
-.service-description{
-padding:32px;
-border:1px solid var(--line);
-border-radius:14px;
-background:#090b0e;
-}
-
-.service-description h2{
-font-size:30px;
-letter-spacing:-.04em;
-margin-bottom:10px;
-}
-
-.service-description p{
-font-size:12px;
-color:#9198a1;
-max-width:680px;
-}
-
-.tags{
-display:flex;
-flex-wrap:wrap;
-gap:7px;
-margin-top:21px;
-}
-
-.tag{
-padding:7px 10px;
-border:1px solid var(--line);
-border-radius:100px;
-font-size:7px;
-text-transform:uppercase;
-letter-spacing:.11em;
-color:#9ca3ac;
-}
-
-/* PACKAGES */
-
-.packages{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:13px;
-}
-
-.package{
-padding:25px;
-border:1px solid var(--line);
-border-radius:12px;
-background:
-linear-gradient(145deg,#0d1014,#07090b);
-}
-
-.package.standard{
-border-color:#68798c;
-box-shadow:0 0 35px rgba(80,110,145,.08);
-}
-
-.package-label{
-font-size:8px;
-letter-spacing:.25em;
-text-transform:uppercase;
-color:#858c95;
-}
-
-.package h3{
-font-size:20px;
-margin-top:5px;
-}
-
-.price{
-font-size:34px;
-font-weight:800;
-letter-spacing:-.04em;
-margin:2px 0 7px;
-}
-
-.package-intro{
-font-size:10px;
-color:#858c95;
-min-height:42px;
-}
-
-.package hr{
-border:0;
-border-top:1px solid var(--line);
-margin:18px 0;
-}
-
-.package h4{
-font-size:8px;
-letter-spacing:.20em;
-color:#c6cad0;
-margin-bottom:10px;
-}
-
-/* WHAT WILL BE DONE */
-
-.package ul{
-list-style:none;
-}
-
-.package li{
-font-size:10px;
-color:#adb3bb;
-margin:7px 0;
-padding-left:15px;
-position:relative;
-}
-
-.package li:before{
-content:"";
-width:4px;
-height:4px;
-border-radius:50%;
-background:#bfc5cc;
-position:absolute;
-left:0;
-top:7px;
-}
-
-.meta{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
-margin-top:19px;
-padding-top:17px;
-border-top:1px solid var(--line);
-}
-
-.meta span{
-display:block;
-font-size:7px;
-letter-spacing:.12em;
-text-transform:uppercase;
-color:#606873;
-}
-
-.meta strong{
-display:block;
-font-size:9px;
-color:#d2d6db;
-margin-top:3px;
-}
-
-.start{
-display:block;
-margin-top:19px;
-padding:12px;
-text-align:center;
-border-radius:7px;
-background:#f2f2f2;
-color:#050607;
-font-size:8px;
-font-weight:800;
-letter-spacing:.14em;
-}
-
-.start:hover{
-background:#fff;
-}
-
-/* CONTACT */
-
-.contact{
-padding:80px 0;
-text-align:center;
-border-top:1px solid var(--line);
-}
-
-.contact h2{
-font-size:38px;
-letter-spacing:-.045em;
-}
-
-.contact p{
-max-width:570px;
-margin:10px auto 24px;
-font-size:12px;
-color:#858c95;
-}
-
-.contact-links{
-display:flex;
-justify-content:center;
-gap:12px;
-}
-
-.contact-btn{
-padding:12px 22px;
-border:1px solid #555e68;
-border-radius:100px;
-font-size:9px;
-}
-
-.contact-btn:hover{
-background:#fff;
-color:#050607;
-}
-
-/* FOOTER */
-
-footer{
-padding:23px 0;
-border-top:1px solid var(--line);
-}
-
-.footer{
-display:flex;
-align-items:center;
-justify-content:space-between;
-}
-
-.footer strong{
-font-size:10px;
-letter-spacing:.10em;
-}
-
-.footer span{
-font-size:8px;
-color:#606873;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-.intro-grid,
-.service-top{
-grid-template-columns:1fr;
-}
-
-.packages{
-grid-template-columns:1fr;
-}
-
-}
-
-@media(max-width:650px){
-
-.hero{
-padding:80px 0 65px;
-}
-
-.hero h1{
-font-size:58px;
-}
-
-.intro h2{
-font-size:35px;
-}
-
-.feature-grid{
-grid-template-columns:1fr 1fr;
-}
-
-.service-description{
-padding:23px;
-}
-
-.service-preview{
-min-height:270px;
-}
-
-.preview-screen{
-width:84%;
-}
-
-.footer{
-flex-direction:column;
-gap:8px;
-}
-
-.contact-links{
-flex-direction:column;
-align-items:center;
-}
-
-.contact-btn{
-width:220px;
-}
-
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Web Development | Victor Phoenix</title>
+
+  <meta
+    name="description"
+    content="Victor Phoenix builds modern websites, web applications, landing pages, e-commerce platforms and custom digital experiences."
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 85% 5%, rgba(255,255,255,.08), transparent 25%),
+        radial-gradient(circle at 10% 35%, rgba(255,255,255,.035), transparent 30%),
+        #070707;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7,7,7,.86);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand img {
+      width: 165px;
+      max-height: 60px;
+      object-fit: contain;
+    }
+
+    .back {
+      color: #bdbdbd;
+      font-size: 14px;
+      transition: .25s ease;
+    }
+
+    .back:hover {
+      color: #fff;
+      transform: translateX(-3px);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(255,255,255,.10),
+        transparent 68%
+      );
+      right: -200px;
+      top: -220px;
+      filter: blur(12px);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 110px 0;
+    }
+
+    .eyebrow {
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 11px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(54px, 10vw, 120px);
+      line-height: .88;
+      letter-spacing: -6px;
+      max-width: 1000px;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: #777;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin-top: 32px;
+      color: #a5a5a5;
+      font-size: 18px;
+    }
+
+    /* INTRO */
+
+    .intro {
+      padding: 110px 0 70px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+    }
+
+    .section-number {
+      color: #555;
+      letter-spacing: 3px;
+      font-size: 12px;
+    }
+
+    .intro h2 {
+      margin-top: 12px;
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: .95;
+      letter-spacing: -3px;
+    }
+
+    .intro-copy {
+      color: #a0a0a0;
+      font-size: 17px;
+    }
+
+    .intro-copy p + p {
+      margin-top: 18px;
+    }
+
+    /* SERVICE */
+
+    .service {
+      padding: 90px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+
+    .service-header {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .service-number {
+      color: #555;
+      font-size: 17px;
+      letter-spacing: 3px;
+    }
+
+    .service-title {
+      font-size: clamp(34px, 5vw, 60px);
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .service-description {
+      max-width: 760px;
+      color: #999;
+      margin-top: 18px;
+    }
+
+    /* SAMPLE */
+
+    .sample {
+      min-height: 280px;
+      margin-bottom: 45px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.10);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.07),
+          rgba(255,255,255,.015)
+        );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .sample::before {
+      content: "";
+      width: 380px;
+      height: 380px;
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,.055);
+      filter: blur(55px);
+    }
+
+    .browser {
+      width: min(780px, 84%);
+      background: #0d0d0d;
+      border: 1px solid #292929;
+      border-radius: 12px;
+      padding: 18px;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 30px 80px rgba(0,0,0,.45);
+    }
+
+    .browser-top {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #666;
+    }
+
+    .browser-title {
+      height: 14px;
+      width: 42%;
+      background: #292929;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+
+    .browser-subtitle {
+      height: 9px;
+      width: 28%;
+      background: #1e1e1e;
+      border-radius: 20px;
+    }
+
+    .browser-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .browser-card {
+      height: 85px;
+      border: 1px solid #252525;
+      border-radius: 8px;
+      background: linear-gradient(145deg,#1c1c1c,#0c0c0c);
+    }
+
+    /* PACKAGES */
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+    }
+
+    .package {
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 16px;
+      padding: 30px;
+      background: rgba(255,255,255,.025);
+      min-height: 690px;
+      display: flex;
+      flex-direction: column;
+      transition: .3s ease;
+    }
+
+    .package:hover {
+      transform: translateY(-7px);
+      border-color: rgba(255,255,255,.22);
+      background: rgba(255,255,255,.045);
+    }
+
+    .package.featured {
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.075),
+          rgba(255,255,255,.02)
+        );
+      border-color: rgba(255,255,255,.25);
+    }
+
+    .package-label {
+      color: #888;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .package h3 {
+      font-size: 28px;
+      margin-top: 9px;
+    }
+
+    .price {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -2px;
+      margin: 17px 0 8px;
+    }
+
+    .package-intro {
+      color: #999;
+      font-size: 14px;
+      min-height: 70px;
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(255,255,255,.09);
+      margin: 24px 0;
+    }
+
+    .scope-title {
+      color: #aaa;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .package ul {
+      list-style: none;
+    }
+
+    .package li {
+      position: relative;
+      padding-left: 17px;
+      color: #b8b8b8;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .package li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #666;
+    }
+
+    .meta {
+      margin-top: auto;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.09);
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 6px 0;
+      font-size: 13px;
+    }
+
+    .meta-row span:first-child {
+      color: #666;
+    }
+
+    .meta-row span:last-child {
+      color: #ddd;
+      text-align: right;
+    }
+
+    .start {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 14px;
+      background: #fff;
+      color: #000;
+      border-radius: 8px;
+      margin-top: 23px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: .25s ease;
+    }
+
+    .start:hover {
+      background: #ddd;
+      transform: translateY(-2px);
+    }
+
+    /* CTA */
+
+    .cta {
+      padding: 130px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(45px, 8vw, 92px);
+      line-height: .93;
+      letter-spacing: -5px;
+    }
+
+    .cta p {
+      max-width: 620px;
+      margin: 25px auto 35px;
+      color: #999;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact-link {
+      border: 1px solid rgba(255,255,255,.15);
+      padding: 14px 24px;
+      border-radius: 8px;
+      background: #111;
+      transition: .25s ease;
+    }
+
+    .contact-link:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 30px 0;
+      color: #666;
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .packages {
+        grid-template-columns: 1fr;
+      }
+
+      .package {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .nav {
+        min-height: 70px;
+      }
+
+      .brand img {
+        width: 135px;
+      }
+
+      .hero-content {
+        padding: 85px 0;
+      }
+
+      .hero h1 {
+        letter-spacing: -3px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .service-header {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .browser {
+        width: 90%;
+      }
+
+      .browser-grid {
+        gap: 6px;
+      }
+
+      .browser-card {
+        height: 55px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
+  <div class="container nav">
 
-<div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="Victor Phoenix">
+    </a>
 
-<a href="index.html" class="brand">
-<img src="logo.png" alt="Victor Phoenix">
-<span class="brand-name">VICTOR PHOENIX</span>
-</a>
+    <a href="services.html" class="back">
+      ← All Services
+    </a>
 
-<a href="services.html" class="back">
-← All Services
-</a>
-
-</div>
-
+  </div>
 </header>
 
 
-<section class="hero">
+<main>
 
-<div class="container">
+  <!-- HERO -->
 
-<div class="eyebrow">
-Victor Phoenix / Digital Technology
-</div>
+  <section class="hero">
 
-<h1>
-Web <span>Development.</span>
-</h1>
+    <div class="container hero-content">
 
-<p>
-Websites and digital platforms engineered to look exceptional,
-perform efficiently, work across devices and give businesses
-a professional digital presence.
-</p>
+      <div class="eyebrow">
+        Victor Phoenix / Web Development
+      </div>
 
-</div>
+      <h1>
+        Build.
+        <span>What’s Next.</span>
+      </h1>
 
-</section>
+      <p>
+        We design and build modern digital experiences that are responsive,
+        functional, fast and ready for real-world business use.
+      </p>
 
+    </div>
 
-<section class="intro">
-
-<div class="container intro-grid">
-
-<div>
-
-<div class="label">
-Development
-</div>
-
-<h2>
-We don't just design websites.<br>
-We build digital experiences.
-</h2>
-
-<p>
-Every project is developed around the purpose of the business,
-the people using it and the results the website needs to achieve.
-Higher-level packages include more pages, functionality,
-integrations, optimization and development work.
-</p>
-
-<div class="note">
-20 Web Development Services
-</div>
-
-</div>
+  </section>
 
 
-<div class="feature-grid">
+  <!-- INTRO -->
 
-<div class="feature">
-<strong>UI</strong>
-<span>Premium Interface Design</span>
-</div>
+  <section class="intro">
 
-<div class="feature">
-<strong>SEO</strong>
-<span>Search Optimization</span>
-</div>
+    <div class="container intro-grid">
 
-<div class="feature">
-<strong>⚡</strong>
-<span>Performance</span>
-</div>
+      <div>
 
-<div class="feature">
-<strong>∞</strong>
-<span>Scalable Development</span>
-</div>
+        <div class="section-number">
+          01 / WEB DEVELOPMENT
+        </div>
 
-</div>
+        <h2>
+          We don't just<br>
+          design pages.
+        </h2>
 
-</div>
+      </div>
 
-</section>
+      <div class="intro-copy">
 
+        <p>
+          We build the actual digital experience — from the structure and
+          interface to functionality, integrations, performance and launch.
+        </p>
 
-<section class="catalogue">
+        <p>
+          Every website is created to work across mobile, tablet and desktop
+          devices while maintaining a clean and professional user experience.
+        </p>
 
-<div class="container">
+        <p>
+          Depending on the project, development can include SEO,
+          Google indexing, analytics, forms, WhatsApp integration,
+          payment systems, databases, APIs, dashboards and custom
+          functionality.
+        </p>
 
-<div class="catalogue-head">
+      </div>
 
-<div class="label">
-Web Development Services
-</div>
+    </div>
 
-<h2>
-Choose what we're building.
-</h2>
-
-<p>
-Each service has its own development scope and pricing.
-As the package level increases, the amount of development,
-functionality, optimization and technical work increases with it.
-</p>
-
-</div>
+  </section>
 
 
-<div id="webServices"></div>
+  <!-- 01 BUSINESS WEBSITE -->
 
-</div>
+  <section class="service">
 
-</section>
+    <div class="container">
+
+      <div class="service-header">
+
+        <div class="service-number">
+          01
+        </div>
+
+        <div>
+
+          <h2 class="service-title">
+            Business Website
+          </h2>
+
+          <p class="service-description">
+            A professional website for businesses that need a strong online
+            presence, clear service presentation and a direct path for
+            customers to contact them.
+          </p>
+
+        </div>
+
+      </div>
 
 
-<section class="contact">
+      <div class="sample">
 
-<div class="container">
+        <div class="browser">
 
-<div class="label">
-Start Your Website
-</div>
+          <div class="browser-top">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
 
-<h2>
-Build what comes next.
-</h2>
+          <div class="browser-title"></div>
+          <div class="browser-subtitle"></div>
 
-<p>
-Tell Victor Phoenix what you want to build. We'll discuss the
-project, recommend the appropriate development package and
-outline the next steps.
-</p>
+          <div class="browser-grid">
+            <div class="browser-card"></div>
+            <div class="browser-card"></div>
+            <div class="browser-card"></div>
+          </div>
 
-<div class="contact-links">
+        </div>
 
-<a
-class="contact-btn"
-href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20discuss%20a%20web%20development%20project."
-target="_blank">
-WhatsApp →
-</a>
+      </div>
 
-<a
-class="contact-btn"
-href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20Web%20Development">
-Email →
-</a>
 
-</div>
+      <div class="packages">
 
-</div>
+        <!-- BASIC -->
 
-</section>
+        <div class="package">
+
+          <div class="package-label">
+            Basic
+          </div>
+
+          <h3>
+            Foundation
+          </h3>
+
+          <div class="price">
+            $250
+          </div>
+
+          <p class="package-intro">
+            A professional starting website for individuals, startups and
+            small businesses.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">
+            What we'll build
+          </div>
+
+          <ul>
+            <li>Up to 3 pages</li>
+            <li>Custom website structure</li>
+            <li>Professional homepage</li>
+            <li>About / Services / Contact structure</li>
+            <li>Responsive mobile design</li>
+            <li>Desktop optimization</li>
+            <li>WhatsApp integration</li>
+            <li>Contact form</li>
+            <li>Basic on-page SEO</li>
+            <li>Page titles and descriptions</li>
+            <li>Google indexing setup</li>
+            <li>Basic speed optimization</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Pages</span>
+              <span>Up to 3</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Concepts</span>
+              <span>1</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>2 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>3–5 days</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Final delivery</span>
+              <span>Complete website</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'm%20interested%20in%20the%20Basic%20Business%20Website%20package.%20I'd%20like%20to%20get%20started."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- STANDARD -->
+
+        <div class="package featured">
+
+          <div class="package-label">
+            Standard
+          </div>
+
+          <h3>
+            Professional
+          </h3>
+
+          <div class="price">
+            $500
+          </div>
+
+          <p class="package-intro">
+            A complete business website with more pages, stronger SEO and
+            additional business functionality.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">
+            What we'll build
+          </div>
+
+          <ul>
+            <li>Up to 7 pages</li>
+            <li>Custom responsive interface</li>
+            <li>Homepage</li>
+            <li>About page</li>
+            <li>Services pages</li>
+            <li>Portfolio / project section</li>
+            <li>Contact page</li>
+            <li>WhatsApp integration</li>
+            <li>Contact forms</li>
+            <li>SEO page structure</li>
+            <li>Meta titles and descriptions</li>
+            <li>XML sitemap</li>
+            <li>Google Search Console setup</li>
+            <li>Google indexing configuration</li>
+            <li>Analytics integration</li>
+            <li>Performance optimization</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Pages</span>
+              <span>Up to 7</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Concepts</span>
+              <span>2</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>3 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>5–8 days</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Final delivery</span>
+              <span>Website + SEO setup</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'm%20interested%20in%20the%20Standard%20Business%20Website%20package.%20I'd%20like%20to%20get%20started."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- PREMIUM -->
+
+        <div class="package">
+
+          <div class="package-label">
+            Premium
+          </div>
+
+          <h3>
+            Advanced
+          </h3>
+
+          <div class="price">
+            $900
+          </div>
+
+          <p class="package-intro">
+            A premium business website built for established brands that
+            require advanced structure, visibility and functionality.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">
+            What we'll build
+          </div>
+
+          <ul>
+            <li>Up to 12 pages</li>
+            <li>Premium custom interface</li>
+            <li>Advanced service structure</li>
+            <li>Portfolio / case studies</li>
+            <li>Blog / content structure</li>
+            <li>Advanced contact forms</li>
+            <li>WhatsApp integration</li>
+            <li>Advanced on-page SEO</li>
+            <li>Structured metadata</li>
+            <li>Schema markup where appropriate</li>
+            <li>XML sitemap</li>
+            <li>Google Search Console</li>
+            <li>Google indexing</li>
+            <li>Analytics integration</li>
+            <li>Performance optimization</li>
+            <li>Cross-device testing</li>
+            <li>Pre-launch technical checks</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Pages</span>
+              <span>Up to 12</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Concepts</span>
+              <span>3</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>5 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>8–14 days</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Final delivery</span>
+              <span>Website + optimization</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'm%20interested%20in%20the%20Premium%20Business%20Website%20package.%20I'd%20like%20to%20get%20started."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- 02 LANDING PAGE -->
+
+  <section class="service">
+
+    <div class="container">
+
+      <div class="service-header">
+
+        <div class="service-number">
+          02
+        </div>
+
+        <div>
+
+          <h2 class="service-title">
+            Landing Page
+          </h2>
+
+          <p class="service-description">
+            A focused page designed around a product, service, campaign,
+            advertisement or specific business objective.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="packages">
+
+        <div class="package">
+
+          <div class="package-label">Basic</div>
+
+          <h3>Launch</h3>
+
+          <div class="price">$180</div>
+
+          <p class="package-intro">
+            A clean single-page experience for a simple offer or service.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">What we'll build</div>
+
+          <ul>
+            <li>1 custom landing page</li>
+            <li>Hero section</li>
+            <li>Offer / service section</li>
+            <li>Call-to-action sections</li>
+            <li>Responsive layout</li>
+            <li>WhatsApp integration</li>
+            <li>Contact form</li>
+            <li>Basic SEO</li>
+            <li>Google indexing setup</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>2 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>2–4 days</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'm%20interested%20in%20the%20Basic%20Landing%20Page%20package.%20I'd%20like%20to%20get%20started."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="package featured">
+
+          <div class="package-label">Standard</div>
+
+          <h3>Conversion</h3>
+
+          <div class="price">$350</div>
+
+          <p class="package-intro">
+            A stronger campaign page structured around trust, user flow
+            and conversion.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">What we'll build</div>
+
+          <ul>
+            <li>Advanced landing page</li>
+            <li>Custom conversion structure</li>
+            <li>Multiple content sections</li>
+            <li>Testimonials section</li>
+            <li>Lead capture form</li>
+            <li>WhatsApp integration</li>
+            <li>SEO configuration</li>
+            <li>Google indexing</li>
+            <li>Analytics</li>
+            <li>Performance optimization</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>3 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>4–6 days</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'm%20interested%20in%20the%20Standard%20Landing%20Page%20package.%20I'd%20like%20to%20get%20started."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="package">
+
+          <div class="package-label">Premium</div>
+
+          <h3>Campaign</h3>
+
+          <div class="price">$650</div>
+
+          <p class="package-intro">
+            A premium campaign experience for major launches, products
+            and high-value offers.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">What we'll build</div>
+
+          <ul>
+            <li>Premium landing experience</li>
+            <li>Advanced interactive sections</li>
+            <li>Conversion-focused user flow</li>
+            <li>Lead capture system</li>
+            <li>WhatsApp integration</li>
+            <li>Advanced SEO</li>
+            <li>Structured metadata</li>
+            <li>Google indexing</li>
+            <li>Analytics</li>
+            <li>Performance optimization</li>
+            <li>Cross-device testing</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>5 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>6–10 days</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'm%20interested%20in%20the%20Premium%20Landing%20Page%20package.%20I'd%20like%20to%20get%20started."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- 03 PORTFOLIO WEBSITE -->
+
+  <section class="service">
+
+    <div class="container">
+
+      <div class="service-header">
+
+        <div class="service-number">
+          03
+        </div>
+
+        <div>
+
+          <h2 class="service-title">
+            Portfolio Website
+          </h2>
+
+          <p class="service-description">
+            A professional digital portfolio for creatives, professionals,
+            developers, designers, photographers and personal brands.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="packages">
+
+        <div class="package">
+
+          <div class="package-label">Basic</div>
+
+          <h3>Starter</h3>
+
+          <div class="price">$250</div>
+
+          <p class="package-intro">
+            A clean portfolio foundation for showcasing work and skills.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">What we'll build</div>
+
+          <ul>
+            <li>Up to 4 pages</li>
+            <li>About section</li>
+            <li>Portfolio section</li>
+            <li>Skills / services section</li>
+            <li>Contact section</li>
+            <li>Responsive design</li>
+            <li>Basic SEO</li>
+            <li>Google indexing</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>2 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>3–5 days</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'm%20interested%20in%20the%20Basic%20Portfolio%20Website%20package.%20I'd%20like%20to%20get%20started."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="package featured">
+
+          <div class="package-label">Standard</div>
+
+          <h3>Professional</h3>
+
+          <div class="price">$500</div>
+
+          <p class="package-intro">
+            A complete professional portfolio with stronger project
+            presentation and search structure.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">What we'll build</div>
+
+          <ul>
+            <li>Up to 7 pages</li>
+            <li>Advanced portfolio structure</li>
+            <li>Project showcase</li>
+            <li>Case-study sections</li>
+            <li>Services / expertise sections</li>
+            <li>Contact forms</li>
+            <li>WhatsApp integration</li>
+            <li>SEO optimization</li>
+            <li>Google Search Console</li>
+            <li>Google indexing</li>
+            <li>Analytics</li>
+            <li>Performance optimization</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>3 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>5–8 days</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'm%20interested%20in%20the%20Standard%20Portfolio%20Website%20package.%20I'd%20like%20to%20get%20started."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="package">
+
+          <div class="package-label">Premium</div>
+
+          <h3>Showcase</h3>
+
+          <div class="price">$900</div>
+
+          <p class="package-intro">
+            A premium portfolio experience for professionals and brands
+            requiring advanced presentation.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">What we'll build</div>
+
+          <ul>
+            <li>Up to 12 pages</li>
+            <li>Premium custom interface</li>
+            <li>Advanced project showcase</li>
+            <li>Case-study structure</li>
+            <li>Interactive sections</li>
+            <li>Blog / article structure</li>
+            <li>WhatsApp integration</li>
+            <li>Advanced SEO</li>
+            <li>Structured metadata</li>
+            <li>Google indexing</li>
+            <li>Analytics</li>
+            <li>Performance optimization</li>
+            <li>Cross-device testing</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>5 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>8–14 days</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'm%20interested%20in%20the%20Premium%20Portfolio%20Website%20package.%20I'd%20like%20to%20get%20started."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- 04 E-COMMERCE -->
+
+  <section class="service">
+
+    <div class="container">
+
+      <div class="service-header">
+
+        <div class="service-number">
+          04
+        </div>
+
+        <div>
+
+          <h2 class="service-title">
+            E-Commerce Website
+          </h2>
+
+          <p class="service-description">
+            An online store designed to present products, guide customers
+            through the buying process and support digital commerce.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="packages">
+
+        <div class="package">
+
+          <div class="package-label">Basic</div>
+
+          <h3>Store Start</h3>
+
+          <div class="price">$650</div>
+
+          <p class="package-intro">
+            A compact online store for businesses starting digital sales.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">What we'll build</div>
+
+          <ul>
+            <li>Storefront structure</li>
+            <li>Up to 15 products</li>
+            <li>Product pages</li>
+            <li>Product categories</li>
+            <li>Cart structure</li>
+            <li>Contact / WhatsApp integration</li>
+            <li>Responsive design</li>
+            <li>Basic SEO</li>
+            <li>Google indexing</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>2 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>7–10 days</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'm%20interested%20in%20the%20Basic%20E-Commerce%20Website%20package.%20I'd%20like%20to%20get%20started."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="package featured">
+
+          <div class="package-label">Standard</div>
+
+          <h3>Commerce</h3>
+
+          <div class="price">$1,200</div>
+
+          <p class="package-intro">
+            A more complete online store with stronger product organization
+            and customer experience.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">What we'll build</div>
+
+          <ul>
+            <li>Storefront design</li>
+            <li>Up to 40 products</li>
+            <li>Product categories</li>
+            <li>Product filtering</li>
+            <li>Shopping cart</li>
+            <li>Checkout structure</li>
+            <li>Contact / WhatsApp integration</li>
+            <li>SEO configuration</li>
+            <li>Google indexing</li>
+            <li>Analytics</li>
+            <li>Performance optimization</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>3 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>10–16 days</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'm%20interested%20in%20the%20Standard%20E-Commerce%20Website%20package.%20I'd%20like%20to%20get%20started."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="package">
+
+          <div class="package-label">Premium</div>
+
+          <h3>Commerce Pro</h3>
+
+          <div class="price">$2,500</div>
+
+          <p class="package-intro">
+            A larger commerce experience for businesses with serious
+            product catalogs and online sales goals.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">What we'll build</div>
+
+          <ul>
+            <li>Advanced storefront</li>
+            <li>Up to 100 products</li>
+            <li>Advanced product categories</li>
+            <li>Search and filtering</li>
+            <li>Cart and checkout experience</li>
+            <li>Customer account structure</li>
+            <li>Payment integration support</li>
+            <li>Advanced SEO</li>
+            <li>Structured metadata</li>
+            <li>Google indexing</li>
+            <li>Analytics</li>
+            <li>Performance optimization</li>
+            <li>Cross-device testing</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>5 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>15–25 days</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'm%20interested%20in%20the%20Premium%20E-Commerce%20Website%20package.%20I'd%20like%20to%20get%20started."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- 05 WEB APPLICATION -->
+
+  <section class="service">
+
+    <div class="container">
+
+      <div class="service-header">
+
+        <div class="service-number">
+          05
+        </div>
+
+        <div>
+
+          <h2 class="service-title">
+            Web Application
+          </h2>
+
+          <p class="service-description">
+            A browser-based application built around custom functionality,
+            workflows, dashboards, data and business logic.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="packages">
+
+        <div class="package">
+
+          <div class="package-label">Basic</div>
+
+          <h3>Web App Start</h3>
+
+          <div class="price">$1,500</div>
+
+          <p class="package-intro">
+            A focused web application built around one core function.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">What we'll build</div>
+
+          <ul>
+            <li>Custom application interface</li>
+            <li>Core functionality</li>
+            <li>Responsive application</li>
+            <li>Basic user flow</li>
+            <li>Form / data interaction</li>
+            <li>Basic API integration</li>
+            <li>Testing</li>
+            <li>Performance optimization</li>
+            <li>Deployment support</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>2 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>10–15 days</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'm%20interested%20in%20the%20Basic%20Web%20Application%20package.%20I'd%20like%20to%20get%20started."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="package featured">
+
+          <div class="package-label">Standard</div>
+
+          <h3>Professional App</h3>
+
+          <div class="price">$3,000</div>
+
+          <p class="package-intro">
+            A multi-function web application with structured user flows,
+            dashboards and integrations.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">What we'll build</div>
+
+          <ul>
+            <li>Custom application interface</li>
+            <li>Multiple functional modules</li>
+            <li>User authentication</li>
+            <li>Dashboard experience</li>
+            <li>Forms and data interaction</li>
+            <li>API integrations</li>
+            <li>Responsive application</li>
+            <li>Database integration</li>
+            <li>Testing and corrections</li>
+            <li>Performance optimization</li>
+            <li>Deployment support</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>3 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>18–30 days</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'm%20interested%20in%20the%20Standard%20Web%20Application%20package.%20I'd%20like%20to%20get%20started."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="package">
+
+          <div class="package-label">Premium</div>
+
+          <h3>Advanced Platform</h3>
+
+          <div class="price">$6,000</div>
+
+          <p class="package-intro">
+            A complex custom application designed around advanced workflows,
+            integrations and scalable functionality.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">What we'll build</div>
+
+          <ul>
+            <li>Advanced custom application</li>
+            <li>Multiple user roles</li>
+            <li>Authentication architecture</li>
+            <li>Advanced dashboards</li>
+            <li>Database architecture</li>
+            <li>API integrations</li>
+            <li>Advanced business logic</li>
+            <li>Custom workflows</li>
+            <li>Security considerations</li>
+            <li>Performance optimization</li>
+            <li>Testing</li>
+            <li>Deployment support</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>5 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>30–45 days</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'm%20interested%20in%20the%20Premium%20Advanced%20Web%20Application%20package.%20I'd%20like%20to%20get%20started."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- 06 CUSTOM WEBSITE -->
+
+  <section class="service">
+
+    <div class="container">
+
+      <div class="service-header">
+
+        <div class="service-number">
+          06
+        </div>
+
+        <div>
+
+          <h2 class="service-title">
+            Custom Website
+          </h2>
+
+          <p class="service-description">
+            A completely custom website for projects that require a unique
+            structure, advanced interaction or specialized functionality.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="packages">
+
+        <div class="package">
+
+          <div class="package-label">Basic</div>
+
+          <h3>Custom Start</h3>
+
+          <div class="price">$600</div>
+
+          <p class="package-intro">
+            A custom website built around a specific business requirement.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">What we'll build</div>
+
+          <ul>
+            <li>Up to 5 pages</li>
+            <li>Custom interface</li>
+            <li>Responsive design</li>
+            <li>Custom sections</li>
+            <li>Basic integrations</li>
+            <li>SEO foundation</li>
+            <li>Google indexing</li>
+            <li>Performance optimization</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>2 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>7–12 days</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'd%20like%20to%20discuss%20a%20Basic%20Custom%20Website%20project."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="package featured">
+
+          <div class="package-label">Standard</div>
+
+          <h3>Custom Pro</h3>
+
+          <div class="price">$1,500</div>
+
+          <p class="package-intro">
+            A more advanced custom website with stronger functionality,
+            integrations and search optimization.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">What we'll build</div>
+
+          <ul>
+            <li>Up to 10 pages</li>
+            <li>Custom UI system</li>
+            <li>Advanced responsive design</li>
+            <li>Custom interactions</li>
+            <li>Multiple integrations</li>
+            <li>Advanced forms</li>
+            <li>SEO optimization</li>
+            <li>Google Search Console</li>
+            <li>Google indexing</li>
+            <li>Analytics</li>
+            <li>Performance optimization</li>
+            <li>Cross-device testing</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>3 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>12–20 days</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'd%20like%20to%20discuss%20a%20Standard%20Custom%20Website%20project."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="package">
+
+          <div class="package-label">Premium</div>
+
+          <h3>Custom Enterprise</h3>
+
+          <div class="price">$3,500</div>
+
+          <p class="package-intro">
+            A high-end custom digital experience for complex business
+            requirements and advanced functionality.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="scope-title">What we'll build</div>
+
+          <ul>
+            <li>Up to 20 pages</li>
+            <li>Premium custom interface</li>
+            <li>Advanced interactions</li>
+            <li>Custom functionality</li>
+            <li>Advanced integrations</li>
+            <li>Complex forms</li>
+            <li>Advanced SEO</li>
+            <li>Structured metadata</li>
+            <li>Google Search Console</li>
+            <li>Analytics</li>
+            <li>Performance optimization</li>
+            <li>Security testing</li>
+            <li>Cross-device testing</li>
+            <li>Launch support</li>
+          </ul>
+
+          <div class="meta">
+
+            <div class="meta-row">
+              <span>Revisions</span>
+              <span>5 rounds</span>
+            </div>
+
+            <div class="meta-row">
+              <span>Delivery</span>
+              <span>20–35 days</span>
+            </div>
+
+            <a
+              class="start"
+              href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'd%20like%20to%20discuss%20a%20Premium%20Custom%20Website%20project."
+              target="_blank"
+            >
+              START NOW →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL CTA -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        Victor Phoenix
+      </div>
+
+      <h2>
+        Build what’s<br>
+        next.
+      </h2>
+
+      <p>
+        Have a website or digital product in mind?
+        Tell us what you want to build and let's turn the idea into
+        a real digital experience.
+      </p>
+
+      <div class="contact-links">
+
+        <a
+          class="contact-link"
+          href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I'd%20like%20to%20discuss%20a%20web%20development%20project."
+          target="_blank"
+        >
+          WhatsApp →
+        </a>
+
+        <a
+          class="contact-link"
+          href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20Web%20Development%20Inquiry"
+        >
+          Email →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
 
 
 <footer>
 
-<div class="container footer">
+  <div class="container footer-inner">
 
-<strong>VICTOR PHOENIX</strong>
+    <div>
+      © 2026 Victor Phoenix. All rights reserved.
+    </div>
 
-<span>
-Create What's Next. © 2026 Victor Phoenix.
-</span>
+    <div>
+      Create. Innovate. Evolve.
+    </div>
 
-</div>
+  </div>
 
 </footer>
-
-
-<script>
-
-/*
-===========================================================
-VICTOR PHOENIX — WEB DEVELOPMENT SERVICES
-
-20 services.
-Every service has its OWN:
-• Basic price
-• Standard price
-• Premium price
-• Development scope
-• Features
-• Delivery time
-
-The packages deliberately become substantially more
-advanced as the price increases.
-===========================================================
-*/
-
-
-const services = [
-
-/* 01 */
-
-{
-n:1,
-name:"Business Website",
-desc:"A professional website designed to establish a strong online presence for an existing business or growing company.",
-accent:"#7da7d9",
-basic:350,
-standard:700,
-premium:1400,
-
-basicIntro:"A professional foundation for a business that needs a strong online presence.",
-
-basic:[
-"3–5 professionally developed pages",
-"Responsive desktop and mobile layout",
-"Professional navigation",
-"About and Services sections",
-"Contact section",
-"WhatsApp integration",
-"Contact form",
-"Basic SEO setup",
-"Google indexing setup",
-"SSL configuration"
-],
-
-standardIntro:"A complete business website with stronger content structure, SEO and performance work.",
-
-standard:[
-"6–8 professionally developed pages",
-"Custom UI design",
-"Service pages",
-"Portfolio or project section",
-"Contact form",
-"WhatsApp integration",
-"Social media integration",
-"On-page SEO",
-"SEO titles and descriptions",
-"XML sitemap",
-"Google Search Console setup",
-"Performance optimization",
-"Image optimization",
-"Responsive testing"
-],
-
-premiumIntro:"A premium business platform designed for companies that need a stronger digital presence and advanced functionality.",
-
-premium:[
-"10–15+ professionally developed pages",
-"Premium bespoke UI design",
-"Advanced navigation structure",
-"Advanced service architecture",
-"Portfolio / case-study system",
-"Blog or news section",
-"Advanced SEO structure",
-"Google Search Console",
-"Structured data where appropriate",
-"Analytics integration",
-"Performance optimization",
-"Security configuration",
-"Conversion-focused structure",
-"Launch testing",
-"Post-launch corrections"
-],
-
-basicDelivery:"5–7 days",
-standardDelivery:"8–12 days",
-premiumDelivery:"12–20 days"
-},
-
-
-/* 02 */
-
-{
-n:2,
-name:"Corporate Website",
-desc:"A sophisticated digital presence for established companies, organizations and professional institutions.",
-accent:"#9ba8b8",
-basic:600,
-standard:1200,
-premium:2500,
-
-basicIntro:"A professional corporate foundation.",
-
-basic:[
-"5–7 pages",
-"Corporate UI design",
-"Responsive development",
-"Company profile section",
-"Services / divisions section",
-"Contact system",
-"WhatsApp integration",
-"Basic SEO",
-"Google indexing",
-"SSL setup"
-],
-
-standardIntro:"A complete corporate website with expanded content architecture.",
-
-standard:[
-"8–12 pages",
-"Custom corporate design",
-"Department / service sections",
-"Leadership section",
-"Company information architecture",
-"Careers section",
-"Contact forms",
-"On-page SEO",
-"XML sitemap",
-"Google Search Console",
-"Analytics",
-"Performance optimization",
-"Responsive testing"
-],
-
-premiumIntro:"A large-scale corporate digital presence built for professional organizations.",
-
-premium:[
-"15–25+ pages",
-"Premium bespoke UI",
-"Advanced content architecture",
-"Multiple company divisions",
-"Leadership profiles",
-"Careers system",
-"News / insights section",
-"Advanced SEO",
-"Structured data",
-"Analytics",
-"Performance engineering",
-"Security configuration",
-"Advanced forms",
-"Launch testing",
-"Post-launch support"
-],
-
-basicDelivery:"7–10 days",
-standardDelivery:"12–18 days",
-premiumDelivery:"18–30 days"
-},
-
-
-/* 03 */
-
-{
-n:3,
-name:"Portfolio Website",
-desc:"A visually focused website for designers, developers, creatives, professionals and personal brands.",
-
-accent:"#a986ff",
-
-basic:300,
-standard:650,
-premium:1300,
-
-basicIntro:"A clean digital portfolio to present your work.",
-
-basic:[
-"3–5 pages",
-"Premium portfolio layout",
-"Responsive design",
-"About section",
-"Project gallery",
-"Contact section",
-"WhatsApp integration",
-"Basic SEO",
-"Google indexing",
-"Image optimization"
-],
-
-standardIntro:"A stronger portfolio with detailed project presentation.",
-
-standard:[
-"6–8 pages",
-"Custom portfolio design",
-"Advanced project gallery",
-"Project detail pages",
-"Case-study sections",
-"Testimonials",
-"Contact forms",
-"On-page SEO",
-"Sitemap",
-"Google Search Console",
-"Performance optimization",
-"Social integration"
-],
-
-premiumIntro:"A premium portfolio experience designed to make the work the centre of attention.",
-
-premium:[
-"10–15+ pages",
-"Highly customized visual design",
-"Advanced project presentation",
-"Case-study system",
-"Interactive portfolio sections",
-"Animations and interactions",
-"Blog / insights",
-"Advanced SEO",
-"Analytics",
-"Performance optimization",
-"Image delivery optimization",
-"Launch testing",
-"Conversion-focused structure"
-],
-
-basicDelivery:"4–6 days",
-standardDelivery:"7–12 days",
-premiumDelivery:"12–18 days"
-},
-
-
-/* 04 */
-
-{
-n:4,
-name:"Landing Page",
-desc:"A focused conversion-oriented page for campaigns, products, services, applications and offers.",
-
-accent:"#64c9ff",
-
-basic:250,
-standard:500,
-premium:950,
-
-basicIntro:"A professionally developed single-page landing experience.",
-
-basic:[
-"1 custom landing page",
-"Hero section",
-"Call-to-action sections",
-"Responsive layout",
-"Contact / inquiry form",
-"WhatsApp integration",
-"Basic SEO",
-"Google indexing",
-"Performance optimization"
-],
-
-standardIntro:"A conversion-focused landing page with stronger content and technical optimization.",
-
-standard:[
-"Advanced landing page structure",
-"Custom UI design",
-"Multiple CTA sections",
-"Lead capture form",
-"WhatsApp integration",
-"Social proof section",
-"SEO optimization",
-"Meta configuration",
-"Google indexing",
-"Analytics integration",
-"Performance optimization",
-"Responsive testing"
-],
-
-premiumIntro:"A high-end campaign landing experience designed around conversion and performance.",
-
-premium:[
-"Premium custom UI",
-"Advanced animations",
-"Conversion-focused structure",
-"Multiple lead capture points",
-"Advanced forms",
-"Analytics tracking",
-"Event tracking",
-"Advanced SEO",
-"Structured data where suitable",
-"Performance engineering",
-"Image optimization",
-"A/B-ready structure",
-"Full launch testing"
-],
-
-basicDelivery:"3–5 days",
-standardDelivery:"5–8 days",
-premiumDelivery:"8–12 days"
-},
-
-
-/* 05 */
-
-{
-n:5,
-name:"Personal Website",
-desc:"A professional digital home for an individual, creator, consultant, professional or public-facing personality.",
-
-accent:"#e1bd72",
-
-basic:300,
-standard:600,
-premium:1200,
-
-basicIntro:"A clean professional personal website.",
-
-basic:[
-"3–5 pages",
-"Personal profile",
-"About section",
-"Services / expertise",
-"Contact section",
-"Responsive design",
-"WhatsApp integration",
-"Basic SEO",
-"Google indexing"
-],
-
-standardIntro:"A complete personal brand website with stronger presentation.",
-
-standard:[
-"6–8 pages",
-"Custom personal branding",
-"Portfolio section",
-"Testimonials",
-"Services section",
-"Contact forms",
-"Social integrations",
-"On-page SEO",
-"Sitemap",
-"Google Search Console",
-"Analytics",
-"Performance optimization"
-],
-
-premiumIntro:"A premium personal brand platform built for professionals and creators.",
-
-premium:[
-"10–15 pages",
-"Premium bespoke design",
-"Advanced personal branding",
-"Portfolio / case studies",
-"Blog / insights",
-"Media section",
-"Advanced SEO",
-"Analytics",
-"Performance engineering",
-"Social integration",
-"Structured data where suitable",
-"Launch testing"
-],
-
-basicDelivery:"4–6 days",
-standardDelivery:"7–12 days",
-premiumDelivery:"12–18 days"
-},
-
-
-/* 06 */
-
-{
-n:6,
-name:"Startup Website",
-desc:"A modern website for startups that need to communicate their product, vision and value clearly.",
-
-accent:"#63e1b2",
-
-basic:450,
-standard:900,
-premium:1800,
-
-basicIntro:"A launch-ready startup website.",
-
-basic:[
-"5 pages",
-"Startup-focused UI",
-"Hero and value proposition",
-"Product / service section",
-"About section",
-"Contact system",
-"Responsive development",
-"Basic SEO",
-"Google indexing"
-],
-
-standardIntro:"A stronger startup website designed for growth.",
-
-standard:[
-"8–12 pages",
-"Custom startup design",
-"Product presentation",
-"Feature sections",
-"Pricing / plans section",
-"FAQ section",
-"Lead forms",
-"SEO setup",
-"Google Search Console",
-"Analytics",
-"Performance optimization"
-],
-
-premiumIntro:"A sophisticated startup platform designed to support growth and conversion.",
-
-premium:[
-"15–20+ pages",
-"Premium bespoke design",
-"Advanced product presentation",
-"Interactive sections",
-"Blog / resources",
-"Lead generation system",
-"Advanced SEO",
-"Analytics",
-"Conversion tracking",
-"Performance engineering",
-"Security configuration",
-"Launch testing"
-],
-
-basicDelivery:"6–8 days",
-standardDelivery:"10–16 days",
-premiumDelivery:"16–25 days"
-},
-
-
-/* 07 */
-
-{
-n:7,
-name:"SaaS Website",
-desc:"A high-quality marketing website for software products and subscription-based digital platforms.",
-
-accent:"#8c9cff",
-
-basic:700,
-standard:1500,
-premium:3200,
-
-basicIntro:"A professional SaaS marketing website.",
-
-basic:[
-"5–7 pages",
-"Software product presentation",
-"Feature sections",
-"Pricing section",
-"FAQ",
-"CTA system",
-"Responsive development",
-"Basic SEO",
-"Google indexing"
-],
-
-standardIntro:"A complete SaaS website with deeper product communication.",
-
-standard:[
-"10–15 pages",
-"Premium UI design",
-"Feature architecture",
-"Pricing comparison",
-"Product showcase",
-"Integrations section",
-"Resources section",
-"Lead forms",
-"Advanced SEO",
-"Google Search Console",
-"Analytics",
-"Performance optimization"
-],
-
-premiumIntro:"A premium SaaS marketing platform designed for software companies.",
-
-premium:[
-"20+ pages",
-"Advanced bespoke UI",
-"Product ecosystem architecture",
-"Advanced pricing system",
-"Interactive product sections",
-"Documentation / resources structure",
-"Blog system",
-"Advanced SEO",
-"Structured data",
-"Analytics",
-"Conversion tracking",
-"Performance engineering",
-"Security configuration",
-"Launch testing"
-],
-
-basicDelivery:"8–12 days",
-standardDelivery:"14–21 days",
-premiumDelivery:"21–35 days"
-},
-
-
-/* 08 */
-
-{
-n:8,
-name:"AI Website",
-desc:"A modern AI-focused website for AI products, AI services, tools and technology companies.",
-
-accent:"#56d9e6",
-
-basic:700,
-standard:1600,
-premium:3500,
-
-basicIntro:"A modern AI product or service website.",
-
-basic:[
-"5–7 pages",
-"AI-focused interface",
-"Product / service presentation",
-"Feature sections",
-"CTA system",
-"Responsive development",
-"Basic SEO",
-"Google indexing",
-"Performance optimization"
-],
-
-standardIntro:"A more advanced AI website with stronger product communication.",
-
-standard:[
-"10–15 pages",
-"Custom AI visual direction",
-"Product architecture",
-"Interactive sections",
-"Pricing / plans",
-"FAQ",
-"Lead capture",
-"API-ready structure where appropriate",
-"Advanced SEO",
-"Analytics",
-"Google Search Console",
-"Performance optimization"
-],
-
-premiumIntro:"A high-end AI technology platform with advanced digital experiences.",
-
-premium:[
-"20+ pages",
-"Premium bespoke AI design",
-"Advanced interactions",
-"Product dashboard-ready architecture",
-"AI feature presentation",
-"API integration planning",
-"Advanced forms",
-"Advanced SEO",
-"Structured data",
-"Analytics",
-"Performance engineering",
-"Security configuration",
-"Launch testing",
-"Post-launch corrections"
-],
-
-basicDelivery:"8–12 days",
-standardDelivery:"14–22 days",
-premiumDelivery:"22–40 days"
-},
-
-
-/* 09 */
-
-{
-n:9,
-name:"Web Application",
-desc:"Custom browser-based applications built around business workflows, user interaction and functionality.",
-
-accent:"#b77dff",
-
-basic:1200,
-standard:2800,
-premium:6000,
-
-basicIntro:"A focused custom web application foundation.",
-
-basic:[
-"Custom application interface",
-"Core application pages",
-"Responsive UI",
-"Basic user flow",
-"Form / data interaction",
-"Basic authentication where required",
-"Database planning",
-"Basic deployment setup",
-"Performance testing"
-],
-
-standardIntro:"A functional web application with deeper workflows and data handling.",
-
-standard:[
-"Custom application architecture",
-"User authentication",
-"User dashboard",
-"Database integration",
-"Core business workflows",
-"Forms and validation",
-"API integration where required",
-"Responsive interface",
-"Performance optimization",
-"Security configuration",
-"Testing"
-],
-
-premiumIntro:"A substantial custom web platform designed around complex business requirements.",
-
-premium:[
-"Advanced application architecture",
-"Custom dashboard",
-"Multiple user roles",
-"Advanced database system",
-"API integrations",
-"Advanced workflows",
-"Admin management",
-"Advanced authentication",
-"Security hardening",
-"Performance engineering",
-"Testing",
-"Deployment configuration",
-"Launch support"
-],
-
-basicDelivery:"14–21 days",
-standardDelivery:"21–35 days",
-premiumDelivery:"35–60+ days"
-},
-
-
-/* 10 */
-
-{
-n:10,
-name:"Dashboard / Admin Panel",
-desc:"Data-driven interfaces for businesses that need to manage users, information, operations or analytics.",
-
-accent:"#66b6ff",
-
-basic:1000,
-standard:2400,
-premium:5000,
-
-basicIntro:"A focused dashboard interface.",
-
-basic:[
-"Dashboard UI",
-"Core navigation",
-"Key information panels",
-"Responsive layout",
-"Basic data display",
-"Basic authentication",
-"Admin structure",
-"Deployment setup"
-],
-
-standardIntro:"A complete business dashboard with functional data management.",
-
-standard:[
-"Custom dashboard design",
-"Multiple dashboard sections",
-"Charts / analytics",
-"User management",
-"Data tables",
-"Search and filters",
-"Authentication",
-"Database integration",
-"API integration",
-"Responsive design",
-"Security configuration",
-"Testing"
-],
-
-premiumIntro:"A powerful administration platform designed for complex operations.",
-
-premium:[
-"Advanced dashboard architecture",
-"Multiple user roles",
-"Advanced analytics",
-"Advanced tables",
-"Filtering and search systems",
-"User management",
-"Permissions system",
-"Database architecture",
-"API integrations",
-"Security hardening",
-"Performance optimization",
-"Testing",
-"Deployment",
-"Launch support"
-],
-
-basicDelivery:"12–18 days",
-standardDelivery:"20–32 days",
-premiumDelivery:"30–50+ days"
-},
-
-
-/* 11 */
-
-{
-n:11,
-name:"Booking Website",
-desc:"A professional website that allows customers to discover services and make bookings or reservations.",
-
-accent:"#65d5ad",
-
-basic:600,
-standard:1300,
-premium:2800,
-
-basicIntro:"A professional service-booking website.",
-
-basic:[
-"5–7 pages",
-"Service listings",
-"Booking inquiry system",
-"Contact form",
-"WhatsApp integration",
-"Responsive design",
-"Basic SEO",
-"Google indexing",
-"Basic booking flow"
-],
-
-standardIntro:"A complete booking experience with stronger functionality.",
-
-standard:[
-"8–12 pages",
-"Service categories",
-"Booking form",
-"Availability structure",
-"Customer information forms",
-"Confirmation workflow",
-"Email notification structure",
-"SEO optimization",
-"Google Search Console",
-"Analytics",
-"Performance optimization"
-],
-
-premiumIntro:"An advanced booking platform designed around reservations and business operations.",
-
-premium:[
-"15+ pages",
-"Advanced booking system",
-"Availability management",
-"User accounts where required",
-"Booking dashboard",
-"Automated notifications",
-"Payment integration where required",
-"Advanced SEO",
-"Analytics",
-"Security configuration",
-"Performance engineering",
-"Testing",
-"Launch configuration"
-],
-
-basicDelivery:"8–12 days",
-standardDelivery:"14–22 days",
-premiumDelivery:"22–40 days"
-},
-
-
-/* 12 */
-
-{
-n:12,
-name:"Restaurant Website",
-desc:"A modern digital presence for restaurants, cafés, food brands and hospitality businesses.",
-
-accent:"#ff9b57",
-
-basic:450,
-standard:950,
-premium:1900,
-
-basicIntro:"A professional restaurant website.",
-
-basic:[
-"5 pages",
-"Restaurant presentation",
-"Menu section",
-"Location / contact",
-"WhatsApp integration",
-"Responsive design",
-"Basic SEO",
-"Google indexing"
-],
-
-standardIntro:"A complete restaurant experience with stronger customer functionality.",
-
-standard:[
-"8–12 pages",
-"Premium restaurant UI",
-"Digital menu",
-"Gallery",
-"Reservation inquiry",
-"Contact system",
-"Google Maps integration",
-"SEO optimization",
-"Analytics",
-"Performance optimization"
-],
-
-premiumIntro:"A premium restaurant platform designed to support reservations, menus and customer conversion.",
-
-premium:[
-"15+ pages",
-"Custom premium design",
-"Advanced digital menu",
-"Reservation system",
-"Online ordering structure",
-"Payment integration where required",
-"Gallery system",
-"Advanced SEO",
-"Analytics",
-"Performance optimization",
-"Security",
-"Launch testing"
-],
-
-basicDelivery:"6–8 days",
-standardDelivery:"10–16 days",
-premiumDelivery:"16–28 days"
-},
-
-
-/* 13 */
-
-{
-n:13,
-name:"Real Estate Website",
-desc:"A property-focused website designed to showcase listings, locations, agents and real estate services.",
-
-accent:"#d3b47a",
-
-basic:700,
-standard:1500,
-premium:3200,
-
-basicIntro:"A professional property presentation website.",
-
-basic:[
-"5–7 pages",
-"Property listings",
-"Property detail section",
-"Agent / company information",
-"Contact forms",
-"WhatsApp integration",
-"Map integration",
-"Basic SEO",
-"Google indexing"
-],
-
-standardIntro:"A complete real estate platform with searchable property presentation.",
-
-standard:[
-"10–15 pages",
-"Advanced property listings",
-"Property detail pages",
-"Search and filtering",
-"Agent profiles",
-"Location sections",
-"Lead forms",
-"Google Maps",
-"SEO optimization",
-"Google Search Console",
-"Analytics",
-"Performance optimization"
-],
-
-premiumIntro:"A large-scale property platform built for real estate businesses.",
-
-premium:[
-"20+ pages",
-"Advanced property architecture",
-"Advanced search",
-"Property filtering",
-"Agent dashboard structure",
-"Property submission system",
-"Map-based discovery",
-"Lead management structure",
-"Advanced SEO",
-"Structured data",
-"Analytics",
-"Performance engineering",
-"Security configuration",
-"Launch testing"
-],
-
-basicDelivery:"8–12 days",
-standardDelivery:"15–24 days",
-premiumDelivery:"25–45 days"
-},
-
-
-/* 14 */
-
-{
-n:14,
-name:"Hotel / Hospitality Website",
-desc:"A premium hospitality website designed to present rooms, facilities, experiences and booking options.",
-
-accent:"#c8a86b",
-
-basic:650,
-standard:1400,
-premium:3000,
-
-basicIntro:"A polished hospitality website.",
-
-basic:[
-"5–7 pages",
-"Hotel presentation",
-"Room section",
-"Facilities section",
-"Gallery",
-"Location",
-"Contact",
-"WhatsApp",
-"Basic SEO"
-],
-
-standardIntro:"A complete hotel website with stronger booking and customer experience.",
-
-standard:[
-"10–14 pages",
-"Premium hospitality design",
-"Room detail pages",
-"Gallery",
-"Facilities",
-"Reservation inquiry",
-"Location / maps",
-"Contact forms",
-"SEO",
-"Google Search Console",
-"Analytics",
-"Performance optimization"
-],
-
-premiumIntro:"A premium hospitality platform built around reservations and guest conversion.",
-
-premium:[
-"18+ pages",
-"Premium bespoke design",
-"Advanced room architecture",
-"Booking integration",
-"Reservation workflow",
-"Payment integration where required",
-"Experiences / services",
-"Advanced SEO",
-"Analytics",
-"Performance engineering",
-"Security configuration",
-"Launch testing"
-],
-
-basicDelivery:"8–12 days",
-standardDelivery:"14–22 days",
-premiumDelivery:"22–40 days"
-},
-
-
-/* 15 */
-
-{
-n:15,
-name:"School / Education Website",
-desc:"A structured digital platform for schools, educators, training organizations and educational institutions.",
-
-accent:"#66a9ff",
-
-basic:600,
-standard:1300,
-premium:2800,
-
-basicIntro:"A professional educational website.",
-
-basic:[
-"5–7 pages",
-"School / organization profile",
-"Programs / departments",
-"Admissions section",
-"Contact section",
-"Responsive development",
-"Basic SEO",
-"Google indexing"
-],
-
-standardIntro:"A complete education website with deeper information architecture.",
-
-standard:[
-"10–15 pages",
-"Program detail pages",
-"Admissions workflow",
-"Staff / faculty section",
-"News section",
-"Events section",
-"Contact forms",
-"SEO optimization",
-"Google Search Console",
-"Analytics",
-"Performance optimization"
-],
-
-premiumIntro:"A larger educational platform with advanced student-facing functionality.",
-
-premium:[
-"18+ pages",
-"Premium custom design",
-"Student portal-ready architecture",
-"Admissions system",
-"Application workflow",
-"News and events system",
-"Resources section",
-"Advanced SEO",
-"Analytics",
-"Performance engineering",
-"Security configuration",
-"Testing",
-"Launch support"
-],
-
-basicDelivery:"8–12 days",
-standardDelivery:"14–22 days",
-premiumDelivery:"22–40 days"
-},
-
-
-/* 16 */
-
-{
-n:16,
-name:"Church / Organization Website",
-desc:"A professional platform for churches, ministries, NGOs, communities and organizations.",
-
-accent:"#b58cff",
-
-basic:500,
-standard:1100,
-premium:2400,
-
-basicIntro:"A clean organization website.",
-
-basic:[
-"5–7 pages",
-"Organization profile",
-"About section",
-"Programs / services",
-"Events section",
-"Contact",
-"WhatsApp integration",
-"Basic SEO",
-"Google indexing"
-],
-
-standardIntro:"A complete organization website with stronger communication tools.",
-
-standard:[
-"10–14 pages",
-"Custom design",
-"Events system",
-"Media / gallery",
-"News section",
-"Contact forms",
-"Donation-ready structure",
-"SEO optimization",
-"Google Search Console",
-"Analytics",
-"Performance optimization"
-],
-
-premiumIntro:"A comprehensive digital platform for organizations with active communities.",
-
-premium:[
-"18+ pages",
-"Premium custom design",
-"Events architecture",
-"Media library",
-"Blog / news",
-"Donation integration where required",
-"Member-area-ready structure",
-"Advanced SEO",
-"Analytics",
-"Security",
-"Performance engineering",
-"Launch testing"
-],
-
-basicDelivery:"7–10 days",
-standardDelivery:"12–20 days",
-premiumDelivery:"20–35 days"
-},
-
-
-/* 17 */
-
-{
-n:17,
-name:"Agency Website",
-desc:"A premium digital home for agencies that need to showcase services, work, expertise and results.",
-
-accent:"#8b9eff",
-
-basic:550,
-standard:1200,
-premium:2500,
-
-basicIntro:"A professional agency website.",
-
-basic:[
-"5–7 pages",
-"Agency presentation",
-"Services section",
-"Portfolio",
-"About",
-"Contact",
-"Responsive design",
-"Basic SEO",
-"Google indexing"
-],
-
-standardIntro:"A complete agency website designed to communicate expertise and generate leads.",
-
-standard:[
-"10–14 pages",
-"Custom agency design",
-"Service detail pages",
-"Portfolio / case studies",
-"Testimonials",
-"Team section",
-"Lead forms",
-"SEO optimization",
-"Google Search Console",
-"Analytics",
-"Performance optimization"
-],
-
-premiumIntro:"A premium agency platform built around authority, case studies and conversion.",
-
-premium:[
-"18+ pages",
-"Premium bespoke UI",
-"Advanced case-study system",
-"Service architecture",
-"Team profiles",
-"Blog / insights",
-"Lead-generation system",
-"Advanced SEO",
-"Analytics",
-"Conversion tracking",
-"Performance engineering",
-"Security",
-"Launch testing"
-],
-
-basicDelivery:"7–10 days",
-standardDelivery:"12–20 days",
-premiumDelivery:"20–35 days"
-},
-
-
-/* 18 */
-
-{
-n:18,
-name:"Blog / Magazine Website",
-desc:"A content-driven website designed for publishing articles, news, stories, resources and media.",
-
-accent:"#d3d8df",
-
-basic:600,
-standard:1300,
-premium:2800,
-
-basicIntro:"A professional publishing website.",
-
-basic:[
-"5–7 pages",
-"Blog structure",
-"Article layout",
-"Categories",
-"Search",
-"Author information",
-"Responsive design",
-"Basic SEO",
-"Google indexing"
-],
-
-standardIntro:"A complete publishing platform with stronger content organization.",
-
-standard:[
-"10–15 pages",
-"Custom editorial design",
-"Advanced categories",
-"Search system",
-"Author pages",
-"Featured content",
-"Newsletter-ready structure",
-"SEO optimization",
-"Google Search Console",
-"Analytics",
-"Performance optimization"
-],
-
-premiumIntro:"A large-scale publishing experience designed for serious content operations.",
-
-premium:[
-"20+ pages",
-"Premium editorial design",
-"Advanced publishing architecture",
-"Multiple content categories",
-"Author management",
-"Advanced search",
-"Newsletter integration",
-"Advertising-ready sections",
-"Advanced SEO",
-"Structured data",
-"Analytics",
-"Performance engineering",
-"Security",
-"Launch testing"
-],
-
-basicDelivery:"8–12 days",
-standardDelivery:"14–22 days",
-premiumDelivery:"22–40 days"
-},
-
-
-/* 19 */
-
-{
-n:19,
-name:"Membership Website",
-desc:"A member-focused website designed for communities, clubs, professional networks and subscription services.",
-
-accent:"#65d5c4",
-
-basic:900,
-standard:2000,
-premium:4500,
-
-basicIntro:"A membership-ready website foundation.",
-
-basic:[
-"5–7 pages",
-"Membership presentation",
-"Registration structure",
-"Login-ready interface",
-"Member information pages",
-"Contact system",
-"Responsive development",
-"Basic SEO"
-],
-
-standardIntro:"A functional membership experience with user-facing features.",
-
-standard:[
-"10–15 pages",
-"Member registration",
-"Login system",
-"Member dashboard",
-"Profile system",
-"Protected content structure",
-"Database integration",
-"Email workflow structure",
-"SEO",
-"Analytics",
-"Security configuration",
-"Testing"
-],
-
-premiumIntro:"A complete membership platform designed for larger communities and subscription businesses.",
-
-premium:[
-"20+ pages",
-"Advanced membership architecture",
-"Multiple user roles",
-"Member dashboard",
-"Profile management",
-"Protected content",
-"Subscription-ready structure",
-"Payment integration where required",
-"Admin management",
-"Database architecture",
-"Advanced security",
-"Performance engineering",
-"Testing",
-"Deployment"
-],
-
-basicDelivery:"12–18 days",
-standardDelivery:"20–35 days",
-premiumDelivery:"35–55+ days"
-},
-
-
-/* 20 */
-
-{
-n:20,
-name:"Custom Web Platform",
-desc:"A bespoke digital platform built around a unique business model, workflow or technology requirement.",
-
-accent:"#d5a8ff",
-
-basic:1800,
-standard:4000,
-premium:8500,
-
-basicIntro:"A custom digital platform foundation.",
-
-basic:[
-"Custom requirements analysis",
-"Custom UI foundation",
-"Core platform pages",
-"Responsive development",
-"Basic database structure",
-"Core workflow",
-"Basic authentication where required",
-"Deployment configuration",
-"Performance testing"
-],
-
-standardIntro:"A more advanced custom platform with deeper functionality and integrations.",
-
-standard:[
-"Custom platform architecture",
-"Advanced UI",
-"User accounts",
-"Dashboard",
-"Database integration",
-"Multiple workflows",
-"API integrations",
-"Admin functionality",
-"Authentication",
-"SEO where applicable",
-"Performance optimization",
-"Security configuration",
-"Testing",
-"Deployment"
-],
-
-premiumIntro:"A substantial bespoke platform engineered around complex business requirements.",
-
-premium:[
-"Full custom platform architecture",
-"Advanced frontend",
-"Advanced backend workflows",
-"Multiple user roles",
-"Advanced database system",
-"Custom dashboards",
-"API ecosystem",
-"Third-party integrations",
-"Advanced authentication",
-"Admin management",
-"Advanced security",
-"Performance engineering",
-"Analytics",
-"Full testing",
-"Production deployment",
-"Launch support"
-],
-
-basicDelivery:"18–25 days",
-standardDelivery:"30–50 days",
-premiumDelivery:"45–90+ days"
-}
-
-];
-
-
-/*
-===========================================================
-BUILD THE PAGE
-===========================================================
-*/
-
-const container = document.getElementById("webServices");
-
-
-function packageCard(
-service,
-level,
-price,
-intro,
-items,
-concepts,
-revisions,
-delivery,
-files
-){
-
-return `
-
-<div class="package ${level === "Standard" ? "standard" : ""}">
-
-<div class="package-label">
-${level}
-</div>
-
-<h3>
-${level === "Basic" ? "Foundation" :
-  level === "Standard" ? "Professional" :
-  "Advanced"}
-</h3>
-
-<div class="price">
-$${price.toLocaleString()}
-</div>
-
-<p class="package-intro">
-${intro}
-</p>
-
-<hr>
-
-<h4>
-WHAT WE'LL BUILD
-</h4>
-
-<ul>
-
-${items.map(item => `
-<li>${item}</li>
-`).join("")}
-
-</ul>
-
-<div class="meta">
-
-<div>
-<span>Scope</span>
-<strong>${concepts}</strong>
-</div>
-
-<div>
-<span>Revisions</span>
-<strong>${revisions}</strong>
-</div>
-
-<div>
-<span>Delivery</span>
-<strong>${delivery}</strong>
-</div>
-
-<div>
-<span>Final</span>
-<strong>${files}</strong>
-</div>
-
-</div>
-
-<a
-href="#"
-class="start"
-onclick="contactWeb(
-'${service.name}',
-'${level}',
-'$${price.toLocaleString()}'
-)">
-START PROJECT →
-</a>
-
-</div>
-
-`;
-
-}
-
-
-services.forEach(service => {
-
-const html = `
-
-<article class="web-service">
-
-<div class="service-top">
-
-<div
-class="service-preview"
-style="--accent:${service.accent}"
->
-
-<span class="service-number">
-${String(service.n).padStart(2,"0")}
-</span>
-
-<span class="service-type">
-${service.name}
-</span>
-
-
-<div class="preview-screen">
-
-<div class="browser-bar">
-
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
-
-</div>
-
-<div class="screen-body">
-
-<div class="screen-line"></div>
-<div class="screen-line short"></div>
-
-<div class="screen-blocks">
-
-<div class="screen-block"></div>
-<div class="screen-block"></div>
-<div class="screen-block"></div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="service-description">
-
-<div class="label">
-${String(service.n).padStart(2,"0")} / Web Development
-</div>
-
-<h2>
-${service.name}
-</h2>
-
-<p>
-${service.desc}
-</p>
-
-<div class="tags">
-
-<span class="tag">
-Custom Development
-</span>
-
-<span class="tag">
-Responsive
-</span>
-
-<span class="tag">
-SEO Ready
-</span>
-
-<span class="tag">
-Performance
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="packages">
-
-
-${packageCard(
-service,
-"Basic",
-service.basic,
-service.basicIntro,
-service.basic,
-"Essential",
-"2",
-service.basicDelivery,
-"Production files"
-)}
-
-
-${packageCard(
-service,
-"Standard",
-service.standard,
-service.standardIntro,
-service.standard,
-"Expanded",
-"3",
-service.standardDelivery,
-"Production + source"
-)}
-
-
-${packageCard(
-service,
-"Premium",
-service.premium,
-service.premiumIntro,
-service.premium,
-"Advanced",
-"5",
-service.premiumDelivery,
-"Full production handover"
-)}
-
-
-</div>
-
-</article>
-
-`;
-
-container.insertAdjacentHTML("beforeend",html);
-
-});
-
-
-/*
-===========================================================
-WHATSAPP
-===========================================================
-*/
-
-function contactWeb(service, level, price){
-
-const message =
-"Hello Victor Phoenix, I'm interested in the " +
-level +
-" " +
-service +
-" web development package (" +
-price +
-"). I'd like to discuss the project, requirements and next steps.";
-
-window.open(
-"https://wa.me/2349165831007?text=" +
-encodeURIComponent(message),
-"_blank"
-);
-
-}
-
-</script>
 
 </body>
 </html>

@@ -131,7 +131,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 38px;
+      gap: 30px;
     }
 
     .nav-links a {
@@ -698,7 +698,7 @@
     }
 
     /* =========================
-       PHILOSOPHY
+       PHILOSOPHY / PORTFOLIO
     ========================= */
 
     .lower-section {
@@ -792,6 +792,194 @@
         rgba(255,255,255,.12);
 
       transform: rotate(-16deg);
+    }
+
+    .view-works-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 24px;
+      padding: 14px 22px;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 30px;
+      color: #ffffff;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: .25s;
+    }
+
+    .view-works-link:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* =========================
+       PHOENIX PRODUCTS
+    ========================= */
+
+    .phoenix-section {
+      padding: 100px 0;
+
+      border-bottom: 1px solid rgba(255,255,255,.08);
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .phoenix-section::before {
+      content: "";
+
+      position: absolute;
+
+      width: 500px;
+      height: 500px;
+
+      right: -220px;
+      top: 50px;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(255,255,255,.05);
+    }
+
+    .phoenix-heading {
+      max-width: 700px;
+
+      margin-bottom: 50px;
+    }
+
+    .phoenix-heading h2 {
+      font-size:
+        clamp(
+          45px,
+          6vw,
+          78px
+        );
+
+      line-height: .92;
+
+      letter-spacing: -4px;
+
+      margin-top: 18px;
+    }
+
+    .phoenix-heading p {
+      max-width: 600px;
+
+      color: #929299;
+
+      font-size: 14px;
+
+      line-height: 1.8;
+
+      margin-top: 22px;
+    }
+
+    .phoenix-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2,1fr);
+
+      gap: 18px;
+
+      position: relative;
+
+      z-index: 2;
+    }
+
+    .phoenix-card {
+      min-height: 270px;
+
+      padding: 30px;
+
+      border: 1px solid rgba(255,255,255,.11);
+
+      border-radius: 16px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.05),
+          rgba(255,255,255,.01)
+        );
+
+      position: relative;
+
+      overflow: hidden;
+
+      transition: .3s;
+    }
+
+    .phoenix-card:hover {
+      transform: translateY(-6px);
+
+      border-color: rgba(255,255,255,.25);
+
+      box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.35);
+    }
+
+    .phoenix-card-number {
+      color: #66666d;
+
+      font-size: 10px;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+    }
+
+    .phoenix-card h3 {
+      font-size: 30px;
+
+      letter-spacing: -1px;
+
+      margin-top: 45px;
+    }
+
+    .phoenix-card p {
+      color: #8e8e95;
+
+      font-size: 13px;
+
+      line-height: 1.7;
+
+      max-width: 450px;
+
+      margin-top: 10px;
+    }
+
+    .phoenix-card-link {
+      position: absolute;
+
+      left: 30px;
+      bottom: 28px;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+    }
+
+    .phoenix-card-link span {
+      transition: .25s;
+    }
+
+    .phoenix-card:hover .phoenix-card-link span {
+      transform: translateX(5px);
     }
 
     /* =========================
@@ -962,6 +1150,10 @@
         grid-template-columns:
           1fr 1fr;
       }
+
+      .phoenix-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 760px) {
@@ -993,7 +1185,8 @@
 
       .hero-copy {
         padding:
-          70px 0 20px;
+          70px 0
+          20px;
       }
 
       .hero-art {
@@ -1017,6 +1210,14 @@
 
       .section-title {
         letter-spacing: -2px;
+      }
+
+      .phoenix-section {
+        padding: 80px 0;
+      }
+
+      .phoenix-card {
+        min-height: 250px;
       }
 
       .footer-row {
@@ -1044,7 +1245,12 @@
 
         letter-spacing: -4px;
       }
+
+      .phoenix-card h3 {
+        font-size: 25px;
+      }
     }
+
   </style>
 </head>
 
@@ -1067,14 +1273,16 @@
 
       <nav class="nav-links">
 
-        <a href="#home">Home</a>
+        <a href="#home">
+          Home
+        </a>
 
         <a href="services.html">
           Services
         </a>
 
         <a href="portfolio.html">
-          Portfolio
+          View Works
         </a>
 
         <a href="about.html">
@@ -1085,11 +1293,18 @@
           Contact
         </a>
 
+        <a href="phoenix-apps.html">
+          Phoenix Apps
+        </a>
+
+        <a href="phoenix-websites.html">
+          Phoenix Websites
+        </a>
+
       </nav>
 
       <div class="contact-icons">
 
-        <!-- WhatsApp icon only -->
         <a
           class="icon-button"
           href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
@@ -1118,7 +1333,6 @@
 
         </a>
 
-        <!-- Email icon only -->
         <a
           class="icon-button"
           href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20Inquiry"
@@ -1398,7 +1612,7 @@
 
               <a
                 class="service-link"
-                href="open ai-solutions.html"
+                href="ai-solutions.html"
               >
                 Learn More →
               </a>
@@ -1477,8 +1691,6 @@
           </p>
 
 
-          <!-- WhatsApp -->
-
           <a
             class="contact-button"
             href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
@@ -1517,8 +1729,6 @@
 
           </a>
 
-
-          <!-- Email -->
 
           <a
             class="contact-button"
@@ -1568,78 +1778,254 @@
 
 
     <!-- =========================
-         PHILOSOPHY / PORTFOLIO
+         PHILOSOPHY / VIEW WORKS
     ========================= -->
 
     <section
-  class="lower-section"
-  id="portfolio"
->
+      class="lower-section"
+      id="portfolio"
+    >
 
-  <div class="container two-columns">
+      <div class="container two-columns">
 
-    <div class="philosophy">
+        <div class="philosophy">
 
-      <div class="eyebrow">
-        Our Philosophy
+          <div class="eyebrow">
+            Our Philosophy
+          </div>
+
+          <h2>
+            Create.<br>
+            <span>Innovate.</span><br>
+            Evolve.
+          </h2>
+
+        </div>
+
+
+        <div>
+
+          <div class="eyebrow">
+            Selected Work
+          </div>
+
+          <h2
+            class="section-title"
+            style="font-size:clamp(36px,4vw,55px)"
+          >
+            Ideas into<br>
+            experiences.
+          </h2>
+
+          <p class="work-description">
+
+            A selection of digital concepts
+            and creative work from the
+            Victor Phoenix universe.
+
+          </p>
+
+          <div class="work-preview"></div>
+
+          <a
+            href="portfolio.html"
+            class="view-works-link"
+          >
+            View All Works <span>→</span>
+          </a>
+
+        </div>
+
       </div>
 
-      <h2>
-        Create.<br>
-        <span>Innovate.</span><br>
-        Evolve.
-      </h2>
+    </section>
 
-    </div>
 
-    <div>
+    <!-- =========================
+         PHOENIX APPS
+    ========================= -->
 
-      <div class="eyebrow">
-        Selected Work
+    <section class="phoenix-section">
+
+      <div class="container">
+
+        <div class="phoenix-heading">
+
+          <div class="eyebrow">
+            Phoenix Apps
+          </div>
+
+          <h2>
+            Applications<br>
+            we build.
+          </h2>
+
+          <p>
+            Phoenix Apps is the dedicated home for
+            applications created and developed by
+            Victor Phoenix. These products are
+            separate from our client portfolio and
+            represent our own technology ecosystem.
+          </p>
+
+        </div>
+
+
+        <div class="phoenix-grid">
+
+          <article class="phoenix-card">
+
+            <div class="phoenix-card-number">
+              APP 01
+            </div>
+
+            <h3>
+              Phoenix App 01
+            </h3>
+
+            <p>
+              A future Victor Phoenix application
+              will be showcased here with its
+              features, technology and live
+              experience.
+            </p>
+
+            <a
+              href="phoenix-apps.html"
+              class="phoenix-card-link"
+            >
+              Explore Phoenix Apps
+              <span>→</span>
+            </a>
+
+          </article>
+
+
+          <article class="phoenix-card">
+
+            <div class="phoenix-card-number">
+              APP ECOSYSTEM
+            </div>
+
+            <h3>
+              More Applications
+            </h3>
+
+            <p>
+              Explore the Phoenix Apps space to
+              discover applications as they are
+              designed, developed and launched.
+            </p>
+
+            <a
+              href="phoenix-apps.html"
+              class="phoenix-card-link"
+            >
+              View Phoenix Apps
+              <span>→</span>
+            </a>
+
+          </article>
+
+        </div>
+
       </div>
 
-      <h2
-        class="section-title"
-        style="font-size:clamp(36px,4vw,55px)"
-      >
-        Ideas into<br>
-        experiences.
-      </h2>
+    </section>
 
-      <p class="work-description">
-        A selection of digital concepts
-        and creative work from the
-        Victor Phoenix universe.
-      </p>
 
-      <div class="work-preview"></div>
+    <!-- =========================
+         PHOENIX WEBSITES
+    ========================= -->
 
-      <a
-        href="portfolio.html"
-        class="view-works-link"
-        style="
-          display:inline-flex;
-          align-items:center;
-          gap:12px;
-          margin-top:24px;
-          padding:14px 22px;
-          border:1px solid rgba(255,255,255,0.25);
-          border-radius:30px;
-          color:#ffffff;
-          font-size:12px;
-          letter-spacing:0.12em;
-          text-transform:uppercase;
-          text-decoration:none;
-        "
-      >
-        View All Works <span>→</span>
-      </a>
+    <section class="phoenix-section">
 
-    </div>
+      <div class="container">
 
-  </div>
+        <div class="phoenix-heading">
 
-</section>
+          <div class="eyebrow">
+            Phoenix Websites
+          </div>
+
+          <h2>
+            Websites<br>
+            we build.
+          </h2>
+
+          <p>
+            Phoenix Websites is dedicated to the
+            websites and digital experiences created
+            inside the Victor Phoenix ecosystem.
+            It is separate from View Works, which
+            showcases the wider body of creative work.
+          </p>
+
+        </div>
+
+
+        <div class="phoenix-grid">
+
+          <article class="phoenix-card">
+
+            <div class="phoenix-card-number">
+              WEBSITE 01
+            </div>
+
+            <h3>
+              Phoenix Website 01
+            </h3>
+
+            <p>
+              A future Victor Phoenix website or
+              digital product will be presented here
+              when it is ready to launch.
+            </p>
+
+            <a
+              href="phoenix-websites.html"
+              class="phoenix-card-link"
+            >
+              Explore Phoenix Websites
+              <span>→</span>
+            </a>
+
+          </article>
+
+
+          <article class="phoenix-card">
+
+            <div class="phoenix-card-number">
+              WEB ECOSYSTEM
+            </div>
+
+            <h3>
+              More Websites
+            </h3>
+
+            <p>
+              Discover websites and digital
+              experiences developed as part of
+              the Victor Phoenix technology ecosystem.
+            </p>
+
+            <a
+              href="phoenix-websites.html"
+              class="phoenix-card-link"
+            >
+              View Phoenix Websites
+              <span>→</span>
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
     <!-- =========================
          ABOUT
     ========================= -->

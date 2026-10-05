@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Phoenix Websites — Victor Phoenix</title>
+
+  <meta
+    name="description"
+    content="Explore websites built by Victor Phoenix."
+  >
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #050505;
+      color: #f4f4f4;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(5, 5, 5, 0.82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      width: 150px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 14px;
+      color: #bdbdbd;
+    }
+
+    .nav-links a {
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .nav-links .active {
+      color: #fff;
+    }
+
+    .contact-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .icon-button {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ddd;
+      transition: 0.3s ease;
+    }
+
+    .icon-button:hover {
+      background: #fff;
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 190px 0 110px;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(
+          circle at 75% 30%,
+          rgba(255,255,255,0.09),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 20% 70%,
+          rgba(255,255,255,0.045),
+          transparent 25%
+        );
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(60px, 9vw, 125px);
+      line-height: 0.9;
+      letter-spacing: -6px;
+      max-width: 1000px;
+    }
+
+    .hero h1 span {
+      color: #777;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      margin-top: 35px;
+      color: #999;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    /* INTRO */
+
+    .intro {
+      padding: 100px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .intro h2 {
+      font-size: clamp(38px, 5vw, 68px);
+      line-height: 1;
+      letter-spacing: -3px;
+    }
+
+    .intro-text {
+      color: #999;
+      font-size: 17px;
+      line-height: 1.9;
+      max-width: 650px;
+    }
+
+    /* WEBSITES */
+
+    .websites {
+      padding: 120px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(42px, 6vw, 75px);
+      line-height: 0.95;
+      letter-spacing: -4px;
+    }
+
+    .section-heading p {
+      max-width: 400px;
+      color: #888;
+      font-size: 15px;
+    }
+
+    .website-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .website-card {
+      border: 1px solid rgba(255,255,255,0.09);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.055),
+          rgba(255,255,255,0.015)
+        );
+      padding: 18px;
+      transition: 0.4s ease;
+    }
+
+    .website-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(255,255,255,0.22);
+    }
+
+    .website-preview {
+      height: 330px;
+      background:
+        linear-gradient(
+          135deg,
+          #171717,
+          #303030 48%,
+          #0b0b0b
+        );
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .website-preview::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(255,255,255,0.14),
+        transparent 65%
+      );
+      filter: blur(10px);
+    }
+
+    .preview-window {
+      width: 76%;
+      height: 68%;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(0,0,0,0.35);
+      backdrop-filter: blur(10px);
+      position: relative;
+      z-index: 2;
+      padding: 18px;
+    }
+
+    .preview-top {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 25px;
+    }
+
+    .preview-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #777;
+    }
+
+    .preview-line {
+      height: 7px;
+      background: rgba(255,255,255,0.15);
+      margin-bottom: 12px;
+      width: 70%;
+    }
+
+    .preview-line.short {
+      width: 45%;
+    }
+
+    .preview-box {
+      height: 75px;
+      margin-top: 20px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .website-content {
+      padding: 30px 10px 12px;
+    }
+
+    .website-number {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #777;
+      margin-bottom: 12px;
+    }
+
+    .website-content h3 {
+      font-size: 28px;
+      margin-bottom: 12px;
+      letter-spacing: -1px;
+    }
+
+    .website-content p {
+      color: #888;
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    .website-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .meta {
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 7px 11px;
+      font-size: 10px;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .website-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .action-button {
+      border: 1px solid rgba(255,255,255,0.16);
+      padding: 12px 18px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: 0.3s ease;
+    }
+
+    .action-button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* NOTE */
+
+    .product-note {
+      margin-top: 70px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 35px 0;
+      color: #777;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    /* CTA */
+
+    .cta {
+      padding: 130px 0;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .cta h2 {
+      font-size: clamp(45px, 7vw, 90px);
+      line-height: 0.95;
+      letter-spacing: -5px;
+      margin-bottom: 30px;
+    }
+
+    .cta p {
+      color: #888;
+      max-width: 550px;
+      margin: auto auto 35px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 15px 24px;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 35px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-logo {
+      width: 125px;
+    }
+
+    .footer-text {
+      color: #666;
+      font-size: 12px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .section-heading {
+        display: block;
+      }
+
+      .section-heading p {
+        margin-top: 25px;
+      }
+
+      .website-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .nav {
+        min-height: 70px;
+      }
+
+      .logo {
+        width: 125px;
+      }
+
+      .hero {
+        padding: 150px 0 90px;
+      }
+
+      .hero h1 {
+        letter-spacing: -4px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .intro,
+      .websites {
+        padding: 85px 0;
+      }
+
+      .website-preview {
+        height: 250px;
+      }
+
+      .preview-window {
+        width: 82%;
+        height: 68%;
+      }
+
+      .website-content h3 {
+        font-size: 24px;
+      }
+
+      .cta {
+        padding: 100px 0;
+      }
+
+      .cta h2 {
+        letter-spacing: -3px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="index.html">
+        <img
+          src="logo.png"
+          alt="Victor Phoenix"
+          class="logo"
+        >
+      </a>
+
+      <nav class="nav-links">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="services.html">
+          Services
+        </a>
+
+        <a href="portfolio.html">
+          View Works
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+        <a href="phoenix-apps.html">
+          Phoenix Apps
+        </a>
+
+        <a
+          href="phoenix-websites.html"
+          class="active"
+        >
+          Phoenix Websites
+        </a>
+
+      </nav>
+
+      <div class="contact-icons">
+
+        <a
+          class="icon-button"
+          href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
+          target="_blank"
+          aria-label="WhatsApp"
+        >
+          WA
+        </a>
+
+        <a
+          class="icon-button"
+          href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20Inquiry"
+          aria-label="Email"
+        >
+          @
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Phoenix Websites
+        </div>
+
+        <h1>
+          Ideas into<br>
+          <span>websites.</span>
+        </h1>
+
+        <p class="hero-description">
+          A dedicated space for websites built by
+          Victor Phoenix. These are in-house digital
+          products and experiments — separate from
+          the client work showcased in View Works.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- INTRO -->
+
+    <section class="intro">
+
+      <div class="container intro-grid">
+
+        <div>
+
+          <div class="eyebrow">
+            Built by Phoenix
+          </div>
+
+          <h2>
+            Digital products<br>
+            with purpose.
+          </h2>
+
+        </div>
+
+        <div>
+
+          <p class="intro-text">
+
+            Phoenix Websites is where we showcase
+            websites created, developed, and launched
+            by Victor Phoenix.
+
+            <br><br>
+
+            This area is intentionally different from
+            the main portfolio. View Works presents
+            the broader range of creative and digital
+            work, while Phoenix Websites focuses
+            specifically on our own websites and
+            digital products.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WEBSITES -->
+
+    <section class="websites">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+
+            <div class="eyebrow">
+              Phoenix Websites
+            </div>
+
+            <h2>
+              Built.<br>
+              Designed.<br>
+              Evolved.
+            </h2>
+
+          </div>
+
+          <p>
+            Explore websites and digital experiences
+            created inside the Victor Phoenix ecosystem.
+          </p>
+
+        </div>
+
+
+        <div class="website-grid">
+
+
+          <!-- WEBSITE 01 -->
+
+          <article class="website-card">
+
+            <div class="website-preview">
+
+              <div class="preview-window">
+
+                <div class="preview-top">
+
+                  <div class="preview-dot"></div>
+                  <div class="preview-dot"></div>
+                  <div class="preview-dot"></div>
+
+                </div>
+
+                <div class="preview-line"></div>
+                <div class="preview-line short"></div>
+
+                <div class="preview-box"></div>
+
+              </div>
+
+            </div>
+
+
+            <div class="website-content">
+
+              <div class="website-number">
+                WEBSITE 01
+              </div>
+
+              <h3>
+                Phoenix Website 01
+              </h3>
+
+              <p>
+                A future Victor Phoenix website
+                concept and digital experience.
+                This space will be replaced with
+                the actual project when launched.
+              </p>
+
+              <div class="website-meta">
+
+                <span class="meta">
+                  Web Experience
+                </span>
+
+                <span class="meta">
+                  In Development
+                </span>
+
+              </div>
+
+              <div class="website-actions">
+
+                <a
+                  href="#"
+                  class="action-button"
+                >
+                  Visit Website →
+                </a>
+
+                <a
+                  href="#"
+                  class="action-button"
+                >
+                  View Details →
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- WEBSITE 02 -->
+
+          <article class="website-card">
+
+            <div class="website-preview">
+
+              <div class="preview-window">
+
+                <div class="preview-top">
+
+                  <div class="preview-dot"></div>
+                  <div class="preview-dot"></div>
+                  <div class="preview-dot"></div>
+
+                </div>
+
+                <div class="preview-line"></div>
+                <div class="preview-line short"></div>
+
+                <div class="preview-box"></div>
+
+              </div>
+
+            </div>
+
+
+            <div class="website-content">
+
+              <div class="website-number">
+                WEBSITE 02
+              </div>
+
+              <h3>
+                Phoenix Website 02
+              </h3>
+
+              <p>
+                A future Victor Phoenix digital
+                product designed around a modern
+                web experience.
+              </p>
+
+              <div class="website-meta">
+
+                <span class="meta">
+                  Digital Product
+                </span>
+
+                <span class="meta">
+                  Coming Soon
+                </span>
+
+              </div>
+
+              <div class="website-actions">
+
+                <a
+                  href="#"
+                  class="action-button"
+                >
+                  Visit Website →
+                </a>
+
+                <a
+                  href="#"
+                  class="action-button"
+                >
+                  View Details →
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- WEBSITE 03 -->
+
+          <article class="website-card">
+
+            <div class="website-preview">
+
+              <div class="preview-window">
+
+                <div class="preview-top">
+
+                  <div class="preview-dot"></div>
+                  <div class="preview-dot"></div>
+                  <div class="preview-dot"></div>
+
+                </div>
+
+                <div class="preview-line"></div>
+                <div class="preview-line short"></div>
+
+                <div class="preview-box"></div>
+
+              </div>
+
+            </div>
+
+
+            <div class="website-content">
+
+              <div class="website-number">
+                WEBSITE 03
+              </div>
+
+              <h3>
+                Phoenix Website 03
+              </h3>
+
+              <p>
+                An upcoming web project built
+                as part of the Victor Phoenix
+                digital ecosystem.
+              </p>
+
+              <div class="website-meta">
+
+                <span class="meta">
+                  Web Platform
+                </span>
+
+                <span class="meta">
+                  Coming Soon
+                </span>
+
+              </div>
+
+              <div class="website-actions">
+
+                <a
+                  href="#"
+                  class="action-button"
+                >
+                  Visit Website →
+                </a>
+
+                <a
+                  href="#"
+                  class="action-button"
+                >
+                  View Details →
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- WEBSITE 04 -->
+
+          <article class="website-card">
+
+            <div class="website-preview">
+
+              <div class="preview-window">
+
+                <div class="preview-top">
+
+                  <div class="preview-dot"></div>
+                  <div class="preview-dot"></div>
+                  <div class="preview-dot"></div>
+
+                </div>
+
+                <div class="preview-line"></div>
+                <div class="preview-line short"></div>
+
+                <div class="preview-box"></div>
+
+              </div>
+
+            </div>
+
+
+            <div class="website-content">
+
+              <div class="website-number">
+                WEBSITE 04
+              </div>
+
+              <h3>
+                Phoenix Website 04
+              </h3>
+
+              <p>
+                A future website experience
+                developed and launched under
+                the Victor Phoenix ecosystem.
+              </p>
+
+              <div class="website-meta">
+
+                <span class="meta">
+                  Web Experience
+                </span>
+
+                <span class="meta">
+                  Planned
+                </span>
+
+              </div>
+
+              <div class="website-actions">
+
+                <a
+                  href="#"
+                  class="action-button"
+                >
+                  Visit Website →
+                </a>
+
+                <a
+                  href="#"
+                  class="action-button"
+                >
+                  View Details →
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+        <div class="product-note">
+
+          These website entries are placeholders for
+          future Victor Phoenix products. They are not
+          presented as launched websites or client work.
+          Actual website links, previews, features, and
+          project details will be added when each product
+          is ready.
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Build what's next
+        </div>
+
+        <h2>
+          Have an idea<br>
+          worth building?
+        </h2>
+
+        <p>
+          Talk to Victor Phoenix about a digital
+          product, website, application, or technology
+          project you want to bring to life.
+        </p>
+
+        <a
+          href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20discuss%20a%20digital%20project."
+          target="_blank"
+          class="cta-button"
+        >
+          Start a Conversation →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <img
+        src="logo.png"
+        alt="Victor Phoenix"
+        class="footer-logo"
+      >
+
+      <div class="footer-text">
+        © 2026 Victor Phoenix. Create What’s Next.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Privacy Policy — Victor Phoenix</title>
+
+  <meta
+    name="description"
+    content="Privacy Policy for Victor Phoenix."
+  >
+
+  <style>
+    :root {
+      --black: #050505;
+      --dark: #090909;
+      --panel: #0d0d0e;
+      --white: #f5f5f5;
+      --silver: #cfcfd4;
+      --gray: #9999a1;
+      --dark-gray: #66666d;
+      --line: rgba(255,255,255,.12);
+      --max-width: 1100px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(
+          circle at 80% 10%,
+          rgba(255,255,255,.07),
+          transparent 28%
+        ),
+        var(--black);
+
+      color: var(--white);
+
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+
+      position: fixed;
+      inset: 0;
+
+      pointer-events: none;
+
+      z-index: 50;
+
+      opacity: .10;
+
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(
+        var(--max-width),
+        calc(100% - 48px)
+      );
+
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+
+      top: 0;
+
+      z-index: 100;
+
+      height: 82px;
+
+      display: flex;
+
+      align-items: center;
+
+      background: rgba(4,4,5,.82);
+
+      backdrop-filter: blur(18px);
+
+      border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+    }
+
+    .nav {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 18px;
+
+      font-weight: 800;
+
+      letter-spacing: -.5px;
+    }
+
+    .back-home {
+      color: #9999a1;
+
+      font-size: 12px;
+
+      transition: .25s;
+    }
+
+    .back-home:hover {
+      color: #fff;
+
+      transform: translateX(-3px);
+    }
+
+    /* =========================
+       PAGE
+    ========================= */
+
+    .policy-page {
+      padding: 100px 0 90px;
+    }
+
+    .policy-header {
+      max-width: 850px;
+
+      margin-bottom: 60px;
+    }
+
+    .eyebrow {
+      display: flex;
+
+      align-items: center;
+
+      gap: 14px;
+
+      color: #77777e;
+
+      text-transform: uppercase;
+
+      letter-spacing: 4px;
+
+      font-size: 10px;
+
+      font-weight: 700;
+    }
+
+    .eyebrow::after {
+      content: "";
+
+      width: 48px;
+
+      height: 1px;
+
+      background: #555;
+    }
+
+    .policy-header h1 {
+      font-size:
+        clamp(
+          48px,
+          7vw,
+          88px
+        );
+
+      line-height: .92;
+
+      letter-spacing: -5px;
+
+      margin-top: 20px;
+    }
+
+    .last-updated {
+      color: #66666d;
+
+      font-size: 11px;
+
+      margin-top: 22px;
+    }
+
+    /* =========================
+       CONTENT
+    ========================= */
+
+    .policy-content {
+      max-width: 850px;
+    }
+
+    .policy-section {
+      margin-bottom: 45px;
+    }
+
+    .policy-section h2 {
+      font-size: 24px;
+
+      line-height: 1.2;
+
+      letter-spacing: -.5px;
+
+      margin-bottom: 13px;
+    }
+
+    .policy-section p {
+      color: #9999a1;
+
+      font-size: 14px;
+
+      line-height: 1.8;
+
+      margin-bottom: 13px;
+    }
+
+    .policy-section ul {
+      padding-left: 23px;
+
+      color: #9999a1;
+
+      font-size: 14px;
+
+      line-height: 1.8;
+    }
+
+    .policy-section li {
+      margin-bottom: 7px;
+    }
+
+    /* =========================
+       LEGAL NAVIGATION
+    ========================= */
+
+    .legal-navigation {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 70px;
+
+      padding-top: 30px;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,.10);
+    }
+
+    .legal-navigation a {
+      padding: 10px 15px;
+
+      border:
+        1px solid
+        rgba(255,255,255,.16);
+
+      border-radius: 999px;
+
+      color: #9999a1;
+
+      font-size: 11px;
+
+      transition: .25s;
+    }
+
+    .legal-navigation a:hover {
+      background: #fff;
+
+      color: #000;
+
+      border-color: #fff;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      border-top:
+        1px solid
+        rgba(255,255,255,.08);
+
+      padding: 27px 0;
+
+      color: #626269;
+
+      font-size: 11px;
+    }
+
+    .footer-row {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+      .container {
+        width:
+          calc(100% - 32px);
+      }
+
+      header {
+        height: 72px;
+      }
+
+      .policy-page {
+        padding: 65px 0 70px;
+      }
+
+      .policy-header h1 {
+        font-size: 50px;
+
+        letter-spacing: -3px;
+      }
+
+      .policy-section h2 {
+        font-size: 21px;
+      }
+
+      .policy-section p,
+      .policy-section ul {
+        font-size: 13px;
+      }
+
+      .footer-row {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+      .legal-navigation {
+        margin-top: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a
+        href="index.html"
+        class="brand"
+      >
+        Victor Phoenix
+      </a>
+
+      <a
+        href="index.html"
+        class="back-home"
+      >
+        ← Back to Home
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       PRIVACY POLICY
+  ========================= -->
+
+  <main class="policy-page">
+
+    <div class="container">
+
+      <div class="policy-header">
+
+        <div class="eyebrow">
+          Legal / Privacy
+        </div>
+
+        <h1>
+          Privacy Policy
+        </h1>
+
+        <div class="last-updated">
+          Last Updated: October 8, 2026
+        </div>
+
+      </div>
+
+
+      <div class="policy-content">
+
+        <!-- SECTION 1 -->
+
+        <section class="policy-section">
+
+          <h2>
+            1. Introduction
+          </h2>
+
+          <p>
+            Victor Phoenix ("Victor Phoenix", "we", "us", or "our")
+            respects your privacy and is committed to protecting
+            information you provide when using our website and digital
+            services.
+          </p>
+
+          <p>
+            This Privacy Policy explains what information we may collect,
+            how we may use it, and how we may protect it.
+          </p>
+
+        </section>
+
+
+        <!-- SECTION 2 -->
+
+        <section class="policy-section">
+
+          <h2>
+            2. Information We May Collect
+          </h2>
+
+          <p>
+            Depending on how you interact with Victor Phoenix, we may
+            collect information such as:
+          </p>
+
+          <ul>
+
+            <li>
+              Your name or business name.
+            </li>
+
+            <li>
+              Phone number or WhatsApp contact information.
+            </li>
+
+            <li>
+              Email address.
+            </li>
+
+            <li>
+              Project requirements and service information.
+            </li>
+
+            <li>
+              Files, images, documents, logos, text, or other materials
+              you provide for a project.
+            </li>
+
+            <li>
+              Technical information about your website visit where
+              applicable.
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!-- SECTION 3 -->
+
+        <section class="policy-section">
+
+          <h2>
+            3. How We Use Your Information
+          </h2>
+
+          <p>
+            Information we receive may be used to:
+          </p>
+
+          <ul>
+
+            <li>
+              Respond to inquiries and messages.
+            </li>
+
+            <li>
+              Understand your project requirements.
+            </li>
+
+            <li>
+              Provide and deliver requested services.
+            </li>
+
+            <li>
+              Communicate with you about your project.
+            </li>
+
+            <li>
+              Provide customer support.
+            </li>
+
+            <li>
+              Improve our website and services.
+            </li>
+
+            <li>
+              Prevent misuse, fraud, or unauthorized activity.
+            </li>
+
+            <li>
+              Meet applicable legal obligations.
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!-- SECTION 4 -->
+
+        <section class="policy-section">
+
+          <h2>
+            4. Project Files and Materials
+          </h2>
+
+          <p>
+            When you provide materials for a project, such as images,
+            documents, logos, brand information, text, or other files,
+            we may need to access or store those materials in order to
+            provide the requested service.
+          </p>
+
+          <p>
+            You are responsible for ensuring that you have the necessary
+            rights or permission to provide materials that belong to you
+            or to third parties.
+          </p>
+
+        </section>
+
+
+        <!-- SECTION 5 -->
+
+        <section class="policy-section">
+
+          <h2>
+            5. Third-Party Services
+          </h2>
+
+          <p>
+            Victor Phoenix may use third-party platforms and services
+            such as communication platforms, hosting providers, payment
+            providers, analytics services, cloud services, APIs, and
+            social-media platforms.
+          </p>
+
+          <p>
+            When you use or communicate through a third-party service,
+            your information may also be subject to that service's own
+            privacy policy and terms.
+          </p>
+
+        </section>
+
+
+        <!-- SECTION 6 -->
+
+        <section class="policy-section">
+
+          <h2>
+            6. Information Sharing
+          </h2>
+
+          <p>
+            Victor Phoenix does not sell your personal information.
+          </p>
+
+          <p>
+            Information may be shared where reasonably necessary to
+            provide our services, operate our website, process
+            transactions, comply with legal obligations, protect our
+            rights, or prevent fraud and abuse.
+          </p>
+
+        </section>
+
+
+        <!-- SECTION 7 -->
+
+        <section class="policy-section">
+
+          <h2>
+            7. Data Security
+          </h2>
+
+          <p>
+            We take reasonable measures to protect information against
+            unauthorized access, loss, misuse, alteration, or disclosure.
+          </p>
+
+          <p>
+            However, no website, online service, or method of electronic
+            transmission can be guaranteed to be completely secure.
+          </p>
+
+        </section>
+
+
+        <!-- SECTION 8 -->
+
+        <section class="policy-section">
+
+          <h2>
+            8. Data Retention
+          </h2>
+
+          <p>
+            We may retain information for as long as reasonably necessary
+            to provide services, maintain appropriate business records,
+            resolve disputes, comply with legal obligations, or protect
+            legitimate business interests.
+          </p>
+
+        </section>
+
+
+        <!-- SECTION 9 -->
+
+        <section class="policy-section">
+
+          <h2>
+            9. Your Privacy Choices
+          </h2>
+
+          <p>
+            Depending on applicable law, you may have rights concerning
+            your personal information, including requesting access,
+            correction, deletion, or clarification regarding how your
+            information is used.
+          </p>
+
+        </section>
+
+
+        <!-- SECTION 10 -->
+
+        <section class="policy-section">
+
+          <h2>
+            10. Children's Privacy
+          </h2>
+
+          <p>
+            Our website and services are not intentionally designed to
+            collect personal information from children.
+          </p>
+
+        </section>
+
+
+        <!-- SECTION 11 -->
+
+        <section class="policy-section">
+
+          <h2>
+            11. Third-Party Links
+          </h2>
+
+          <p>
+            Our website may contain links to websites, applications,
+            platforms, or services operated by third parties.
+          </p>
+
+          <p>
+            Victor Phoenix is not responsible for the privacy practices,
+            content, security, or policies of those third-party services.
+          </p>
+
+        </section>
+
+
+        <!-- SECTION 12 -->
+
+        <section class="policy-section">
+
+          <h2>
+            12. Changes to This Privacy Policy
+          </h2>
+
+          <p>
+            We may update this Privacy Policy from time to time to
+            reflect changes to our services, website, technology,
+            business practices, or legal requirements.
+          </p>
+
+          <p>
+            When changes are made, the "Last Updated" date at the top of
+            this page may be updated.
+          </p>
+
+        </section>
+
+
+        <!-- SECTION 13 -->
+
+        <section class="policy-section">
+
+          <h2>
+            13. Contact Us
+          </h2>
+
+          <p>
+            If you have questions, concerns, or requests regarding this
+            Privacy Policy or the way Victor Phoenix handles information,
+            please contact us through the official contact channels
+            provided on our website.
+          </p>
+
+        </section>
+
+
+      </div>
+
+
+      <!-- =========================
+           OTHER LEGAL PAGES
+      ========================= -->
+
+      <nav
+        class="legal-navigation"
+        aria-label="Legal Pages"
+      >
+
+        <a href="privacy-policy.html">
+          Privacy Policy
+        </a>
+
+        <a href="terms-and-conditions.html">
+          Terms & Conditions
+        </a>
+
+        <a href="service-policy.html">
+          Service Policy
+        </a>
+
+        <a href="refund-policy.html">
+          Refund Policy
+        </a>
+
+        <a href="cookie-policy.html">
+          Cookie Policy
+        </a>
+
+        <a href="disclaimer.html">
+          Disclaimer
+        </a>
+
+      </nav>
+
+    </div>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container footer-row">
+
+      <div>
+        © 2026 Victor Phoenix. All rights reserved.
+      </div>
+
+      <div>
+        Digital Services & Technology
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

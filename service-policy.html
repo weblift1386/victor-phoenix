@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Service Policy | Victor Phoenix</title>
+
+  <meta
+    name="description"
+    content="Service Policy for Victor Phoenix digital services."
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #d8d8dc;
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8, 8, 8, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .header-row {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #929298;
+      font-size: 12px;
+      transition: .25s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    /* HERO */
+    .legal-hero {
+      padding: 90px 0 55px;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+
+    .legal-hero span {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: #85858c;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .legal-hero h1 {
+      font-size: clamp(38px, 7vw, 68px);
+      line-height: 1.05;
+      color: #fff;
+      margin-bottom: 18px;
+    }
+
+    .legal-hero p {
+      max-width: 720px;
+      color: #88888f;
+      font-size: 14px;
+    }
+
+    /* CONTENT */
+    .legal-content {
+      padding: 65px 0 90px;
+    }
+
+    .legal-section {
+      margin-bottom: 48px;
+    }
+
+    .legal-section h2 {
+      color: #fff;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .legal-section h3 {
+      color: #e7e7e9;
+      font-size: 16px;
+      margin: 24px 0 10px;
+    }
+
+    .legal-section p {
+      color: #a1a1a8;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .legal-section ul {
+      margin: 12px 0 18px 20px;
+      color: #a1a1a8;
+    }
+
+    .legal-section li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .notice {
+      border: 1px solid rgba(255,255,255,.1);
+      background: #101010;
+      padding: 22px;
+      border-radius: 12px;
+      margin: 30px 0;
+    }
+
+    .notice p {
+      margin: 0;
+    }
+
+    /* POLICY NAVIGATION */
+    .legal-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 50px;
+    }
+
+    .legal-nav a {
+      border: 1px solid rgba(255,255,255,.12);
+      padding: 9px 13px;
+      border-radius: 999px;
+      color: #929298;
+      font-size: 11px;
+      transition: .25s;
+    }
+
+    .legal-nav a:hover,
+    .legal-nav a.active {
+      background: #fff;
+      color: #000;
+      border-color: #fff;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 30px 0;
+      color: #626269;
+      font-size: 11px;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .footer-links a {
+      color: #77777e;
+      transition: .25s;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    /* MOBILE */
+    @media (max-width: 760px) {
+
+      .header-row {
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 0;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .legal-hero {
+        padding: 65px 0 45px;
+      }
+
+      .legal-content {
+        padding: 45px 0 70px;
+      }
+
+      .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-row">
+
+      <a href="index.html" class="brand">
+        Victor Phoenix
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="legal-hero">
+    <div class="container">
+
+      <span>Service Information</span>
+
+      <h1>Service Policy</h1>
+
+      <p>
+        This policy explains how Victor Phoenix handles digital service
+        requests, projects, communication, revisions, delivery, and
+        client responsibilities.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="legal-content">
+
+    <div class="container">
+
+      <!-- POLICY NAVIGATION -->
+      <div class="legal-nav">
+
+        <a href="privacy-policy.html">
+          Privacy Policy
+        </a>
+
+        <a href="terms-and-conditions.html">
+          Terms & Conditions
+        </a>
+
+        <a href="service-policy.html" class="active">
+          Service Policy
+        </a>
+
+        <a href="refund-policy.html">
+          Refund Policy
+        </a>
+
+        <a href="cookie-policy.html">
+          Cookie Policy
+        </a>
+
+        <a href="disclaimer.html">
+          Disclaimer
+        </a>
+
+      </div>
+
+
+      <!-- INTRODUCTION -->
+      <section class="legal-section">
+
+        <h2>1. Introduction</h2>
+
+        <p>
+          Victor Phoenix provides digital and creative services for
+          individuals, businesses, brands, and organizations.
+        </p>
+
+        <p>
+          This Service Policy explains the general process used when a
+          client requests and receives a service from Victor Phoenix.
+        </p>
+
+        <p>
+          Specific projects may have additional requirements or terms
+          depending on the service and package selected.
+        </p>
+
+      </section>
+
+
+      <!-- SERVICES -->
+      <section class="legal-section">
+
+        <h2>2. Services We Provide</h2>
+
+        <p>
+          Our services may include:
+        </p>
+
+        <ul>
+          <li>Logo and brand identity design</li>
+          <li>Flyer and promotional graphics</li>
+          <li>Banner and social media graphics</li>
+          <li>Website design</li>
+          <li>Website development</li>
+          <li>Web application development</li>
+          <li>App development</li>
+          <li>Digital marketing services</li>
+          <li>AI-assisted digital solutions</li>
+          <li>Other digital and creative services</li>
+        </ul>
+
+        <p>
+          Services and packages may be added, changed, updated, or
+          discontinued as Victor Phoenix evolves.
+        </p>
+
+      </section>
+
+
+      <!-- SERVICE SELECTION -->
+      <section class="legal-section">
+
+        <h2>3. Choosing a Service</h2>
+
+        <p>
+          Clients should carefully review the available service or
+          package before placing an order.
+        </p>
+
+        <p>
+          Service information may include:
+        </p>
+
+        <ul>
+          <li>Service name</li>
+          <li>Package level</li>
+          <li>Included features</li>
+          <li>Price</li>
+          <li>Estimated delivery time</li>
+          <li>Revision allowance</li>
+          <li>Required client materials</li>
+        </ul>
+
+        <p>
+          If you are unsure which service or package is appropriate,
+          you may contact Victor Phoenix before placing an order.
+        </p>
+
+      </section>
+
+
+      <!-- ORDER PROCESS -->
+      <section class="legal-section">
+
+        <h2>4. Service Process</h2>
+
+        <p>
+          A typical project may follow these steps:
+        </p>
+
+        <ul>
+          <li>Client selects a service or package.</li>
+          <li>Client provides the required project information.</li>
+          <li>Project requirements are reviewed and confirmed.</li>
+          <li>Payment arrangements are confirmed.</li>
+          <li>Work begins after the project is approved to start.</li>
+          <li>Initial work or design is produced.</li>
+          <li>Applicable revisions are completed.</li>
+          <li>Final work is delivered.</li>
+        </ul>
+
+        <p>
+          The exact process may vary depending on the type and
+          complexity of the project.
+        </p>
+
+      </section>
+
+
+      <!-- CLIENT MATERIALS -->
+      <section class="legal-section">
+
+        <h2>5. Client Materials</h2>
+
+        <p>
+          Clients may need to provide materials required for their
+          project.
+        </p>
+
+        <p>
+          These may include:
+        </p>
+
+        <ul>
+          <li>Business information</li>
+          <li>Brand names and descriptions</li>
+          <li>Images</li>
+          <li>Logos</li>
+          <li>Written content</li>
+          <li>Design preferences</li>
+          <li>Website information</li>
+          <li>Other relevant project materials</li>
+        </ul>
+
+        <p>
+          Clients are responsible for ensuring that materials they
+          provide are accurate and that they have the necessary rights
+          to use them.
+        </p>
+
+      </section>
+
+
+      <!-- DELIVERY -->
+      <section class="legal-section">
+
+        <h2>6. Delivery Time</h2>
+
+        <p>
+          Delivery times are normally stated on the relevant service or
+          package page.
+        </p>
+
+        <p>
+          Some simple projects may have a delivery target of
+          approximately 48 hours or 2 days, where specifically stated.
+        </p>
+
+        <div class="notice">
+
+          <p>
+            Delivery estimates may change when a project requires
+            additional information, revisions, technical work, or
+            client approvals.
+          </p>
+
+        </div>
+
+        <p>
+          The delivery period may also be affected by delays outside
+          Victor Phoenix's reasonable control.
+        </p>
+
+      </section>
+
+
+      <!-- COMMUNICATION -->
+      <section class="legal-section">
+
+        <h2>7. Communication</h2>
+
+        <p>
+          Project communication may take place through the official
+          contact channels provided by Victor Phoenix.
+        </p>
+
+        <p>
+          Clients should provide clear instructions and respond to
+          project questions or requests for information in a timely
+          manner.
+        </p>
+
+        <p>
+          Delayed communication may affect the project's delivery
+          schedule.
+        </p>
+
+      </section>
+
+
+      <!-- REVISIONS -->
+      <section class="legal-section">
+
+        <h2>8. Revisions</h2>
+
+        <p>
+          Revision availability depends on the service or package
+          purchased.
+        </p>
+
+        <p>
+          A revision means a reasonable adjustment to work already
+          created within the agreed project requirements.
+        </p>
+
+        <p>
+          A request that substantially changes the original concept,
+          direction, scope, or requirements may be treated as additional
+          work.
+        </p>
+
+      </section>
+
+
+      <!-- SCOPE -->
+      <section class="legal-section">
+
+        <h2>9. Changes to Project Scope</h2>
+
+        <p>
+          Once a project has started, clients may request additional
+          features, pages, designs, concepts, functionality, or other
+          work.
+        </p>
+
+        <p>
+          Work outside the original agreement may require:
+        </p>
+
+        <ul>
+          <li>Additional payment</li>
+          <li>Additional delivery time</li>
+          <li>A revised project agreement</li>
+        </ul>
+
+      </section>
+
+
+      <!-- APPROVAL -->
+      <section class="legal-section">
+
+        <h2>10. Client Approval</h2>
+
+        <p>
+          Clients are responsible for reviewing submitted work and
+          communicating any applicable corrections or revisions within
+          the agreed revision period.
+        </p>
+
+        <p>
+          Once final work has been approved, further changes may be
+          treated as a new request depending on the circumstances.
+        </p>
+
+      </section>
+
+
+      <!-- WEBSITE DEVELOPMENT -->
+      <section class="legal-section">
+
+        <h2>11. Website and App Projects</h2>
+
+        <p>
+          Website and application projects may require additional
+          information and technical decisions compared with standard
+          graphic design services.
+        </p>
+
+        <p>
+          Depending on the project, clients may need to provide or
+          approve:
+        </p>
+
+        <ul>
+          <li>Website content</li>
+          <li>Brand assets</li>
+          <li>Domain information</li>
+          <li>Hosting information</li>
+          <li>Third-party service access</li>
+          <li>Application requirements</li>
+          <li>Functional requirements</li>
+        </ul>
+
+        <p>
+          Third-party hosting, domain, software, API, payment, or other
+          external costs may not be included unless explicitly stated
+          in the selected package.
+        </p>
+
+      </section>
+
+
+      <!-- THIRD PARTY -->
+      <section class="legal-section">
+
+        <h2>12. Third-Party Tools and Platforms</h2>
+
+        <p>
+          Some projects may use third-party platforms, hosting
+          providers, APIs, AI tools, payment processors, design tools,
+          or other external technologies.
+        </p>
+
+        <p>
+          The availability and functionality of these services may be
+          outside Victor Phoenix's control.
+        </p>
+
+      </section>
+
+
+      <!-- COMPLETION -->
+      <section class="legal-section">
+
+        <h2>13. Project Completion</h2>
+
+        <p>
+          A project is considered completed when the agreed work has
+          been delivered according to the selected service or package
+          and applicable revisions have been addressed.
+        </p>
+
+        <p>
+          Additional requests after completion may be treated as a new
+          project or additional service.
+        </p>
+
+      </section>
+
+
+      <!-- CLIENT RESPONSIBILITY -->
+      <section class="legal-section">
+
+        <h2>14. Client Responsibility</h2>
+
+        <p>
+          Clients are responsible for checking final materials before
+          using them publicly or commercially.
+        </p>
+
+        <p>
+          This includes checking:
+        </p>
+
+        <ul>
+          <li>Names</li>
+          <li>Dates</li>
+          <li>Prices</li>
+          <li>Contact information</li>
+          <li>Spelling</li>
+          <li>Business information</li>
+          <li>Other supplied content</li>
+        </ul>
+
+      </section>
+
+
+      <!-- QUALITY -->
+      <section class="legal-section">
+
+        <h2>15. Quality and Service Standards</h2>
+
+        <p>
+          Victor Phoenix aims to provide professional, functional, and
+          carefully prepared digital work according to the agreed
+          requirements.
+        </p>
+
+        <p>
+          However, creative preferences can differ between clients.
+          Clients are encouraged to provide clear references,
+          requirements, and feedback before and during the project.
+        </p>
+
+      </section>
+
+
+      <!-- REFUNDS -->
+      <section class="legal-section">
+
+        <h2>16. Refunds</h2>
+
+        <p>
+          Refund requests are handled according to the Victor Phoenix
+          Refund Policy.
+        </p>
+
+        <p>
+          Please review the
+          <a href="refund-policy.html">Refund Policy</a>
+          before placing an order.
+        </p>
+
+      </section>
+
+
+      <!-- PRIVACY -->
+      <section class="legal-section">
+
+        <h2>17. Client Information and Privacy</h2>
+
+        <p>
+          Information provided by clients in connection with a project
+          may be used to communicate, process, manage, and deliver the
+          requested service.
+        </p>
+
+        <p>
+          For more information, please review the
+          <a href="privacy-policy.html">Privacy Policy</a>.
+        </p>
+
+      </section>
+
+
+      <!-- POLICY CHANGES -->
+      <section class="legal-section">
+
+        <h2>18. Policy Updates</h2>
+
+        <p>
+          Victor Phoenix may update this Service Policy when necessary
+          to reflect changes in services, packages, processes, or
+          business operations.
+        </p>
+
+        <p>
+          The latest version published on this website will apply to
+          future service requests unless otherwise agreed.
+        </p>
+
+      </section>
+
+
+      <!-- CONTACT -->
+      <section class="legal-section">
+
+        <h2>19. Contact</h2>
+
+        <p>
+          If you have questions about a service, package, delivery time,
+          revision, project requirement, or any other service-related
+          matter, please contact Victor Phoenix through the official
+          contact channel provided on the website.
+        </p>
+
+      </section>
+
+
+      <!-- EFFECTIVE DATE -->
+      <section class="legal-section">
+
+        <h2>20. Effective Date</h2>
+
+        <p>
+          This Service Policy is effective from the date it is published
+          on the Victor Phoenix website and may be updated from time to
+          time.
+        </p>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container footer-row">
+
+      <div>
+        © 2026 Victor Phoenix. All rights reserved.
+      </div>
+
+      <div>
+
+        <div>
+          Digital Services & Technology
+        </div>
+
+        <div class="footer-links">
+
+          <a href="privacy-policy.html">
+            Privacy Policy
+          </a>
+
+          <a href="terms-and-conditions.html">
+            Terms & Conditions
+          </a>
+
+          <a href="service-policy.html">
+            Service Policy
+          </a>
+
+          <a href="refund-policy.html">
+            Refund Policy
+          </a>
+
+          <a href="cookie-policy.html">
+            Cookie Policy
+          </a>
+
+          <a href="disclaimer.html">
+            Disclaimer
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

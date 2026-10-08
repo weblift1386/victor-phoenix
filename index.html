@@ -1093,27 +1093,60 @@
       margin-top: 30px;
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+ /* =========================
+   FOOTER
+========================= */
 
-    footer {
-      border-top: 1px solid rgba(255,255,255,.08);
+footer {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding: 27px 0;
+  color: #626269;
+  font-size: 11px;
+}
 
-      padding: 27px 0;
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
 
-      color: #626269;
+.footer-copyright {
+  color: #626269;
+  font-size: 11px;
+}
 
-      font-size: 11px;
-    }
+.footer-legal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 18px;
+}
 
-    .footer-row {
-      display: flex;
+.footer-legal a {
+  color: #77777e;
+  font-size: 11px;
+  transition: .25s ease;
+}
 
-      justify-content: space-between;
+.footer-legal a:hover {
+  color: #ffffff;
+}
 
-      gap: 20px;
-    }
+@media (max-width: 760px) {
+
+  .footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-legal {
+    justify-content: flex-start;
+    gap: 12px 16px;
+  }
+
+}
 
     /* =========================
        MOBILE
@@ -2157,20 +2190,24 @@
   ========================= -->
 
   <footer>
+  <div class="container">
 
-    <div class="container footer-row">
+    <div class="footer-row">
 
-      <span>
+      <div class="footer-copyright">
         © 2026 Victor Phoenix. All rights reserved.
-      </span>
+      </div>
 
-      <span>
-        Create What’s Next.
-      </span>
+      <nav class="footer-legal" aria-label="Legal">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms & Conditions</a>
+        <a href="service-policy.html">Service Policy</a>
+        <a href="refund-policy.html">Refund Policy</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </nav>
 
     </div>
 
-  </footer>
-
-</body>
-</html>
+  </div>
+</footer>

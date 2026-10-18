@@ -272,35 +272,88 @@
     /* PROJECT GRID */
 
     .works-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 70px 28px;
-    }
+      /* REAL PORTFOLIO IMAGES */
 
-    .work-card {
-      min-width: 0;
-    }
+.project-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: #0b0b0b;
+}
 
-    .work-card.hidden {
-      display: none;
-    }
+.project-image.cover {
+  object-fit: cover;
+}
 
-    .work-image {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 25% 25%, rgba(255,255,255,0.13), transparent 30%),
-        linear-gradient(135deg, #202020, #090909 70%);
-      border: 1px solid var(--line);
-      transition: 0.4s ease;
-    }
+.business-card-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 16px;
+  align-items: stretch;
+  aspect-ratio: 16 / 10;
+  background:
+    radial-gradient(circle at center, #252525, #080808 80%);
+  border: 1px solid var(--line);
+}
 
-    .work-card:hover .work-image {
-      border-color: var(--line-strong);
-      transform: translateY(-4px);
-    }
+.card-side {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.card-side img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+}
+
+.card-side-label {
+  flex-shrink: 0;
+  color: #cfcfcf;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.single-project-image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #0b0b0b;
+}
+
+.single-project-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.work-card:hover .single-project-image img {
+  transform: scale(1.025);
+}
+
+@media (max-width: 600px) {
+  .business-card-images {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .card-side-label {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+}
 
     /*
       IMAGE AREA
@@ -904,363 +957,240 @@
       </div>
 
 
-      <div class="works-grid">
+      
+<div class="works-grid">
 
-
-        <!-- WORK 01 -->
-
-        <article class="work-card" data-category="web">
-
-          <div class="work-image visual-1">
-
-            <div class="visual-content">
-
-              <div class="browser-frame">
-
-                <div class="browser-top">
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                </div>
-
-                <div class="browser-body">
-                  <div class="browser-line"></div>
-                  <div class="browser-line short"></div>
-                  <div class="browser-box"></div>
-                </div>
-
-              </div>
-
-            </div>
-
+  <!-- 01: WEBSITE -->
+  <article class="work-card" data-category="web">
+    <div class="work-image visual-1">
+      <div class="visual-content">
+        <div class="browser-frame">
+          <div class="browser-top"><i></i><i></i><i></i></div>
+          <div class="browser-body">
+            <div class="browser-line"></div>
+            <div class="browser-line short"></div>
+            <div class="browser-box"></div>
           </div>
-
-          <div class="work-info">
-            <span class="work-number">01</span>
-            <span class="work-category">Web Development</span>
-          </div>
-
-          <h2 class="work-title">
-            Victor Phoenix Digital Experience
-          </h2>
-
-          <p class="work-description">
-            The Victor Phoenix website — a premium digital experience
-            designed around technology, creativity and forward movement.
-          </p>
-
-          <span class="work-status">
-            Built / Victor Phoenix
-          </span>
-
-          <a href="index.html" class="work-link">
-            View Project <span>→</span>
-          </a>
-
-        </article>
-
-
-        <!-- WORK 02 -->
-
-        <article class="work-card" data-category="graphics">
-
-          <div class="work-image visual-2">
-
-            <div class="visual-content">
-
-              <div class="visual-mark">
-                <span>VP</span>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="work-info">
-            <span class="work-number">02</span>
-            <span class="work-category">Graphics & Design</span>
-          </div>
-
-          <h2 class="work-title">
-            Premium Brand Identity Concept
-          </h2>
-
-          <p class="work-description">
-            A monochrome identity direction exploring premium typography,
-            contrast, structure and modern visual systems.
-          </p>
-
-          <span class="work-status">
-            Concept / Sample
-          </span>
-
-          <a href="#" class="work-link">
-            View Project <span>→</span>
-          </a>
-
-        </article>
-
-
-        <!-- WORK 03 -->
-
-        <article class="work-card" data-category="graphics">
-
-          <div class="work-image visual-3">
-
-            <div class="visual-content">
-
-              <div class="visual-word">
-                PHOENIX
-                <small>CREATE WHAT'S NEXT</small>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="work-info">
-            <span class="work-number">03</span>
-            <span class="work-category">Graphics & Design</span>
-          </div>
-
-          <h2 class="work-title">
-            Modern Wordmark Exploration
-          </h2>
-
-          <p class="work-description">
-            A clean wordmark concept focused on strong typography,
-            balance and a distinctive technology-oriented presence.
-          </p>
-
-          <span class="work-status">
-            Concept / Sample
-          </span>
-
-          <a href="#" class="work-link">
-            View Project <span>→</span>
-          </a>
-
-        </article>
-
-
-        <!-- WORK 04 -->
-
-        <article class="work-card" data-category="web">
-
-          <div class="work-image visual-4">
-
-            <div class="visual-content">
-
-              <div class="browser-frame">
-
-                <div class="browser-top">
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                </div>
-
-                <div class="browser-body">
-                  <div class="browser-line"></div>
-                  <div class="browser-line short"></div>
-                  <div class="browser-box"></div>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="work-info">
-            <span class="work-number">04</span>
-            <span class="work-category">Web Development</span>
-          </div>
-
-          <h2 class="work-title">
-            Business Website Concept
-          </h2>
-
-          <p class="work-description">
-            A premium business website concept focused on clear
-            communication, responsive design and conversion-focused
-            user experience.
-          </p>
-
-          <span class="work-status">
-            Concept / Sample
-          </span>
-
-          <a href="#" class="work-link">
-            View Project <span>→</span>
-          </a>
-
-        </article>
-
-
-        <!-- WORK 05 -->
-
-        <article class="work-card" data-category="ai">
-
-          <div class="work-image visual-5">
-
-            <div class="visual-content">
-              <div class="ai-orb"></div>
-            </div>
-
-          </div>
-
-          <div class="work-info">
-            <span class="work-number">05</span>
-            <span class="work-category">AI Solutions</span>
-          </div>
-
-          <h2 class="work-title">
-            AI Business Assistant
-          </h2>
-
-          <p class="work-description">
-            An AI-powered assistant concept designed to help businesses
-            answer questions, organize information and automate routine
-            interactions.
-          </p>
-
-          <span class="work-status">
-            Concept / Sample
-          </span>
-
-          <a href="#" class="work-link">
-            View Project <span>→</span>
-          </a>
-
-        </article>
-
-
-        <!-- WORK 06 -->
-
-        <article class="work-card" data-category="ai">
-
-          <div class="work-image visual-6">
-
-            <div class="visual-content">
-
-              <div class="campaign-text">
-                <strong>AI<br>BUILDS</strong>
-                <span>Intelligent digital systems</span>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="work-info">
-            <span class="work-number">06</span>
-            <span class="work-category">AI Solutions</span>
-          </div>
-
-          <h2 class="work-title">
-            AI Automation System
-          </h2>
-
-          <p class="work-description">
-            A conceptual automation system designed to connect business
-            processes, intelligent actions and repeatable workflows.
-          </p>
-
-          <span class="work-status">
-            Concept / Sample
-          </span>
-
-          <a href="#" class="work-link">
-            View Project <span>→</span>
-          </a>
-
-        </article>
-
-
-        <!-- WORK 07 -->
-
-        <article class="work-card" data-category="marketing">
-
-          <div class="work-image visual-7">
-
-            <div class="visual-content">
-
-              <div class="campaign-text">
-                <strong>MOVE<br>FORWARD.</strong>
-                <span>Campaign concept</span>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="work-info">
-            <span class="work-number">07</span>
-            <span class="work-category">Digital Marketing</span>
-          </div>
-
-          <h2 class="work-title">
-            Brand Awareness Campaign
-          </h2>
-
-          <p class="work-description">
-            A campaign concept built around strong messaging,
-            visual consistency and a clear digital brand presence.
-          </p>
-
-          <span class="work-status">
-            Concept / Sample
-          </span>
-
-          <a href="#" class="work-link">
-            View Project <span>→</span>
-          </a>
-
-        </article>
-
-
-        <!-- WORK 08 -->
-
-        <article class="work-card" data-category="marketing">
-
-          <div class="work-image visual-8">
-
-            <div class="visual-content">
-
-              <div class="visual-mark">
-                <span>01</span>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="work-info">
-            <span class="work-number">08</span>
-            <span class="work-category">Digital Marketing</span>
-          </div>
-
-          <h2 class="work-title">
-            Product Promotion Campaign
-          </h2>
-
-          <p class="work-description">
-            A digital campaign concept combining promotional messaging,
-            creative direction and audience-focused marketing content.
-          </p>
-
-          <span class="work-status">
-            Concept / Sample
-          </span>
-
-          <a href="#" class="work-link">
-            View Project <span>→</span>
-          </a>
-
-        </article>
-
-
+        </div>
       </div>
+    </div>
+    <div class="work-info">
+      <span class="work-number">01</span>
+      <span class="work-category">Web Development</span>
+    </div>
+    <h2 class="work-title">Victor Phoenix Digital Experience</h2>
+    <p class="work-description">The Victor Phoenix website, designed around technology, creativity and forward movement.</p>
+    <span class="work-status">Built / Victor Phoenix</span>
+    <a href="index.html" class="work-link">View Project <span>→</span></a>
+  </article>
+
+  <!-- 02: VICTOR PHOENIX BUSINESS CARD -->
+  <article class="work-card" data-category="graphics">
+    <div class="business-card-images">
+      <div class="card-side">
+        <img src="front%20of%20victor-phoenix-business-card.png"
+             alt="Front side of the Victor Phoenix business card"
+             loading="lazy">
+        <span class="card-side-label">Front Side</span>
+      </div>
+      <div class="card-side">
+        <img src="back%20of%20victor-phoenix-business-card.png"
+             alt="Back side of the Victor Phoenix business card"
+             loading="lazy">
+        <span class="card-side-label">Back Side</span>
+      </div>
+    </div>
+    <div class="work-info">
+      <span class="work-number">02</span>
+      <span class="work-category">Graphics &amp; Design</span>
+    </div>
+    <h2 class="work-title">Victor Phoenix Business Card</h2>
+    <p class="work-description">A professional monochrome business card design, presenting the brand across both sides.</p>
+    <span class="work-status">Business Card Design</span>
+  </article>
+
+  <!-- 03: YOUTUBE BANNER -->
+  <article class="work-card" data-category="graphics">
+    <div class="single-project-image">
+      <img class="cover"
+           src="victor-phoenix-youtube-banner.png"
+           alt="Victor Phoenix YouTube banner design"
+           loading="lazy">
+    </div>
+    <div class="work-info">
+      <span class="work-number">03</span>
+      <span class="work-category">Social Media Design</span>
+    </div>
+    <h2 class="work-title">Victor Phoenix YouTube Banner</h2>
+    <p class="work-description">A branded channel banner created to maintain a consistent Victor Phoenix visual identity.</p>
+    <span class="work-status">Banner Design</span>
+  </article>
+
+  <!-- 04: FASHION DESIGNER BUSINESS CARD -->
+  <article class="work-card" data-category="graphics">
+    <div class="business-card-images">
+      <div class="card-side">
+        <img src="front%20of%20fashion-designer-business-card.png"
+             alt="Front side of the fashion designer business card"
+             loading="lazy">
+        <span class="card-side-label">Front Side</span>
+      </div>
+      <div class="card-side">
+        <img src="back%20of%20fashion-designer-business-card.png"
+             alt="Back side of the fashion designer business card"
+             loading="lazy">
+        <span class="card-side-label">Back Side</span>
+      </div>
+    </div>
+    <div class="work-info">
+      <span class="work-number">04</span>
+      <span class="work-category">Fashion Branding</span>
+    </div>
+    <h2 class="work-title">Fashion Designer Business Card</h2>
+    <p class="work-description">A business card design created for a fashion designer, with coordinated front and back layouts.</p>
+    <span class="work-status">Business Card Design</span>
+  </article>
+
+  <!-- 05: PERSONAL BRAND POSTER -->
+  <article class="work-card" data-category="graphics">
+    <div class="single-project-image">
+      <img src="victor-phoenix-personal-brand-poster.png"
+           alt="Victor Phoenix personal brand poster"
+           loading="lazy">
+    </div>
+    <div class="work-info">
+      <span class="work-number">05</span>
+      <span class="work-category">Poster Design</span>
+    </div>
+    <h2 class="work-title">Victor Phoenix Personal Brand Poster</h2>
+    <p class="work-description">A promotional poster expressing the Victor Phoenix identity through a focused visual composition.</p>
+    <span class="work-status">Poster Design</span>
+  </article>
+
+  <!-- 06: BRAND PRESENTATION -->
+  <article class="work-card" data-category="graphics">
+    <div class="single-project-image">
+      <img src="victor-phoenix-brand-presentation.png"
+           alt="Victor Phoenix brand presentation design"
+           loading="lazy">
+    </div>
+    <div class="work-info">
+      <span class="work-number">06</span>
+      <span class="work-category">Brand Identity</span>
+    </div>
+    <h2 class="work-title">Victor Phoenix Brand Presentation</h2>
+    <p class="work-description">A visual presentation of the brand's identity and creative direction.</p>
+    <span class="work-status">Brand Presentation</span>
+  </article>
+
+  <!-- 07: VICTOR PHOENIX LOGO -->
+  <article class="work-card" data-category="graphics">
+    <div class="single-project-image">
+      <img src="logo.png"
+           alt="Victor Phoenix Phoenix symbol and wordmark logo"
+           loading="lazy">
+    </div>
+    <div class="work-info">
+      <span class="work-number">07</span>
+      <span class="work-category">Logo Design</span>
+    </div>
+    <h2 class="work-title">Victor Phoenix Logo Design</h2>
+    <p class="work-description">The Victor Phoenix brand mark, designed around a distinctive Phoenix symbol and wordmark.</p>
+    <span class="work-status">Brand Identity</span>
+  </article>
+
+  <!-- 08: WEBSITE CONCEPT -->
+  <article class="work-card" data-category="web">
+    <div class="work-image visual-4">
+      <div class="visual-content">
+        <div class="browser-frame">
+          <div class="browser-top"><i></i><i></i><i></i></div>
+          <div class="browser-body">
+            <div class="browser-line"></div>
+            <div class="browser-line short"></div>
+            <div class="browser-box"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="work-info">
+      <span class="work-number">08</span>
+      <span class="work-category">Web Development</span>
+    </div>
+    <h2 class="work-title">Business Website Concept</h2>
+    <p class="work-description">A responsive website concept focused on clear communication and user experience.</p>
+    <span class="work-status">Concept / Sample</span>
+  </article>
+
+  <!-- 09: AI ASSISTANT -->
+  <article class="work-card" data-category="ai">
+    <div class="work-image visual-5">
+      <div class="visual-content"><div class="ai-orb"></div></div>
+    </div>
+    <div class="work-info">
+      <span class="work-number">09</span>
+      <span class="work-category">AI Solutions</span>
+    </div>
+    <h2 class="work-title">AI Business Assistant</h2>
+    <p class="work-description">An assistant concept for answering questions, organizing information and supporting routine business interactions.</p>
+    <span class="work-status">Concept / Sample</span>
+  </article>
+
+  <!-- 10: AI AUTOMATION -->
+  <article class="work-card" data-category="ai">
+    <div class="work-image visual-6">
+      <div class="visual-content">
+        <div class="campaign-text">
+          <strong>AI<br>BUILDS</strong>
+          <span>Intelligent digital systems</span>
+        </div>
+      </div>
+    </div>
+    <div class="work-info">
+      <span class="work-number">10</span>
+      <span class="work-category">AI Solutions</span>
+    </div>
+    <h2 class="work-title">AI Automation System</h2>
+    <p class="work-description">A conceptual system connecting business processes, intelligent actions and repeatable workflows.</p>
+    <span class="work-status">Concept / Sample</span>
+  </article>
+
+  <!-- 11: BRAND AWARENESS -->
+  <article class="work-card" data-category="marketing">
+    <div class="work-image visual-7">
+      <div class="visual-content">
+        <div class="campaign-text">
+          <strong>MOVE<br>FORWARD.</strong>
+          <span>Campaign concept</span>
+        </div>
+      </div>
+    </div>
+    <div class="work-info">
+      <span class="work-number">11</span>
+      <span class="work-category">Digital Marketing</span>
+    </div>
+    <h2 class="work-title">Brand Awareness Campaign</h2>
+    <p class="work-description">A campaign concept built around strong messaging and a consistent digital brand presence.</p>
+    <span class="work-status">Concept / Sample</span>
+  </article>
+
+  <!-- 12: PRODUCT PROMOTION -->
+  <article class="work-card" data-category="marketing">
+    <div class="work-image visual-8">
+      <div class="visual-content">
+        <div class="visual-mark"><span>01</span></div>
+      </div>
+    </div>
+    <div class="work-info">
+      <span class="work-number">12</span>
+      <span class="work-category">Digital Marketing</span>
+    </div>
+    <h2 class="work-title">Product Promotion Campaign</h2>
+    <p class="work-description">A campaign concept combining promotional messaging, creative direction and audience-focused content.</p>
+    <span class="work-status">Concept / Sample</span>
+  </article>
+
+</div>
 
     </section>
 

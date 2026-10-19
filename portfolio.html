@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Portfolio | Victor Phoenix — Create What's Next</title>
-  <meta name="description" content="Explore graphic design, branding, web development, AI solutions and digital marketing by Victor Phoenix.">
+  <meta name="description" content="Explore graphic design, branding, business cards, social media graphics, web development, AI solutions and digital marketing by Victor Phoenix.">
   <meta name="theme-color" content="#050505">
+  <meta name="robots" content="index, follow">
 
   <style>
     :root {
@@ -52,8 +52,6 @@
     button {
       font: inherit;
     }
-
-    /* HEADER */
 
     header {
       position: fixed;
@@ -135,8 +133,6 @@
       fill: currentColor;
     }
 
-    /* HERO */
-
     .hero {
       position: relative;
       max-width: 1400px;
@@ -156,11 +152,7 @@
       height: 520px;
       right: -140px;
       top: 70px;
-      background: radial-gradient(
-        circle,
-        rgba(255,255,255,.11),
-        transparent 70%
-      );
+      background: radial-gradient(circle, rgba(255,255,255,.11), transparent 70%);
       pointer-events: none;
     }
 
@@ -198,8 +190,6 @@
       font-size: 15px;
     }
 
-    /* INTRODUCTION */
-
     .intro {
       max-width: 1400px;
       margin: auto;
@@ -227,8 +217,6 @@
       letter-spacing: -.035em;
     }
 
-    /* PORTFOLIO SECTION */
-
     .portfolio {
       max-width: 1400px;
       margin: auto;
@@ -252,8 +240,6 @@
       color: var(--gray);
       font-size: 14px;
     }
-
-    /* FILTER BUTTONS */
 
     .filter-wrap {
       display: flex;
@@ -296,8 +282,6 @@
       border-color: var(--white);
     }
 
-    /* PROJECT LAYOUT */
-
     .works-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -325,8 +309,6 @@
       }
     }
 
-    /* IMAGE DISPLAY */
-
     .work-image {
       position: relative;
       width: 100%;
@@ -343,7 +325,7 @@
         #101010;
     }
 
-    .work-image img {
+    .work-image > img {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -353,34 +335,26 @@
       transition: transform .35s ease;
     }
 
-    .work-card:hover .work-image img {
+    .work-card:hover .work-image > img {
       transform: scale(1.025);
     }
 
     .work-image.card-preview {
       padding: 18px;
-      background:
-        radial-gradient(circle at center, #292929, #090909 75%);
-    }
-
-    .work-image.card-preview img {
-      object-fit: contain;
+      background: radial-gradient(circle at center, #292929, #090909 75%);
     }
 
     .work-image.logo-preview {
       padding: 30px;
-      background:
-        radial-gradient(circle at center, #292929, #080808 75%);
+      background: radial-gradient(circle at center, #292929, #080808 75%);
     }
 
-    .work-image.logo-preview img {
+    .work-image.logo-preview > img {
       width: 82%;
       height: 82%;
       inset: 9%;
       object-fit: contain;
     }
-
-    /* IMAGE ERROR MESSAGE */
 
     .image-fallback {
       position: absolute;
@@ -417,7 +391,68 @@
       display: flex;
     }
 
-    /* GRAPHIC PLACEHOLDERS FOR CONCEPT PROJECTS */
+    /* Business-card front and back previews */
+
+    .card-pair {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      height: 100%;
+      padding: 18px;
+    }
+
+    .card-side {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .card-side-label {
+      color: #bdbdc2;
+      font-size: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .card-side a {
+      width: 100%;
+      display: block;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.18);
+      background: #171717;
+      transition: border-color .2s ease;
+    }
+
+    .card-side a:hover {
+      border-color: #fff;
+    }
+
+    .card-side img {
+      width: 100%;
+      aspect-ratio: 1.7 / 1;
+      object-fit: contain;
+      background: #111;
+    }
+
+    .card-side .image-fallback {
+      position: relative;
+      inset: auto;
+      min-height: 100px;
+      padding: 12px;
+      font-size: 10px;
+    }
+
+    .card-side.image-missing .image-fallback {
+      display: flex;
+    }
+
+    .card-side.image-missing img {
+      display: none;
+    }
 
     .art {
       position: absolute;
@@ -495,8 +530,6 @@
       background: transparent;
     }
 
-    /* PROJECT INFORMATION */
-
     .work-meta {
       display: flex;
       align-items: flex-start;
@@ -548,6 +581,8 @@
 
     .view-image {
       display: inline-flex;
+      align-items: center;
+      justify-content: center;
       margin-top: 17px;
       padding: 10px 15px;
       border: 1px solid #555;
@@ -556,6 +591,7 @@
       font-size: 11px;
       letter-spacing: .06em;
       transition: .25s;
+      cursor: pointer;
     }
 
     .view-image:hover {
@@ -563,8 +599,6 @@
       color: black;
       border-color: white;
     }
-
-    /* PROJECT NOTE */
 
     .concept-note {
       max-width: 1400px;
@@ -595,15 +629,11 @@
       line-height: 1.9;
     }
 
-    /* CONTACT SECTION */
-
     .cta {
       padding: 105px 6%;
       border-top: 1px solid var(--line);
       text-align: center;
-      background:
-        radial-gradient(circle at 50% 0%, #222, transparent 50%),
-        #080808;
+      background: radial-gradient(circle at 50% 0%, #222, transparent 50%), #080808;
     }
 
     .cta h2 {
@@ -644,8 +674,6 @@
       border-color: white;
     }
 
-    /* FOOTER */
-
     footer {
       padding: 28px 6%;
       border-top: 1px solid var(--line);
@@ -667,8 +695,6 @@
       flex-wrap: wrap;
       gap: 18px;
     }
-
-    /* RESPONSIVE */
 
     @media (max-width: 900px) {
       .nav {
@@ -752,7 +778,16 @@
       }
 
       .work-image.card-preview {
-        padding: 16px;
+        padding: 12px;
+      }
+
+      .card-pair {
+        gap: 8px;
+        padding: 10px;
+      }
+
+      .card-side-label {
+        font-size: 9px;
       }
 
       .work-title {
@@ -788,11 +823,8 @@
 
 <body>
 
-  <!-- HEADER -->
-
   <header>
     <nav class="nav">
-
       <a href="index.html" class="brand" aria-label="Victor Phoenix home">
         <img src="logo.png" alt="Victor Phoenix logo">
       </a>
@@ -800,11 +832,10 @@
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
-        <a href="portfolio.html">View Works</a>
+        <a href="portfolio.html" aria-current="page">View Works</a>
       </div>
 
       <div class="nav-actions">
-
         <a class="icon-btn"
            href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
            target="_blank"
@@ -822,15 +853,11 @@
             <path d="M2.5 5.5A2.5 2.5 0 0 1 5 3h14a2.5 2.5 0 0 1 2.5 2.5v13A2.5 2.5 0 0 1 19 21H5a2.5 2.5 0 0 1-2.5-2.5v-13Zm2.1.25 7.4 5.73 7.4-5.73A1 1 0 0 0 19 5H5a1 1 0 0 0-.4.75Zm14.9 2.03-6.6 5.11a1.5 1.5 0 0 1-1.8 0L4.6 7.78V18.5c0 .22.18.4.4.4h14c.22 0 .4-.18.4-.4V7.78Z"/>
           </svg>
         </a>
-
       </div>
     </nav>
   </header>
 
   <main>
-
-    <!-- HERO -->
-
     <section class="hero">
       <div class="eyebrow">Victor Phoenix / Portfolio</div>
 
@@ -840,18 +867,15 @@
       </h1>
 
       <p class="hero-description">
-        Explore creative design, brand identity, websites, AI concepts
+        Explore graphic design, brand identity, websites, AI concepts
         and digital marketing work by Victor Phoenix. Each project
         represents a commitment to thoughtful design and digital progress.
       </p>
     </section>
 
-    <!-- INTRODUCTION -->
-
     <section class="intro">
       <div class="intro-grid">
         <div class="intro-label">The Portfolio</div>
-
         <div class="intro-text">
           Ideas become visual identities, digital experiences,
           intelligent systems and campaigns designed to move
@@ -860,10 +884,7 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
-
     <section class="portfolio" id="works">
-
       <div class="section-heading">
         <div class="section-label">Selected Work</div>
         <h2>Explore the projects.</h2>
@@ -887,16 +908,14 @@
 
       <div class="works-grid">
 
-        <!-- 01: VICTOR PHOENIX LOGO -->
+        <!-- 01: LOGO -->
 
         <article class="work-card" data-category="graphics">
           <div class="work-image logo-preview">
-            <img src="logo.png"
-                 alt="Victor Phoenix brand logo"
-                 loading="lazy">
+            <img src="logo.png" alt="Victor Phoenix brand logo" loading="lazy">
             <div class="image-fallback">
-              <strong>Image not found</strong>
-              <span>Check that this file exists in the repository root:</span>
+              <strong>Image unavailable</strong>
+              <span>Check that this file exists in the same repository folder as portfolio.html.</span>
               <code>logo.png</code>
             </div>
           </div>
@@ -907,265 +926,252 @@
           </div>
 
           <h3 class="work-title">Victor Phoenix Brand Logo</h3>
-
           <p class="work-description">
             The Victor Phoenix visual identity, built around the Phoenix
             symbol and a monochrome design direction.
           </p>
-
           <span class="work-status">Brand Identity</span>
 
-          <a class="view-image" href="logo.png" target="_blank" rel="noopener noreferrer">
-            View Full Image ↗
+          <a class="view-image" href="logo.png" data-full-image="logo.png" target="_blank" rel="noopener noreferrer">
+            See Full Image ↗
           </a>
         </article>
 
-        <!-- 02: VICTOR PHOENIX BUSINESS CARD FRONT -->
+        <!-- 02: VICTOR PHOENIX BUSINESS CARD FRONT AND BACK -->
 
         <article class="work-card" data-category="graphics">
           <div class="work-image card-preview">
-            <img src="front%20of%20victor-phoenix-business-card.png"
-                 alt="Front of Victor Phoenix business card"
-                 loading="lazy">
-            <div class="image-fallback">
-              <strong>Image not found</strong>
-              <span>Check the filename and folder:</span>
-              <code>images/front of victor-phoenix-business-card.png</code>
+            <div class="card-pair">
+
+              <div class="card-side">
+                <span class="card-side-label">Front</span>
+                <a href="front%20of%20victor-phoenix-business-card.png"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open full-size front of Victor Phoenix business card">
+                  <img src="front%20of%20victor-phoenix-business-card.png"
+                       alt="Front of Victor Phoenix business card"
+                       loading="lazy">
+                </a>
+                <div class="image-fallback">
+                  <strong>Front image unavailable</strong>
+                  <code>front of victor-phoenix-business-card.png</code>
+                </div>
+              </div>
+
+              <div class="card-side">
+                <span class="card-side-label">Back</span>
+                <a href="back%20of%20victor-phoenix-business-card.png"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open full-size back of Victor Phoenix business card">
+                  <img src="back%20of%20victor-phoenix-business-card.png"
+                       alt="Back of Victor Phoenix business card"
+                       loading="lazy">
+                </a>
+                <div class="image-fallback">
+                  <strong>Back image unavailable</strong>
+                  <code>back of victor-phoenix-business-card.png</code>
+                </div>
+              </div>
+
             </div>
           </div>
 
           <div class="work-meta">
             <span class="work-number">02</span>
-            <span class="work-category">Business Card · Front</span>
+            <span class="work-category">Business Card Design</span>
           </div>
 
           <h3 class="work-title">Victor Phoenix Business Card</h3>
-
           <p class="work-description">
-            The front side of the Victor Phoenix business card,
-            presenting the brand in a clean and professional format.
+            Both sides of the Victor Phoenix business card are displayed
+            together. Select either side to open its full-size image.
           </p>
-
-          <span class="work-status">Front Side</span>
+          <span class="work-status">Front + Back</span>
 
           <a class="view-image"
-             href="images/front%20of%20victor-phoenix-business-card.png"
+             href="front%20of%20victor-phoenix-business-card.png"
+             data-full-image="front%20of%20victor-phoenix-business-card.png"
              target="_blank" rel="noopener noreferrer">
-            View Full Image ↗
+            See Front Image ↗
+          </a>
+
+          <a class="view-image"
+             href="back%20of%20victor-phoenix-business-card.png"
+             data-full-image="back%20of%20victor-phoenix-business-card.png"
+             target="_blank" rel="noopener noreferrer">
+            See Back Image ↗
           </a>
         </article>
 
-        <!-- 03: VICTOR PHOENIX BUSINESS CARD BACK -->
+        <!-- 03: FASHION DESIGNER BUSINESS CARD -->
 
         <article class="work-card" data-category="graphics">
           <div class="work-image card-preview">
-            <img src="back%20of%20victor-phoenix-business-card.png"
-                 alt="Back of Victor Phoenix business card"
-                 loading="lazy">
-            <div class="image-fallback">
-              <strong>Image not found</strong>
-              <span>Check the filename and folder:</span>
-              <code>images/back of victor-phoenix-business-card.png</code>
+            <div class="card-pair">
+
+              <div class="card-side">
+                <span class="card-side-label">Front</span>
+                <a href="front%20of%20fashion-designer-business-card.png"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open full-size front of fashion designer business card">
+                  <img src="front%20of%20fashion-designer-business-card.png"
+                       alt="Front of fashion designer business card"
+                       loading="lazy">
+                </a>
+                <div class="image-fallback">
+                  <strong>Front image unavailable</strong>
+                  <code>front of fashion-designer-business-card.png</code>
+                </div>
+              </div>
+
+              <div class="card-side">
+                <span class="card-side-label">Back</span>
+                <a href="back%20of%20fashion-designer-business-card.png"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open full-size back of fashion designer business card">
+                  <img src="back%20of%20fashion-designer-business-card.png"
+                       alt="Back of fashion designer business card"
+                       loading="lazy">
+                </a>
+                <div class="image-fallback">
+                  <strong>Back image unavailable</strong>
+                  <code>back of fashion-designer-business-card.png</code>
+                </div>
+              </div>
+
             </div>
           </div>
 
           <div class="work-meta">
             <span class="work-number">03</span>
-            <span class="work-category">Business Card · Back</span>
+            <span class="work-category">Fashion Branding</span>
           </div>
 
-          <h3 class="work-title">Victor Phoenix Business Card — Back</h3>
-
+          <h3 class="work-title">Fashion Designer Business Card</h3>
           <p class="work-description">
-            The reverse side of the Victor Phoenix business card,
-            displayed separately so visitors can inspect the design.
+            Front and back designs presented side by side. Open either
+            image to inspect the complete design at full size.
           </p>
-
-          <span class="work-status">Back Side</span>
+          <span class="work-status">Front + Back</span>
 
           <a class="view-image"
-             href="images/back%20of%20victor-phoenix-business-card.png"
+             href="front%20of%20fashion-designer-business-card.png"
+             data-full-image="front%20of%20fashion-designer-business-card.png"
              target="_blank" rel="noopener noreferrer">
-            View Full Image ↗
+            See Front Image ↗
+          </a>
+
+          <a class="view-image"
+             href="back%20of%20fashion-designer-business-card.png"
+             data-full-image="back%20of%20fashion-designer-business-card.png"
+             target="_blank" rel="noopener noreferrer">
+            See Back Image ↗
           </a>
         </article>
 
-        <!-- 04: FASHION DESIGNER BUSINESS CARD FRONT -->
+        <!-- 04: YOUTUBE BANNER -->
 
         <article class="work-card" data-category="graphics">
-          <div class="work-image card-preview">
-            <img src="front%20of%20fashion-designer-business-card.png"
-                 alt="Front of fashion designer business card"
+          <div class="work-image">
+            <img src="victor-phoenix-youtube-banner.png"
+                 alt="Victor Phoenix YouTube channel banner design"
                  loading="lazy">
             <div class="image-fallback">
-              <strong>Image not found</strong>
-              <span>Check the filename and folder:</span>
-              <code>images/front of fashion-designer-business-card.png</code>
+              <strong>Image unavailable</strong>
+              <span>Check the filename in your GitHub repository.</span>
+              <code>victor-phoenix-youtube-banner.png</code>
             </div>
           </div>
 
           <div class="work-meta">
             <span class="work-number">04</span>
-            <span class="work-category">Fashion Branding · Front</span>
+            <span class="work-category">Social Media Design</span>
           </div>
 
-          <h3 class="work-title">Fashion Designer Business Card</h3>
-
+          <h3 class="work-title">Victor Phoenix YouTube Banner</h3>
           <p class="work-description">
-            A business card design created for a fashion designer,
-            showing visual branding for a fashion-related business.
+            A branded channel banner designed to establish a consistent
+            visual identity across video content.
           </p>
-
-          <span class="work-status">Front Side</span>
+          <span class="work-status">Channel Branding</span>
 
           <a class="view-image"
-             href="images/front%20of%20fashion-designer-business-card.png"
+             href="victor-phoenix-youtube-banner.png"
+             data-full-image="victor-phoenix-youtube-banner.png"
              target="_blank" rel="noopener noreferrer">
-            View Full Image ↗
+            See Full Image ↗
           </a>
         </article>
 
-        <!-- 05: FASHION DESIGNER BUSINESS CARD BACK -->
+        <!-- 05: PERSONAL BRAND POSTER -->
 
         <article class="work-card" data-category="graphics">
-          <div class="work-image card-preview">
-            <img src="back%20of%20fashion-designer-business-card.png"
-                 alt="Back of fashion designer business card"
+          <div class="work-image">
+            <img src="victor-phoenix-personal-brand-poster.png"
+                 alt="Victor Phoenix personal brand promotional poster"
                  loading="lazy">
             <div class="image-fallback">
-              <strong>Image not found</strong>
-              <span>Check the filename and folder:</span>
-              <code>images/back of fashion-designer-business-card.png</code>
+              <strong>Image unavailable</strong>
+              <span>Check the filename in your GitHub repository.</span>
+              <code>victor-phoenix-personal-brand-poster.png</code>
             </div>
           </div>
 
           <div class="work-meta">
             <span class="work-number">05</span>
-            <span class="work-category">Fashion Branding · Back</span>
+            <span class="work-category">Poster Design</span>
           </div>
 
-          <h3 class="work-title">Fashion Designer Business Card — Back</h3>
-
+          <h3 class="work-title">Victor Phoenix Personal Brand Poster</h3>
           <p class="work-description">
-            The reverse side of the fashion designer's business card,
-            presented separately to show the complete design.
+            A promotional poster combining typography, composition
+            and messaging to communicate the Victor Phoenix identity.
           </p>
-
-          <span class="work-status">Back Side</span>
+          <span class="work-status">Personal Branding</span>
 
           <a class="view-image"
-             href="images/back%20of%20fashion-designer-business-card.png"
+             href="victor-phoenix-personal-brand-poster.png"
+             data-full-image="victor-phoenix-personal-brand-poster.png"
              target="_blank" rel="noopener noreferrer">
-            View Full Image ↗
+            See Full Image ↗
           </a>
         </article>
 
-        <!-- 06: YOUTUBE BANNER -->
+        <!-- 06: BRAND PRESENTATION -->
 
         <article class="work-card" data-category="graphics">
           <div class="work-image">
-            <img src="victor-phoenix-youtube-banner.png"
-                 alt="Victor Phoenix YouTube banner"
+            <img src="victor-phoenix-brand-presentation.png"
+                 alt="Victor Phoenix brand presentation design"
                  loading="lazy">
             <div class="image-fallback">
-              <strong>Image not found</strong>
-              <span>Check the filename and folder:</span>
-              <code>images/victor-phoenix-youtube-banner.png</code>
+              <strong>Image unavailable</strong>
+              <span>Check the filename in your GitHub repository.</span>
+              <code>victor-phoenix-brand-presentation.png</code>
             </div>
           </div>
 
           <div class="work-meta">
             <span class="work-number">06</span>
-            <span class="work-category">Social Media Design</span>
-          </div>
-
-          <h3 class="work-title">Victor Phoenix YouTube Banner</h3>
-
-          <p class="work-description">
-            A branded channel banner designed to establish a consistent
-            visual identity across video content.
-          </p>
-
-          <span class="work-status">Channel Branding</span>
-
-          <a class="view-image"
-             href="images/victor-phoenix-youtube-banner.png"
-             target="_blank" rel="noopener noreferrer">
-            View Full Image ↗
-          </a>
-        </article>
-
-        <!-- 07: PERSONAL BRAND POSTER -->
-
-        <article class="work-card" data-category="graphics">
-          <div class="work-image">
-            <img src="victor-phoenix-personal-brand-poster.png"
-                 alt="Victor Phoenix personal brand poster"
-                 loading="lazy">
-            <div class="image-fallback">
-              <strong>Image not found</strong>
-              <span>Check the filename and folder:</span>
-              <code>images/victor-phoenix-personal-brand-poster.png</code>
-            </div>
-          </div>
-
-          <div class="work-meta">
-            <span class="work-number">07</span>
-            <span class="work-category">Poster Design</span>
-          </div>
-
-          <h3 class="work-title">Victor Phoenix Personal Brand Poster</h3>
-
-          <p class="work-description">
-            A promotional poster combining typography, composition
-            and messaging to communicate the Victor Phoenix identity.
-          </p>
-
-          <span class="work-status">Personal Branding</span>
-
-          <a class="view-image"
-             href="images/victor-phoenix-personal-brand-poster.png"
-             target="_blank" rel="noopener noreferrer">
-            View Full Image ↗
-          </a>
-        </article>
-
-        <!-- 08: BRAND PRESENTATION -->
-
-        <article class="work-card" data-category="graphics">
-          <div class="work-image">
-            <img src="victor-phoenix-brand-presentation.png"
-                 alt="Victor Phoenix brand presentation"
-                 loading="lazy">
-            <div class="image-fallback">
-              <strong>Image not found</strong>
-              <span>Check the filename and folder:</span>
-              <code>images/victor-phoenix-brand-presentation.png</code>
-            </div>
-          </div>
-
-          <div class="work-meta">
-            <span class="work-number">08</span>
             <span class="work-category">Brand Identity</span>
           </div>
 
           <h3 class="work-title">Victor Phoenix Brand Presentation</h3>
-
           <p class="work-description">
             A visual presentation of the Victor Phoenix brand direction
             and its promotional design style.
           </p>
-
           <span class="work-status">Brand Presentation</span>
 
           <a class="view-image"
-             href="images/victor-phoenix-brand-presentation.png"
+             href="victor-phoenix-brand-presentation.png"
+             data-full-image="victor-phoenix-brand-presentation.png"
              target="_blank" rel="noopener noreferrer">
-            View Full Image ↗
+            See Full Image ↗
           </a>
         </article>
 
-        <!-- 09: VICTOR PHOENIX WEBSITE -->
+        <!-- 07: WEBSITE -->
 
         <article class="work-card" data-category="web">
           <div class="work-image">
@@ -1182,23 +1188,21 @@
           </div>
 
           <div class="work-meta">
-            <span class="work-number">09</span>
+            <span class="work-number">07</span>
             <span class="work-category">Web Development</span>
           </div>
 
           <h3 class="work-title">Victor Phoenix Digital Experience</h3>
-
           <p class="work-description">
             The Victor Phoenix website, built around creativity,
             technology and a responsive digital experience.
           </p>
-
           <span class="work-status">Victor Phoenix Website</span>
 
           <a href="index.html" class="view-image">Visit Website ↗</a>
         </article>
 
-        <!-- 10: WEBSITE CONCEPT -->
+        <!-- 08: WEBSITE CONCEPT -->
 
         <article class="work-card" data-category="web">
           <div class="work-image">
@@ -1211,21 +1215,19 @@
           </div>
 
           <div class="work-meta">
-            <span class="work-number">10</span>
+            <span class="work-number">08</span>
             <span class="work-category">Web Development</span>
           </div>
 
           <h3 class="work-title">Business Website Concept</h3>
-
           <p class="work-description">
             A sample website direction focused on clear messaging,
             responsive layouts and a professional online presence.
           </p>
-
           <span class="work-status">Concept / Sample</span>
         </article>
 
-        <!-- 11: AI ASSISTANT CONCEPT -->
+        <!-- 09: AI ASSISTANT -->
 
         <article class="work-card" data-category="ai">
           <div class="work-image">
@@ -1238,21 +1240,19 @@
           </div>
 
           <div class="work-meta">
-            <span class="work-number">11</span>
+            <span class="work-number">09</span>
             <span class="work-category">AI Solutions</span>
           </div>
 
           <h3 class="work-title">AI Business Assistant</h3>
-
           <p class="work-description">
             An AI assistant concept for helping businesses organize
             information and support routine customer interactions.
           </p>
-
           <span class="work-status">Concept / Sample</span>
         </article>
 
-        <!-- 12: AI AUTOMATION CONCEPT -->
+        <!-- 10: AI AUTOMATION -->
 
         <article class="work-card" data-category="ai">
           <div class="work-image">
@@ -1265,21 +1265,19 @@
           </div>
 
           <div class="work-meta">
-            <span class="work-number">12</span>
+            <span class="work-number">10</span>
             <span class="work-category">AI Solutions</span>
           </div>
 
           <h3 class="work-title">AI Automation System</h3>
-
           <p class="work-description">
             A concept for connecting business processes, intelligent
             actions and repeatable workflows.
           </p>
-
           <span class="work-status">Concept / Sample</span>
         </article>
 
-        <!-- 13: BRAND AWARENESS -->
+        <!-- 11: BRAND AWARENESS -->
 
         <article class="work-card" data-category="marketing">
           <div class="work-image">
@@ -1292,21 +1290,19 @@
           </div>
 
           <div class="work-meta">
-            <span class="work-number">13</span>
+            <span class="work-number">11</span>
             <span class="work-category">Digital Marketing</span>
           </div>
 
           <h3 class="work-title">Brand Awareness Campaign</h3>
-
           <p class="work-description">
             A marketing concept built around consistent visuals,
             clear messaging and brand recognition.
           </p>
-
           <span class="work-status">Concept / Sample</span>
         </article>
 
-        <!-- 14: PRODUCT PROMOTION -->
+        <!-- 12: PRODUCT PROMOTION -->
 
         <article class="work-card" data-category="marketing">
           <div class="work-image">
@@ -1319,29 +1315,24 @@
           </div>
 
           <div class="work-meta">
-            <span class="work-number">14</span>
+            <span class="work-number">12</span>
             <span class="work-category">Digital Marketing</span>
           </div>
 
           <h3 class="work-title">Product Promotion Campaign</h3>
-
           <p class="work-description">
             A sample campaign direction combining promotional messaging,
             creative design and audience-focused content.
           </p>
-
           <span class="work-status">Concept / Sample</span>
         </article>
 
       </div>
     </section>
 
-    <!-- PORTFOLIO NOTE -->
-
     <section class="concept-note">
       <div class="note-box">
         <div class="note-label">Portfolio Note</div>
-
         <p class="note-text">
           Items labelled as concepts or samples are illustrative examples
           intended to demonstrate possible design and technical approaches.
@@ -1350,8 +1341,6 @@
         </p>
       </div>
     </section>
-
-    <!-- CONTACT CTA -->
 
     <section class="cta">
       <h2>Create<br>What's Next.</h2>
@@ -1369,15 +1358,10 @@
           Start a Project
         </a>
 
-        <a class="cta-btn" href="services.html">
-          Explore Services
-        </a>
+        <a class="cta-btn" href="services.html">Explore Services</a>
       </div>
     </section>
-
   </main>
-
-  <!-- FOOTER -->
 
   <footer>
     <div class="footer-inner">
@@ -1386,7 +1370,7 @@
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
-        <a href="portfolio.html">View Works</a>
+        <a href="portfolio.html" aria-current="page">View Works</a>
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
         <a href="service-policy.html">Service Policy</a>
@@ -1394,13 +1378,16 @@
     </div>
   </footer>
 
-  <!-- IMAGE ERROR HANDLING AND CATEGORY FILTERS -->
-
   <script>
-    // Show a useful message when a portfolio image cannot be loaded.
-    document.querySelectorAll(".work-image img").forEach(function (img) {
+    /*
+      Full-size image links:
+      Every image button points directly to an image file in the
+      same directory as portfolio.html. No separate image page is needed.
+    */
+
+    document.querySelectorAll(".work-image img, .card-side img").forEach(function (img) {
       function showImageError() {
-        const container = img.closest(".work-image");
+        const container = img.closest(".card-side") || img.closest(".work-image");
         if (container) {
           container.classList.add("image-missing");
         }
@@ -1413,7 +1400,31 @@
       }
     });
 
-    // Filter portfolio projects by category.
+    /*
+      Stop a broken image link from opening a missing page.
+      The visitor gets a clear message if the file cannot be found.
+    */
+
+    document.querySelectorAll("a[data-full-image]").forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        const imagePath = link.getAttribute("data-full-image");
+        const image = new Image();
+
+        image.onerror = function () {
+          event.preventDefault();
+          alert(
+            "Sorry, this image could not be found. Please try again later."
+          );
+        };
+
+        image.src = imagePath;
+      });
+    });
+
+    /*
+      Category filtering
+    */
+
     const filterButtons = document.querySelectorAll(".filter-btn");
     const workCards = document.querySelectorAll(".work-card");
 

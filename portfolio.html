@@ -5,19 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>View Works | Victor Phoenix</title>
-  <meta name="description" content="Explore graphic design, branding, websites, AI concepts and digital marketing projects by Victor Phoenix.">
+  <title>Portfolio | Victor Phoenix — Create What's Next</title>
+  <meta name="description" content="Explore graphic design, branding, web development, AI solutions and digital marketing by Victor Phoenix.">
   <meta name="theme-color" content="#050505">
 
   <style>
     :root {
       --black: #050505;
-      --dark: #101010;
+      --dark: #0a0a0a;
       --panel: #111111;
       --white: #f5f5f5;
-      --silver: #cfcfcf;
-      --gray: #909090;
-      --line: rgba(255,255,255,.12);
+      --silver: #cfcfd4;
+      --gray: #909098;
+      --line: rgba(255,255,255,.13);
     }
 
     * {
@@ -28,6 +28,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 100px;
     }
 
     body {
@@ -43,13 +44,13 @@
       text-decoration: none;
     }
 
-    button {
-      font: inherit;
-    }
-
     img {
       display: block;
       max-width: 100%;
+    }
+
+    button {
+      font: inherit;
     }
 
     /* HEADER */
@@ -57,10 +58,8 @@
     header {
       position: fixed;
       z-index: 1000;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(5,5,5,.9);
+      inset: 0 0 auto;
+      background: rgba(5,5,5,.92);
       backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--line);
     }
@@ -68,12 +67,18 @@
     .nav {
       max-width: 1400px;
       min-height: 82px;
-      padding: 14px 6%;
       margin: auto;
+      padding: 12px 6%;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
     }
 
     .brand img {
@@ -86,12 +91,17 @@
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 24px;
     }
 
     .nav-links {
       font-size: 13px;
       color: var(--silver);
+    }
+
+    .nav-links a,
+    .footer-links a {
+      transition: color .2s ease;
     }
 
     .nav-links a:hover,
@@ -109,7 +119,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid rgba(255,255,255,.2);
+      border: 1px solid var(--line);
       border-radius: 50%;
       transition: .25s;
     }
@@ -128,95 +138,101 @@
     /* HERO */
 
     .hero {
+      position: relative;
       max-width: 1400px;
-      min-height: 68vh;
+      min-height: 65vh;
       margin: auto;
-      padding: 175px 6% 85px;
+      padding: 165px 6% 80px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      position: relative;
+      overflow: hidden;
     }
 
     .hero::before {
       content: "";
       position: absolute;
-      width: 450px;
-      height: 450px;
-      right: -100px;
-      top: 100px;
+      width: 520px;
+      height: 520px;
+      right: -140px;
+      top: 70px;
       background: radial-gradient(
         circle,
-        rgba(255,255,255,.1),
+        rgba(255,255,255,.11),
         transparent 70%
       );
       pointer-events: none;
     }
 
-    .eyebrow {
-      color: #aaa;
+    .eyebrow,
+    .section-label {
+      color: #a5a5aa;
       font-size: 11px;
-      letter-spacing: .25em;
+      letter-spacing: .23em;
       text-transform: uppercase;
+    }
+
+    .eyebrow {
+      position: relative;
       margin-bottom: 25px;
     }
 
     .hero h1 {
       position: relative;
-      font-size: clamp(60px, 10vw, 145px);
-      line-height: .9;
+      font-size: clamp(58px, 10vw, 140px);
+      line-height: .91;
       letter-spacing: -.075em;
+      font-weight: 700;
     }
 
     .hero h1 span {
       display: block;
-      color: #777;
+      color: #77777d;
     }
 
     .hero-description {
       position: relative;
-      max-width: 680px;
-      margin-top: 35px;
+      max-width: 650px;
+      margin-top: 32px;
       color: var(--gray);
-      font-size: 16px;
+      font-size: 15px;
     }
 
-    /* INTRO */
+    /* INTRODUCTION */
 
     .intro {
       max-width: 1400px;
       margin: auto;
-      padding: 45px 6% 75px;
+      padding: 40px 6% 70px;
       border-top: 1px solid var(--line);
     }
 
     .intro-grid {
       display: grid;
       grid-template-columns: .7fr 1.3fr;
-      gap: 50px;
+      gap: 45px;
     }
 
-    .intro-label,
-    .section-label {
+    .intro-label {
       color: var(--gray);
       font-size: 11px;
-      text-transform: uppercase;
       letter-spacing: .2em;
+      text-transform: uppercase;
     }
 
     .intro-text {
       max-width: 850px;
-      font-size: clamp(25px, 3vw, 40px);
+      font-size: clamp(24px, 3vw, 39px);
       line-height: 1.3;
       letter-spacing: -.035em;
     }
 
-    /* PORTFOLIO */
+    /* PORTFOLIO SECTION */
 
     .portfolio {
       max-width: 1400px;
       margin: auto;
-      padding: 20px 6% 110px;
+      padding: 20px 6% 100px;
     }
 
     .section-heading {
@@ -224,42 +240,42 @@
     }
 
     .section-heading h2 {
-      font-size: clamp(34px, 5vw, 62px);
-      letter-spacing: -.055em;
-      line-height: 1.1;
       margin-top: 12px;
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1.1;
+      letter-spacing: -.055em;
     }
 
     .section-heading p {
-      color: var(--gray);
       max-width: 650px;
-      margin-top: 14px;
+      margin-top: 15px;
+      color: var(--gray);
       font-size: 14px;
     }
 
-    /* FILTERS */
+    /* FILTER BUTTONS */
 
     .filter-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
       padding: 22px 0;
       margin-bottom: 45px;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
-      display: flex;
-      flex-direction: column;
-      gap: 17px;
     }
 
     .filter-title {
       color: var(--gray);
-      font-size: 11px;
-      letter-spacing: .18em;
+      font-size: 10px;
+      letter-spacing: .2em;
       text-transform: uppercase;
     }
 
     .filters {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 9px;
     }
 
     .filter-btn {
@@ -275,30 +291,30 @@
 
     .filter-btn:hover,
     .filter-btn.active {
-      color: #050505;
-      background: #f5f5f5;
-      border-color: #f5f5f5;
+      background: var(--white);
+      color: var(--black);
+      border-color: var(--white);
     }
 
-    /* LARGE SIDE-BY-SIDE PROJECTS */
+    /* PROJECT LAYOUT */
 
     .works-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 65px 30px;
       align-items: start;
+      gap: 58px 28px;
     }
 
     .work-card {
       min-width: 0;
-      animation: appear .4s ease;
+      animation: fadeIn .35s ease;
     }
 
     .work-card.hidden {
       display: none;
     }
 
-    @keyframes appear {
+    @keyframes fadeIn {
       from {
         opacity: 0;
         transform: translateY(8px);
@@ -309,80 +325,107 @@
       }
     }
 
+    /* IMAGE DISPLAY */
+
     .work-image {
+      position: relative;
       width: 100%;
-      min-height: 240px;
       aspect-ratio: 4 / 3;
+      min-height: 230px;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
+      border: 1px solid var(--line);
+      border-radius: 3px;
       background:
         radial-gradient(circle at top right, #292929, transparent 55%),
         #101010;
-      border: 1px solid var(--line);
-      border-radius: 3px;
     }
 
     .work-image img {
-      width: 100%;
-      height: 100%;
       position: absolute;
       inset: 0;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
-      background: #101010;
-      transition: transform .5s ease;
+      background: transparent;
+      transition: transform .35s ease;
     }
 
     .work-card:hover .work-image img {
       transform: scale(1.025);
     }
 
-    /* Business card previews retain the entire design.
-       Front and back are shown as separate projects. */
-
     .work-image.card-preview {
-      aspect-ratio: 4 / 3;
-      padding: 22px;
+      padding: 18px;
       background:
-        radial-gradient(circle at center, #252525, #090909 75%);
+        radial-gradient(circle at center, #292929, #090909 75%);
     }
 
     .work-image.card-preview img {
-      position: relative;
-      inset: auto;
-      width: 100%;
-      height: 100%;
       object-fit: contain;
-      background: transparent;
     }
 
     .work-image.logo-preview {
-      aspect-ratio: 4 / 3;
-      padding: 35px;
+      padding: 30px;
       background:
-        radial-gradient(circle at center, #252525, #080808 75%);
+        radial-gradient(circle at center, #292929, #080808 75%);
     }
 
     .work-image.logo-preview img {
-      position: relative;
-      inset: auto;
-      width: 80%;
-      height: 80%;
+      width: 82%;
+      height: 82%;
+      inset: 9%;
       object-fit: contain;
-      background: transparent;
     }
 
-    /* PLACEHOLDER ART FOR NON-GRAPHICS PROJECTS */
+    /* IMAGE ERROR MESSAGE */
+
+    .image-fallback {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 25px;
+      text-align: center;
+      background: #111;
+      color: #bbb;
+    }
+
+    .image-fallback strong {
+      font-size: 13px;
+      color: #eee;
+    }
+
+    .image-fallback span {
+      font-size: 11px;
+      overflow-wrap: anywhere;
+    }
+
+    .image-fallback code {
+      color: #aaa;
+      font-size: 10px;
+      overflow-wrap: anywhere;
+    }
+
+    .work-image.image-missing .image-fallback {
+      display: flex;
+    }
+
+    /* GRAPHIC PLACEHOLDERS FOR CONCEPT PROJECTS */
 
     .art {
       position: absolute;
       inset: 0;
       display: flex;
-      justify-content: center;
       align-items: center;
-      padding: 30px;
+      justify-content: center;
+      padding: 25px;
       text-align: center;
       background:
         radial-gradient(circle at 70% 25%, #333, transparent 30%),
@@ -401,7 +444,7 @@
       margin-top: 15px;
       color: #aaa;
       font-size: 10px;
-      letter-spacing: .2em;
+      letter-spacing: .18em;
       text-transform: uppercase;
     }
 
@@ -452,11 +495,14 @@
       background: transparent;
     }
 
+    /* PROJECT INFORMATION */
+
     .work-meta {
       display: flex;
+      align-items: flex-start;
       justify-content: space-between;
-      gap: 15px;
-      padding: 18px 0 12px;
+      gap: 12px;
+      padding: 17px 0 12px;
       border-bottom: 1px solid var(--line);
     }
 
@@ -469,16 +515,16 @@
     .work-category {
       color: #aaa;
       font-size: 10px;
-      letter-spacing: .12em;
+      letter-spacing: .1em;
       text-transform: uppercase;
       text-align: right;
     }
 
     .work-title {
-      font-size: clamp(20px, 2.3vw, 27px);
-      letter-spacing: -.035em;
+      margin-top: 17px;
+      font-size: clamp(20px, 2.2vw, 27px);
       line-height: 1.25;
-      margin-top: 18px;
+      letter-spacing: -.035em;
     }
 
     .work-description {
@@ -490,7 +536,7 @@
 
     .work-status {
       display: inline-flex;
-      margin-top: 17px;
+      margin-top: 16px;
       padding: 6px 10px;
       border: 1px solid var(--line);
       border-radius: 30px;
@@ -502,37 +548,37 @@
 
     .view-image {
       display: inline-flex;
-      margin-top: 18px;
+      margin-top: 17px;
       padding: 10px 15px;
-      border: 1px solid var(--line);
+      border: 1px solid #555;
       border-radius: 30px;
       color: #ddd;
       font-size: 11px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
+      letter-spacing: .06em;
       transition: .25s;
     }
 
     .view-image:hover {
       background: white;
       color: black;
+      border-color: white;
     }
 
-    /* NOTE */
+    /* PROJECT NOTE */
 
     .concept-note {
       max-width: 1400px;
       margin: auto;
-      padding: 0 6% 100px;
+      padding: 0 6% 90px;
     }
 
     .note-box {
-      padding: 30px 0;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
       display: grid;
       grid-template-columns: .4fr 1fr;
       gap: 35px;
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
 
     .note-label {
@@ -549,10 +595,10 @@
       line-height: 1.9;
     }
 
-    /* CTA */
+    /* CONTACT SECTION */
 
     .cta {
-      padding: 110px 6%;
+      padding: 105px 6%;
       border-top: 1px solid var(--line);
       text-align: center;
       background:
@@ -582,6 +628,9 @@
     }
 
     .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 13px 23px;
       border: 1px solid #555;
       border-radius: 30px;
@@ -616,7 +665,7 @@
     .footer-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 18px;
     }
 
     /* RESPONSIVE */
@@ -631,8 +680,8 @@
       }
 
       .hero {
-        min-height: 60vh;
-        padding-top: 140px;
+        min-height: 58vh;
+        padding-top: 135px;
       }
 
       .intro-grid {
@@ -641,7 +690,7 @@
       }
 
       .works-grid {
-        gap: 45px 20px;
+        gap: 42px 20px;
       }
 
       .work-image {
@@ -655,13 +704,13 @@
     }
 
     @media (max-width: 600px) {
-      .brand img {
-        width: 120px;
-      }
-
       .nav {
         padding-left: 5%;
         padding-right: 5%;
+      }
+
+      .brand img {
+        width: 120px;
       }
 
       .nav-actions {
@@ -674,7 +723,7 @@
       }
 
       .hero {
-        padding: 135px 5% 65px;
+        padding: 130px 5% 60px;
       }
 
       .hero-description {
@@ -689,12 +738,12 @@
       }
 
       .portfolio {
-        padding-bottom: 75px;
+        padding-bottom: 70px;
       }
 
       .works-grid {
         grid-template-columns: 1fr;
-        gap: 48px;
+        gap: 45px;
       }
 
       .work-image {
@@ -703,7 +752,7 @@
       }
 
       .work-image.card-preview {
-        padding: 18px;
+        padding: 16px;
       }
 
       .work-title {
@@ -722,6 +771,16 @@
       .footer-inner {
         align-items: flex-start;
         flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
       }
     }
   </style>
@@ -748,9 +807,10 @@
 
         <a class="icon-btn"
            href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20make%20an%20inquiry."
-           target="_blank" rel="noopener"
-           aria-label="WhatsApp">
-          <svg viewBox="0 0 24 24">
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Contact Victor Phoenix on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M20.5 3.5A11.9 11.9 0 0 0 12.03 0C5.43 0 .06 5.37.06 11.97c0 2.11.55 4.17 1.59 5.99L0 24l6.18-1.62a11.94 11.94 0 0 0 5.84 1.53h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.2-3.5-8.44ZM12.03 21.92h-.01a9.93 9.93 0 0 1-5.06-1.39l-.36-.21-3.67.96.98-3.58-.23-.37a9.95 9.95 0 1 1 8.35 4.59Zm5.46-7.46c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.21 5.08 4.5.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35Z"/>
           </svg>
         </a>
@@ -758,7 +818,7 @@
         <a class="icon-btn"
            href="mailto:victorphoenix402@gmail.com?subject=Victor%20Phoenix%20Inquiry"
            aria-label="Email Victor Phoenix">
-          <svg viewBox="0 0 24 24">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M2.5 5.5A2.5 2.5 0 0 1 5 3h14a2.5 2.5 0 0 1 2.5 2.5v13A2.5 2.5 0 0 1 19 21H5a2.5 2.5 0 0 1-2.5-2.5v-13Zm2.1.25 7.4 5.73 7.4-5.73A1 1 0 0 0 19 5H5a1 1 0 0 0-.4.75Zm14.9 2.03-6.6 5.11a1.5 1.5 0 0 1-1.8 0L4.6 7.78V18.5c0 .22.18.4.4.4h14c.22 0 .4-.18.4-.4V7.78Z"/>
           </svg>
         </a>
@@ -772,7 +832,7 @@
     <!-- HERO -->
 
     <section class="hero">
-      <div class="eyebrow">Victor Phoenix / View Works</div>
+      <div class="eyebrow">Victor Phoenix / Portfolio</div>
 
       <h1>
         Work.
@@ -780,13 +840,13 @@
       </h1>
 
       <p class="hero-description">
-        Explore selected creative, digital, technological and marketing
-        work by Victor Phoenix. Each project reflects our commitment to
-        thoughtful design, clear communication and forward movement.
+        Explore creative design, brand identity, websites, AI concepts
+        and digital marketing work by Victor Phoenix. Each project
+        represents a commitment to thoughtful design and digital progress.
       </p>
     </section>
 
-    <!-- INTRO -->
+    <!-- INTRODUCTION -->
 
     <section class="intro">
       <div class="intro-grid">
@@ -808,8 +868,8 @@
         <div class="section-label">Selected Work</div>
         <h2>Explore the projects.</h2>
         <p>
-          View graphics and branding projects alongside website,
-          AI and digital marketing concepts.
+          Browse graphics and branding, web development, AI solutions
+          and digital marketing concepts.
         </p>
       </div>
 
@@ -817,23 +877,28 @@
         <div class="filter-title">Explore by category</div>
 
         <div class="filters">
-          <button class="filter-btn active" data-filter="all">All Works</button>
-          <button class="filter-btn" data-filter="graphics">Graphics &amp; Design</button>
-          <button class="filter-btn" data-filter="web">Web Development</button>
-          <button class="filter-btn" data-filter="ai">AI Solutions</button>
-          <button class="filter-btn" data-filter="marketing">Digital Marketing</button>
+          <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All Works</button>
+          <button type="button" class="filter-btn" data-filter="graphics" aria-pressed="false">Graphics &amp; Design</button>
+          <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web Development</button>
+          <button type="button" class="filter-btn" data-filter="ai" aria-pressed="false">AI Solutions</button>
+          <button type="button" class="filter-btn" data-filter="marketing" aria-pressed="false">Digital Marketing</button>
         </div>
       </div>
 
       <div class="works-grid">
 
-        <!-- GRAPHICS 01: LOGO -->
+        <!-- 01: VICTOR PHOENIX LOGO -->
 
         <article class="work-card" data-category="graphics">
           <div class="work-image logo-preview">
-            <img src="images/logo.png"
-                 alt="Victor Phoenix logo design"
+            <img src="logo.png"
+                 alt="Victor Phoenix brand logo"
                  loading="lazy">
+            <div class="image-fallback">
+              <strong>Image not found</strong>
+              <span>Check that this file exists in the repository root:</span>
+              <code>logo.png</code>
+            </div>
           </div>
 
           <div class="work-meta">
@@ -844,86 +909,99 @@
           <h3 class="work-title">Victor Phoenix Brand Logo</h3>
 
           <p class="work-description">
-            The Victor Phoenix visual mark, created to represent a modern
-            digital brand through a distinctive Phoenix symbol and
-            monochrome identity.
+            The Victor Phoenix visual identity, built around the Phoenix
+            symbol and a monochrome design direction.
           </p>
 
           <span class="work-status">Brand Identity</span>
 
-          <a class="view-image" href="images/logo.png" target="_blank" rel="noopener">
+          <a class="view-image" href="logo.png" target="_blank" rel="noopener noreferrer">
             View Full Image ↗
           </a>
         </article>
 
-        <!-- GRAPHICS 02: BUSINESS CARD FRONT -->
+        <!-- 02: VICTOR PHOENIX BUSINESS CARD FRONT -->
 
         <article class="work-card" data-category="graphics">
           <div class="work-image card-preview">
-            <img src="images/front%20of%20Phoenix%20business%20card.png"
-                 alt="front of victor-phoenix-business-card.png"
+            <img src="images/front%20of%20victor-phoenix-business-card.png"
+                 alt="Front of Victor Phoenix business card"
                  loading="lazy">
+            <div class="image-fallback">
+              <strong>Image not found</strong>
+              <span>Check the filename and folder:</span>
+              <code>images/front of victor-phoenix-business-card.png</code>
+            </div>
           </div>
 
           <div class="work-meta">
             <span class="work-number">02</span>
-            <span class="work-category">Business Card Design · Front</span>
+            <span class="work-category">Business Card · Front</span>
           </div>
 
           <h3 class="work-title">Victor Phoenix Business Card</h3>
 
           <p class="work-description">
-            Front-side business card design featuring the Victor Phoenix
-            brand identity in a refined black-and-white presentation.
+            The front side of the Victor Phoenix business card,
+            presenting the brand in a clean and professional format.
           </p>
 
           <span class="work-status">Front Side</span>
 
           <a class="view-image"
-             href="images/front%20of%20Phoenix%20business%20card.png"
-             target="_blank" rel="noopener">
+             href="images/front%20of%20victor-phoenix-business-card.png"
+             target="_blank" rel="noopener noreferrer">
             View Full Image ↗
           </a>
         </article>
 
-        <!-- GRAPHICS 03: BUSINESS CARD BACK -->
+        <!-- 03: VICTOR PHOENIX BUSINESS CARD BACK -->
 
         <article class="work-card" data-category="graphics">
           <div class="work-image card-preview">
-            <img src="images/back%20of%20Phoenix%20business%20card.png"
-                 alt="back of victor-phoenix-business-card.png"
+            <img src="images/back%20of%20victor-phoenix-business-card.png"
+                 alt="Back of Victor Phoenix business card"
                  loading="lazy">
+            <div class="image-fallback">
+              <strong>Image not found</strong>
+              <span>Check the filename and folder:</span>
+              <code>images/back of victor-phoenix-business-card.png</code>
+            </div>
           </div>
 
           <div class="work-meta">
             <span class="work-number">03</span>
-            <span class="work-category">Business Card Design · Back</span>
+            <span class="work-category">Business Card · Back</span>
           </div>
 
           <h3 class="work-title">Victor Phoenix Business Card — Back</h3>
 
           <p class="work-description">
             The reverse side of the Victor Phoenix business card,
-            presented separately so visitors can inspect its layout
-            and contact information.
+            displayed separately so visitors can inspect the design.
           </p>
 
           <span class="work-status">Back Side</span>
 
           <a class="view-image"
-             href="images/back%20of%20Phoenix%20business%20card.png"
-             target="_blank" rel="noopener">
+             href="images/back%20of%20victor-phoenix-business-card.png"
+             target="_blank" rel="noopener noreferrer">
             View Full Image ↗
           </a>
         </article>
 
-        <!-- GRAPHICS 04: FASHION CARD FRONT -->
+        <!-- 04: FASHION DESIGNER BUSINESS CARD FRONT -->
 
         <article class="work-card" data-category="graphics">
           <div class="work-image card-preview">
-            <img src="images/front%20of%20fashion%20designer%20business%20card.png"
-                 alt="front of fashion-designer-business-card.png"
+            <img src="images/front%20of%20fashion-designer-business-card.png"
+                 alt="Front of fashion designer business card"
                  loading="lazy">
+            <div class="image-fallback">
+              <strong>Image not found</strong>
+              <span>Check the filename and folder:</span>
+              <code>images/front of fashion-designer-business-card.png</code>
+            </div>
           </div>
 
           <div class="work-meta">
@@ -935,25 +1013,30 @@
 
           <p class="work-description">
             A business card design created for a fashion designer,
-            demonstrating visual presentation for a fashion-related brand.
+            showing visual branding for a fashion-related business.
           </p>
 
           <span class="work-status">Front Side</span>
 
           <a class="view-image"
-             href="images/front%20of%20fashion%20designer%20business%20card.png"
-             target="_blank" rel="noopener">
+             href="images/front%20of%20fashion-designer-business-card.png"
+             target="_blank" rel="noopener noreferrer">
             View Full Image ↗
           </a>
         </article>
 
-        <!-- GRAPHICS 05: FASHION CARD BACK -->
+        <!-- 05: FASHION DESIGNER BUSINESS CARD BACK -->
 
         <article class="work-card" data-category="graphics">
           <div class="work-image card-preview">
-            <img src="images/back%20of%20fashion%20designer%20business%20card.png"
-                 alt="back of fashion-designer-business-card.png"
+            <img src="images/back%20of%20fashion-designer-business-card.png"
+                 alt="Back of fashion designer business card"
                  loading="lazy">
+            <div class="image-fallback">
+              <strong>Image not found</strong>
+              <span>Check the filename and folder:</span>
+              <code>images/back of fashion-designer-business-card.png</code>
+            </div>
           </div>
 
           <div class="work-meta">
@@ -965,25 +1048,30 @@
 
           <p class="work-description">
             The reverse side of the fashion designer's business card,
-            shown separately to make both sides of the design easy to view.
+            presented separately to show the complete design.
           </p>
 
           <span class="work-status">Back Side</span>
 
           <a class="view-image"
-             href="images/back%20of%20fashion%20designer%20business%20card.png"
-             target="_blank" rel="noopener">
+             href="images/back%20of%20fashion-designer-business-card.png"
+             target="_blank" rel="noopener noreferrer">
             View Full Image ↗
           </a>
         </article>
 
-        <!-- GRAPHICS 06: YOUTUBE BANNER -->
+        <!-- 06: YOUTUBE BANNER -->
 
         <article class="work-card" data-category="graphics">
           <div class="work-image">
             <img src="images/victor-phoenix-youtube-banner.png"
-                 alt="victor-phoenix-youtube-banner.png"
+                 alt="Victor Phoenix YouTube banner"
                  loading="lazy">
+            <div class="image-fallback">
+              <strong>Image not found</strong>
+              <span>Check the filename and folder:</span>
+              <code>images/victor-phoenix-youtube-banner.png</code>
+            </div>
           </div>
 
           <div class="work-meta">
@@ -995,25 +1083,30 @@
 
           <p class="work-description">
             A branded channel banner designed to establish a consistent
-            and recognizable identity across video content.
+            visual identity across video content.
           </p>
 
           <span class="work-status">Channel Branding</span>
 
           <a class="view-image"
              href="images/victor-phoenix-youtube-banner.png"
-             target="_blank" rel="noopener">
+             target="_blank" rel="noopener noreferrer">
             View Full Image ↗
           </a>
         </article>
 
-        <!-- GRAPHICS 07: PERSONAL BRAND POSTER -->
+        <!-- 07: PERSONAL BRAND POSTER -->
 
         <article class="work-card" data-category="graphics">
           <div class="work-image">
             <img src="images/victor-phoenix-personal-brand-poster.png"
-                 alt="victor-phoenix-personal-brand-poster.png"
+                 alt="Victor Phoenix personal brand poster"
                  loading="lazy">
+            <div class="image-fallback">
+              <strong>Image not found</strong>
+              <span>Check the filename and folder:</span>
+              <code>images/victor-phoenix-personal-brand-poster.png</code>
+            </div>
           </div>
 
           <div class="work-meta">
@@ -1024,26 +1117,31 @@
           <h3 class="work-title">Victor Phoenix Personal Brand Poster</h3>
 
           <p class="work-description">
-            A promotional poster built around the Victor Phoenix brand,
-            combining visual hierarchy, typography and brand messaging.
+            A promotional poster combining typography, composition
+            and messaging to communicate the Victor Phoenix identity.
           </p>
 
           <span class="work-status">Personal Branding</span>
 
           <a class="view-image"
              href="images/victor-phoenix-personal-brand-poster.png"
-             target="_blank" rel="noopener">
+             target="_blank" rel="noopener noreferrer">
             View Full Image ↗
           </a>
         </article>
 
-        <!-- GRAPHICS 08: BRAND PRESENTATION -->
+        <!-- 08: BRAND PRESENTATION -->
 
         <article class="work-card" data-category="graphics">
           <div class="work-image">
             <img src="images/victor-phoenix-brand-presentation.png"
-                 alt="victor-phoenix-brand-presentation.png"
+                 alt="Victor Phoenix brand presentation"
                  loading="lazy">
+            <div class="image-fallback">
+              <strong>Image not found</strong>
+              <span>Check the filename and folder:</span>
+              <code>images/victor-phoenix-brand-presentation.png</code>
+            </div>
           </div>
 
           <div class="work-meta">
@@ -1054,20 +1152,20 @@
           <h3 class="work-title">Victor Phoenix Brand Presentation</h3>
 
           <p class="work-description">
-            A brand presentation showcasing the Victor Phoenix visual
-            direction and promotional design approach.
+            A visual presentation of the Victor Phoenix brand direction
+            and its promotional design style.
           </p>
 
           <span class="work-status">Brand Presentation</span>
 
           <a class="view-image"
              href="images/victor-phoenix-brand-presentation.png"
-             target="_blank" rel="noopener">
+             target="_blank" rel="noopener noreferrer">
             View Full Image ↗
           </a>
         </article>
 
-        <!-- WEB 09 -->
+        <!-- 09: VICTOR PHOENIX WEBSITE -->
 
         <article class="work-card" data-category="web">
           <div class="work-image">
@@ -1075,7 +1173,9 @@
               <div class="browser-art">
                 <div class="browser-bar"><i></i><i></i><i></i></div>
                 <div class="browser-content">
-                  <span></span><span></span><span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
               </div>
             </div>
@@ -1089,16 +1189,16 @@
           <h3 class="work-title">Victor Phoenix Digital Experience</h3>
 
           <p class="work-description">
-            The Victor Phoenix website, designed around creativity,
+            The Victor Phoenix website, built around creativity,
             technology and a responsive digital experience.
           </p>
 
-          <span class="work-status">Built / Victor Phoenix</span>
+          <span class="work-status">Victor Phoenix Website</span>
 
           <a href="index.html" class="view-image">Visit Website ↗</a>
         </article>
 
-        <!-- WEB 10 -->
+        <!-- 10: WEBSITE CONCEPT -->
 
         <article class="work-card" data-category="web">
           <div class="work-image">
@@ -1125,7 +1225,7 @@
           <span class="work-status">Concept / Sample</span>
         </article>
 
-        <!-- AI 11 -->
+        <!-- 11: AI ASSISTANT CONCEPT -->
 
         <article class="work-card" data-category="ai">
           <div class="work-image">
@@ -1152,7 +1252,7 @@
           <span class="work-status">Concept / Sample</span>
         </article>
 
-        <!-- AI 12 -->
+        <!-- 12: AI AUTOMATION CONCEPT -->
 
         <article class="work-card" data-category="ai">
           <div class="work-image">
@@ -1179,7 +1279,7 @@
           <span class="work-status">Concept / Sample</span>
         </article>
 
-        <!-- MARKETING 13 -->
+        <!-- 13: BRAND AWARENESS -->
 
         <article class="work-card" data-category="marketing">
           <div class="work-image">
@@ -1200,13 +1300,13 @@
 
           <p class="work-description">
             A marketing concept built around consistent visuals,
-            strong messaging and brand recognition.
+            clear messaging and brand recognition.
           </p>
 
           <span class="work-status">Concept / Sample</span>
         </article>
 
-        <!-- MARKETING 14 -->
+        <!-- 14: PRODUCT PROMOTION -->
 
         <article class="work-card" data-category="marketing">
           <div class="work-image">
@@ -1243,29 +1343,29 @@
         <div class="note-label">Portfolio Note</div>
 
         <p class="note-text">
-          Portfolio items marked as concepts or samples are illustrative
-          work created to demonstrate design and technical capabilities.
-          Other projects showcase Victor Phoenix branding and design work.
-          As new client projects are completed, this portfolio can be
-          updated with additional examples.
+          Items labelled as concepts or samples are illustrative examples
+          intended to demonstrate possible design and technical approaches.
+          Other entries showcase Victor Phoenix branding and design work.
+          This portfolio can be updated as additional projects are completed.
         </p>
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- CONTACT CTA -->
 
     <section class="cta">
       <h2>Create<br>What's Next.</h2>
 
       <p>
         Have an idea, business or project that needs a digital solution?
-        Let's turn it into something real.
+        Let's discuss how to bring it to life.
       </p>
 
       <div class="cta-buttons">
         <a class="cta-btn"
            href="https://wa.me/2349165831007?text=Hello%20Victor%20Phoenix%2C%20I%27d%20like%20to%20discuss%20a%20project."
-           target="_blank" rel="noopener">
+           target="_blank"
+           rel="noopener noreferrer">
           Start a Project
         </a>
 
@@ -1294,23 +1394,43 @@
     </div>
   </footer>
 
-  <!-- PORTFOLIO FILTER -->
+  <!-- IMAGE ERROR HANDLING AND CATEGORY FILTERS -->
 
   <script>
+    // Show a useful message when a portfolio image cannot be loaded.
+    document.querySelectorAll(".work-image img").forEach(function (img) {
+      function showImageError() {
+        const container = img.closest(".work-image");
+        if (container) {
+          container.classList.add("image-missing");
+        }
+      }
+
+      img.addEventListener("error", showImageError);
+
+      if (img.complete && img.naturalWidth === 0) {
+        showImageError();
+      }
+    });
+
+    // Filter portfolio projects by category.
     const filterButtons = document.querySelectorAll(".filter-btn");
     const workCards = document.querySelectorAll(".work-card");
 
-    filterButtons.forEach(button => {
-      button.addEventListener("click", () => {
+    filterButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
         const filter = button.dataset.filter;
 
-        filterButtons.forEach(btn => {
-          btn.classList.toggle("active", btn === button);
+        filterButtons.forEach(function (item) {
+          const isActive = item === button;
+          item.classList.toggle("active", isActive);
+          item.setAttribute("aria-pressed", String(isActive));
         });
 
-        workCards.forEach(card => {
+        workCards.forEach(function (card) {
           const matches =
-            filter === "all" || card.dataset.category === filter;
+            filter === "all" ||
+            card.dataset.category === filter;
 
           card.classList.toggle("hidden", !matches);
         });

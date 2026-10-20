@@ -1,6 +1,53 @@
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://victorphoenix.vphq.workers.dev/</loc>
+  </url>
+  <url>
+    <loc>https://victorphoenix.vphq.workers.dev/services.html</loc>
+  </url>
+  <url>
+    <loc>https://victorphoenix.vphq.workers.dev/portfolio.html</loc>
+  </url>
+  <url>
+    <loc>https://victorphoenix.vphq.workers.dev/about.html</loc>
+  </url>
+  <url>
+    <loc>https://victorphoenix.vphq.workers.dev/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://victorphoenix.vphq.workers.dev/graphics.html</loc>
+  </url>
+  <url>
+    <loc>https://victorphoenix.vphq.workers.dev/web-development.html</loc>
+  </url>
+  <url>
+    <loc>https://victorphoenix.vphq.workers.dev/ai-solutions.html</loc>
+  </url>
+  <url>
+    <loc>https://victorphoenix.vphq.workers.dev/digital-marketing.html</loc>
+  </url>
+  <url>
+    <loc>https://victorphoenix.vphq.workers.dev/phoenix-apps.html</loc>
+  </url>
+  <url>
+    <loc>https://victorphoenix.vphq.workers.dev/phoenix-websites.html</loc>
+  </url>
+  <url>
+    <loc>https://victorphoenix.vphq.workers.dev/privacy-policy.html</loc>
+  </url>
+  <url>
+    <loc>https://victorphoenix.vphq.workers.dev/terms-and-conditions.html</loc>
+  </url>
+  <url>
+    <loc>https://victorphoenix.vphq.workers.dev/service-policy.html</loc>
+  </url>
+  <url>
+    <loc>https://victorphoenix.vphq.workers.dev/refund-policy.html</loc>
+  </url>
+  <url>
+    <loc>https://victorphoenix.vphq.workers.dev/cookie-policy.html</loc>
+  </url>
+  <url>
+    <loc>https://victorphoenix.vphq.workers.dev/disclaimer.html</loc>
   </url>
 </urlset>

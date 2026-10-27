@@ -315,10 +315,54 @@
         width: 145px;
       }
 
-      .footer-row {
-        flex-direction: column;
-        gap: 8px;
-      }
+footer {
+  padding: 30px 0;
+  border-top: 1px solid var(--line);
+  color: #777780;
+  font-size: 11px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.footer-links,
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.footer-links a,
+.footer-socials a {
+  color: #9999a1;
+  transition: color .25s;
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 700px) {
+  .footer-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-links,
+  .footer-socials {
+    gap: 14px;
+  }
+}
     }
   </style>
 </head>
@@ -619,10 +663,11 @@
   </main>
 
 
-  <footer>
+  
+<footer>
+  <div class="container footer-content">
 
-    <div class="container footer-row">
-
+    <div class="footer-row">
       <span>
         © 2026 Victor Phoenix. All rights reserved.
       </span>
@@ -630,10 +675,27 @@
       <span>
         Create What’s Next.
       </span>
-
     </div>
 
-  </footer>
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="service-policy.html">Service Policy</a>
+    </div>
+
+    <div class="footer-socials">
+      <a href="https://www.tiktok.com/@YOUR_USERNAME"
+         target="_blank" rel="noopener noreferrer">TikTok</a>
+
+      <a href="https://x.com/YOUR_USERNAME"
+         target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+
+      <a href="https://www.youtube.com/@YOUR_CHANNEL"
+         target="_blank" rel="noopener noreferrer">YouTube</a>
+    </div>
+
+  </div>
+</footer>
 
 </body>
 </html>
